@@ -4,13 +4,13 @@ combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_FIREATTACK)
 combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_FIRE)
 
 function onGetFormulaValues(player, level, maglevel)
-	min = -((level / 5) + (maglevel * 2.8) + 16)
-	max = -((level / 5) + (maglevel * 4.4) + 28)
-	return min, max
+	local min = (level / 5) + (maglevel * 2.8) + 16
+	local max = (level / 5) + (maglevel * 4.4) + 28
+	return -min, -max
 end
 
 combat:setCallback(CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
 
-function onCastSpell(creature, var)
-	return combat:execute(creature, var)
+function onCastSpell(creature, variant)
+	return combat:execute(creature, variant)
 end

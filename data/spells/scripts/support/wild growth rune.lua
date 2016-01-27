@@ -4,7 +4,7 @@ combat:setParameter(COMBAT_PARAM_CREATEITEM, ITEM_WILDGROWTH)
 
 local area = {Position(1009, 546, 7), Position(1098, 611, 7)}
 
-function onCastSpell(creature, var, isHotkey)
+function onCastSpell(creature, var)
 
 local swim = Game.getSpectators(Position(388,897,7), false, true, 20, 15)
 	for k = 1, #swim do
