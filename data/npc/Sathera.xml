@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Sathera" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="136" head="78" body="96" legs="101" feet="95" addons="0"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="lute,2370,500;lyre,2372,1000;panpipes,2373,400;wooden flute,2374,450;"/>
+		<parameter key="shop_sellable" value="post horn,2364,1000;lyre,2372,200;"/>
+	</parameters>
+</npc>

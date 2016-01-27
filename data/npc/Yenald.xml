@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Yenald" script="valuables.lua" walkinterval="2000">
+	<health now="150" max="150"/>
+	<look type="278" head="78" body="60" legs="49" feet="18" addons="0" corpse="2212"/>
+</npc>

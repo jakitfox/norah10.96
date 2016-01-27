@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Black Nightmare" nameDescription="a black nightmare" race="undead" experience="6900" speed="496" manacost="0">
+    <health now="9400" max="9400"/>
+    <look type="279" head="3" body="76" legs="0" feet="86" addons="3" corpse="3128"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="1"/>
+      <flag illusionable="0"/>
+      <flag convinceable="1"/>
+      <flag pushable="0"/>
+      <flag canpushitems="0"/>
+      <flag staticattack="80"/>
+      <flag lightlevel="0"/>
+      <flag lightcolor="0"/>
+      <flag targetdistance="1"/>
+      <flag runonhealth="0"/>
+    </flags>
+    <attacks>
+      <attack name="melee" interval="2000" min="-115" max="-264"/>
+      <attack name="sudden death" interval="2000" chance="100" min="-119" max="-466"/>
+    </attacks>
+    <defenses armor="44" defense="42">
+      <defense name="haste" interval="5000" chance="100"/>
+      <defense name="Ultimate Healing" interval="4000" chance="50" min="50" max="200"/>
+    </defenses>
+    <immunities>
+      <immunity physical="0"/>
+      <immunity energy="0"/>
+      <immunity fire="1"/>
+      <immunity poison="1"/>
+      <immunity lifedrain="0"/>
+      <immunity paralyze="1"/>
+      <immunity outfit="0"/>
+      <immunity drunk="1"/>
+      <immunity invisible="1"/>
+    </immunities>
+    <voices interval="2000" chance="5">
+      <voice sentence="I'm Undead... I'm Back!!!"/>
+      <voice sentence="I'm scary... Hahahaha!"/>
+    </voices>
+    <loot>
+      <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+      <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+      <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+      <item id="2148" countmax="56" chance1="100000" chancemax="0"/>
+      <item id="2146" countmax="10" chance1="100000" chancemax="0"/>
+      <item id="7405" chance="2000"/>
+      <item id="2656" chance="4500"/>
+      <item id="2680" countmax="8" chance1="10000" chancemax="0"/>
+      <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+      <item id="7427" chance="2500"/>
+      <item id="2470" chance="1500"/>
+      <item id="2154" chance="5000"/>
+      <item id="2143" countmax="15" chance1="100000" chancemax="0"/>
+      <item id="7368" countmax="10" chance1="100000" chancemax="0"/>
+    </loot>
+  </monster>

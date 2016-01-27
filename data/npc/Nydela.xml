@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Nydela" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="141" head="115" body="94" legs="113" feet="19" addons="1"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="bread,2689,4;ham,2671,8;cheese,2696,5;meat,2666,5;"/>
+	</parameters>
+</npc>

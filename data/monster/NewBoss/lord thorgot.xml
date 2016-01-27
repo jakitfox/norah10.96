@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lord Thorgot" nameDescription="Lord Thorgot" race="blood" experience="16000" speed="470" manacost="0">
+	<health now="9000" max="9000"/>
+	<look type="535" corpse="19903"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="90" defense="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="0"/>
+		<flag staticattack="50"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="70" attack="90"/>
+		<attack name="death" interval="2000" chance="10" range="7" radius="1" target="1" min="-280" max="-320">
+			<attribute key="shootEffect" value="death"/>
+			<attribute key="areaEffect" value="mortarea"/>
+			<attribute key="areaEffect" value="smallclouds"/>
+		</attack>
+		<attack name="earth" interval="2000" chance="20" range="7" radius="4" target="1" min="-290" max="-500">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="25">
+		<defense name="healing" interval="2000" chance="10" min="90" max="270">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="2000" chance="15" speedchange="420" duration="5000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="50"/>
+		<element physicalPercent="-20"/>
+		<element icePercent="50"/>
+		<element deathPercent="50"/>
+		<element holyPercent="-20"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+		<immunity earth="1"/>
+		<immunity lifedrain="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Close your eyes... I want to show you something."/>
+		<voice sentence="I will haunt you forever!"/>
+		<voice sentence="Pffffrrrrrrrrrrrr."/>
+		<voice sentence="I will make you scream."/>
+		<voice sentence="Take a ride with me."/>
+		<voice sentence="Weeeheeheeeheee!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="50000"/><!-- gold coin -->
+		<item id="2148" countmax="55" chance="50000"/><!-- gold coin -->
+		<item id="2671" countmax="2" chance="29000"/><!-- ham -->
+		<item id="5944" chance="20000"/><!-- soul orb -->
+		<item id="6558" countmax="2" chance="19666"/><!-- concentrated demonic blood -->
+		<item id="11223" chance="15240"/><!-- essence of a bad dream -->
+		<item id="6500" chance="10000"/><!-- demonic essence -->
+		<item id="2547" countmax="4" chance="9090"/><!-- power bolt -->
+		<item id="11229" chance="9090"/><!-- scythe leg -->
+		<item id="2152" countmax="3" chance="2564"/><!-- platinum coin -->
+		<item id="6300" chance="1498"/><!-- death ring -->
+		<item id="2532" chance="1190"/><!-- ancient shield -->
+		<item id="2477" chance="1161"/><!-- knight legs -->
+		<item id="2195" chance="537"/><!-- boots of haste -->
+		<item id="6526" chance="537"/><!-- skeleton decoration -->
+		<item id="5669" chance="323"/><!-- mysterious voodoo skull -->
+		<item id="2454" chance="395"/><!-- war axe -->
+		<item id="9695" chance="3800"/><!-- the torso of a jester doll -->
+		<item id="13293" chance="100"/><!-- Leather Whip -->
+	</loot>
+</monster>

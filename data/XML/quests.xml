@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quests>
+
+
+<quest name="Satan Quest" startstorageid="3000" startstoragevalue="1">
+		<mission name="Ceremonial Ankh" storageid="3001" startvalue="0" endvalue="3">
+			<missionstate id="1" description="Go to Mothrim to Magical Room and find Ceremonial Ankh."/>
+			<missionstate id="2" description="Come back to Bertry with Ceremonial Ankh."/>
+			<missionstate id="3" description="Use Ceremonial Ankh on Woman on Ankh to entrance hell."/>
+		</mission>
+		<mission name="Zugurosh's Throne" storageid="3004" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Sit down on the throne."/>
+			<missionstate id="2" description="You have absorbed some energy out of the throne!"/>
+		</mission>
+		<mission name="Ushuriel's Throne" storageid="3005" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Sit down on the throne."/>
+			<missionstate id="2" description="You have absorbed some energy out of the throne!"/>
+		</mission>
+		<mission name="Golgordan's Throne" storageid="3006" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Sit down on the throne."/>
+			<missionstate id="2" description="You have absorbed some energy out of the throne!"/>
+		</mission>
+		<mission name="Annihilion's Throne" storageid="3007" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Sit down on the throne."/>
+			<missionstate id="2" description="You have absorbed some energy out of the throne!"/>
+		</mission>
+		<mission name="Madareth's Throne" storageid="3008" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Sit down on the throne."/>
+			<missionstate id="2" description="You have absorbed some energy out of the throne!"/>
+		</mission>
+		<mission name="Latrivan's Throne" storageid="3009" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Sit down on the throne."/>
+			<missionstate id="2" description="You have absorbed some energy out of the throne!"/>
+		</mission>
+		<mission name="Hellgorak's Throne" storageid="3010" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Sit down on the throne."/>
+			<missionstate id="2" description="You have absorbed some energy out of the throne!"/>
+		</mission>
+		<mission name="Bertry's Reward" storageid="3012" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Go to Bertry to get reward."/>
+			<missionstate id="2" description="Bertry gived you one milion of expirence."/>
+		</mission>
+	</quest>
+	
+	<quest name="Eight Trophys Quest" startstorageid="3020" startstoragevalue="1">
+		<mission name="Silver Cup of Honour" storageid="3021" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a Silver Cup of Honour to Elard."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Bronze Cup of Honour" storageid="3022" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a Bronze Cup of Honour to Elard."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Golden Warrior Trophy" storageid="3023" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a Golden Warrior Trophy to Elard."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Silver Warrior Trophy" storageid="3024" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a Silver Warrior Trophy to Elard."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Bronze Warrior Trophy" storageid="3025" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a Bronze Warrior Trophy to Elard."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Golden Trophy of Excellence" storageid="3026" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a Golden Trophy of Excellence to Elard."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Silver Trophy of Excellence" storageid="3027" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a Silver Trophy of Excellence to Elard."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Bronze Trophy of Excellence" storageid="3028" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a Bronze Trophy of Excellence to Elard."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+	</quest>
+
+<quest name="Gravedigger Quest" startstorageid="3030" startstoragevalue="1">
+		<mission name="Koshei's Ancient Amulet" storageid="3030" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Find four elements of Koshei's Ancient Amulet and back with theirs to Mower."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Serial Murder" storageid="3031" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kill evill creation in grave."/>
+			<missionstate id="2" description="Come back to Mower."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Pharaoh Master" storageid="3032" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kill Pharaoh."/>
+			<missionstate id="2" description="Come back to city for more information."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Second Pharaoh Master" storageid="3033" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kill second Pharaoh."/>
+			<missionstate id="2" description="Back to city."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Broken Doll" storageid="3034" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Found six elements of Mower's Jester Doll. Probably scary creatures have elements of this toy. Letter go to Erald for fix doll."/>
+			<missionstate id="2" description="Go back with fixed Jester Doll to Mower."/>
+			<missionstate id="3" description="Mission complete. Go to Mour in Depot Pont Vanis for next mission."/>
+		</mission>
+		<mission name="Release Martyr" storageid="3035" startvalue="1" endvalue="4">
+			<missionstate id="1" description="Mour's husbend was kidnap by one of the mistic Pharaoh. Found him! Ask Pharaoh in Nilfgaard for more information."/>
+			<missionstate id="2" description="Mour's husbend is under Nilfgaard cementary, go there."/>
+			<missionstate id="3" description="Mour's husbend is dead. Back to Pont Vanis with this information."/>
+			<missionstate id="4" description="Mission complete. Go to Mower for next mission."/>
+		</mission>
+		<mission name="Plague" storageid="3036" startvalue="1" endvalue="4">
+			<missionstate id="1" description="Found four parts of plague documents. You can find it near Pont Vanis. Letter back to Mower."/>
+			<missionstate id="2" description="Go to Dark Catedral and kill evil."/>
+			<missionstate id="3" description="Back to Mower."/>
+			<missionstate id="4" description="Mission complete. Go to Mower for next mission."/>
+		</mission>
+		<mission name="Mysterious Ball" storageid="3037" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Fill Mower's ball up with dead energy."/>
+			<missionstate id="2" description="Back to Mower with ball."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Finall Battle" storageid="3038" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Kill Hades. He's under Dark Catedral."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+	</quest>
+
+<quest name="Yalahar Quest" startstorageid="3070" startstoragevalue="1">
+		<mission name="Mission I" storageid="3071" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a 30 scythe leg to Omera."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Mission II" storageid="3072" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring a 6 phoenix eggs to Omera."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Mission III" storageid="3073" startvalue="0" endvalue="3">
+			<missionstate id="1" description="Go and kill Ucker. You will find him close to the gigantic gate."/>
+			<missionstate id="2" description="Back to Omer."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Menor" storageid="3077" startvalue="0" endvalue="3">
+			<missionstate id="1" description="Destroy the column of energy."/>
+			<missionstate id="2" description="You've destroyed one of the column."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Adness" storageid="3078" startvalue="0" endvalue="3">
+			<missionstate id="1" description="Destroy the column of energy."/>
+			<missionstate id="2" description="You've destroyed one of the column."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Kaneler" storageid="3079" startvalue="0" endvalue="3">
+			<missionstate id="1" description="Destroy the column of energy."/>
+			<missionstate id="2" description="You've destroyed one of the column."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Zomer" storageid="3080" startvalue="0" endvalue="3">
+			<missionstate id="1" description="Destroy the column of energy."/>
+			<missionstate id="2" description="You've destroyed one of the column."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Dazzer" storageid="3081" startvalue="0" endvalue="3">
+			<missionstate id="1" description="Destroy the column of energy."/>
+			<missionstate id="2" description="You've destroyed one of the column."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>		
+		<mission name="Enorien" storageid="3082" startvalue="0" endvalue="3">
+			<missionstate id="1" description="Destroy the column of energy."/>
+			<missionstate id="2" description="You've destroyed one of the column."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Rotter" storageid="3083" startvalue="0" endvalue="3">
+			<missionstate id="1" description="Destroy the column of energy."/>
+			<missionstate id="2" description="You've destroyed one of the column."/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+	</quest>
+
+
+	<quest name="Elemental Quest" startstorageid="3095" startstoragevalue="1">
+		<mission name="Mechanicals" storageid="3096" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You must absorb energy."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Grounds" storageid="3097" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You must absorb energy."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Sludges" storageid="3098" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You must absorb energy."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Fires" storageid="3099" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You must absorb energy."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Magicals" storageid="3100" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You must absorb energy."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Poisons" storageid="3101" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You must absorb energy."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Ices" storageid="3102" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You must absorb energy."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Waters" storageid="3103" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You must absorb energy."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+	</quest>
+
+	<quest name="Stronghold Quest" startstorageid="3130" startstoragevalue="1">
+		<mission name="Chapels" storageid="3131" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Go and find four Ardos chapel's."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Records" storageid="3131" startvalue="3" endvalue="4">
+			<missionstate id="3" description="Go and search the ruins to find books or notes."/>
+			<missionstate id="4" description="Mission complete."/>
+		</mission>
+		<mission name="Ruins" storageid="3131" startvalue="5" endvalue="6">
+			<missionstate id="5" description="Go to the ruins , to stop spreading of evil"/>
+			<missionstate id="6" description="Mission complete."/>
+		</mission>
+		<mission name="Reward" storageid="3131" startvalue="7" endvalue="8">
+			<missionstate id="7" description="You did it! You banish evil from this world , go to Dargitan and take your reward."/>
+			<missionstate id="8" description="Mission complete."/>
+		</mission>
+	</quest>
+
+	<quest name="Killing in the Name of..." startstorageid="3220" startstoragevalue="1">
+
+	<!-- killing in the name of rank -->
+		<mission name="Paw and Fur: Member" storageid="3601" startvalue="0" endvalue="10" description="You are member of the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
+		<mission name="Paw and Fur: Ranger" storageid="3601" startvalue="11" endvalue="20" description="You are Ranger of the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
+		<mission name="Paw and Fur: Big Game Hunter" storageid="3601" startvalue="21" endvalue="40" description="You are Big Game Hunter in the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
+		<mission name="Paw and Fur: Trophy Hunter" storageid="3601" startvalue="41" endvalue="70" description="You are Trophy Hunter in the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points. Ask Kelvin for 'special task' he might have something for you." />
+		<mission name="Paw and Fur: Elite Hunter" storageid="3601" startvalue="71" endvalue="100" description="You have obtained the highest possible rank in the Paw and Fur hunting elite, you are Elite Hunter. You currently have |STATE| Paw &amp; Fur points. Ask Kelvin for 'special task' he might have something for you." />
+
+	<!-- special tasks for killing in the name of -->
+		<mission name="Paw and Fur: Tiquandas Revenge" storageid="3530" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Find it and kill."/>
+			<missionstate id="2" description="You have slained the Tiquandas Revenge."/>
+		</mission>
+		<mission name="Paw and Fur: Demodras" storageid="3529" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Find it and kill."/>
+			<missionstate id="2" description="You have slained the Demodras."/>
+		</mission>
+
+	<!-- Short questlog for bosses, when they have the correct storage. (atm disspears from questlog after jumping into tp)-->
+		<mission name="Paw and Fur: The Snapper" storageid="3501" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Hide" storageid="3502" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Deathbine" storageid="3503" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: The Bloodtusk" storageid="3504" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Shardhead" storageid="3505" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Esmerelda" storageid="3506" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Fleshcrawler" storageid="3507" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Ribstride" storageid="3508" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Bloodweb" storageid="3509" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Thul" storageid="3510" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: The Old Widow" storageid="3511" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Hemming" storageid="3512" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Tormentor" storageid="3513" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Flameborn" storageid="3514" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Fazzrah" storageid="3515" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Tromphonyte" storageid="3516" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Sulphur Scuttler" storageid="3517" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Sulphur Scuttler" storageid="3518" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: The Many" storageid="3519" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: The Noxious Spawn" storageid="3520" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Gorgo" storageid="3521" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Stonecracker" storageid="3522" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Leviathan" storageid="3523" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Kerberos" storageid="3524" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Ethershreck" storageid="3525" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Paiz the Pauperizer" storageid="3526" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Bretzecutioner" storageid="3527" startvalue="1" endvalue="2" description="Find it and kill." />
+		<mission name="Paw and Fur: Zanakeph" storageid="3528" startvalue="1" endvalue="2" description="Find it and kill." />
+
+
+		<!--s for level 6 to 49 -->
+		<mission name="Paw and Fur: Trolls" storageid="3302" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 trolls." />
+		<mission name="Paw and Fur: Globins" storageid="3303" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 globins." />
+		<mission name="Paw and Fur: Crocodiles" storageid="3304" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 crocodiles." />
+		<mission name="Paw and Fur: Badgers" storageid="3305" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 badgers." />
+		<mission name="Paw and Fur: Tarantulas" storageid="3306" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 tarantulas." />
+		<mission name="Paw and Fur: Carniphilas" storageid="3307" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 carniphilas." />
+		<mission name="Paw and Fur: Stone Golems" storageid="3308" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 stone golems." />
+		<mission name="Paw and Fur: Mammoths" storageid="3309" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 mammoths." />
+		<mission name="Paw and Fur: Gnarlhounds" storageid="3310" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 gnarlhounds." />
+		<mission name="Paw and Fur: Terramites" storageid="3311" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 terramites." />
+		<mission name="Paw and Fur: Apes" storageid="3312" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 apes." />
+		<mission name="Paw and Fur: Thornback Tortoises" storageid="3313" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 thornback tortoises." />
+		<mission name="Paw and Fur: Gargoyles" storageid="3314" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 gargoyles." />
+
+		<!--Tasks for level 50 to 79 -->
+		<mission name="Paw and Fur: Ice Golems" storageid="3315" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 ice golems." />
+		<mission name="Paw and Fur: Quara Scouts" storageid="3316" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 quara scouts." />
+		<mission name="Paw and Fur: Mutated Rats" storageid="3317" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 mutated rats." />
+		<mission name="Paw and Fur: Ancient Scarabs" storageid="3318" startvalue="0" endvalue="250" description="You already hunted |STATE|/250 ancient scarabs." />
+		<mission name="Paw and Fur: Wyverns" storageid="3319" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 wyverns." />
+		<mission name="Paw and Fur: Lancer Beetles" storageid="3320" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 lancer beetles." />
+		<mission name="Paw and Fur: Wailing Widows" storageid="3321" startvalue="0" endvalue="400" description="You already hunted |STATE|/300 wailing widows." />
+		<mission name="Paw and Fur: Killer Caimans" storageid="3322" startvalue="0" endvalue="250" description="You already hunted |STATE|/300 killer caimans." />
+		<mission name="Paw and Fur: Bonebeasts" storageid="3323" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 bonebeasts." />
+		<mission name="Paw and Fur: Crystal Spiders" storageid="3324" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 crystal spiders." />
+		<mission name="Paw and Fur: Mutated Tigers" storageid="3325" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 mutated tigers." />
+
+		<!--s for level 80 to 129 -->
+		<mission name="Paw and Fur: Underwater Quara" storageid="3326" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 underwater quara." />
+		<mission name="Paw and Fur: Giant Spiders" storageid="3327" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 giant spiders." />
+		<mission name="Paw and Fur: Werewolves" storageid="3328" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 werewolves." />
+		<mission name="Paw and Fur: Nightmares" storageid="3329" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 nightmares." />
+		<mission name="Paw and Fur: Hellspawns" storageid="3330" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 hellspawns." />
+		<mission name="Paw and Fur: High Class Lizards" storageid="3331" startvalue="0" endvalue="800" description="You already hunted |STATE|/800 high class lizards." />
+		<mission name="Paw and Fur: Stampors" storageid="3332" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 stampors." />
+		<mission name="Paw and Fur: Brimstone Bugs" storageid="3333" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 brimstone bugs." />
+		<mission name="Paw and Fur: Mutated Bats" storageid="3334" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 mutated bats." />
+
+		<!--s for level 130+ -->
+		<mission name="Paw and Fur: Hydras" storageid="3335" startvalue="0" endvalue="650" description="You already hunted |STATE|/650 hydras." />
+		<mission name="Paw and Fur: Serpent Spawns" storageid="3336" startvalue="0" endvalue="800" description="You already hunted |STATE|/800 serpent spawns." />
+		<mission name="Paw and Fur: Medusas" storageid="3337" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 medusas." />
+		<mission name="Paw and Fur: Behemoths" storageid="3338" startvalue="0" endvalue="700" description="You already hunted |STATE|/700 behemoths." />
+		<mission name="Paw and Fur: Sea Serpents and Young Sea Serpents" storageid="3339" startvalue="0" endvalue="900" description="You already hunted |STATE|/900 sea serpents and young sea serpents." />
+		<mission name="Paw and Fur: Hellhounds" storageid="3340" startvalue="0" endvalue="250" description="You already hunted |STATE|/250 hellhounds." />
+		<mission name="Paw and Fur: Ghastly Dragons" storageid="3341" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 ghastly dragons." />
+		<mission name="Paw and Fur: Drakens" storageid="3342" startvalue="0" endvalue="900" description="You already hunted |STATE|/900 drakens." />
+		<mission name="Paw and Fur: Destroyers" storageid="3343" startvalue="0" endvalue="650" description="You already hunted |STATE|/650 destroyers." />
+		<mission name="Paw and Fur: Undead Dragons" storageid="3344" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 undead dragons." />
+
+		<!-- Specials -->
+		<mission name="Paw and Fur: Demons" storageid="3345" startvalue="0" endvalue="6666" description="You already hunted |STATE|/6666 demons." />
+		<mission name="Paw and Fur: Green Djinns or Efreets" storageid="3346" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 green djinns or efreets." />
+		<mission name="Paw and Fur: Blue Djinns or Marids" storageid="3347" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 blue djinns or marids." />
+		<mission name="Paw and Fur: Pirates" storageid="3348" startvalue="0" endvalue="3000" description="You already hunted |STATE|/3000 pirates." />
+		<mission name="Paw and Fur: Pirates Second" storageid="3349" startvalue="0" endvalue="3000" description="You already hunted |STATE|/3000 pirates." />
+		<mission name="Paw and Fur: Minotaurs" storageid="3350" startvalue="0" endvalue="5000" description="You already hunted |STATE|/5000 minotaurs." />
+		<mission name="Paw and Fur: Necromancers and Priestess" storageid="3351" startvalue="0" endvalue="4000" description="You already hunted |STATE|/4000 necromancers and priestess." />
+		<mission name="Paw and Fur: Necromancers and Priestess Second" storageid="3351" startvalue="0" endvalue="1000" description="You already hunted |STATE|/1000 necromancers and priestess." />
+	</quest>
+
+	<quest name="Demon Oak" startstorageid="3650" startstoragevalue="1">
+		<mission name="Oldrak" storageid="3650" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Go to Oldrak in Pont Vanis."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Tree" storageid="3650" startvalue="2" endvalue="3">
+			<missionstate id="2" description="Go and cut evil tree!"/>
+			<missionstate id="3" description="Mission complete."/>
+		</mission>
+		<mission name="Reward" storageid="3650" startvalue="3" endvalue="5">
+			<missionstate id="3" description="Tell Oldrak about your great victory."/>
+			<missionstate id="4" description="Go and find grave Yesim Adelit."/>
+			<missionstate id="5" description="Mission complete."/>
+		</mission>
+	</quest>
+	
+	<quest name="Club Prospectors and Travelers" startstorageid="3660" startstoragevalue="1">
+		<mission name="Stolen Roc Feather" storageid="3661" startvalue="0" endvalue="1">
+			<missionstate id="1" description="You have founded stolen many years ago roc feather. For reward you got Master's Archer Armor"/>
+		</mission>
+		<mission name="Elane's Crossbow" storageid="3662" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring Composite Hornbow, The Ironworker, Royal Crossbow, Warsinger Bow and Silkweaver Bow."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Dark Lord's Cape" storageid="3663" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring 200 black hoods, 50 badger fur and 350 dark rosary."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Molten Plate" storageid="3664" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring 300 high guard flag, 300 legionnaire flag and 150 petrified scream."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Robe of the Underworld" storageid="3665" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring 100 Book of Necromantic Rituals and 400 Spiked Iron Ball"/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+		<mission name="Velvet Mantle" storageid="3666" startvalue="0" endvalue="2">
+			<missionstate id="1" description="Bring 450 winged tail, 450 snake skin and 400 boggy dreads."/>
+			<missionstate id="2" description="Mission complete."/>
+		</mission>
+	</quest>	
+</quests>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Pirate Queen" nameDescription="a Pirate Queen" race="blood" experience="5000" speed="368" manacost="0">
+  <health now="10000" max="10000"/>
+  <look type="155 " head="114" body="94" legs="88" feet="0" corpse="6080" addons="1"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" chance="100" min="-190" max="-500"/>
+    <attack name="physical" interval="3000" chance="25" range="7" min="-100" max="-300">
+      <attribute key="shootEffect" value="arrow"/>
+    </attack>
+	<attack name="drunk" interval="2000" chance="16" range="8" target="1" duration="20000">
+			<attribute key="areaEffect" value="stun"/>
+	</attack>
+  </attacks>
+  <defenses armor="30" defense="20">
+    <defense name="healing" interval="1000" chance="30" min="200" max="400">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+	<elements>
+		<element energyPercent="15"/>
+		<element icePercent="10"/>
+		<element firePercent="10"/>
+		<element holyPercent="10"/>
+		<element earthPercent="10"/>
+		<element physicalPercent="15"/>
+		<element deathPercent="-37"/>
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Agrrrr!"/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+    <item id="2148" countmax="60" chance="100000"/><!-- gold coin -->
+    <item id="8873" chance="20000"/><!-- Hibiscus Dress -->
+    <item id="2153" chance="4000"/><!-- Violet Gem -->
+    <item id="2145" countmax="10" chance1="20000" chancemax="0"/><!-- Small Diamond -->
+    <item id="5926" chance="100000"><!-- pirate backpack -->
+      <inside>
+        <item id="2377" chance="1500"/><!-- crow armor -->
+        <item id="2487" chance="600"/><!-- crow armor -->
+        <item id="6100" chance="700"/><!-- lethal lissy's shirt -->
+        <item id="2466" chance="2700"/><!-- Golden Armor -->
+        <item id="6102" chance="800"/><!-- deadeye devious' eye patch -->h
+        <item id="7413" chance="3000"/><!-- Titan Axe -->
+        <item id="2470" chance="3000"/><!-- Golden Legs-->
+      </inside>
+    </item>
+  </loot>
+</monster>

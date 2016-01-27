@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Galdior" script="bank.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+<look type="146" head="95" body="94" legs="132" feet="2" addons="2"/>
+  
+<parameters>
+    <parameter key="module_shop" value="1"/>
+	<parameter key="shop_buyable" value="letter,2597,3;parcel,2595,10;label,2599,5;" />
+	<parameter key="shop_sellable" value="blueberry,2677,3" />
+</parameters>
+</npc>

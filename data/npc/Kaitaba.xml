@@ -1,0 +1,19 @@
+<npc name="Kaitaba" script="default.lua" walkinterval="2000">
+    <health now="150" max="150"/>
+    <look type="104" head="20" body="120" legs="75" feet="13" corpse="2212"/>
+	
+<parameters>
+    <parameter key="message_greet" value="Greetings, traveller |PLAYERNAME|." />
+	<parameter key="message_walkaway" value="Take care!" />
+	
+	<parameter key="module_travel" value="1" />
+	<parameter key="travel_destinations" value="orc,915,699,6,300;pont vanis,648,684,6,350;undead,841,925,3,400;dry hills,420,478,2,320;riwen,460,1364,6,290" />
+	
+	<parameter key="module_keywords" value="1" />
+	<parameter key="keywords" value="go;travel;passage;sail" />
+	<parameter key="keyword_reply1" value="I can take you to {Dry Hills}, {Pont Vanis}, {Tigunda}, {Orc Castle}, {Undead Land} or to {Riwen} for just a small fee." />
+	<parameter key="keyword_reply2" value="I can take you to {Dry Hills}, {Pont Vanis}, {Tigunda}, {Orc Castle}, {Undead Land} or to {Riwen} for just a small fee." />
+	<parameter key="keyword_reply3" value="I can take you to {Dry Hills}, {Pont Vanis}, {Tigunda}, {Orc Castle}, {Undead Land} or to {Riwen} for just a small fee." />
+	<parameter key="keyword_reply4" value="I can take you to {Dry Hills}, {Pont Vanis}, {Tigunda}, {Orc Castle}, {Undead Land} or to {Riwen} for just a small fee." />
+</parameters>
+</npc>

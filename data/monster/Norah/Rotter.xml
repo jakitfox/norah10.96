@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Rotter" nameDescription="rotter" race="fire" experience="100000" speed="380" manacost="0">
+	<health now="60000" max="60000"/>
+	<look type="12" head="50" body="91" legs="31" feet="2" corpse="6068"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="185" attack="175"/>
+		<attack name="death" interval="1000" chance="11" length="8" spread="0" min="200" max="-600">
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>
+		<attack name="death" interval="2000" chance="75" target="0" radius="4" min="-200" max="-700">
+			<attribute key="areaEffect" value="icearea"/>
+		</attack>
+		<attack name="physical" interval="3000" chance="88" radius="5" target="1" min="-100" max="-655">
+			<attribute key="areaEffect" value="groundshaker"/>
+		</attack>
+		<attack name="fire" interval="2000" chance="65" radius="6" target="1" min="-350" max="-500">
+			<attribute key="areaEffect" value="firearea"/>
+			<attribute key="shootEffect" value="fire"/>
+		</attack>
+	</attacks>
+	<defenses armor="60" defense="55">
+		<defense name="healing" interval="4000" chance="60" min="200" max="500">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="4" speedchange="500" duration="7000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="-15"/>
+		<element deathPercent="10"/>
+		<element firePercent="205"/>
+	</elements>
+	<immunities>
+		<immunity earth="1"/>
+		<immunity lifedrain="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Rotter!" yell="1"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+		<item id="2148" countmax="50" chance1="100000" chancemax="0"/>
+		<item id="2150" countmax="20" chance1="5515" chancemax="0"/> 
+		<item id="2520" chance="7000"/> 
+		<item id="7439" chance="7000"/>
+		<item id="2127" chance="7000"/>
+		<item id="7440" chance="7000"/>
+		<item id="2474" chance="8000" /><!-- winged helmet -->
+		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
+		<item id="21700" chance="8000" /><!-- icy culotte -->
+		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
+		<item id="2646" chance="5000" /><!-- golden boots -->
+		<item id="2522" chance="5000" /><!-- great shield -->
+		<item id="18412" chance="8000" /><!-- glacial rod -->
+		<item id="18411" chance="8000" /><!-- muck rod -->
+		<item id="18390" chance="8000" /><!-- wand of defiance -->
+		<item id="18409" chance="8000" /><!-- wand of everblazing -->
+		<item id="16111" chance="5000" /><!-- thorn spitter -->
+		<item id="7455" chance="8000" /><!-- mythril axe -->
+		<item id="7410" chance="8000" /><!-- queens sceptre -->
+		<item id="8884" chance="8000" /><!-- runed sword -->
+		<item id="2160" countmax="10" chance="54875" /><!-- crystal coin -->
+		<item id="2165" chance="7000"/>
+		<item id="2214" chance="7000"/>
+		<item id="9810" chance="7000"/>
+		<item id="2515" chance="7000"/>
+		<item id="2519" chance="7000"/>
+		<item id="2427" chance="7000"/>
+		<item id="2528" chance="7000"/>
+		<item id="2158" chance="7000"/>
+		<item id="2155" chance="7000"/>
+		<item id="2154" chance="7000"/>
+		<item id="2156" chance="7000"/>
+		<item id="2520" chance="7000"/>
+		<item id="7421" chance="7000"/>
+		<item id="8889" chance="11000"/> 
+		<item id="8877" chance="3000"/> 
+		<item id="7431" chance="3000"/>
+		<item id="2452" chance="3000"/>
+		<item id="8929" chance="1000"/>
+		<item id="8928" chance="1000"/>
+		<item id="7417" chance="1000"/>
+    <item id="6529" countmax="49" chance1="10000" chancemax="0"/>
+    <item id="2547" countmax="82" chance1="10000" chancemax="0"/>
+    <item id="7366" countmax="4" chance1="5000" chancemax="0"/>
+    <item id="5954" countmax="2" chance1="5000" chancemax="0"/>
+    <item id="9971" countmax="3" chance1="5000" chancemax="0"/>
+		<item id="1987" chance="100000">
+		<inside>
+			<item id="2158" chance="4300"/> 
+			<item id="2520" chance="7600"/> 
+			<item id="2165" chance="10000"/> 
+		</inside>
+		</item>
+	</loot>
+</monster>

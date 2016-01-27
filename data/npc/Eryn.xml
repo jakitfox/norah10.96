@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Eryn" script="default.lua" walkinterval="2000">
+	<health now="100" max="100"/>
+	<look type="130" head="39" body="122" legs="125" feet="57" addons="0"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. Do you want to buy or sell any amulets?"/>
+		<?xml version="1.0" encoding="UTF-8"?>
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="amulet of loss,2173,50000;" />
+		<parameter key="shop_sellable" value="amulet of loss,2173,45000;platinum amulet,2171,2500" />
+	</parameters>
+</npc>

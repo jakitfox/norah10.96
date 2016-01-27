@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Helnin" script="default.lua" walkinterval="2000">
+	<health now="150" max="150"/>
+	<look type="145" head="76" body="60" legs="96" feet="115" addons="0" corpse="2212"/>
+	<parameters>
+	    <parameter key="message_greet" value="Welcome you wanderer, |PLAYERNAME|." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="steel helmet,2457,580;brass helmet,2460,120;viking helmet,2473,265;plate armor,2463,1200;chain armor,2464,200;brass armor,2465,450;chain legs,2648,80;steel shield,2509,240;plate shield,2510,165;battle axe,2378,235" />
+	</parameters>
+	</npc>
+	

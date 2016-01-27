@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<npc name="Tasior" script="tasior.lua" walkinterval="200" floorchange="0">
+	<health now="1" max="1"/>
+	<look type="132" head="98" body="116" legs="43" feet="95" addons="3"/>
+</npc>

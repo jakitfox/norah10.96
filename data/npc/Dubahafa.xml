@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Dubahafa" script="default.lua" walkinterval="2000">
+    <health now="150" max="150"/>
+    <look type="104" head="20" body="120" legs="75" feet="13" corpse="2212" />
+	
+	<parameters>
+    <parameter key="message_greet" value="Greetings, traveller |PLAYERNAME|." />
+	<parameter key="message_walkaway" value="Take care!" />
+	
+	<parameter key="module_travel" value="1" />
+	<parameter key="travel_destinations" value="pont vanis,648,684,6,500;orc,915,699,6,450;dry hills,420,478,2,350;riwen,460,1364,6,250;nilfgaard,533,315,6,500" />
+
+	<parameter key="module_keywords" value="1" />
+	<parameter key="keywords" value="go;travel;passage;sail" />
+	<parameter key="keyword_reply1" value="You can travel to {Pont Vanis}, {Orc Castle}, {Dry Hills}, {Nilfgaard} or {Riwen}." />
+	<parameter key="keyword_reply2" value="You can travel to {Pont Vanis}, {Orc Castle}, {Dry Hills}, {Nilfgaard} or {Riwen}." />
+	<parameter key="keyword_reply3" value="You can travel to {Pont Vanis}, {Orc Castle}, {Dry Hills}, {Nilfgaard} or {Riwen}." />
+	<parameter key="keyword_reply4" value="You can travel to {Pont Vanis}, {Orc Castle}, {Dry Hills}, {Nilfgaard} or {Riwen}." />
+    </parameters>
+</npc>

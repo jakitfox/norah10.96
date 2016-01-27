@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Etemen" script="bank.lua" walkinterval="2000">
+	<health now="150" max="150"/>
+	<look type="251" head="77" body="114" legs="107" feet="59" addons="2" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="parcel,2595,10;label,2599,5;letter,2597,5" />
+	</parameters>
+</npc>

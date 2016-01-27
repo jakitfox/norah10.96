@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Yodense" nameDescription="Yodense" race="blood" experience="4250" speed="460" manacost="0">
+	<health now="10500" max="10500"/>
+	<look type="408" corpse="13752"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1600" skill="80" attack="60"/>
+		<attack name="physical" interval="5000" chance="38" radius="5" target="1" min="-200" max="-455">
+			<attribute key="areaEffect" value="groundshaker"/>
+		</attack>
+		<attack name="poison" interval="2000" chance="35" range="7" radius="4" target="1" min="-250" max="-350">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="lifedrain" interval="3000" chance="40" length="8" spread="3" min="-180" max="-280">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</attack>
+	</attacks>
+	<defenses armor="60" defense="55">
+		<defense name="healing" interval="1000" chance="34" min="80" max="200">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element energyPercent="15"/>
+		<element icePercent="-10"/>
+		<element physicalPercent="-10"/>
+		<element firePercent="15"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="IIEEH!! Iiih iih ih iiih!!!" yell="1"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2148" countmax="50" chance="100000"/><!-- gold coin -->
+		<item id="2145" countmax="5" chance="5515"/><!-- Small Diamond -->
+		<item id="7588" countmax="3" chance="8515"/><!-- strong health potion -->
+		<item id="7589" countmax="3" chance="8515"/><!-- strong health potion -->
+		<item id="2789" countmax="3" chance="5515"/><!-- brown mushroom -->
+		<item id="2151" chance="6700"/><!--  Talon-->
+		<item id="2438" chance="4700"/><!--  epee-->
+		<item id="13877" chance="4700"/><!--  broken ring of ending -->
+		<item id="7895" chance="3700"/><!-- Lightning Legs-->
+		<item id="13942" chance="3700"/><!--  Yielocks-->
+		<item id="13881" chance="3700"/><!-- Yielowax-->
+		<item id="1987" chance="100000"><!-- bag -->
+			<inside>
+				<item id="2189" chance="5300"/><!-- Wand of Cosmic Energy -->
+				<item id="2164" chance="7600"/><!-- Might Ring -->
+				<item id="10221" chance="6000"/><!-- Shockwave Amulet -->
+				<item id="7889" chance="6000"/><!-- lightning pendant -->
+				<item id="7440" chance="7000"/><!-- Mastermind Potion -->
+				<item id="10221" chance="6000"/><!-- Shockwave Amulet -->
+			</inside>
+		</item>
+	</loot>
+</monster>

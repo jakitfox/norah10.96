@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Tormentor" nameDescription="a tormentor" race="blood" experience="3200" speed="270" manacost="0">
+	<health now="4100" max="2700"/>
+	<look type="245" corpse="6340"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="60" attack="65"/>
+		<attack name="sudden death" interval="3000" chance="100" min="-130" max="-170"/>
+		<attack name="melee" interval="3000" chance="18" range="7" radius="4" target="1" min="-250" max="-400">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="20">
+		<defense name="healing" interval="1000" chance="50" min="60" max="100">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="40" speedchange="360" duration="80000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="20"/>
+		<element energyPercent="20"/>
+		<element icePercent="10"/>
+		<element holyPercent="-25"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+		<immunity death="1"/>
+		<immunity earth="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+      <voice sentence="I will haunt you forever!"/>
+    </voices>
+	<loot>
+		<item id="2152" countmax="10" chance="40564"/><!-- platinum coin -->
+		<item id="6558" countmax="5" chance="29666"/><!-- concentrated demonic blood -->
+		<item id="6300" chance="24298"/><!-- death ring -->
+		<item id="6500" chance="94000"/><!-- demonic essence -->
+		<item id="11223" chance="18285"/><!-- essence of a bad dream -->
+		<item id="2671" chance="25000"/><!-- ham -->
+		<item id="2477" chance="79061"/><!-- knight legs -->
+		<item id="2454" chance="45095"/><!-- war axe -->
+		<item id="6526" chance="64337"/><!-- skeleton decoration -->
+		<item id="5669" chance="65023"/><!-- mysterious voodoo skull -->
+		<item id="11229" chance="85090"/><!-- scythe leg -->
+		<item id="2195" chance="67337"/><!-- boots of haste -->
+		<item id="7418" chance="25000"/><!-- nightmare blade -->
+	</loot>
+</monster>

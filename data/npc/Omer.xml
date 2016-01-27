@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Omer" script="Yala.lua" walkinterval="2000">
+	<health now="100" max="100"/>
+	<look type="251" head="77" body="96" legs="116" feet="94" addons="3"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. What are you doing , in such dangerous place?"/>
+	</parameters>
+</npc>

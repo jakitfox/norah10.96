@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Genor" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="131" head="121" body="30" legs="97" feet="12" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell backpack and bag"/>
+		<parameter key="shop_buyable" value="backpack,1988,30;bag,1987,20;beach backpack,5949,40;beach bag,5950,30;blue backpack,2002,30;blue bag,1995,20;brocade backpack,9774,40;brocade bag,9775,30;camouflage backpack,3940,40;camouflage bag,3939,30;fur backpack,7342,35;fur bag,7343,25;golden backpack,2004,30;golden bag,1997,20;green backpack,1998,30;green bag,1991,20;grey backpack,2003,30;grey bag,1996,20;orange backpack,10519,30;orange bag,10520,20;pirate backpack,5926,30;pirate bag,5927,20;purple backpack,2001,30;purple bag,1994,20;red backpack,2000,30;red bag,1993,20;yellow backpack,1999,30;yellow bag,1992,20"/>
+	</parameters>
+</npc>

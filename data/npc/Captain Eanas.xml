@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Captain Eanas" script="default.lua" walkinterval="2000">
+	<health now="150" max="150"/>
+	<look type="153" head="95" body="76" legs="76" feet="77" corpse="2212" addons="2"/>
+	
+<parameters>
+    <parameter key="message_greet" value="Welcome on board, |PLAYERNAME|. Where can I {sail} you today?" />
+	<parameter key="message_farewell" value="Good bye. Recommend us if you were satisfied with our service." />
+	<parameter key="message_walkaway" value="Good bye then." />
+	
+	<parameter key="module_travel" value="1" />
+	<parameter key="travel_destinations" value="zalavia,1281,519,7,500;vanessa,1035,1280,7,300;zagond,1129,1233,7,250;guzur,1033,1035,7,350;dharel,1091,1045,7,400;wilara,1275,915,7,450" />
+
+	<parameter key="module_keywords" value="1" />
+	<parameter key="keywords" value="go;travel;passage;sail" />
+	<parameter key="keyword_reply1" value="Where do you want to go? To {Zalavia}, {Zagond}, {Guzur}, {Dharel}, {Wilara} or {Vanessa}?" />
+	<parameter key="keyword_reply2" value="Where do you want to go? To {Zalavia}, {Zagond}, {Guzur}, {Dharel}, {Wilara} or {Vanessa}?" />
+	<parameter key="keyword_reply3" value="Where do you want to go? To {Zalavia}, {Zagond}, {Guzur}, {Dharel}, {Wilara} or {Vanessa}?" />
+	<parameter key="keyword_reply4" value="Where do you want to go? To {Zalavia}, {Zagond}, {Guzur}, {Dharel}, {Wilara} or {Vanessa}?" />
+</parameters>
+</npc>

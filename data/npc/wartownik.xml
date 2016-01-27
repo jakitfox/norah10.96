@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Wartownik" script="default.lua" walkinterval="0" lookdir="2">
+	<health now="100" max="100"/>
+	<look type="131" head="27" body="34" legs="104" feet="15" addons="1"/>
+	<parameters>
+		<parameter key="message_greet" value=""/>
+	</parameters>
+</npc>

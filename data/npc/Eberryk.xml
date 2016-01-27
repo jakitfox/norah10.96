@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Eberryk" script="repair_boots.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="128" head="79" body="19" legs="76" feet="3" addons="0"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="bread,2689,4;roll,2690,2;brown bread,2691,3"/>
+	</parameters>
+</npc>

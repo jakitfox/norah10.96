@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raids>
+
+	<!-- Bosses -->
+	<raid name="Demodras" file="demodras.xml" interval2="1440" chance="1" margin="60" enabled="yes"/>
+	<raid name="Ferumbras" file="ferumbras.xml" interval2="1840" chance="1" margin="60" enabled="yes"/>
+	<raid name="Ghazbaran" file="ghazbaran.xml" interval2="1840" chance="1" margin="60" enabled="yes"/>
+	<raid name="Morgaroth" file="morg.xml" interval2="1940" chance="1" margin="60" enabled="yes"/>
+	<raid name="Orshabaal" file="orshabaal.xml" interval2="1940" chance="1" margin="60" enabled="yes"/> 
+	<raid name="The Horned Fox" file="the_horned_fox.xml" interval2="1440" chance="1" margin="60" enabled="yes"/> 
+	<raid name="Necropharus" file="necropharus.xml" interval2="1040" chance="1" margin="60" enabled="yes"/> 
+	<raid name="Massacre" file="massacre.xml" interval2="1940" chance="1" margin="60" enabled="yes"/> 
+	<raid name="Yeti" file="yeti.xml" interval2="1440" chance="1" margin="60" enabled="yes"/>
+	<raid name="The Old Widow" file="widow.xml" interval2="1940" chance="1" margin="60" enabled="yes"/>
+	<raid name="The Imperor" file="imperor.xml" interval2="1940" chance="1" margin="60" enabled="yes"/>
+</raids>

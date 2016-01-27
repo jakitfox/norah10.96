@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Flameborn" nameDescription="a flameborn" experience="2550" speed="360" race="blood" manacost="0">
+	<health now="3500" max="3500"/>
+	<strategy attack="100" defense="0"/>
+	<targetchange speed="0" chance="8"/>
+	<look type="322" corpse="9923"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" chance="100" skill="70" attack="100"/>
+		<attack name="fireball" interval="2000" chance="24" min="-150" max="-175"/>
+		<attack name="soulfire" interval="2000" chance="14"/> 
+	</attacks>
+	<defenses armor="50" defense="55">
+		<defense name="healing" interval="1000" chance="15" min="150" max="230">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="20"/>
+		<element energyPercent="10"/>
+		<element earthPercent="80"/>
+		<element firePercent="40"/>
+		<element deathPercent="-5"/>
+		<element icePercent="-10"/>
+		<element holyPercent="30"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/> 
+	</immunities> 
+	<loot>
+		<item id="2152" countmax="11" chance="100000"/><!-- platinum coin -->
+		<item id="9970" countmax="4" chance="9882"/><!-- small topaz -->
+		<item id="10000" chance="9090"/><!-- demonic essence -->
+		<item id="7439" chance="9034"/><!-- berserk potion -->
+		<item id="7591" chance="33333"/><!-- great health potion -->
+		<item id="11221" chance="20000"/><!-- hellspawn tail -->
+		<item id="9969" chance="56151"/><!-- black skull -->
+		<item id="2477" chance="71030"/><!-- knight legs -->
+		<item id="2475" chance="79086"/><!-- warrior helmet -->
+		<item id="2519" chance="79086"/><!-- crown shield -->
+		<item id="2788" countmax="2" chance="72882"/><!-- Red Mushrooms -->
+		<item id="8473" chance="14090"/><!-- ultimate health potion -->
+		<item id="13298" chance="36086"/><!-- carrot on a stick -->
+		<item id="7421" chance="35003"/><!-- onyx fail -->
+		<item id="11115" chance="29003"/><!-- tribal crest -->
+	</loot>
+</monster>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Gorn" script="bank.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="128" head="95" body="94" legs="132" feet="2" addons="2"/>
+  
+  <parameters>
+	<parameter key="module_keywords" value="1" />
+    <parameter key="keywords" value="name;excalibug" />
+    <parameter key="keyword_reply1" value="My name is Gorn." />
+    <parameter key="keyword_reply2" value="I do not know too much about the sword." />	
+    <parameter key="module_shop" value="1"/>
+	<parameter key="shop_buyable" value="parcel,2595,15;letter,2597,8;label,2599,1;" />
+	<parameter key="shop_sellable" value="blueberry,2677,3" />
+    </parameters>
+</npc>

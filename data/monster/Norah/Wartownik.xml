@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Wartownik" nameDescription="Wartownik" race="fire" experience="10000" speed="0" manacost="0"  lookdir="1">
+	<health now="75000" max="75000"/>
+	<look type="131" head="27" body="34" legs="104" feet="15" addons="1"/>
+	<targetchange interval="2000" chance="10"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="0"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<elements>
+		<element deathPercent="95"/>
+		<element firePercent="30"/>
+		<element icePercent="-10"/>
+		<element holyPercent="30"/>
+	</elements>
+	<immunities>
+		<immunity energy="1"/>
+		<immunity invisible="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+</monster>

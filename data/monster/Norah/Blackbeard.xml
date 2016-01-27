@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Blackbeard" nameDescription="a Blackbeard" experience="3200" speed="360" race="blood" manacost="0">
+	<health now="2450" max="2450" />  
+	<look type="98" corpse="6080" />
+	<targetchange speed="0" chance="8"/>  
+	<strategy attack="100" defense="0"/>
+	<flags>    
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="2"/>
+		<flag staticattack="40"/>
+		<flag runonhealth="0"/>
+	</flags>  
+	<attacks>    
+		<attack name="melee" interval="2000" chance="32" min="-80" max="-120" range="0"/>    
+		<attack name="speed" interval="2000" chance="5" radius="5" target="0" speedchange="-300">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>	
+		<attack name="physical" interval="2000" chance="100" range="7" target="1" min="-180" max="-370">
+			<attribute key="shootEffect" value="THROWINGKNIFE"/>
+		</attack>
+		</attacks>    
+	<defenses armor="25" defense="25">
+		<defense name="healing" interval="2000" chance="20" min="400" max="500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element earthPercent="5"/>
+		<element firePercent="-5"/>
+		<element deathPercent="-15"/>
+		<element icePercent="0"/>
+		<element holyPercent="5"/>
+	</elements>
+	<immunities>
+   		<immunity lifedrain="1"/>
+   		<immunity paralyze="1"/>
+		<immunity poison="1" />
+		<immunity outfit="1" /> 
+		<immunity drunk="1" /> 
+		<immunity invisible="1" />
+	</immunities>   
+	<loot>
+		<item id="2667" countmax="3" chance1="8000"/> <!-- fish -->
+		<item id="2410" countmax="10" chance1="90000" chancemax="0"/> <!-- Throwing Knife -->
+		<item id="2152" countmax="10" chance1="80000" chancemax="0"/> <!-- platinum coins -->
+		<item id="2148" countmax="100" chance1="100000" chancemax="0"/> <!-- gps -->
+		<item id="2424" chance="100"/> <!-- Silver Mace -->
+		<item id="6097" chance="3533"/><!-- hook -->
+		<item id="6126" chance="3533"/><!-- peg leg -->
+		<item id="8473" chance="2700"/> <!-- ultimate health potion -->
+		<item id="5927" chance="100000">
+			<inside>
+				<item id="2123" chance="3000"/> <!-- Ring of the Sky -->
+				<item id="2476" chance="4000"/> <!-- knight armor -->
+				<item id="2195" chance="3733"/><!-- Boots of Haste -->
+				<item id="2488" chance="3533"/><!-- Crown Legs -->
+				<item id="2487" chance="3100"/> <!-- Crown Armor -->
+				<item id="7588" chance="1200"/> <!-- strong health potion -->
+				<item id="6098" chance="3800"/> <!-- eye patch-->
+				<item id="6101" chance="700"/> <!--  ron the ripper's sabre -->
+				<item id="2498" chance="700"/> <!-- Royal Helmet -->
+			</inside>
+		</item>
+	</loot>
+</monster>

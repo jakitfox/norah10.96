@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Gerilia" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="252" head="57" body="50" legs="47" feet="95" addons="2"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="bread,2689,4;ham,2671,8;cheese,2696,5;meat,2666,5;fish,2667,5;"/>
+	</parameters>
+</npc>

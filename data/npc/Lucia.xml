@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Lucia" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="150" head="59" body="1" legs="20" feet="95" addons="3"/>
+	<parameters>
+		<parameter key="message_greet" value="Welcome you wanderer, |PLAYERNAME|." />
+		<parameter key="message_farewell" value="Take care, |PLAYERNAME|!" />
+		<parameter key="message_walkaway" value="Take care!" />  
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="White Mushroom,2787,6;Brown Mushroom,2789,10;Red Mushroom,2788,12;Dragon Ham,2672,25;Fish,2667,5;Egg,2328,2;Ham,2671,5;Meat,2666,3;Salmon,2668,4"/>
+	</parameters>
+</npc>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Astira" script="default.lua" walkinterval="2000">
+	<health now="150" max="150"/>
+	<look type="336" head="98" body="97" legs="96" feet="40" addons="0" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="sword ring,2207,500;power ring,2203,100;energy ring,2167,2000;dwarven ring,2213,2000;club ring,2209,500;axe ring,2208,500;scraf,2661,15;stone skin amulet,2197,5000,5;protection amulet,2200,700;dragon necklace,2201,1000;ring of healing,2214,2000;life ring,2168,900;stealth ring,2165,200;time ring,2169,2000;" />
+		<parameter key="shop_sellable" value="ring of the sky,2123,30000;demonbone amulet,2136,32000;beetle necklace,11374,1500;wailing widow necklace,11329,3000;terra amulet,7887,1500;shockwave amulet,10221,3000;leviathan's amulet,10220,3000;lightning pendant,7889,1500;silver amulet,2170,50;bronze amulet,2172,50;garlic necklace,2199,50;protection amulet,2200,100;magma amulet,7890,1500;emerald bangle,2127,800;death ring,6300,1000;" />
+	</parameters>
+</npc>

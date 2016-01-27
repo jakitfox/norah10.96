@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<npc name="Egon" script="mount.lua" walkinterval="50000" floorchange="0">
+	<health now="1000" max="1000"/>
+	<look type="128" head="116" body="39" legs="48" feet="97" addons="2"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|.I have many {mounts} to sell for you!"/>
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="mounts;mount" />
+		<parameter key="keyword_reply1" value="I bet you know my name" />
+		<parameter key="keyword_reply2" value="I bet you know my name" />
+	</parameters>
+</npc>

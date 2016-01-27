@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalevents>
+	<globalevent type="startup" name="ServerStartup" script="startup.lua"/>
+	<globalevent type="record" name="PlayerRecord" script="record.lua"/>
+	<globalevent name="Server Save" time="05:55:00" script="serversave.lua" />
+	<globalevent name="RentThink" interval="15000" script="checkmount.lua"/>
+	<!-- Event -->
+	<globalevent name="event calendar" interval="60000" script="event/event_calendar.lua"/>
+	
+	<!-- Demon Oak Quest -->
+	<globalevent name="DemonOakVoices" interval="15000" script="demon oak quest/voices.lua"/>
+	
+</globalevents>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Mower" script="gravedigger.lua" walkinterval="2000" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="130" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+    <parameters>
+		<parameter key="message_greet" value="Welcome |PLAYERNAME|, maybe you want to help me in Gravedigger's {mission}"/>
+    </parameters>
+</npc>

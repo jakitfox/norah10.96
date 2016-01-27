@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Bertry" script="satan.lua" walkinterval="2000" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="130" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+    <parameters>
+		<parameter key="message_greet" value="Welcome |PLAYERNAME|. I dont have much time , I need to stop {Satan} somehow."/>
+		<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="name;magic longsword;job" />
+		<parameter key="keyword_reply1" value="I bet you know my name" />
+		<parameter key="keyword_reply2" value="Theres a legends abaut him. There's a rumor , that you need to collect some parts of the body from lords of hell." />
+		<parameter key="keyword_reply3" value="I used to be mage , but this wicked Ferumbras took all my power" />
+    </parameters>
+</npc>

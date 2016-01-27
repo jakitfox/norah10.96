@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Dwarf Soldier" nameDescription="a dwarf soldier" race="blood" experience="0" speed="170" manacost="360">
+	<health now="135" max="135"/>
+	<look type="71" corpse="0"/>
+	<targetchange interval="5000" chance="8"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<defenses armor="9" defense="20"/>
+	<voices interval="5000" chance="10">
+		<voice sentence="Hail Durin!"/>
+	</voices>
+<script>
+                <event name="TWDDeath"/>
+        </script>
+</monster>

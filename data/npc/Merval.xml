@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Mistrok" script="gnome1.lua" walkinterval="0" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="133" head="98" body="116" legs="43" feet="95" addons="3"/>
+	<parameters>
+		<parameter key="module_keywords" value="1" />
+		<parameter key="message_greet" value="Greetings. Are you interested in {adventures}?" />
+
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="teleport crystal,18457,150" />
+	</parameters>
+</npc>
