@@ -5642,18 +5642,18 @@
 		<monster name="Elf" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="326" centery="588" centerz="7" radius="2">
-		<npc name="wartownik" x="-2" y="-2" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="-1" y="-2" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="1" y="-2" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="2" y="-2" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="-2" y="0" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="-1" y="0" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="1" y="0" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="2" y="0" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="-2" y="2" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="-1" y="2" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="1" y="2" z="7" spawntime="60" direction="0" />
-		<npc name="wartownik" x="2" y="2" z="7" spawntime="60" direction="0" />
+		<monster name="Wartownik" x="-2" y="-2" z="7" spawntime="60" />
+		<monster name="Wartownik" x="-1" y="-2" z="7" spawntime="60" />
+		<monster name="Wartownik" x="1" y="-2" z="7" spawntime="60" />
+		<monster name="Wartownik" x="2" y="-2" z="7" spawntime="60" />
+		<monster name="Wartownik" x="-2" y="0" z="7" spawntime="60" />
+		<monster name="Wartownik" x="-1" y="0" z="7" spawntime="60" />
+		<monster name="Wartownik" x="1" y="0" z="7" spawntime="60" />
+		<monster name="Wartownik" x="2" y="0" z="7" spawntime="60" />
+		<monster name="Wartownik" x="-2" y="2" z="7" spawntime="60" />
+		<monster name="Wartownik" x="-1" y="2" z="7" spawntime="60" />
+		<monster name="Wartownik" x="1" y="2" z="7" spawntime="60" />
+		<monster name="Wartownik" x="2" y="2" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="637" centery="589" centerz="7" radius="1">
 		<npc name="Thorthun" x="-1" y="0" z="7" spawntime="60" direction="2" />
@@ -16730,23 +16730,43 @@
 	<spawn centerx="423" centery="502" centerz="10" radius="2">
 		<monster name="Hero" x="2" y="0" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="653" centery="502" centerz="10" radius="1" />
-	<spawn centerx="665" centery="502" centerz="10" radius="1" />
+	<spawn centerx="653" centery="502" centerz="10" radius="1">
+		<monster name="Bretzecutioner" x="1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="665" centery="502" centerz="10" radius="1">
+		<monster name="Zanakeph" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="409" centery="503" centerz="10" radius="2" />
-	<spawn centerx="635" centery="504" centerz="10" radius="1" />
-	<spawn centerx="640" centery="504" centerz="10" radius="1" />
-	<spawn centerx="645" centery="504" centerz="10" radius="1" />
-	<spawn centerx="669" centery="504" centerz="10" radius="1" />
+	<spawn centerx="635" centery="504" centerz="10" radius="1">
+		<monster name="Hemming" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="640" centery="504" centerz="10" radius="1">
+		<monster name="Tormentor" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="645" centery="504" centerz="10" radius="1">
+		<monster name="Flameborn" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="669" centery="504" centerz="10" radius="1">
+		<monster name="Bruise Payne" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="674" centery="504" centerz="10" radius="1">
 		<monster name="The Many" x="0" y="1" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="679" centery="504" centerz="10" radius="1">
 		<monster name="The Noxious Spawn" x="0" y="1" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="684" centery="504" centerz="10" radius="1" />
-	<spawn centerx="650" centery="505" centerz="10" radius="1" />
-	<spawn centerx="655" centery="505" centerz="10" radius="1" />
-	<spawn centerx="664" centery="505" centerz="10" radius="1" />
+	<spawn centerx="684" centery="504" centerz="10" radius="1">
+		<monster name="Gorgo" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="650" centery="505" centerz="10" radius="1">
+		<monster name="Fazzrah" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="655" centery="505" centerz="10" radius="1">
+		<monster name="Tromphonyte" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="664" centery="505" centerz="10" radius="1">
+		<monster name="Sulphur Scuttler" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="429" centery="510" centerz="10" radius="2">
 		<monster name="Priestess" x="0" y="-1" z="10" spawntime="60" />
 		<monster name="Hero" x="-2" y="0" z="10" spawntime="60" />
@@ -16760,11 +16780,21 @@
 	<spawn centerx="645" centery="514" centerz="10" radius="1">
 		<monster name="The Bloodweb" x="0" y="0" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="650" centery="514" centerz="10" radius="1" />
-	<spawn centerx="655" centery="514" centerz="10" radius="1" />
-	<spawn centerx="664" centery="514" centerz="10" radius="1" />
-	<spawn centerx="669" centery="514" centerz="10" radius="1" />
-	<spawn centerx="674" centery="514" centerz="10" radius="1" />
+	<spawn centerx="650" centery="514" centerz="10" radius="1">
+		<monster name="Ribstride" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="655" centery="514" centerz="10" radius="1">
+		<monster name="Fleshcrawler" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="664" centery="514" centerz="10" radius="1">
+		<monster name="Paiz The Pauperizer" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="669" centery="514" centerz="10" radius="1">
+		<monster name="Ethershreck" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="674" centery="514" centerz="10" radius="1">
+		<monster name="Kerberos" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="679" centery="514" centerz="10" radius="1">
 		<monster name="Leviathan" x="0" y="0" z="10" spawntime="60" />
 	</spawn>
