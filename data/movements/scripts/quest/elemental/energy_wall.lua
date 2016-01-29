@@ -14,6 +14,7 @@ local v = config[item.actionid]
 
 if v and player:getStorageValue(v.storage) == 1 then
 	player:teleportTo(fromPosition)
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
     player:say("You haven\'t completed all the rooms!", TALKTYPE_MONSTER_SAY)
 end
 return true
