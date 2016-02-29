@@ -260,4 +260,164 @@
 	<house name="Nilfgaard 44" houseid="304" entryx="583" entryy="349" entryz="7" rent="0" townid="3" size="18" />
 	<house name="Nilfgaard 45" houseid="305" entryx="568" entryy="349" entryz="7" rent="0" townid="3" size="66" />
 	<house name="Nilfgaard 46" houseid="306" entryx="572" entryy="340" entryz="7" rent="0" townid="3" size="16" />
+	<house name="Mothrim 1" houseid="307" entryx="999" entryy="983" entryz="7" rent="0" townid="2" size="16" />
+	<house name="Mothrim 2" houseid="308" entryx="994" entryy="980" entryz="7" rent="0" townid="2" size="27" />
+	<house name="Mothrim 3" houseid="309" entryx="978" entryy="976" entryz="6" rent="0" townid="2" size="32" />
+	<house name="Mothrim 4" houseid="310" entryx="998" entryy="968" entryz="7" rent="0" townid="2" size="13" />
+	<house name="Mothrim 5" houseid="311" entryx="981" entryy="956" entryz="6" rent="0" townid="2" size="24" />
+	<house name="Snowhill 1" houseid="312" entryx="1278" entryy="1433" entryz="7" rent="0" townid="4" size="44" />
+	<house name="Snowhill 2" houseid="313" entryx="1281" entryy="1434" entryz="7" rent="0" townid="4" size="24" />
+	<house name="Snowhill 3" houseid="314" entryx="1268" entryy="1404" entryz="7" rent="0" townid="4" size="41" />
+	<house name="Snowhill 4" houseid="315" entryx="1289" entryy="1401" entryz="7" rent="0" townid="4" size="21" />
+	<house name="Snowhill 5" houseid="316" entryx="1285" entryy="1409" entryz="7" rent="0" townid="4" size="22" />
+	<house name="Snowhill 6" houseid="317" entryx="1277" entryy="1411" entryz="6" rent="0" townid="4" size="45" />
+	<house name="Snowhill 7" houseid="318" entryx="1265" entryy="1406" entryz="6" rent="0" townid="4" size="62" />
+	<house name="Snowhill 8" houseid="319" entryx="1266" entryy="1399" entryz="6" rent="0" townid="4" size="69" />
+	<house name="Snowhill 9" houseid="320" entryx="1287" entryy="1390" entryz="6" rent="0" townid="4" size="40" />
+	<house name="Snowhill 10" houseid="321" entryx="1335" entryy="1412" entryz="6" rent="0" townid="4" size="61" />
+	<house name="Snowhill 11" houseid="322" entryx="1261" entryy="1397" entryz="5" rent="0" townid="4" size="37" />
+	<house name="Arvales Alley 1" houseid="323" entryx="512" entryy="1366" entryz="7" rent="0" townid="5" size="16" />
+	<house name="Arvales Alley 2" houseid="324" entryx="523" entryy="1372" entryz="7" rent="0" townid="5" size="30" />
+	<house name="Arvales Alley 3" houseid="325" entryx="512" entryy="1379" entryz="7" rent="0" townid="5" size="4" />
+	<house name="Arvales Alley 4" houseid="326" entryx="516" entryy="1379" entryz="7" rent="0" townid="5" size="4" />
+	<house name="Arvales Alley 5" houseid="327" entryx="512" entryy="1380" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 6" houseid="328" entryx="516" entryy="1380" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 7" houseid="329" entryx="523" entryy="1379" entryz="7" rent="0" townid="5" size="15" />
+	<house name="Arvales Alley 8" houseid="330" entryx="523" entryy="1383" entryz="7" rent="0" townid="5" size="15" />
+	<house name="Arvales Alley 9" houseid="331" entryx="516" entryy="1379" entryz="6" rent="0" townid="5" size="12" />
+	<house name="Arvales Alley 10" houseid="332" entryx="515" entryy="1381" entryz="6" rent="0" townid="5" size="16" />
+	<house name="Arvales Alley 11" houseid="333" entryx="527" entryy="1378" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 12" houseid="334" entryx="527" entryy="1382" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 13" houseid="335" entryx="527" entryy="1386" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 14" houseid="336" entryx="537" entryy="1378" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 15" houseid="337" entryx="537" entryy="1382" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 16" houseid="338" entryx="537" entryy="1386" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 17" houseid="339" entryx="536" entryy="1386" entryz="6" rent="0" townid="5" size="13" />
+	<house name="Arvales Alley 18" houseid="340" entryx="536" entryy="1382" entryz="6" rent="0" townid="5" size="13" />
+	<house name="Arvales Alley 19" houseid="341" entryx="536" entryy="1378" entryz="6" rent="0" townid="5" size="13" />
+	<house name="Arvales Alley 20" houseid="342" entryx="543" entryy="1383" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 21" houseid="343" entryx="547" entryy="1383" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 22" houseid="344" entryx="551" entryy="1383" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 23" houseid="345" entryx="551" entryy="1381" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 24" houseid="346" entryx="547" entryy="1381" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 25" houseid="347" entryx="543" entryy="1381" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 26" houseid="348" entryx="537" entryy="1370" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 27" houseid="349" entryx="539" entryy="1368" entryz="7" rent="0" townid="5" size="17" />
+	<house name="Arvales Alley 28" houseid="350" entryx="527" entryy="1369" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 29" houseid="351" entryx="527" entryy="1365" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 30" houseid="352" entryx="527" entryy="1361" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 31" houseid="353" entryx="535" entryy="1355" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Arvales Alley 32" houseid="354" entryx="539" entryy="1355" entryz="7" rent="0" townid="5" size="15" />
+	<house name="Arvales Alley 33" houseid="355" entryx="543" entryy="1355" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Arvales Alley 34" houseid="356" entryx="538" entryy="1359" entryz="6" rent="0" townid="5" size="18" />
+	<house name="Arvales Alley 35" houseid="357" entryx="537" entryy="1359" entryz="6" rent="0" townid="5" size="7" />
+	<house name="Arvales Alley 36" houseid="358" entryx="537" entryy="1366" entryz="6" rent="0" townid="5" size="13" />
+	<house name="Tornel 1" houseid="359" entryx="563" entryy="1381" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Tornel 2" houseid="360" entryx="546" entryy="1371" entryz="7" rent="0" townid="5" size="65" />
+	<house name="Tornel 3" houseid="361" entryx="561" entryy="1371" entryz="7" rent="0" townid="5" size="65" />
+	<house name="Tornel 4" houseid="362" entryx="512" entryy="1359" entryz="7" rent="0" townid="5" size="24" />
+	<house name="Tornel 5" houseid="363" entryx="550" entryy="1351" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Tornel 6" houseid="364" entryx="559" entryy="1351" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Tornel 7" houseid="365" entryx="558" entryy="1349" entryz="7" rent="0" townid="5" size="26" />
+	<house name="Tornel 8" houseid="366" entryx="550" entryy="1349" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Tornel 9" houseid="367" entryx="552" entryy="1350" entryz="6" rent="0" townid="5" size="23" />
+	<house name="Tornel 10" houseid="368" entryx="554" entryy="1349" entryz="6" rent="0" townid="5" size="36" />
+	<house name="Tornel 11" houseid="369" entryx="556" entryy="1350" entryz="6" rent="0" townid="5" size="23" />
+	<house name="Tear Alley #1" houseid="370" entryx="540" entryy="1337" entryz="7" rent="0" townid="5" size="25" />
+	<house name="Tear Alley #2" houseid="371" entryx="540" entryy="1324" entryz="7" rent="0" townid="5" size="18" />
+	<house name="Tear Alley #3" houseid="372" entryx="540" entryy="1320" entryz="7" rent="0" townid="5" size="33" />
+	<house name="Tear Alley #4" houseid="373" entryx="549" entryy="1320" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Tear Alley #5" houseid="374" entryx="554" entryy="1320" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Tear Alley #6" houseid="375" entryx="569" entryy="1312" entryz="7" rent="0" townid="5" size="19" />
+	<house name="Tear Alley #7" houseid="376" entryx="569" entryy="1317" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Tear Alley #8" houseid="377" entryx="559" entryy="1317" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Tear Alley #9" houseid="378" entryx="559" entryy="1312" entryz="7" rent="0" townid="5" size="19" />
+	<house name="Tear Alley #10" houseid="379" entryx="557" entryy="1310" entryz="7" rent="0" townid="5" size="13" />
+	<house name="Tear Alley #11" houseid="380" entryx="550" entryy="1310" entryz="7" rent="0" townid="5" size="15" />
+	<house name="Tear Alley #12" houseid="381" entryx="546" entryy="1310" entryz="7" rent="0" townid="5" size="15" />
+	<house name="Tear Alley #13" houseid="382" entryx="542" entryy="1310" entryz="7" rent="0" townid="5" size="15" />
+	<house name="Elit House 1" houseid="383" entryx="510" entryy="1316" entryz="7" rent="0" townid="5" size="16" />
+	<house name="Elit House 2" houseid="384" entryx="512" entryy="1314" entryz="7" rent="0" townid="5" size="8" />
+	<house name="Elit House 3" houseid="385" entryx="512" entryy="1330" entryz="6" rent="0" townid="5" size="13" />
+	<house name="Elit House 4" houseid="386" entryx="514" entryy="1330" entryz="6" rent="0" townid="5" size="13" />
+	<house name="Emer 1" houseid="387" entryx="519" entryy="1348" entryz="7" rent="0" townid="5" size="16" />
+	<house name="Emer 2" houseid="388" entryx="519" entryy="1347" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Emer 3" houseid="389" entryx="519" entryy="1343" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Emer 4" houseid="390" entryx="509" entryy="1350" entryz="6" rent="0" townid="5" size="16" />
+	<house name="Emer 5" houseid="391" entryx="510" entryy="1350" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Emer 6" houseid="392" entryx="514" entryy="1347" entryz="6" rent="0" townid="5" size="16" />
+	<house name="Emer 7" houseid="393" entryx="513" entryy="1346" entryz="6" rent="0" townid="5" size="7" />
+	<house name="Emer 8" houseid="394" entryx="507" entryy="1344" entryz="6" rent="0" townid="5" size="23" />
+	<house name="Emer 9" houseid="395" entryx="508" entryy="1345" entryz="5" rent="0" townid="5" size="26" />
+	<house name="Emer 10" houseid="396" entryx="508" entryy="1348" entryz="5" rent="0" townid="5" size="14" />
+	<house name="Emer 11" houseid="397" entryx="509" entryy="1348" entryz="5" rent="0" townid="5" size="7" />
+	<house name="Castle 1" houseid="398" entryx="503" entryy="1391" entryz="7" rent="0" townid="5" size="141" />
+	<house name="Castle 2" houseid="399" entryx="498" entryy="1287" entryz="7" rent="0" guildhall="true" townid="5" size="192" />
+	<house name="Erlingo Alley #1" houseid="400" entryx="480" entryy="1286" entryz="7" rent="0" townid="5" size="21" />
+	<house name="Erlingo Alley #2" houseid="401" entryx="470" entryy="1286" entryz="7" rent="0" townid="5" size="47" />
+	<house name="Erlingo Alley #3" houseid="402" entryx="464" entryy="1289" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #4" houseid="403" entryx="464" entryy="1292" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #5" houseid="404" entryx="464" entryy="1295" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #6" houseid="405" entryx="464" entryy="1289" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #7" houseid="406" entryx="464" entryy="1292" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #8" houseid="407" entryx="464" entryy="1295" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #9" houseid="408" entryx="459" entryy="1304" entryz="7" rent="0" townid="5" size="26" />
+	<house name="Erlingo Alley #10" houseid="409" entryx="472" entryy="1291" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Erlingo Alley #11" houseid="410" entryx="476" entryy="1291" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Erlingo Alley #12" houseid="411" entryx="472" entryy="1301" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Erlingo Alley #13" houseid="412" entryx="477" entryy="1294" entryz="6" rent="0" townid="5" size="11" />
+	<house name="Erlingo Alley #14" houseid="413" entryx="475" entryy="1298" entryz="6" rent="0" townid="5" size="7" />
+	<house name="Erlingo Alley #15" houseid="414" entryx="485" entryy="1296" entryz="7" rent="0" townid="5" size="4" />
+	<house name="Erlingo Alley #16" houseid="415" entryx="489" entryy="1296" entryz="7" rent="0" townid="5" size="4" />
+	<house name="Erlingo Alley #17" houseid="416" entryx="495" entryy="1300" entryz="7" rent="0" townid="5" size="6" />
+	<house name="Erlingo Alley #18" houseid="417" entryx="488" entryy="1305" entryz="7" rent="0" townid="5" size="17" />
+	<house name="Erlingo Alley #19" houseid="418" entryx="492" entryy="1310" entryz="7" rent="0" townid="5" size="20" />
+	<house name="Erlingo Alley #20" houseid="419" entryx="490" entryy="1305" entryz="6" rent="0" townid="5" size="26" />
+	<house name="Erlingo Alley #21" houseid="420" entryx="491" entryy="1304" entryz="6" rent="0" townid="5" size="22" />
+	<house name="Erlingo Alley #22" houseid="421" entryx="491" entryy="1300" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #23" houseid="422" entryx="491" entryy="1296" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #24" houseid="423" entryx="489" entryy="1296" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #25" houseid="424" entryx="489" entryy="1300" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #26" houseid="425" entryx="474" entryy="1315" entryz="7" rent="0" townid="5" size="62" />
+	<house name="Erlingo Alley #27" houseid="426" entryx="466" entryy="1315" entryz="7" rent="0" townid="5" size="94" />
+	<house name="Erlingo Alley #28" houseid="427" entryx="483" entryy="1325" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Erlingo Alley #29" houseid="428" entryx="483" entryy="1323" entryz="6" rent="0" townid="5" size="14" />
+	<house name="Erlingo Alley #30" houseid="429" entryx="484" entryy="1334" entryz="7" rent="0" townid="5" size="43" />
+	<house name="Erlingo Alley #31" houseid="430" entryx="486" entryy="1335" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #32" houseid="431" entryx="494" entryy="1335" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Erlingo Alley #33" houseid="432" entryx="496" entryy="1339" entryz="6" rent="0" townid="5" size="31" />
+	<house name="Erlingo Alley #34" houseid="433" entryx="486" entryy="1345" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #35" houseid="434" entryx="491" entryy="1345" entryz="7" rent="0" townid="5" size="11" />
+	<house name="Erlingo Alley #36" houseid="435" entryx="497" entryy="1345" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Erlingo Alley #37" houseid="436" entryx="491" entryy="1325" entryz="7" rent="0" townid="5" size="12" />
+	<house name="Erlingo Alley #38" houseid="437" entryx="497" entryy="1325" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #39" houseid="438" entryx="491" entryy="1324" entryz="7" rent="0" townid="5" size="12" />
+	<house name="Erlingo Alley #40" houseid="439" entryx="497" entryy="1324" entryz="7" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #41" houseid="440" entryx="491" entryy="1324" entryz="6" rent="0" townid="5" size="12" />
+	<house name="Erlingo Alley #42" houseid="441" entryx="491" entryy="1325" entryz="6" rent="0" townid="5" size="12" />
+	<house name="Erlingo Alley #43" houseid="442" entryx="497" entryy="1325" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Erlingo Alley #44" houseid="443" entryx="497" entryy="1324" entryz="6" rent="0" townid="5" size="10" />
+	<house name="Battory Alley #1" houseid="444" entryx="471" entryy="1323" entryz="7" rent="0" townid="5" size="56" />
+	<house name="Battory Alley #2" houseid="445" entryx="472" entryy="1332" entryz="7" rent="0" townid="5" size="16" />
+	<house name="Battory Alley #3" houseid="446" entryx="472" entryy="1337" entryz="7" rent="0" townid="5" size="16" />
+	<house name="Battory Alley #4" houseid="447" entryx="472" entryy="1342" entryz="7" rent="0" townid="5" size="16" />
+	<house name="Battory Alley #5" houseid="448" entryx="472" entryy="1332" entryz="6" rent="0" townid="5" size="16" />
+	<house name="Battory Alley #6" houseid="449" entryx="472" entryy="1337" entryz="6" rent="0" townid="5" size="16" />
+	<house name="Battory Alley #7" houseid="450" entryx="472" entryy="1342" entryz="6" rent="0" townid="5" size="16" />
+	<house name="Battory Alley #8" houseid="451" entryx="472" entryy="1354" entryz="7" rent="0" townid="5" size="44" />
+	<house name="Battory Alley #9" houseid="452" entryx="461" entryy="1372" entryz="7" rent="0" townid="5" size="50" />
+	<house name="Battory Alley #10" houseid="453" entryx="465" entryy="1371" entryz="7" rent="0" townid="5" size="19" />
+	<house name="Battory Alley #11" houseid="454" entryx="464" entryy="1376" entryz="7" rent="0" townid="5" size="13" />
+	<house name="Battory Alley #12" houseid="455" entryx="471" entryy="1382" entryz="7" rent="0" townid="5" size="12" />
+	<house name="Battory Alley #13" houseid="456" entryx="476" entryy="1377" entryz="7" rent="0" townid="5" size="13" />
+	<house name="Battory Alley #14" houseid="457" entryx="501" entryy="1376" entryz="7" rent="0" townid="5" size="42" />
+	<house name="Battory Alley #15" houseid="458" entryx="503" entryy="1370" entryz="7" rent="0" townid="5" size="21" />
+	<house name="Battory Alley #16" houseid="459" entryx="499" entryy="1372" entryz="6" rent="0" townid="5" size="13" />
+	<house name="Battory Alley #17" houseid="460" entryx="498" entryy="1373" entryz="6" rent="0" townid="5" size="28" />
+	<house name="Battory Alley #18" houseid="461" entryx="508" entryy="1359" entryz="7" rent="0" townid="5" size="23" />
+	<house name="Battory Alley #19" houseid="462" entryx="505" entryy="1361" entryz="6" rent="0" townid="5" size="18" />
+	<house name="Battory Alley #20" houseid="463" entryx="505" entryy="1359" entryz="5" rent="0" townid="5" size="8" />
+	<house name="Battory Alley #21" houseid="464" entryx="495" entryy="1357" entryz="7" rent="0" townid="5" size="15" />
+	<house name="Battory Alley #22" houseid="465" entryx="498" entryy="1363" entryz="6" rent="0" townid="5" size="16" />
+	<house name="Battory Alley #23" houseid="466" entryx="499" entryy="1347" entryz="7" rent="0" townid="5" size="14" />
 </houses>
