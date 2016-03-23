@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<raid>
-<announce delay="1000" type="warning" message="Necromancer's boss appear in our world! Keep watch, Your life isn't safe anymore!" />
-	<singlespawn delay="40000" name="Necropharus" x="751" y="545" z="8"/>
-</raid>
-

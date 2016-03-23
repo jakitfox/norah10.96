@@ -259,7 +259,8 @@ Storage = {
 		Storage02 = 3711, --zeJoinedCountGlobalStorage
 		Storage03 = 3712,
 		Storage04 = 3713,
-	
 	}
+	-- 3300 - uid schody
+	
 	
 }

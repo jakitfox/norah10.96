@@ -6,12 +6,12 @@ local page = {
 		-- "!antibot",
 		"!buyhouse",
 		"!leavehouse",
-		"!bug - report a bug",
+		--"!bug - report a bug",
 	},
 	["event"] = {
-		"!quit - leave event area",
+		--"!quit - leave event area",
 		"!events - see today's schedule",
-		"!dhelp - dungeon system commands(event channel only)"
+		--"!dhelp - dungeon system commands(event channel only)"
 	},
 	["staff"] = {"/a",
 "/t",

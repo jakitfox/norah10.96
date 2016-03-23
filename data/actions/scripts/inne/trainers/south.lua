@@ -1,4 +1,4 @@
-function onUse(cid, item, target, fromPosition, itemEx, toPosition)
+function onUse(cid, item, fromPosition, itemEx, toPosition)
 
     -- Define positions.
     local charPos = getCreaturePosition(cid)
@@ -31,12 +31,9 @@ function onUse(cid, item, target, fromPosition, itemEx, toPosition)
         doTeleportThing(cid, doorPos)
         doMoveCreature(cid, oldDir)
         -- Remove training monks.
-		local specs, spec = Game.getSpectators(Position(charPos), false, false, 0, 1, 1, 1)
-		for i = 1, #specs do
-			spec = specs[i]
-			spec:remove()
-		end
-		-- Send magic effect.
+        doRemoveCreature(getThingfromPos({x = monkOne.x, y = monkOne.y, z = monkOne.z, stackpos = 253}).uid)
+        doRemoveCreature(getThingfromPos({x = monkTwo.x, y = monkTwo.y, z = monkTwo.z, stackpos = 253}).uid)
+        -- Send magic effect.
         doSendMagicEffect(monkOne, CONST_ME_YALAHARIGHOST)
         doSendMagicEffect(monkTwo, CONST_ME_YALAHARIGHOST)
     end

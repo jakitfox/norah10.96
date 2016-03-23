@@ -31,14 +31,14 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
         doTeleportThing(cid, doorPos)
         doMoveCreature(cid, oldDir)
         -- Remove training monks.
-		local specs, spec = Game.getSpectators(Position(charPos), false, false, 1, 0, 1, 1)
-		for i = 1, #specs do
-			spec = specs[i]
-			spec:remove()
-		end
+        doRemoveCreature(getThingfromPos({x = monkOne.x, y = monkOne.y, z = monkOne.z, stackpos = 253}).uid)
+        doRemoveCreature(getThingfromPos({x = monkTwo.x, y = monkTwo.y, z = monkTwo.z, stackpos = 253}).uid)
         -- Send magic effect.
-        doSendMagicEffect(monkOne, CONST_ME_YALAHARIGHOST)
-        doSendMagicEffect(monkTwo, CONST_ME_YALAHARIGHOST)
+        doSendMagicEffect(monkOne, 65)
+        doSendMagicEffect(monkTwo, 65)
+        -- Define last character.
+        local charName = getCreatureName(cid)
+        doSetItemSpecialDescription(getThingfromPos(doorPos).uid, "Last one to use this booth was player:\n" .. charName .. ".")
     end
     return TRUE
 

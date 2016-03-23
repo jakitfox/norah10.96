@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<raid>
-<announce delay="1000" type="warning" message="This isn't a legend! Yeti exists!" />
-
-<singlespawn delay="10000" name="Yeti" x="1043" y="1270" z="7" />
-</raid>

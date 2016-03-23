@@ -21,7 +21,7 @@ function onSpeak(player, type, message)
 			local targetName = string.sub(message, 7)
 			local target = Player(targetName)
 			if target ~= nil then
-				if player:getAccountType() > target:getAccountType() then
+				if playerAccountType > target:getAccountType() then
 					if not target:getCondition(CONDITION_CHANNELMUTEDTICKS, CONDITIONID_DEFAULT, CHANNEL_HELP) then
 						target:addCondition(muted)
 						sendChannelMessage(CHANNEL_HELP, TALKTYPE_CHANNEL_R1, target:getName() .. " has been muted by " .. player:getName() .. " for using Help Channel inappropriately.")

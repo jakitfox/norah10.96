@@ -26,11 +26,10 @@ function onLogin(player)
 		loginStr = string.format("Your last visit was on %s.", os.date("%a %b %d %X %Y", player:getLastLoginSaved()))
 	end
 	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
-	player:openChannel(32)
-	
+
 	-- Stamina
 	nextUseStaminaTime[player.uid] = 0
-	
+
 	-- Promotion
 	local vocation = player:getVocation()
 	local promotion = vocation:getPromotion()
@@ -44,13 +43,7 @@ function onLogin(player)
 	elseif not promotion then
 		player:setVocation(vocation:getDemotion())
 	end
-	
-	-- Rewards notice
- 	local rewards = #player:getRewardList()
- 	if(rewards > 0) then
- 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("You have %d %s in your reward chest.", rewards, rewards > 1 and "rewards" or "reward"))
- 	end
- 
+
 	-- Events
     player:registerEvent("PlayerDeath")
 	player:registerEvent("DropLoot")

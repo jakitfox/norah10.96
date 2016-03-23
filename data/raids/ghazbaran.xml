@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<raid>
-<announce delay="1000" type="warning" message="An ancient evil is awakening in the mines beneath Snowhill." />
-<announce delay="30000" type="Event" message="Demonic entities are entering the mortal realm in the Snowhill mines." />
-<announce delay="60000" type="Event" message="The demonic master has revealed itself in the mines of Snowhill." />
-
-<singlespawn delay="60000" name="ghazbaran" x="1294" y="1190" z="11" />
-
-</raid>

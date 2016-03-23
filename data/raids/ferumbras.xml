@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<raid>
-	<announce delay="1000" type="warning" message="Lord of the mages warn You poor players! He want kill You all! Watch Your back!" />
-	<announce delay="4000" type="warning" message="Oh no! Ferumbras is here! Only choosens can kill him!" />
-	<singlespawn delay="80000" name="Ferumbras" x="497" y="292" z="4"/>
-</raid>

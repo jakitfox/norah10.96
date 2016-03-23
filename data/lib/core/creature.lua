@@ -47,7 +47,6 @@ function Creature.isPlayer(self)
 	return false
 end
 
-
 function Creature.isTile(self)
 	return false
 end

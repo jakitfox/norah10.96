@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<raid>
-	<announce delay="1000" type="warning" message="Arch demon want Your blood! He's ponder visit to the this world!" />
-	<announce delay="2000" type="warning" message="Run! Run! Morgaroth! Yes! This arch demon comes to kill You all!" />
-	<singlespawn delay="40000" name="Morgaroth" x="756" y="853" z="12"/>
-</raid>
-

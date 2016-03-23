@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<raid>
-<announce delay="1000" type="warning" message="Ester Rabbits in Pont Vanis!" />
-<areaspawn delay="7500" fromx="575" fromy="535" fromz="7" tox="720" toy="687" toz="7">
-<monster name="Ester Rabbit" amount="200" />
-</areaspawn>
-</raid>
