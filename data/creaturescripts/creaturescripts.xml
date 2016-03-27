@@ -10,24 +10,24 @@
 	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua" />
 	
 	<!-- QUEST -->
-	<event type="kill" name="MonsterCounter" script="quest/monster_counter.lua"/>
+	<event type="kill" name="MonsterCounter" script="quest/monster_counter.lua" />
 	<!-- Killing In The Name Of Quest -->
-	<event type="kill" name="KillingInTheNameOfKills" script="quest/killing in the name of/kills.lua"/>
+	<event type="kill" name="KillingInTheNameOfKills" script="quest/killing in the name of/kills.lua" />
 	<!-- In Service Of Yalahar Quest -->
-	<event type="kill" name="inServiceOfYalaharQuestsMorik" script="quest/yalahar/Yalahar.lua"/>
+	<event type="kill" name="inServiceOfYalaharQuestsMorik" script="quest/yalahar/Yalahar.lua" />
 	<!-- Arena: Killing a boss -->
-	<event type="kill" name="SvargrondArenaKill" script="quest/arena/arena_kill.lua"/>
+	<event type="kill" name="SvargrondArenaKill" script="quest/arena/arena_kill.lua" />
 	<!-- Auto Open Channel-->
-	<event type="login" name="ChatChannels" script="chatchannels.lua"/>
+	<event type="login" name="ChatChannels" script="chatchannels.lua" />
 	
 	<!-- EVENTS -->
 	<!-- EVENT TEST -->
-	<event type="preparedeath" name="ZE_Death" script="event/spider/spider.lua"/>
-	<event type="death" name="ZE_Mon_Death" script="event/spider/spider.lua"/>
+	<event type="preparedeath" name="ZE_Death" script="event/spider/spider.lua" />
+	<event type="death" name="ZE_Mon_Death" script="event/spider/spider.lua" />
 	
-	<event type="death" name="TWDDeath" script="event/twd/twdDeath.lua"/>
-    <event type="preparedeath" name="TWDOnLose" script="event/twd/twdOnLose.lua"/>
-    <event type="modalwindow" name="TWDBuildWindow" script="event/twd/twdBuildWindow.lua"/>
-    <event type="modalwindow" name="TWDOtherWindow" script="event/twd/twdOtherWindow.lua"/>
-    <event type="healthchange" name="TWDHealthChange" script="event/twd/twdHealthChange.lua"/>
+	<event type="death" name="TWDDeath" script="event/twd/twdDeath.lua" />
+    <event type="preparedeath" name="TWDOnLose" script="event/twd/twdOnLose.lua" />
+    <event type="modalwindow" name="TWDBuildWindow" script="event/twd/twdBuildWindow.lua" />
+    <event type="modalwindow" name="TWDOtherWindow" script="event/twd/twdOtherWindow.lua" />
+    <event type="healthchange" name="TWDHealthChange" script="event/twd/twdHealthChange.lua" />
 </creaturescripts>

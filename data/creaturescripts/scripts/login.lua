@@ -54,10 +54,10 @@ function onLogin(player)
 	player:registerEvent("SvargrondArenaKill")
 	player:registerEvent("AdvanceSave")
 	player:registerEvent("ZE_Death")
+	
     if player:getStorageValue(1000) == 1 then --write ze_join_storage number here
         player:setStorageValue(1000, 0) --write ze_join_storage number here
     end
-	
 	
 	if player:getStorageValue(Storage.combatProtectionStorage) <= os.time() then
 		player:setStorageValue(Storage.combatProtectionStorage, os.time() + 10)

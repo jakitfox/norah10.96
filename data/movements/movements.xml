@@ -1,109 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
 	<!-- EVENTS -->
-	<movevent event="StepIn" uniqueid="3293" script="event/spider/spider_tp.lua"/>
+	<movevent event="StepIn" uniqueid="3293" script="event/spider/spider_tp.lua" />
 	<!-- TWD -->
-	<movevent event="StepIn" fromuid="3290" touid="3291" script="event/twd/twdTile.lua"/>
+	<movevent event="StepIn" fromuid="3290" touid="3291" script="event/twd/twdTile.lua" />
 	<!-- Swim -->
 	<movevent event="StepIn" uniqueid="3285" script="event/swim/swim_event.lua" />
 	<!-- Dungeon -->
-	<movevent event="StepIn" actionid="2700" script="event/dungeon/inst_enter.lua"/>
-	<movevent event="StepIn" actionid="20402" script="event/dungeon/inst_enter_tomb.lua"/>
-	<movevent event="AddItem" tileitem="1" actionid="20403" script="event/dungeon/inst_d_open.lua"/>
-	<movevent event="StepIn" actionid="20404" script="event/dungeon/inst_d_open.lua"/>
-	<movevent event="StepIn" actionid="20405" script="event/dungeon/inst_d_open_2.lua"/>
-	<movevent event="StepIn" fromaid="20201" toaid="20230" script="event/dungeon/inst_exit.lua"/>
+	<movevent event="StepIn" actionid="2700" script="event/dungeon/inst_enter.lua" />
+	<movevent event="StepIn" actionid="20402" script="event/dungeon/inst_enter_tomb.lua" />
+	<movevent event="AddItem" tileitem="1" actionid="20403" script="event/dungeon/inst_d_open.lua" />
+	<movevent event="StepIn" actionid="20404" script="event/dungeon/inst_d_open.lua" />
+	<movevent event="StepIn" actionid="20405" script="event/dungeon/inst_d_open_2.lua" />
+	<movevent event="StepIn" fromaid="20201" toaid="20230" script="event/dungeon/inst_exit.lua" />
 
 	<!-- Satan Quest -->
 	<movevent event="StepIn" uniqueid="3003" script="quest/satan/room.lua" />
 	<movevent event="StepIn" fromuid="3011" touid="3017" script="quest/satan/thrones.lua" />
 
 	<!--Gravedigger Quest-->
-	<movevent event="StepIn" fromuid="3047" touid="3050" script="quest/gravedigger/tomb_tp.lua"/>
-	<movevent event="StepIn" uniqueid="3051" script="quest/gravedigger/tp_faraon_1.lua"/>
-	<movevent event="StepIn" uniqueid="3052" script="quest/gravedigger/exit_arena.lua"/>
-	<movevent event="StepIn" uniqueid="3053" script="quest/gravedigger/tp_faraon_2.lua"/>
-	<movevent event="StepIn" uniqueid="3054" script="quest/gravedigger/exit_arena.lua"/>
-	<movevent event="StepIn" uniqueid="3058" script="quest/gravedigger/tp_faraon_3.lua"/>
-	<movevent event="StepIn" uniqueid="3059" script="quest/gravedigger/exit_arena.lua"/>
-	<movevent event="StepIn" uniqueid="3065" script="quest/gravedigger/tp_boss.lua"/>
-	<movevent event="StepIn" uniqueid="3066" script="quest/gravedigger/exit_arena.lua"/>
-	<movevent event="StepIn" uniqueid="3068" script="quest/gravedigger/final.lua"/>
-	<movevent event="StepIn" uniqueid="3069" script="quest/gravedigger/medal_of_honour.lua"/>
-	<movevent event="StepIn" uniqueid="3076" script="quest/gravedigger/exit.lua"/>
+	<movevent event="StepIn" fromuid="3047" touid="3050" script="quest/gravedigger/tomb_tp.lua" />
+	<movevent event="StepIn" uniqueid="3051" script="quest/gravedigger/tp_faraon_1.lua" />
+	<movevent event="StepIn" uniqueid="3052" script="quest/gravedigger/exit_arena.lua" />
+	<movevent event="StepIn" uniqueid="3053" script="quest/gravedigger/tp_faraon_2.lua" />
+	<movevent event="StepIn" uniqueid="3054" script="quest/gravedigger/exit_arena.lua" />
+	<movevent event="StepIn" uniqueid="3058" script="quest/gravedigger/tp_faraon_3.lua" />
+	<movevent event="StepIn" uniqueid="3059" script="quest/gravedigger/exit_arena.lua" />
+	<movevent event="StepIn" uniqueid="3065" script="quest/gravedigger/tp_boss.lua" />
+	<movevent event="StepIn" uniqueid="3066" script="quest/gravedigger/exit_arena.lua" />
+	<movevent event="StepIn" uniqueid="3068" script="quest/gravedigger/final.lua" />
+	<movevent event="StepIn" uniqueid="3069" script="quest/gravedigger/medal_of_honour.lua" />
+	<movevent event="StepIn" uniqueid="3076" script="quest/gravedigger/exit.lua" />
 
 	<!-- Yalahar Quest -->
 	<movevent event="StepIn" uniqueid="3081" script="quest/yalahar/wioska.lua" />
-	<movevent event="StepIn" uniqueid="3083" script="quest/yalahar/tp_ucker.lua"/>
-	<movevent event="StepIn" fromuid="3084" touid="3085" script="quest/yalahar/tepek1.lua"/>
-	<movevent event="StepIn" uniqueid="3100" script="quest/yalahar/tp_amerus.lua"/>
-	<movevent event="StepIn" fromuid="3101" touid="3102" script="quest/yalahar/LastFightTeleports.lua"/>
+	<movevent event="StepIn" uniqueid="3083" script="quest/yalahar/tp_ucker.lua" />
+	<movevent event="StepIn" fromuid="3084" touid="3085" script="quest/yalahar/tepek1.lua" />
+	<movevent event="StepIn" uniqueid="3100" script="quest/yalahar/tp_amerus.lua" />
+	<movevent event="StepIn" fromuid="3101" touid="3102" script="quest/yalahar/LastFightTeleports.lua" />
 	<movevent event="StepIn" uniqueid="3103" script="quest/yalahar/yalahar_azerus_quest.lua" />
 
 	<!-- Elemental Quest -->
-	<movevent event="StepIn" uniqueid="3110" script="quest/elemental/elemental_start.lua"/>
-	<movevent event="StepIn" fromaid="3111" toaid="3118" script="quest/elemental/energy_wall.lua"/>
+	<movevent event="StepIn" uniqueid="3110" script="quest/elemental/elemental_start.lua" />
+	<movevent event="StepIn" fromaid="3111" toaid="3118" script="quest/elemental/energy_wall.lua" />
 	<movevent event="StepIn" fromuid="3111" touid="3118" script="quest/elemental/elemental.lua" />
 	
 	<!-- Riwen -->
-	<movevent event="StepIn" uniqueid="3126" script="quest/riwen/mini quest.lua"/>
+	<movevent event="StepIn" uniqueid="3126" script="quest/riwen/mini quest.lua" />
 	
 	<!--Stronghold Quest-->
-	<movevent event="StepIn" actionid="3139" script="quest/ruiny/ruinymagicwall.lua"/>
-	<movevent event="StepIn" fromuid="3134" touid="3135" script="quest/ruiny/tp.lua"/>
-	<movevent event="StepIn" fromuid="3136" touid="3140" script="quest/ruiny/Salanr1.lua"/>
-	<movevent event="StepIn" actionid="3145" script="quest/ruiny/boss.lua"/>
+	<movevent event="StepIn" actionid="3139" script="quest/ruiny/ruinymagicwall.lua" />
+	<movevent event="StepIn" fromuid="3134" touid="3135" script="quest/ruiny/tp.lua" />
+	<movevent event="StepIn" fromuid="3136" touid="3140" script="quest/ruiny/Salanr1.lua" />
+	<movevent event="StepIn" actionid="3145" script="quest/ruiny/boss.lua" />
 	
 	<!-- Dry Hills -->
-	<movevent event="StepIn" uniqueid="3150" script="quest/blue_legs.lua"/> 
+	<movevent event="StepIn" uniqueid="3150" script="quest/blue_legs.lua" /> 
 	
 	<!--Firewalker Quest-->
-	<movevent event="StepIn" fromuid="3160" touid="3163" script="quest/firewalker/tepek.lua"/>
-	<movevent event="StepIn" uniqueid="3170" script="quest/firewalker/fire.lua"/>
+	<movevent event="StepIn" fromuid="3160" touid="3163" script="quest/firewalker/tepek.lua" />
+	<movevent event="StepIn" uniqueid="3170" script="quest/firewalker/fire.lua" />
 	
 	<!--Access Draken Riwen-->
-	<movevent event="StepIn" uniqueid="3171" script="inne/riwen_draken.lua"/>
-	<movevent event="StepIn" actionid="3175" script="inne/riwen_draken.lua"/>
+	<movevent event="StepIn" uniqueid="3171" script="inne/riwen_draken.lua" />
+	<movevent event="StepIn" actionid="3175" script="inne/riwen_draken.lua" />
 	
 	<!--Inne-->
-	<movevent event="StepIn" fromuid="3175" touid="3176"  script="inne/cyc.lua"/>
-	<movevent event="StepIn" uniqueid="3177" script="inne/pont_vanis/mirror.lua"/>
-	<movevent event="StepIn" fromuid="3178" touid="3186" script="inne/pont_vanis/bat.lua"/>
-	<movevent event="StepIn" fromuid="3187" touid="3191" script="inne/pont_vanis/vampire.lua"/>
+	<movevent event="StepIn" fromuid="3175" touid="3176"  script="inne/cyc.lua" />
+	<movevent event="StepIn" uniqueid="3177" script="inne/pont_vanis/mirror.lua" />
+	<movevent event="StepIn" fromuid="3178" touid="3186" script="inne/pont_vanis/bat.lua" />
+	<movevent event="StepIn" fromuid="3187" touid="3191" script="inne/pont_vanis/vampire.lua" />
 	<movevent event="AddItem" tileitem="1" itemid="7655" script="inne/seeds.lua" />
-	<movevent event="StepIn" fromaid="3200" toaid="3203" script="inne/enchanting.lua"/>
+	<movevent event="StepIn" fromaid="3200" toaid="3203" script="inne/enchanting.lua" />
 	
 	<!-- KillingOfTheNameOf -->
-	<movevent event="StepIn" fromuid="3210" touid="3261" script="quest/killing in the name of/boss.lua"/>
+	<movevent event="StepIn" fromuid="3210" touid="3261" script="quest/killing in the name of/boss.lua" />
 	
 	<!-- Demon Oak Quest -->
 	<movevent event="StepIn" uniqueid="3265" script="quest/demon oak/entrance.lua" />
 	<movevent event="StepIn" itemid="8292" script="quest/demon oak/areaDamage.lua" />
 	
 	<!--Arena Quest-->
-	<movevent event="StepIn" fromuid="3275" touid="3277" script="quest/arena/arenaTrophy.lua"/>
- 	<movevent event="StepIn" actionid="3696" script="quest/arena/arenaEnter.lua"/>
-	<movevent event="StepIn" actionid="3695" script="quest/arena/arenaPit.lua"/>
-	<movevent event="StepIn" actionid="3670" script="quest/arena/arenaPit.lua"/>
+	<movevent event="StepIn" fromuid="3275" touid="3277" script="quest/arena/arenaTrophy.lua" />
+ 	<movevent event="StepIn" actionid="3696" script="quest/arena/arenaEnter.lua" />
+	<movevent event="StepIn" actionid="3695" script="quest/arena/arenaPit.lua" />
+	<movevent event="StepIn" actionid="3670" script="quest/arena/arenaPit.lua" />
 	
 
 	
 	
 	<!--Warzone-->
-	<movevent event="StepIn" fromuid="5600" touid="5606" script="quest/warzone/warzone_enter.lua"/>
-	<movevent event="StepIn" fromuid="5614" touid="5615" script="quest/warzone/warzone_level.lua"/>
-	<movevent event="StepIn" uniqueid="5624" script="quest/warzone/warzone_level.lua"/>
-	<movevent event="StepIn" fromuid="5619" touid="5620" script="quest/warzone/warzone_enter.lua"/>
-	<movevent event="StepIn" uniqueid="5625" script="quest/warzone/warzone_enter.lua"/>
+	<movevent event="StepIn" fromuid="5600" touid="5606" script="quest/warzone/warzone_enter.lua" />
+	<movevent event="StepIn" fromuid="5614" touid="5615" script="quest/warzone/warzone_level.lua" />
+	<movevent event="StepIn" uniqueid="5624" script="quest/warzone/warzone_level.lua" />
+	<movevent event="StepIn" fromuid="5619" touid="5620" script="quest/warzone/warzone_enter.lua" />
+	<movevent event="StepIn" uniqueid="5625" script="quest/warzone/warzone_enter.lua" />
 	
 	<!--Warzone BOSS-->
-	<movevent event="StepIn" uniqueid="5607" script="quest/warzone/warzone_tp.lua"/>
-	<movevent event="StepIn" fromuid="5612" touid="5613" script="quest/warzone/warzone_tp.lua"/>
-	<movevent event="StepIn" fromuid="5608" touid="5610" script="quest/warzone/warzone_level_acces.lua"/>
-	<movevent event="StepIn" uniqueid="5626" script="quest/warzone/warzone_level_acces.lua"/>
+	<movevent event="StepIn" uniqueid="5607" script="quest/warzone/warzone_tp.lua" />
+	<movevent event="StepIn" fromuid="5612" touid="5613" script="quest/warzone/warzone_tp.lua" />
+	<movevent event="StepIn" fromuid="5608" touid="5610" script="quest/warzone/warzone_level_acces.lua" />
+	<movevent event="StepIn" uniqueid="5626" script="quest/warzone/warzone_level_acces.lua" />
 	
 	<!--Elemental Lord-->
-	<movevent event="StepIn" fromuid="5050" touid="5053" script="quest/Elemental_Lord/gate.lua"/>
+	<movevent event="StepIn" fromuid="5050" touid="5053" script="quest/Elemental_Lord/gate.lua" />
 	
 	<!-- Norah END -->
 
@@ -231,6 +231,8 @@
 	<movevent event="StepOut" itemid="19848" script="closingdoor.lua" />
 	<movevent event="StepOut" itemid="19988" script="closingdoor.lua" />
 	<movevent event="StepOut" itemid="20281" script="closingdoor.lua" />
+	<movevent event="StepOut" itemid="22820" script="closingdoor.lua" />
+	<movevent event="StepOut" itemid="22829" script="closingdoor.lua" />
 
 	<!-- Snow footprint tiles -->
 	<movevent event="StepOut" itemid="670" script="snow.lua" />

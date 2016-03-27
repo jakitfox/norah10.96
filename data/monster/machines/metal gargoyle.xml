@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Metal Gargoyle" nameDescription="a metal gargoyle" race="energy" experience="1400" speed="270">
+	<health now="2100" max="2100" />
+	<look type="601" corpse="23347" />
+	<targetchange interval="4000" chance="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-200" />
+	</attacks>
+	<defenses armor="25" defense="35" />
+	<elements>
+		<element physicalPercent="40" />
+		<element firePercent="10" />
+		<element deathPercent="1" />
+		<element energyPercent="-1" />
+		<element icePercent="-1" />
+	</elements>
+	<immunities>
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="*clonk*" />
+		<voice sentence="*stomp*" />
+		<voice sentence="*click*" />
+	</voices>
+	<loot>
+		<item id="2148" countmax="199" chance="100000" /><!-- gold coin -->
+		<item id="2152" countmax="2" chance="44860" /><!-- platinum coin -->
+		<item id="23564" chance="17020" /><!-- metal jaw -->
+		<item id="7589" countmax="2" chance="9260" /><!-- strong mana potion -->
+		<item id="7588" countmax="2" chance="8550" /><!-- strong health potion -->
+		<item id="23540" chance="3020" /><!-- metal spats -->
+		<item id="9810" chance="2350" /><!-- rusty armor -->
+		<item id="24124" chance="2320" /><!-- bronze gear wheel -->
+		<item id="11227" chance="1140" /><!-- shiny stone -->
+		<item id="8910" chance="1020" /><!-- underworld rod -->
+		<item id="23539" chance="1010" /><!-- alloy legs -->
+		<item id="23542" chance="890" /><!-- metal bat -->
+		<item id="5880" chance="510" /><!-- iron ore -->
+		<item id="2167" chance="500" /><!-- energy ring -->
+		<item id="2168" chance="470" /><!-- life ring -->
+	</loot>
+</monster>

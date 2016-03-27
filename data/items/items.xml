@@ -26393,6 +26393,26 @@
 	<item id="20089" article="a" name="bola">
 		<attribute key="weight" value="500" />
 	</item>
+	<item id="20239" article="a" name="pendulum clock">
+		<attribute key="rotateTo" value="20240" />
+		<attribute key="destroyTo" value="2254" />
+		<attribute key="weight" value="3600" />
+	</item>
+	<item id="20240" article="a" name="pendulum clock">
+		<attribute key="rotateTo" value="20239" />
+		<attribute key="destroyTo" value="2254" />
+		<attribute key="weight" value="3600" />
+	</item>
+	<item id="20241" article="a" name="locker">
+		<attribute key="rotateTo" value="20242" />
+		<attribute key="destroyTo" value="2254" />
+		<attribute key="weight" value="600" />
+	</item>
+	<item id="20242" article="a" name="locker">
+		<attribute key="rotateTo" value="20241" />
+		<attribute key="destroyTo" value="2254" />
+		<attribute key="weight" value="600" />
+	</item>
 	<item id="20090" article="a" name="spike shield">
 		<attribute key="weight" value="5900" />
 		<attribute key="defense" value="28" />
@@ -30279,12 +30299,19 @@
 	<item id="22831" article="an" name="open door">
 		<attribute key="type" value="door" />
 	</item>
+	<item fromid="22840" toid="22844"  article="a" name="ladder">
+		<attribute key="floorchange" value="down" />
+	</item>
+	<item id="22845" article="a" name="ladder" />
+	<item id="22846" article="a" name="ladder" />
 	<item fromid="22840" toid="22842" article="a" name="hole">
 		<attribute key="floorchange" value="down" />
 	</item>
+	<item fromid="22851" toid="22856" article="an" name="archway" />
 	<item fromid="22859" toid="22860" article="a" name="hole">
 		<attribute key="floorchange" value="down" />
 	</item>
+	<item id="22861" article="a" name="closed hole" />
 	<item id="22862" article="a" name="stair">
 		<attribute key="floorchange" value="north" />
 	</item>
@@ -30299,6 +30326,12 @@
 	<item id="22867" article="a" name="stair">
 		<attribute key="floorchange" value="east" />
 	</item>
+	<item id="22868" article="a" name="street lamp" />
+	<item id="22869" article="a" name="street lamp" />
+	<item id="22870" article="a" name="street lamp" />
+	<item id="22871" article="a" name="street lamp" />
+	<item id="22872" article="a" name="candle" />
+	<item id="22873" article="a" name="lit candle" />
 	<item id="23121" article="a" name="stair">
 		<attribute key="floorchange" value="north" />
 	</item>
@@ -30348,25 +30381,25 @@
 	<item id="23347" article="a" name="dead metal gargoyle">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="23348" />
-		<attribute key="duration" value="60" />
+		<attribute key="duration" value="10" />
 		<attribute key="corpseType" value="energy" />
 	</item>
 	<item id="23348" article="a" name="dead metal gargoyle">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="23349" />
-		<attribute key="duration" value="60" />
+		<attribute key="duration" value="900" />
 		<attribute key="corpseType" value="energy" />
 	</item>
 	<item id="23349" article="a" name="dead metal gargoyle">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="23350" />
-		<attribute key="duration" value="60" />
+		<attribute key="duration" value="900" />
 		<attribute key="corpseType" value="energy" />
 	</item>
 	<item id="23350" article="a" name="dead metal gargoyle">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="0" />
-		<attribute key="duration" value="10" />
+		<attribute key="duration" value="600" />
 		<attribute key="corpseType" value="energy" />
 	</item>
 	<item id="23351" article="a" name="dead blood beast">
@@ -30400,25 +30433,25 @@
 	<item id="23355" article="a" name="dead rustheap golem">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="23356" />
-		<attribute key="duration" value="60" />
+		<attribute key="duration" value="10" />
 		<attribute key="corpseType" value="energy" />
 	</item>
 	<item id="23356" article="a" name="dead rustheap golem">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="23357" />
-		<attribute key="duration" value="60" />
+		<attribute key="duration" value="900" />
 		<attribute key="corpseType" value="energy" />
 	</item>
 	<item id="23357" article="a" name="dead rustheap golem">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="23358" />
-		<attribute key="duration" value="60" />
+		<attribute key="duration" value="900" />
 		<attribute key="corpseType" value="energy" />
 	</item>
 	<item id="23358" article="a" name="dead rustheap golem">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="0" />
-		<attribute key="duration" value="10" />
+		<attribute key="duration" value="600" />
 		<attribute key="corpseType" value="energy" />
 	</item>
 	<item id="23359" article="a" name="dead glooth anemone">
@@ -31175,6 +31208,9 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="simplearrow" />
 		<attribute key="maxHitChance" value="91" />
+	</item>
+	<item id="24124" article="a" name="bronze gear wheel">
+		<attribute key="weight" value="5" />
 	</item>
 	<item id="24331" article="an" name="assassin doll">
 		<attribute key="weight" value="2504" />

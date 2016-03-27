@@ -2,119 +2,149 @@
 <actions>
 	<!-- EVENTS -->
 	<!-- TWD -->
-	<action itemid="2557" script="event/Tower Defense/twdHammer.lua" allowfaruse="1"/>
+	<action itemid="2557" script="event/Tower Defense/twdHammer.lua" allowfaruse="1" />
 	<!-- Swim Event -->
-	<action uniqueid="3286" script="event/swim/se_chest.lua"/>
+	<action uniqueid="3286" script="event/swim/se_chest.lua" />
 	
 	<!-- Satan Quest -->
-	<action uniqueid="3000" script="quests/satan/ceremonial_ankh.lua"/>
-	<action uniqueid="3001" script="quests/satan/addon.lua"/>
-	<action uniqueid="3002" script="quests/satan/pieklo_wejscie.lua"/>	
-	<action fromuid="3004" touid="3010" script="quests/satan/rooms_entrance.lua"/>
-	<action uniqueid="3018" script="quests/satan/satan.lua"/> 
-	<action uniqueid="3019" script="quests/satan/reward_room.lua"/>
-	<action fromuid="3020" touid="3024" script="quests/satan/nagrody.lua"/>
-	<action uniqueid="3025" script="quests/satan/addon.lua"/>
+	<action uniqueid="3000" script="quests/satan/ceremonial_ankh.lua" />
+	<action uniqueid="3001" script="quests/satan/addon.lua" />
+	<action uniqueid="3002" script="quests/satan/pieklo_wejscie.lua" />	
+	<action fromuid="3004" touid="3010" script="quests/satan/rooms_entrance.lua" />
+	<action uniqueid="3018" script="quests/satan/satan.lua" /> 
+	<action uniqueid="3019" script="quests/satan/reward_room.lua" />
+	<action fromuid="3020" touid="3024" script="quests/satan/nagrody.lua" />
+	<action uniqueid="3025" script="quests/satan/addon.lua" />
 	
 	<!-- Eight Dolls Quest -->
-	<action fromuid="3030" touid="3037" script="quests/dolls/doll.lua"/>
+	<action fromuid="3030" touid="3037" script="quests/dolls/doll.lua" />
 	
 	<!-- Gravedigger Quest -->
-	<action fromuid="3040" touid="3043"	script="quests/gravedigger/koshei.lua"/>
-	<action fromuid="3044" touid="3045" script="quests/gravedigger/monument.lua"/> 
-	<action actionid="3046" script="quests/gravedigger/pharaoh_first.lua"/>
-	<action actionid="3049" script="quests/gravedigger/pharaoh_second.lua"/>	
-	<action uniqueid="3055" script="quests/gravedigger/swamp.lua"/> 
-	<action uniqueid="3056" script="quests/gravedigger/labirynt_1.lua"/> 
-	<action uniqueid="3057" script="quests/gravedigger/labirynt_2.lua"/>
-	<action fromuid="3060" touid="3063" script="quests/gravedigger/plague.lua"/>
-	<action uniqueid="3064" script="quests/gravedigger/boss.lua"/>
-	<action itemid="2176" script="quests/gravedigger/ball.lua"/>
-	<action itemid="5468" script="quests/gravedigger/hades.lua"/>
-	<action uniqueid="3067" script="quests/gravedigger/hades_leaver.lua"/> 
-	<action fromuid="3070" touid="3072" script="quests/gravedigger/armors.lua"/>
-	<action fromuid="3073" touid="3075" script="quests/gravedigger/rewards.lua"/>  
+	<action fromuid="3040" touid="3043"	script="quests/gravedigger/koshei.lua" />
+	<action fromuid="3044" touid="3045" script="quests/gravedigger/monument.lua" /> 
+	<action actionid="3046" script="quests/gravedigger/pharaoh_first.lua" />
+	<action actionid="3049" script="quests/gravedigger/pharaoh_second.lua" />	
+	<action uniqueid="3055" script="quests/gravedigger/swamp.lua" /> 
+	<action uniqueid="3056" script="quests/gravedigger/labirynt_1.lua" /> 
+	<action uniqueid="3057" script="quests/gravedigger/labirynt_2.lua" />
+	<action fromuid="3060" touid="3063" script="quests/gravedigger/plague.lua" />
+	<action uniqueid="3064" script="quests/gravedigger/boss.lua" />
+	<action itemid="2176" script="quests/gravedigger/ball.lua" />
+	<action itemid="5468" script="quests/gravedigger/hades.lua" />
+	<action uniqueid="3067" script="quests/gravedigger/hades_leaver.lua" /> 
+	<action fromuid="3070" touid="3072" script="quests/gravedigger/armors.lua" />
+	<action fromuid="3073" touid="3075" script="quests/gravedigger/rewards.lua" />  
 	
 	<!-- Yalahar-->
-	<action uniqueid="3080" script="quests/yalahar/wioska.lua"/> 
-	<action uniqueid="3082" script="quests/yalahar/ucker.lua"/> 
-	<action fromuid="3086" touid="3092"  script="quests/yalahar/turet1.1.lua"/>
-	<action fromuid="3093" touid="3099"  script="quests/yalahar/turet1.2.lua"/>
-	<action uniqueid="3104" script="quests/yalahar/LastFight.lua"/>
-	<action fromuid="3105" touid="3107" script="quests/yalahar/reward.lua"/>
-	<action uniqueid="3108" script="quests/yalahar/addon.lua"/>
+	<action uniqueid="3080" script="quests/yalahar/wioska.lua" /> 
+	<action uniqueid="3082" script="quests/yalahar/ucker.lua" /> 
+	<action fromuid="3086" touid="3092"  script="quests/yalahar/turet1.1.lua" />
+	<action fromuid="3093" touid="3099"  script="quests/yalahar/turet1.2.lua" />
+	<action uniqueid="3104" script="quests/yalahar/LastFight.lua" />
+	<action fromuid="3105" touid="3107" script="quests/yalahar/reward.lua" />
+	<action uniqueid="3108" script="quests/yalahar/addon.lua" />
 	
 	<!--Riwen-->
-	<action fromuid="3120" touid="3125" script="quests/riwen/mini quest.lua"/>
+	<action fromuid="3120" touid="3125" script="quests/riwen/mini quest.lua" />
 	
 	<!--Ruiny-->
-	<action fromuid="3128" touid="3131" script="quests/ruiny/kapliczki.lua"/>
-	<action uniqueid="3132" script="quests/ruiny/ksiega.lua"/>
+	<action fromuid="3128" touid="3131" script="quests/ruiny/kapliczki.lua" />
+	<action uniqueid="3132" script="quests/ruiny/ksiega.lua" />
 
-	<action fromuid="3141" touid="3143" script="quests/ruiny/brama1.lua"/>
-	<action uniqueid="3144"	script="quests/ruiny/reward mount.lua"/>
-	<action fromuid="3145" touid="3147"	script="quests/ruiny/reward.lua"/>
+	<action fromuid="3141" touid="3143" script="quests/ruiny/brama1.lua" />
+	<action uniqueid="3144"	script="quests/ruiny/reward mount.lua" />
+	<action fromuid="3145" touid="3147"	script="quests/ruiny/reward.lua" />
 	
 	<!-- Dry Hills -->
-	<action fromuid="3151" touid="3152" script="quests/blue_legs.lua"/>
-	<action uniqueid="3153" script="quests/backpacks.lua"/>
-	<action uniqueid="3154" script="quests/scyzoryk.lua"/>
+	<action fromuid="3151" touid="3152" script="quests/blue_legs.lua" />
+	<action uniqueid="3153" script="quests/backpacks.lua" />
+	<action uniqueid="3154" script="quests/scyzoryk.lua" />
 	
 	<!-- Demon Helmet -->
-	<action uniqueid="3155" script="quests/demonhelmet.lua"/>
+	<action uniqueid="3155" script="quests/demonhelmet.lua" />
 	
 	<!-- Firewalker Quest -->
-	<action uniqueid="3164"	script="quests/firewalker/tp.lua"/>
-	<action fromuid="3165" touid="3169"	script="quests/firewalker/statues.lua"/>
+	<action uniqueid="3164"	script="quests/firewalker/tp.lua" />
+	<action fromuid="3165" touid="3169"	script="quests/firewalker/statues.lua" />
 	
 	<!-- Inne -->
-	<action itemid="7734" script="inne/flowerpot.lua"/>
-	<action itemid="2177" script="inne/crystal.lua"/>
-	<action itemid="13670" script="inne/belongings.lua"/>	
-	<action itemid="8110" script="inne/explosivepresent.lua"/>
-	<action fromuid="3195" touid="3196" script="inne/kopalniatep.lua"/>
-	<action itemid="6561" script="inne/blessings.lua"/>
-	<action itemid="12424" script="inne/blessings.lua"/>
-	<action itemid="7735" script="inne/spellwand.lua"/>
-	<action itemid="7499" script="inne/smoke.lua"/>
-	<action itemid="5957" script="inne/lottery.lua"/>
-	<action fromuid="3197" touid="3198" script="inne/hotd.lua"/>
-	<action fromid="7439" toid="7440" script="inne/strengthening_potions.lua"/>
-	<action itemid="7443" script="inne/strengthening_potions.lua"/>
-	<action itemid="6558" script="inne/demonic_blood.lua"/>
-	<action itemid="9999" script="inne/blessedsteak.lua"/>
-	<action uniqueid="3300"	script="inne/schody_bagno.lua"/>
+	<action itemid="7734" script="inne/flowerpot.lua" />
+	<action itemid="2177" script="inne/crystal.lua" />
+	<action itemid="13670" script="inne/belongings.lua" />	
+	<action itemid="8110" script="inne/explosivepresent.lua" />
+	<action fromuid="3195" touid="3196" script="inne/kopalniatep.lua" />
+	<action itemid="6561" script="inne/blessings.lua" />
+	<action itemid="12424" script="inne/blessings.lua" />
+	<action itemid="7735" script="inne/spellwand.lua" />
+	<action itemid="7499" script="inne/smoke.lua" />
+	<action itemid="5957" script="inne/lottery.lua" />
+	<action fromuid="3197" touid="3198" script="inne/hotd.lua" />
+	<action fromid="7439" toid="7440" script="inne/strengthening_potions.lua" />
+	<action itemid="7443" script="inne/strengthening_potions.lua" />
+	<action itemid="6558" script="inne/demonic_blood.lua" />
+	<action itemid="9999" script="inne/blessedsteak.lua" />
+	<action uniqueid="3300"	script="inne/schody_bagno.lua" />
+	<action itemid="18395" script="inne/muckremover.lua" /> <!-- Zapamiętac dodać do gnom bazy -->
+	<action itemid="18511" script="inne/musicbox.lua" />
+	<action itemid="5907" script="inne/taming.lua" />
+	<action itemid="13247" script="inne/taming.lua" />
+	<action fromid="13291" toid="13295" script="inne/taming.lua" />
+	<action itemid="13298" script="inne/taming.lua" />
+	<action itemid="13305" script="inne/taming.lua" />
+	<action itemid="13307" script="inne/taming.lua" />
+	<action itemid="13498" script="inne/taming.lua" />
+	<action itemid="13508" script="inne/taming.lua" />
+	<action fromid="13535" toid="13539" script="inne/taming.lua" />
+	<action fromid="13938" toid="13939" script="inne/taming.lua" />
+	<action fromid="15545" toid="15546" script="inne/taming.lua" />
+	<action fromid="18447" toid="18449" script="inne/taming.lua" />
+	<action itemid="18516" script="inne/taming.lua" />
+	<action itemid="20138" script="inne/taming.lua" />
+	<action itemid="22608" script="inne/taming.lua" />
+	<action itemid="13941" script="inne/cup of molten gold.lua" />
+	<action itemid="11339" script="inne/claylump.lua" />
+	<action fromid="11258" toid="11262" script="inne/blessingCharms.lua" />
+	<action itemid="3955" script="inne/voodoo_doll.lua" />
+	
+	<!-- Narzedzia -->
+	<action itemid="5908" script="tools/skinning.lua" />
+	<action itemid="5942" script="tools/skinning.lua" />
+	<action itemid="9930" script="tools/rustremover.lua" />
+	<action itemid="10511" script="tools/toolgear.lua" />
+	<action itemid="10513" script="tools/toolgear.lua" />
+	<action itemid="10515" script="tools/toolgear.lua" />
+	<action itemid="10309" script="tools/noxiousclaw.lua" />
 	
 	<!-- Dolls -->
-	<action itemid="5080" script="inne/dolls.lua"/>
-	<action itemid="5669" script="inne/dolls.lua"/>
-	<action itemid="6388" script="inne/dolls.lua"/>
-	<action itemid="6512" script="inne/dolls.lua"/>
-	<action itemid="6566" script="inne/dolls.lua"/>
-	<action itemid="8974" script="inne/dolls.lua"/>
-	<action itemid="8977" script="inne/dolls.lua"/>
-	<action itemid="8981" script="inne/dolls.lua"/>
-	<action itemid="8982" script="inne/dolls.lua"/>
+	<action itemid="5080" script="inne/dolls.lua" />
+	<action itemid="5669" script="inne/dolls.lua" />
+	<action itemid="6388" script="inne/dolls.lua" />
+	<action itemid="6512" script="inne/dolls.lua" />
+	<action itemid="6566" script="inne/dolls.lua" />
+	<action itemid="8974" script="inne/dolls.lua" />
+	<action itemid="8977" script="inne/dolls.lua" />
+	<action itemid="8981" script="inne/dolls.lua" />
+	<action itemid="8982" script="inne/dolls.lua" />
 	
 	<!-- Weapons enchanting (Gems) -->
-	<action fromid="2146" toid="2147" script="inne/enchanting.lua"/>
-	<action fromid="2149" toid="2150" script="inne/enchanting.lua"/>
-	<action fromid="7759" toid="7762" script="inne/enchanting.lua"/>
+	<action fromid="2146" toid="2147" script="inne/enchanting.lua" />
+	<action fromid="2149" toid="2150" script="inne/enchanting.lua" />
+	<action fromid="7759" toid="7762" script="inne/enchanting.lua" />
 	
 	<!-- Quests -->
-	<action actionid="2000" script="quests/quests.lua"/>
-	<action fromaid="2001" toaid="2004" script="quests/quests.lua"/>
-	<action uniqueid="3200" script="quests/anni/annihilator.lua"/>
-	<action fromuid="3201" touid="3203" script="quests/s_quests.lua"/>
-	<action uniqueid="3204" script="quests/s_quests_key.lua"/>
+	<action actionid="2000" script="quests/quests.lua" />
+	<action fromaid="2001" toaid="2004" script="quests/quests.lua" />
+	<action uniqueid="3200" script="quests/anni/annihilator.lua" />
+	<action fromuid="3201" touid="3203" script="quests/s_quests.lua" />
+	<action uniqueid="3204" script="quests/s_quests_key.lua" />
 	
 	<!-- Demon Oak Quest -->
-	<action itemid="8293" script="quests/demon oak/demonOak.lua"/>
-	<action fromuid="3266" touid="3269" script="quests/demon oak/demonOakChest.lua"/>
+	<action itemid="8293" script="quests/demon oak/demonOak.lua" />
+	<action fromuid="3266" touid="3269" script="quests/demon oak/demonOakChest.lua" />
 	<action uniqueid="3270" script="quests/demon oak/demonOakGravestone.lua" />
 	
 	<!-- Arena Quest-->
-	<action fromaid="3691" toaid="3694" script="quests/arena/arena_door.lua"/>
+	<action fromaid="3691" toaid="3694" script="quests/arena/arena_door.lua" />
 
 	
 	<!-- Warzone Quest -->
@@ -142,8 +172,6 @@
 	<action itemid="1876" function="decreaseItemId" />
 	<action itemid="2162" function="increaseItemId" />
 	<action itemid="2163" function="decreaseItemId" />
-	<action itemid="3743" function="increaseItemId" />
-	<action itemid="3744" function="decreaseItemId" />
 	<action itemid="3947" function="increaseItemId" />
 	<action itemid="3948" function="decreaseItemId" />
 	<action itemid="1479" function="increaseItemId" />
@@ -209,9 +237,25 @@
 	<action itemid="9748" function="decreaseItemId" />
 	<action itemid="9749" function="increaseItemId" />
 	<action itemid="9750" function="decreaseItemId" />
+	<action itemid="19689" function="increaseItemId" />
+	<action itemid="19690" function="decreaseItemId" />
 	<action itemid="19691" function="increaseItemId" />
 	<action itemid="19692" function="decreaseItemId" />
-
+	<action itemid="19693" function="increaseItemId" />
+	<action itemid="19694" function="decreaseItemId" />
+	<action itemid="19695" function="increaseItemId" />
+	<action itemid="19696" function="decreaseItemId" />
+	<action itemid="19697" function="increaseItemId" />
+	<action itemid="19698" function="decreaseItemId" />
+	<action itemid="22868" function="increaseItemId" />
+	<action itemid="22869" function="decreaseItemId" />
+	<action itemid="22870" function="increaseItemId" />
+	<action itemid="22871" function="decreaseItemId" />
+	<action itemid="22872" function="increaseItemId" />
+	<action itemid="22873" function="decreaseItemId" />
+	<action itemid="22874" function="increaseItemId" />
+	<action itemid="22875" function="decreaseItemId" />
+	
 	<!-- Food -->
 	<action itemid="2362" script="other/food.lua" />
 	<action fromid="2666" toid="2691" script="other/food.lua" />
@@ -304,6 +348,8 @@
 	<action itemid="1386" script="other/teleport.lua" />
 	<action itemid="3678" script="other/teleport.lua" />
 	<action itemid="5543" script="other/teleport.lua" />
+	<action itemid="22845" script="other/teleport.lua" />
+	<action itemid="22846" script="other/teleport.lua" />
 	<action fromid="2376" toid="2404" script="other/destroy.lua" />
 	<action fromid="2406" toid="2419" script="other/destroy.lua" />
 	<action fromid="2421" toid="2453" script="other/destroy.lua" />
@@ -376,6 +422,9 @@
 	<action fromid="17235" toid="17238" script="other/doors.lua" />
 	<action fromid="18208" toid="18209" script="other/doors.lua" />
 	<action fromid="13020" toid="13023" script="other/doors.lua" />
+	<action fromid="22814" toid="22831" script="other/doors.lua" />
 	<action itemid="14405" function="market" />
 	<action fromid="18488" toid="18492" script="other/skilltrainer.lua" />
+	<action itemid="3743" script="other/transforms.lua" />
+ 	<action itemid="4404" script="other/transforms.lua" />
 </actions>

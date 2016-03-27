@@ -2046,8 +2046,20 @@
 	<spawn centerx="625" centery="235" centerz="6" radius="1">
 		<monster name="Dragon Hatchling" x="-1" y="-1" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="523" centery="243" centerz="6" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="492" centery="245" centerz="6" radius="3">
 		<monster name="Rustheap Golem" x="-2" y="2" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="522" centery="246" centerz="6" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="527" centery="246" centerz="6" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="533" centery="246" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="492" centery="252" centerz="6" radius="3">
 		<monster name="Rustheap Golem" x="-1" y="1" z="6" spawntime="60" />
@@ -2057,11 +2069,21 @@
 		<monster name="Glooth Blob" x="3" y="-2" z="6" spawntime="60" />
 		<monster name="Glooth Blob" x="2" y="0" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="528" centery="252" centerz="6" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="542" centery="252" centerz="6" radius="1" />
+	<spawn centerx="537" centery="253" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="834" centery="258" centerz="6" radius="10">
 		<monster name="Behemoth" x="0" y="-5" z="6" spawntime="60" />
 		<monster name="Behemoth" x="8" y="-1" z="6" spawntime="60" />
 		<monster name="Behemoth" x="-7" y="2" z="6" spawntime="60" />
 		<monster name="Behemoth" x="-1" y="6" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="533" centery="260" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="0" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="803" centery="265" centerz="6" radius="10">
 		<monster name="Behemoth" x="-3" y="-2" z="6" spawntime="60" />
