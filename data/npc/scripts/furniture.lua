@@ -2,24 +2,144 @@ local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 NpcSystem.parseParameters(npcHandler)
 
-function onCreatureAppear(cid)				npcHandler:onCreatureAppear(cid) 			end
-function onCreatureDisappear(cid) 			npcHandler:onCreatureDisappear(cid) 		end
-function onCreatureSay(cid, type, msg) 		npcHandler:onCreatureSay(cid, type, msg) 	end
-function onThink() 							npcHandler:onThink() 						end
-function onPlayerEndTrade(cid)				npcHandler:onPlayerEndTrade(cid)			end
-function onPlayerCloseChannel(cid)			npcHandler:onPlayerCloseChannel(cid)		end
+function onCreatureAppear(cid)              npcHandler:onCreatureAppear(cid)            end
+function onCreatureDisappear(cid)           npcHandler:onCreatureDisappear(cid)         end
+function onCreatureSay(cid, type, msg)      npcHandler:onCreatureSay(cid, type, msg)    end
+function onThink()                          npcHandler:onThink()                        end
 
--- Don't forget npcHandler = npcHandler in the parameters. It is required for all StdModule functions!
-keywordHandler:addKeyword({'chairs'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell wooden, sofa, red cushioned, green cushioned, tusk and ivory chairs.'})
-keywordHandler:addKeyword({'tables'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell big, square, round, small, stone, tusk, bamboo tables.'})
-keywordHandler:addKeyword({'plants'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell pink and green flowers, also christmas trees.'})
-keywordHandler:addKeyword({'furniture'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell large trunks, boxes, drawers, dressers, lockers and troughs.'})
-keywordHandler:addKeyword({'more'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell coal basins, birdcages, harps, pianos, globes, clocks and lamps.'})
-keywordHandler:addKeyword({'destination'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell blue, green, orange, pink, red, white and yellow tapestries.'})
-keywordHandler:addKeyword({'small'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell small purple, small green, small red, small blue, small orange, small turquiose and small white pillows.'})
-keywordHandler:addKeyword({'round'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell round blue, round red, round purple and round turquiose pillows.'})
-keywordHandler:addKeyword({'square'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell blue, red, green and yellow pillows.'})
-keywordHandler:addKeyword({'pillows'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell heart, small, sqare and round pillows.'})
-keywordHandler:addKeyword({'beds'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell {green}, {red} and {yellow} {beds} for {5000}gp. I can sell you too standard bed (to remove modification)'})
+local shopModule = ShopModule:new()
+npcHandler:addModule(shopModule)
 
+-----Poduszki-----
+shopModule:addBuyableItem({'small purple pillow'}, 1678, 20, 'small purple pillow')
+shopModule:addBuyableItem({'small green pillow'}, 1679, 20, 'small green pillow')
+shopModule:addBuyableItem({'small red pillow'}, 1680, 25, 'small red pillow')
+shopModule:addBuyableItem({'small blue pillow'}, 1681, 20, 'small blue pillow')
+shopModule:addBuyableItem({'small orange pillow'}, 1682, 20, 'small orange pillow')
+shopModule:addBuyableItem({'small turquoise pillow'}, 1683, 20, 'small turquoise pillow')
+shopModule:addBuyableItem({'small white pillow'}, 1684, 20, 'small white pillow')
+shopModule:addBuyableItem({'small blue pillow'}, 1681, 20, 'small blue pillow')
+shopModule:addBuyableItem({'heart pillow'}, 1685, 30, 'heart pillow')
+shopModule:addBuyableItem({'blue pillow'}, 1686, 25, 'blue pillow')
+shopModule:addBuyableItem({'red pillow'}, 1687, 25, 'red pillow')
+shopModule:addBuyableItem({'green pillow'}, 1688, 25, 'green pillow')
+shopModule:addBuyableItem({'yellow pillow'}, 1689, 30, 'yellow pillow')
+shopModule:addBuyableItem({'round blue pillow'}, 1690, 25, 'round blue pillow')
+shopModule:addBuyableItem({'round red pillow'}, 1691, 25, 'round red pillow')
+shopModule:addBuyableItem({'round purple pillow'}, 1692, 25, 'round purple pillow')
+shopModule:addBuyableItem({'round turquoise pillow'}, 1693, 25, 'round turquoise pillow')
+
+-----Zasłony-----
+shopModule:addBuyableItem({'purple tapestry'}, 1857, 25, 'purple tapestry')
+shopModule:addBuyableItem({'green tapestry'}, 1860, 25, 'green tapestry')
+shopModule:addBuyableItem({'yellow tapestry'}, 1863, 25, 'yellow tapestry')
+shopModule:addBuyableItem({'orange tapestry'}, 1866, 25, 'orange tapestry')
+shopModule:addBuyableItem({'red tapestry'}, 1869, 25, 'red tapestry')
+shopModule:addBuyableItem({'blue tapestry'}, 1872, 25, 'blue tapestry')
+shopModule:addBuyableItem({'white tapestry'}, 1880, 25, 'white tapestry')
+shopModule:addBuyableItem({'silky tapestry'}, 9959, 80, 'silky tapestry')
+shopModule:addBuyableItem({'pirate tapestry'}, 5616, 40, 'pirate tapestry')
+shopModule:addBuyableItem({'dragon tapestry'}, 11264, 80, 'dragon tapestry')
+
+shopModule:addSellableItem({'velvet tapestry'}, 9837, 800, 'velvet tapestry')
+shopModule:addSellableItem({'royal tapestry'}, 9958, 1000, 'royal tapestry')
+
+----Meble----
+shopModule:addBuyableItem({'armor rack kit'}, 6114, 90, 'armor rack kit')
+shopModule:addBuyableItem({'weapon rack kit'}, 6115, 90, 'weapon rack kit')
+shopModule:addBuyableItem({'bamboo drawer kit'}, 3921, 20, 'bamboo drawer kit')
+shopModule:addBuyableItem({'bamboo table kit'}, 3914, 25, 'bamboo table kit')
+shopModule:addBuyableItem({'barrel kit'}, 3919, 12, 'barrel kit')
+shopModule:addBuyableItem({'big table kit'}, 3911, 30, 'big table kit')
+shopModule:addBuyableItem({'birdcage kit'}, 3922, 50, 'birdcage kit')
+shopModule:addBuyableItem({'blue bed kit'}, 7907, 80, 'blue bed kit')
+shopModule:addBuyableItem({'green bed kit'}, 7904, 80, 'green bed kit')
+shopModule:addBuyableItem({'yellow bed kit'}, 7905, 80, 'yellow bed kit')
+shopModule:addBuyableItem({'red bed kit'}, 7906, 80, 'red bed kit')
+shopModule:addBuyableItem({'canopy bed kit'}, 20252, 200, 'canopy bed kit')
+shopModule:addBuyableItem({'bookcase kit'}, 6373, 70, 'bookcase kit')
+shopModule:addBuyableItem({'venorean cabinet kit'}, 20254, 90, 'venorean cabinet kit')
+shopModule:addBuyableItem({'stone table kit'}, 3912, 30, 'stone table kit')
+shopModule:addBuyableItem({'drawer kit'}, 3915, 18, 'drawer kit')
+shopModule:addBuyableItem({'chimney kit'}, 8692, 200, 'chimney kit')
+shopModule:addBuyableItem({'coal basin kit'}, 3932, 25, 'coal basin kit')
+shopModule:addBuyableItem({'crystal table kit'}, 9974, 150, 'crystal table kit')
+shopModule:addBuyableItem({'venorean drawer kit'}, 20257, 40, 'venorean drawer kit')
+shopModule:addBuyableItem({'dresser kit'}, 3916, 25, 'dresser kit')
+shopModule:addBuyableItem({'green cushioned chair kit'}, 3902, 40, 'green cushioned chair kit')
+shopModule:addBuyableItem({'harp kit'}, 3934, 50, 'harp kit')
+shopModule:addBuyableItem({'indoor plant kit'}, 3937, 8, 'indoor plant kit')
+shopModule:addBuyableItem({'ivory chair kit'}, 3907, 25, 'ivory chair kit')
+shopModule:addBuyableItem({'large amphora kit'}, 3931, 50, 'large amphora kit')
+shopModule:addBuyableItem({'trunk kit'}, 3920, 10, 'trunk kit')
+shopModule:addBuyableItem({'lizard weapon rack kit'}, 11126, 500, 'lizard weapon rack kit')
+shopModule:addBuyableItem({'locker kit'}, 3917, 30, 'locker kit')
+shopModule:addBuyableItem({'oven kit'}, 6372, 80, 'oven kit')
+shopModule:addBuyableItem({'pendulum clock kit'}, 3927, 75, 'pendulum clock kit')
+shopModule:addBuyableItem({'piano kit'}, 3933, 200, 'piano kit')
+shopModule:addBuyableItem({'red cushioned chair kit'}, 3901, 40, 'red cushioned chair kit')
+shopModule:addBuyableItem({'rocking chair kit'}, 3904, 25, 'rocking chair kit')
+shopModule:addBuyableItem({'rocking horse kit'}, 3926, 30, 'rocking horse kit')
+shopModule:addBuyableItem({'round table kit'}, 14328, 25, 'round table kit')
+shopModule:addBuyableItem({'small table kit'}, 3908, 20, 'small table kit')
+shopModule:addBuyableItem({'trunk chair kit'}, 3935, 20, 'trunk chair kit')
+shopModule:addBuyableItem({'sofa chair kit'}, 3905, 55, 'sofa chair kit')
+shopModule:addBuyableItem({'square table kit'}, 14329, 25, 'square table kit')
+shopModule:addBuyableItem({'stone table kit'}, 3912, 30, 'stone table kit')
+shopModule:addBuyableItem({'table lamp kit'}, 3924, 35, 'table lamp kit')
+shopModule:addBuyableItem({'trunk table kit'}, 3936, 20, 'trunk table kit')
+shopModule:addBuyableItem({'trough kit'}, 3918, 7, 'trough kit')
+shopModule:addBuyableItem({'tusk chair kit'}, 3906, 25, 'tusk chair kit')
+shopModule:addBuyableItem({'tusk table kit'}, 3913, 25, 'tusk table kit')
+shopModule:addBuyableItem({'venorean wardrobe kit'}, 20255, 50, 'venorean wardrobe kit')
+shopModule:addBuyableItem({'wooden chair kit'}, 3903, 15, 'wooden chair kit')
+
+
+----Statuy----
+shopModule:addBuyableItem({'knight statue kit'}, 3928, 50, 'knight statue kit')
+shopModule:addBuyableItem({'monkey statue \'speak\' kit'}, 5088, 65, 'monkey statue \'speak\' kit')
+shopModule:addBuyableItem({'monkey statue \'see\' kit'}, 5086, 65, 'monkey statue \'see\' kit')
+shopModule:addBuyableItem({'monkey statue \'hear\' kit'}, 5087, 65, 'monkey statue \'hear\' kit')
+shopModule:addBuyableItem({'minotaur statue kit'}, 3929, 50, 'minotaur statue kit')
+shopModule:addBuyableItem({'goblin statue kit'}, 3930, 50, 'goblin statue kit')
+
+----Lustra---
+shopModule:addBuyableItem({'wall mirror'}, 1845, 40, 'wall mirror')
+shopModule:addBuyableItem({'wall mirror (Oval)'}, 1851, 40, 'wall mirror (Oval)')
+shopModule:addBuyableItem({'wall mirror (Edged)'}, 1848, 40, 'wall mirror (Edged)')
+
+----Akcesoria-----
+shopModule:addBuyableItem({'table lamp kit'}, 3924, 35, 'table lamp kit')
+shopModule:addBuyableItem({'telescope kit'}, 3925, 70, 'telescope kit')
+shopModule:addBuyableItem({'globe kit'}, 3923, 50, 'globe kit')
+----Obrazy-----
+shopModule:addBuyableItem({'picture (Still Life)'}, 1853, 50, 'picture (Still Life)')
+shopModule:addBuyableItem({'picture (Portrait)'}, 1854, 50, 'picture (Portrait)')
+shopModule:addBuyableItem({'picture (Landscape)'}, 1852, 50, 'picture (Landscape)')
+
+-----Inne-----
+shopModule:addBuyableItem({'cuckoo clock'}, 1877, 40, 'cuckoo clock')
+shopModule:addBuyableItem({'golden goblet'}, 5805, 5000, 'golden goblet')
+shopModule:addBuyableItem({'silver goblet'}, 5806, 3000, 'silver goblet')
+shopModule:addBuyableItem({'bronze goblet'}, 5807, 2000, 'bronze goblet')
+shopModule:addBuyableItem({'empty goldfish bowl'}, 5928, 50, 'empty goldfish bowl')
+shopModule:addBuyableItem({'water pipe'}, 2093, 40, 'water pipe')
+shopModule:addBuyableItem({'oracle figurine'}, 8974, 100, 'oracle figurine')
+
+shopModule:addSellableItem({'hieroglyph banner'}, 13739, 500, 'hieroglyph banner')
+shopModule:addSellableItem({'golden figurine'}, 5799, 3000, 'golden figurine')
+shopModule:addSellableItem({'frozen starlight'}, 2361, 20000, 'frozen starlight')
+shopModule:addSellableItem({'dracoyle statue'}, 9948, 5000, 'dracoyle statue')
+shopModule:addSellableItem({'blood goblet'}, 9447, 10000, 'blood goblet')
+shopModule:addSellableItem({'black skull'}, 9969, 4000, 'black skull')
+shopModule:addSellableItem({'bat decoration'}, 6492, 2000, 'bat decoration')
+shopModule:addSellableItem({'bejeweled ship\'s telescope'}, 10532, 20000, 'bejeweled ship\'s telescope')
+shopModule:addSellableItem({'skeleton decoration'}, 6526, 3000, 'skeleton decoration')
+shopModule:addSellableItem({'pharaoh banner'}, 13472, 1000, 'pharaoh banner')
+
+
+npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
+npcHandler:setMessage(MESSAGE_GREET, 'Welcome to my Furniture shop,|PLAYERNAME|!')
+npcHandler:setMessage(MESSAGE_FAREWELL, 'Good bye, hope you might come back anytime to my furniture shop.')
+npcHandler:setMessage(MESSAGE_WALKAWAY, 'Uhm... Hope you liked my furniture shop...')
 npcHandler:addModule(FocusModule:new())
