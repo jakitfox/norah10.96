@@ -94,7 +94,6 @@ shopModule:addBuyableItem({'tusk table kit'}, 3913, 25, 'tusk table kit')
 shopModule:addBuyableItem({'venorean wardrobe kit'}, 20255, 50, 'venorean wardrobe kit')
 shopModule:addBuyableItem({'wooden chair kit'}, 3903, 15, 'wooden chair kit')
 
-
 ----Statuy----
 shopModule:addBuyableItem({'knight statue kit'}, 3928, 50, 'knight statue kit')
 shopModule:addBuyableItem({'monkey statue \'speak\' kit'}, 5088, 65, 'monkey statue \'speak\' kit')

@@ -532,9 +532,6 @@
 		<monster name="Cyclops" x="-3" y="1" z="4" spawntime="60" />
 		<monster name="Cyclops Drone" x="2" y="3" z="4" spawntime="60" />
 	</spawn>
-	<spawn centerx="919" centery="594" centerz="4" radius="5">
-		<monster name="Necromancer" x="1" y="0" z="4" spawntime="60" />
-	</spawn>
 	<spawn centerx="291" centery="597" centerz="4" radius="1" />
 	<spawn centerx="288" centery="598" centerz="4" radius="1">
 		<monster name="Raging Mage" x="-1" y="1" z="4" spawntime="60" />
@@ -1209,9 +1206,6 @@
 		<npc name="Mour" x="1" y="0" z="5" spawntime="60" direction="2" />
 	</spawn>
 	<spawn centerx="143" centery="589" centerz="5" radius="7" />
-	<spawn centerx="919" centery="595" centerz="5" radius="5">
-		<monster name="Necromancer" x="1" y="-1" z="5" spawntime="60" />
-	</spawn>
 	<spawn centerx="291" centery="599" centerz="5" radius="1" />
 	<spawn centerx="286" centery="600" centerz="5" radius="1" />
 	<spawn centerx="290" centery="601" centerz="5" radius="1" />
@@ -5851,7 +5845,7 @@
 		<monster name="Smuggler" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="683" centery="600" centerz="7" radius="1">
-		<npc name="Mastork" x="0" y="-1" z="7" spawntime="60" direction="2" />
+		<npc name="Mistrok" x="0" y="0" z="7" spawntime="60" direction="2" />
 	</spawn>
 	<spawn centerx="769" centery="600" centerz="7" radius="1">
 		<monster name="Smuggler" x="-1" y="-1" z="7" spawntime="60" />

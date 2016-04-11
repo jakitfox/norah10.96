@@ -4,6 +4,7 @@
 	<look type="251" head="0" body="77" legs="155" feet="114" addons="0"/>
 	<parameters>
 		<parameter key="module_shop" value="1"/>
-		<parameter key="shop_buyable" value="ice cream cone,7375,30;ice cream cone,7373,30;ice cream cone,7374,30;snowball,2111,2;ice cube,7441,100"/>
+		<parameter key="shop_buyable" value="ice cream cone,7375,30;ice cream cone,7373,30;ice cream cone,7374,30;snowball,2111,2;small ice statue,7447,50;small ice statue,7448,50;"/>
+		<parameter key="shop_sellable" value="ice cube,7441,250;"/>
 	</parameters>
 </npc>
