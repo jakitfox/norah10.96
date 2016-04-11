@@ -5,6 +5,7 @@
 <look type="57" head="20" body="30" legs="40" feet="50"/>
 <parameters>
 	<parameter key="module_shop" value="1"/>
-	<parameter key="shop_buyable" value="ankh,2193,10;"/>
+	<parameter key="shop_buyable" value="wedding ring,2121,5000;"/>
+	<parameter key="shop_sellable" value="wedding ring,2121,100;"/>
 </parameters>
 </npc>

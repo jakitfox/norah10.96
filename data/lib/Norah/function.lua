@@ -335,3 +335,12 @@ function Creature.getMonster(self)
 	return self:isMonster() and self or nil
 end
 
+function getPlayerNameById(id)
+    local resultName = db.storeQuery("SELECT `name` FROM `players` WHERE `id` = " .. db.escapeString(id))
+    if resultName ~= false then
+        local name = result.getDataString(resultName, "name")
+        result.free(resultName)
+        return name
+    end
+    return 0
+end

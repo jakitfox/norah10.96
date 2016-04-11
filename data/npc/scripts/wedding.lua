@@ -1,197 +1,150 @@
- local keywordHandler = KeywordHandler:new()
+local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 NpcSystem.parseParameters(npcHandler)
-local talkState = {}
-local talk_state = {}
 
-function onCreatureAppear(cid)                npcHandler:onCreatureAppear(cid)            end
-function onCreatureDisappear(cid)            npcHandler:onCreatureDisappear(cid)            end
-function onCreatureSay(cid, type, msg)            npcHandler:onCreatureSay(cid, type, msg)        end
-function onThink()                    npcHandler:onThink()                    end
+function onCreatureAppear(cid)            npcHandler:onCreatureAppear(cid)            end
+function onCreatureDisappear(cid)        npcHandler:onCreatureDisappear(cid)            end
+function onCreatureSay(cid, type, msg)    npcHandler:onCreatureSay(cid, type, msg)    end
+function onThink()                        npcHandler:onThink()                        end
 
-function creatureSayCallback(cid, type, msg)
+local function greetCallback(cid)
+    local player = Player(cid)
+    local msg = 'Be welcome, ' .. player:getName() .. '.'
+   
+    local playerStatus = getPlayerMarriageStatus(player:getGuid())
+    local playerSpouse = getPlayerSpouse(player:getGuid())
+    if (playerStatus == MARRIED_STATUS) then
+        msg = msg .. ' I see that you are a happily married ' .. ((player:getSex() == PLAYERSEX_FEMALE) and 'woman' or 'man') .. '. What brings you here? Looking for a {divorce}?'
+    elseif (playerStatus == PROPOSED_STATUS) then
+        msg = msg .. ' You are still waiting for the wedding proposal you made to {' .. (getPlayerNameById(playerSpouse)) .. '}. Would you like to {remove} it?'
+    else
+        msg = msg .. ' What brings you here? Wanting to {marry} someone?'
+    end
+    npcHandler:say(msg,cid)
+    npcHandler:addFocus(cid)
+    return false
+end
+
+local function tryEngage(cid, message, keywords, parameters, node)
     if(not npcHandler:isFocused(cid)) then
         return false
     end
-
-	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
-
-	if msgcontains(msg, 'marry') or msgcontains(msg, 'marriage') then
-		if getPlayerStorageValue(cid,3066) == -1 then
-			selfSay('Would you like to get married?', cid)
-			talkState[talkUser] = 1
-		elseif getPlayerStorageValue(cid,3066) == 1 then
-			local fid = getPlayerGUID(cid)
-			local marrystatus = getOwnMarryStatus(fid)
-			if marrystatus ~= 0 then
-				local newpartner = getPlayerNameByGUID(marrystatus)
-				selfSay('You already set a wedding date with {' .. newpartner .. '}, now I must talk to your partner. Do you want to {cancel} it?', cid)
-				talkState[talkUser] = 5
-			else
-				setPlayerStorageValue(cid,3066,-1)
-				selfSay('Would you like to get married?', cid)
-				talkState[talkUser] = 1
-			end
-		elseif getPlayerStorageValue(cid,3066) == 2 then
-			selfSay('You are already married. If you want to {divorce}, just say it.', cid)
-			talkState[talkUser] = 0
-		end
-
-	elseif msgcontains(msg, 'divorce') then
-		if getPlayerStorageValue(cid,3066) == 2 then
-			selfSay('Would you like to divorce of your partner?', cid)
-			talkState[talkUser] = 6
-		else
-			selfSay('You are not married. If you want to get married, just say {marry}.', cid)
-			talkState[talkUser] = 0
-		end
-	end
-
-	if talkState[talkUser] == 1 then
-		if msgcontains(msg, 'yes') then
-			local fid = getPlayerGUID(cid)
-			local marrystatus = getMarryStatus(fid)
-			if marrystatus == FALSE then
-				selfSay('And what\'s the name of your future partner?', cid)
-				talkState[talkUser] = 2
-			else
-				local marryname = getPlayerNameByGUID(marrystatus)
-				selfSay('{' .. marryname .. '} has set a wedding date with you. Do you want to {proceed} or {cancel} the wedding?', cid)
-				talkState[talkUser] = 4
-			end
-		end
-
-	elseif talkState[talkUser] == 2 then
-		local p = msg
-		local player = getPlayerName(cid)
-		local fid = getPlayerGUID(cid)
-		local sid = getPlayerGUIDByName(p)
-		if sid == 0 then
-			selfSay('A player with that name does not exists.', cid)
-			talkState[talkUser] = 0
-		elseif sid == fid then
-			selfSay('Don\'t worry, you will always be married with yourself, kid.', cid)
-			talkState[talkUser] = 0
-		else
-			local marrystatus = getMarryStatus(fid)
-			local pmarriage = getPlayerMarriage(sid)
-			local ownstatus = getOwnMarryStatus(cid)
-			if pmarriage == FALSE then
-				if marrystatus == FALSE then
-					if ownstatus == FALSE then
-						setPlayerStorageValue(cid,3066,1)
-						addMarryStatus(fid,sid)
-						selfSay('You\'ve just set a wedding date with {' .. p .. '}.', cid)
-						talkState[talkUser] = 0
-					else
-						local partnername = getPlayerNameByGUID(ownstatus)
-						selfSay('{' .. p .. '} has already set a wedding date with {' .. partnername .. '}.', cid)
-						talkState[talkUser] = 0
-					end
-				else
-					local marryname = getPlayerNameByGUID(marrystatus)
-					selfSay('{' .. marryname .. '} has set a wedding date with you. Do you want to {proceed} or {cancel} the wedding?', cid)
-					talkState[talkUser] = 4
-				end
-			else
-				local pname = getPlayerNameByGUID(pmarriage)
-				selfSay('Sorry, but {' .. p .. '} is already married to {' .. pname .. '}.', cid)
-				talkState[talkUser] = 0
-			end
-		end
-
-	elseif talkState[talkUser] == 4 then
-		if msgcontains(msg, 'proceed') then
-			local fid = getPlayerGUID(cid)
-			local sid = getMarryStatus(fid)
-			local marryname = getPlayerNameByGUID(sid)
-			local pid = getPlayerByNameWildcard(marryname)
-				local tmf = getCreaturePosition(cid)
-				local	tms = getCreaturePosition(pid)
-				local text = {'I love you!','My love!','Baby dear!'}
-				local chance1 = math.random(1,table.getn(text))
-				local chance2 = math.random(1,table.getn(text))
-				local dateFormat = "%A %d"..getMonthDayEnding(os.date("%d")).." %B %Y"
-                                local ring = doPlayerAddItem(cid,2121,1)
-                                local ring2 = doPlayerAddItem(pid,2121,1)
-
-			if isOnline(fid) == TRUE and isOnline(sid) == TRUE then
-			if getDistanceBetween(tmf, tms) <= 3 then
-					setPlayerStorageValue(cid,3066,2)
-					setPlayerStorageValue(pid,3066,2)
-					doCancelMarryStatus(fid)
-					doCancelMarryStatus(sid)
-					setPlayerPartner(cid,sid)
-					setPlayerPartner(pid,fid)
-                                        doPlayerAddOutfitId(cid,34,0)
-                                        doPlayerAddOutfitId(pid,34,0)
-                                        doItemSetAttribute(ring, "description", "" .. getCreatureName(cid) .. " & " .. getCreatureName(pid) .. " forever - married on " ..os.date(dateFormat).. ".")
-                                        doItemSetAttribute(ring2, "description", "" .. getCreatureName(cid) .. " & " .. getCreatureName(pid) .. " forever - married on " ..os.date(dateFormat).. ".")
-					doCreatureSay(cid, text[chance1], TALKTYPE_ORANGE_1)
-					doCreatureSay(pid, text[chance2], TALKTYPE_ORANGE_1)
-					doSendMagicEffect(tmf, 35)
-					doSendMagicEffect(tms, 35)
-					selfSay('Congratulations! Now you may kiss your partner! Everytime you wanna make this effect, just say {love}. You must be close to your partner.', cid)
-					talkState[talkUser] = 0
-
-				else
-					selfSay('Your partner must be close to you so you can marry!', cid)
-					talkState[talkUser] = 0
-				end
-			else
-				selfSay('You and your new partner must be online at the same time.', cid)
-				talkState[talkUser] = 0
-			end
-			
-
-
-		elseif msgcontains(msg, 'cancel') then
-			local fid = getPlayerGUID(cid)
-			local sid = getMarryStatus(fid)
-			local marryname = getPlayerNameByGUID(sid)
-			local pid = getPlayerByNameWildcard(marryname)
-			if isOnline(sid) == TRUE then
-				setPlayerStorageValue(pid,3066,-1)
-			end
-			doCancelMarryStatus(sid)
-			selfSay('You just canceled your wedding date with {' .. marryname .. '}.', cid)
-			talkState[talkUser] = 0
-		end
-
-	elseif talkState[talkUser] == 5 then
-		if msgcontains(msg, 'cancel') or msgcontains(msg, 'yes') then
-			local fid = getPlayerGUID(cid)
-			setPlayerStorageValue(cid,3066,-1)
-			doCancelMarryStatus(fid)
-			talkState[talkUser] = 0
-		end
-
-	elseif talkState[talkUser] == 6 then
-		if msgcontains(msg, 'yes') then
-			local fid = getPlayerGUID(cid)
-			local sid = getPlayerPartner(cid)
-			local marryname = getPlayerNameByGUID(sid)
-			local pid = getPlayerByNameWildcard(marryname)
-			if (isOnline(fid) == TRUE and isOnline(sid) == TRUE) then
-				setPlayerStorageValue(cid,3066,-1)
-				setPlayerStorageValue(pid,3066,-1)
-				setPlayerPartner(cid,0)
-				setPlayerPartner(pid,0)
-                                doPlayerAddOutfitId(cid,34,-1)
-                                doPlayerAddOutfitId(pid,34,-1)
-				selfSay('You\'ve just divorced of your old partner.', cid)
-				talkState[talkUser] = 0
-			else
-				selfSay('You and your new partner must be online at the same time.', cid)
-				talkState[talkUser] = 0
-			end
-		end
-
-	end
-
-
-	return TRUE
+   
+    local player = Player(cid)
+   
+    local playerStatus = getPlayerMarriageStatus(player:getGuid())
+    local playerSpouse = getPlayerSpouse(player:getGuid())
+    if playerStatus == MARRIED_STATUS then
+        npcHandler:say('You are already married to {' .. getPlayerNameById(playerSpouse) .. '}.', cid)
+    elseif playerStatus == PROPOSED_STATUS then
+        npcHandler:say('You already made a wedding proposal to {' .. getPlayerNameById(playerSpouse) .. '}. You can always remove the proposal by saying {remove} proposal.', cid)
+    else
+        local candidate = getPlayerGUIDByName(message)
+        if candidate == 0 then
+            npcHandler:say('A player with this name does not exist.', cid)
+        elseif candidate == player:getGuid() then
+            npcHandler:say('You can\'t marry yourself, kid.', cid)
+        else
+            if player:getItemCount(ITEM_WEDDING_RING) == 0 then
+                npcHandler:say('As I said, you need a wedding ring in order to marry.', cid)
+            else
+                local candidateStatus = getPlayerMarriageStatus(candidate)
+                local candidateSpouse = getPlayerSpouse(candidate)
+                if candidateStatus == MARRIED_STATUS then
+                    npcHandler:say('{' .. getPlayerNameById(candidate) .. '} is already married to {' .. getPlayerNameById(candidateSpouse) .. '}.', cid)
+                elseif candidateStatus == PROPOSED_STATUS then
+                    if candidateSpouse == player:getGuid() then
+                        npcHandler:say('Since both young souls are willing to marry, I now pronounce you and {' .. getPlayerNameById(candidate) .. '} married. {' .. player:getName() .. '}, take these two engraved wedding rings and give one of them to your spouse.', cid)
+                        player:removeItem(ITEM_WEDDING_RING,1)
+                        local item1 = Item(doPlayerAddItem(cid,ITEM_ENGRAVED_WEDDING_RING,1))
+                        local item2 = Item(doPlayerAddItem(cid,ITEM_ENGRAVED_WEDDING_RING,1))
+                        item1:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, player:getName() .. ' & ' .. getPlayerNameById(candidate) .. ' forever - married on ' .. os.date('%B %d, %Y.'))
+                        item2:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, player:getName() .. ' & ' .. getPlayerNameById(candidate) .. ' forever - married on ' .. os.date('%B %d, %Y.'))
+                        setPlayerMarriageStatus(player:getGuid(), MARRIED_STATUS)
+                        setPlayerMarriageStatus(candidate, MARRIED_STATUS)
+                        setPlayerSpouse(player:getGuid(), candidate)
+                    else
+                        npcHandler:say('{' .. getPlayerNameById(candidate) .. '} already made a wedding proposal to {' .. getPlayerNameById(candidateSpouse) .. '}.', cid)
+                    end
+                else
+                    npcHandler:say('Ok, now let\'s wait and see if {' ..  getPlayerNameById(candidate) .. '} accepts your proposal. I\'ll give you back your wedding ring as soon as {' ..  getPlayerNameById(candidate) .. '} accepts your proposal or you {remove} it.', cid)
+                    player:removeItem(ITEM_WEDDING_RING,1)
+                    setPlayerMarriageStatus(player:getGuid(), PROPOSED_STATUS)
+                    setPlayerSpouse(player:getGuid(), candidate)
+                end
+            end
+        end
+    end
+    keywordHandler:moveUp(3)
+    return true
 end
 
-npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
+local function confirmRemoveEngage(cid, message, keywords, parameters, node)
+    if(not npcHandler:isFocused(cid)) then
+        return false
+    end
+   
+    local player = Player(cid)
+    local playerStatus = getPlayerMarriageStatus(player:getGuid())
+    local playerSpouse = getPlayerSpouse(player:getGuid())
+    if playerStatus == PROPOSED_STATUS then
+        npcHandler:say('Are you sure you want to remove your wedding proposal with {' .. getPlayerNameById(playerSpouse) .. '}?', cid)
+        node:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, moveup = 3, text = 'Ok, let\'s keep it then.'})
+       
+        local function removeEngage(cid, message, keywords, parameters, node)
+            doPlayerAddItem(cid,ITEM_WEDDING_RING,1)
+            setPlayerMarriageStatus(player:getGuid(), 0)
+            setPlayerSpouse(player:getGuid(), -1)
+            npcHandler:say(parameters.text, cid)
+            keywordHandler:moveUp(parameters.moveup)
+        end
+        node:addChildKeyword({'yes'}, removeEngage, {moveup = 3, text = 'Ok, your marriage proposal to {' .. getPlayerNameById(playerSpouse) .. '} has been removed. Take your wedding ring back.'})
+    else
+        npcHandler:say('You don\'t have any pending proposal to be removed.', cid)
+        keywordHandler:moveUp(2)
+    end
+    return true
+end
+
+local function confirmDivorce(cid, message, keywords, parameters, node)
+    if(not npcHandler:isFocused(cid)) then
+        return false
+    end
+   
+    local player = Player(cid)
+    local playerStatus = getPlayerMarriageStatus(player:getGuid())
+    local playerSpouse = getPlayerSpouse(player:getGuid())
+    if playerStatus == MARRIED_STATUS then
+        npcHandler:say('Are you sure you want to divorce of {' .. getPlayerNameById(playerSpouse) .. '}?', cid)
+        node:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, moveup = 3, text = 'Great! Marriages should be an eternal commitment.'})
+       
+        local function divorce(cid, message, keywords, parameters, node)
+            local player = Player(cid)
+            local spouse = getPlayerSpouse(player:getGuid())
+            setPlayerMarriageStatus(player:getGuid(), 0)
+            setPlayerSpouse(player:getGuid(), -1)
+            setPlayerMarriageStatus(spouse, 0)
+            setPlayerSpouse(spouse, -1)
+            npcHandler:say(parameters.text, cid)
+            keywordHandler:moveUp(parameters.moveup)
+        end
+        node:addChildKeyword({'yes'}, divorce, {moveup = 3, text = 'Ok, you are now divorced of {' .. getPlayerNameById(playerSpouse) .. '}. Think better next time after marrying someone.'})
+    else
+        npcHandler:say('You aren\'t married to get a divorce.', cid)
+        keywordHandler:moveUp(2)
+    end
+    return true
+end
+
+local node1 = keywordHandler:addKeyword({'marry'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Would you like to get married? Make sure you have a wedding ring with you.'})
+node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, moveup = 1, text = 'That\'s fine.'})
+local node2 = node1:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'And who would you like to marry?'})
+node2:addChildKeyword({'[%w]'}, tryEngage, {})
+
+keywordHandler:addKeyword({'remove'}, confirmRemoveEngage, {})
+
+keywordHandler:addKeyword({'divorce'}, confirmDivorce, {})
+
+npcHandler:setCallback(CALLBACK_GREET, greetCallback)
+
 npcHandler:addModule(FocusModule:new())
