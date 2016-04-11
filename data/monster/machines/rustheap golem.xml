@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Rustheap Golem" nameDescription="a rustheap golem" race="venom" experience="2300" speed="270">
+<monster name="Rustheap Golem" nameDescription="a rustheap golem" race="venom" experience="2300" speed="250" manacost="0">
 	<health now="2800" max="2800" />
 	<look type="603" corpse="23355" />
 	<targetchange interval="4000" chance="10" />
