@@ -4,19 +4,13 @@ end
 
 function Player:onLook(thing, position, distance)
 	local description = "You see " .. thing:getDescription(distance)
-		if LOOK_MARRIAGE_DESCR and thing:isCreature() then
+	if LOOK_MARRIAGE_DESCR and thing:isCreature() then
         if thing:isPlayer() then
             description = description .. self:getMarriageDescription(thing)
         end
     end
-	
 	if self:getGroup():getAccess() then
-	
-		if LOOK_MARRIAGE_DESCR and thing:isCreature() then
-			if thing:isPlayer() then
-				description = description .. self:getMarriageDescription(thing)
-			end
-		elseif thing:isItem() then
+		if thing:isItem() then
 			description = string.format("%s\nItem ID: %d", description, thing:getId())
 
 			local actionId = thing:getActionId()
