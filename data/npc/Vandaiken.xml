@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Vandaiken" script="event_mount.lua" walkinterval="2000" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="637" head="0" body="85" legs="132" feet="114" addons="3"/>
+</npc>

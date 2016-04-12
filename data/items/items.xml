@@ -31209,6 +31209,9 @@
 		<attribute key="shootType" value="simplearrow" />
 		<attribute key="maxHitChance" value="91" />
 	</item>
+	<item id="24115" article="a" name="event token">
+		<attribute key="weight" value="50" />
+	</item>
 	<item id="24124" article="a" name="bronze gear wheel">
 		<attribute key="weight" value="5" />
 	</item>

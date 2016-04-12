@@ -251,7 +251,8 @@ Storage = {
 		Storage02 = 3702,
 		Storage03 = 3703,
 		Storage04 = 3704,
-		Storage05 = 3705
+		Storage05 = 3705,
+		Storage06 = 3706
 	},
 	
 	Spider = {
@@ -262,5 +263,6 @@ Storage = {
 	}
 	-- 3300 - uid schody
 	
+	-- 3900
 	
 }
