@@ -6,14 +6,6 @@
 	<movevent event="StepIn" fromuid="3290" touid="3291" script="event/twd/twdTile.lua" />
 	<!-- Swim -->
 	<movevent event="StepIn" uniqueid="3285" script="event/swim/swim_event.lua" />
-	<!-- Dungeon -->
-	<movevent event="StepIn" actionid="2700" script="event/dungeon/inst_enter.lua" />
-	<movevent event="StepIn" actionid="20402" script="event/dungeon/inst_enter_tomb.lua" />
-	<movevent event="AddItem" tileitem="1" actionid="20403" script="event/dungeon/inst_d_open.lua" />
-	<movevent event="StepIn" actionid="20404" script="event/dungeon/inst_d_open.lua" />
-	<movevent event="StepIn" actionid="20405" script="event/dungeon/inst_d_open_2.lua" />
-	<movevent event="StepIn" fromaid="20201" toaid="20230" script="event/dungeon/inst_exit.lua" />
-
 	<!-- Satan Quest -->
 	<movevent event="StepIn" uniqueid="3003" script="quest/satan/room.lua" />
 	<movevent event="StepIn" fromuid="3011" touid="3017" script="quest/satan/thrones.lua" />
