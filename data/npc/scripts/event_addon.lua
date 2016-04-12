@@ -7,11 +7,7 @@ local table = {
 	["ranger"] = {name = "Ranger", male = 684, female = 683, storage = 3910, outfit = 570, storage1 = 3911 },
 	["ceremonial garb"] = {name = "Ceremonial Garb", male = 695, female = 694, storage = 3912, outfit = 570, storage1 = 3913 },
 	["puppeteer"] = {name = "Puppeteer", male = 697, female = 696, storage = 3914, outfit = 690, storage1 = 3915 },
-	["spirit caller"] = {name = "Spirit Caller", male = 699, female = 698, storage = 3916, outfit = 420, storage1 = 3917 },
-	["conjurer"] = {name = "Conjurer", male = 634, female = 632, storage = 3902, outfit = 540, storage1 = 3903 },
-	["conjurer"] = {name = "Conjurer", male = 634, female = 632, storage = 3902, outfit = 540, storage1 = 3903 },
-	["conjurer"] = {name = "Conjurer", male = 634, female = 632, storage = 3902, outfit = 540, storage1 = 3903 },
-	
+	["spirit caller"] = {name = "Spirit Caller", male = 699, female = 698, storage = 3916, outfit = 420, storage1 = 3917 }
 }
 
 local keywordHandler = KeywordHandler:new()
@@ -106,7 +102,7 @@ end
 return true 
 end 
 
-keywordHandler:addKeyword({'addon'}, StdModule.say, {npcHandler = npcHandler, text = 'You can choose from this list: {champion}, {conjurer}, {beastmaster}, {chaos acolyte}, {death herald}, {ranger}, {ceremonial garb}, {spirit caller},  .'})
+keywordHandler:addKeyword({'addon'}, StdModule.say, {npcHandler = npcHandler, text = 'You can choose from this list: {champion}, {conjurer}, {beastmaster}, {chaos acolyte}, {death herald}, {ranger}, {ceremonial garb}, {spirit caller}.'})
 
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Um yeah, good day.')
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Farewell, I hope you were satisfied with our service.')
