@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talkactions>
 	<!-- commands -->
-	<talkaction words="!quit" script="quitbomb.lua"/>
 	<talkaction words="!events" separator=" " script="events.lua"/>
 	<talkaction words="/save" separator=" " script="save.lua" />
 	<talkaction words="!help" separator=" " script="commands.lua"/>
