@@ -52,6 +52,7 @@
 		<item id="2671" countmax="2" chance="60000" /><!-- ham -->
 		<item id="2152" countmax="8" chance="55000" /><!-- platinum coin -->
 		<item id="6558" countmax="3" chance="33333" /><!-- concentrated demonic blood -->
+		<item id="9694" chance="3800"/><!-- the head of a jester doll -->
 		<item id="5944" chance="23000" /><!-- soul orb -->
 		<item id="7591" countmax="2" chance="10000" /><!-- great health potion -->
 		<item id="7590" countmax="2" chance="14830" /><!-- great mana potion -->
@@ -67,5 +68,6 @@
 		<item id="5801" chance="1192" /><!-- jewelled backpack -->
 		<item id="7388" chance="480" /><!-- vile axe -->
 		<item id="2470" chance="30" /><!-- golden legs -->
+		
 	</loot>
 </monster>

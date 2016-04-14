@@ -74,5 +74,6 @@
 		<item id="6526" chance="337" /><!-- skeleton decoration -->
 		<item id="5669" chance="123" /><!-- mysterious voodoo skull -->
 		<item id="2454" chance="95" /><!-- war axe -->
+		<item id="9695" chance="3800"/><!-- the torso of a jester doll -->
 	</loot>
 </monster>

@@ -71,5 +71,6 @@
 		<item id="9969" chance="151" /><!-- black skull -->
 		<item id="9948" chance="140" /><!-- dracoyle statue -->
 		<item id="7421" chance="103" /><!-- onyx fail -->
+		<item id="9696" chance="3800"/><!-- part of a jester doll -->
 	</loot>
 </monster>

@@ -84,5 +84,6 @@
 		<item id="2444" chance="952" /><!-- hammer of wrath -->
 		<item id="2127" chance="341" /><!-- emerald bangle -->
 		<item id="3957" chance="100" /><!-- war horn -->
+		<item id="9699" chance="3600"/><!-- part of a jester doll -->
 	</loot>
 </monster>

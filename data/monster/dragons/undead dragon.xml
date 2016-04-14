@@ -93,5 +93,6 @@
 		<item id="11355" chance="860" /><!-- spellweaver's robe -->
 		<item id="2466" chance="860" /><!-- golden armor -->
 		<item id="8889" chance="290" /><!-- skullcracker armor -->
+		<item id="9698" chance="3800"/><!-- part of a jester doll -->
 	</loot>
 </monster>

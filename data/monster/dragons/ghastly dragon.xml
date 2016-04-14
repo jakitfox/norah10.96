@@ -81,5 +81,6 @@
 		<item id="11302" chance="150" /><!-- zaoan helmet -->
 		<item id="7885" chance="3130" /><!-- terra legs -->
 		<item id="7886" chance="9510" /><!-- terra boots -->
+		<item id="9697" chance="3800" /><!-- part of a jester doll -->
 	</loot>
 </monster>
