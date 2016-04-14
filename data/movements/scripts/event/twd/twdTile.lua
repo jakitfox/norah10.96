@@ -26,19 +26,28 @@ function onStepIn(creature, item, position, fromPosition)
                 end
  
                 -- Let's make sure none is playing, before entrance
-                if getWaveLevel() > 0 then
+				if getWaveLevel() > 0 then
                         creature:teleportTo(fromPosition, true)
                         fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
                         creature:sendTextMessage(MESSAGE_INFO_DESCR, "There is someone already in the event.")
-                        return true
+
+                return true
                 end
  
+				if creature:getStorageValue(Storage.TwD.Storage06) >= os.time() then
+						creature:teleportTo(fromPosition, true)
+                        fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
+                        creature:sendTextMessage(MESSAGE_INFO_DESCR, "You have to wait " .. creature:getStorageValue(Storage.TwD.Storage06) - os.time() .. " seconds :)")
+				return true
+                end
+				
                 -- Prepare Player
                 creature:teleportTo(eventRoomPosition)
                 creature:addHealth(creature:getMaxHealth())
                 creature:setStorageValue(playingGameStorage, 1)
                 creature:addCoins(twdConfig.startingCoins)
                 creature:addItem(2557, 1)
+				creature:setStorageValue(Storage.TwD.Storage06, os.time() + 14400)
  
                 -- Setup Game
                 setWaveLevel(1)
