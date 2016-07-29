@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,9 +27,9 @@
 #include "spells.h"
 #include "movement.h"
 #include "weapons.h"
-#include "creatureevent.h"
 #include "globalevent.h"
 #include "events.h"
+#include "modules.h"
 
 Actions* g_actions = nullptr;
 CreatureEvents* g_creatureEvents = nullptr;
@@ -40,6 +40,7 @@ Spells* g_spells = nullptr;
 TalkActions* g_talkActions = nullptr;
 MoveEvents* g_moveEvents = nullptr;
 Weapons* g_weapons = nullptr;
+Modules* g_modules = nullptr;
 
 extern LuaEnvironment g_luaEnvironment;
 
@@ -116,6 +117,12 @@ bool ScriptingManager::loadScriptSystems()
 	g_events = new Events();
 	if (!g_events->load()) {
 		std::cout << "> ERROR: Unable to load events!" << std::endl;
+		return false;
+	}
+
+	g_modules = new Modules();
+	if (!g_modules->loadFromXml()) {
+		std::cout << "> ERROR: Unable to load modules!" << std::endl;
 		return false;
 	}
 

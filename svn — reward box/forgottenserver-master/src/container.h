@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,8 +28,6 @@
 class Container;
 class DepotChest;
 class DepotLocker;
-class RewardChest;
-class Reward;
 
 class ContainerIterator
 {
@@ -42,7 +40,6 @@ class ContainerIterator
 		Item* operator*();
 
 	protected:
-		Container* super;
 		std::list<const Container*> over;
 		ItemDeque::const_iterator cur;
 
@@ -52,9 +49,9 @@ class ContainerIterator
 class Container : public Item, public Cylinder
 {
 	public:
-		explicit Container(uint16_t _type);
-		Container(uint16_t _type, uint16_t _size);
-		explicit Container(Tile* tile);
+		explicit Container(uint16_t type);
+		Container(uint16_t type, uint16_t size, bool unlocked = true, bool pagination = false);
+		explicit Container(Tile* type);
 		~Container();
 
 		// non-copyable
@@ -76,20 +73,6 @@ class Container : public Item, public Cylinder
 		virtual const DepotLocker* getDepotLocker() const {
 			return nullptr;
 		}
-		
-		virtual RewardChest* getRewardChest() {
- 			return nullptr;
- 		}
- 		virtual const RewardChest* getRewardChest() const {
- 			return nullptr;
- 		}
- 
- 		virtual Reward* getReward() {
- 			return nullptr;
- 		}
- 		virtual const Reward* getReward() const {
- 			return nullptr;
- 		}
 
 		Attr_ReadValue readAttr(AttrTypes_t attr, PropStream& propStream) override;
 		bool unserializeItemNode(FileLoader& f, NODE node, PropStream& propStream) override;

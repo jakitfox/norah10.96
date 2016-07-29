@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -57,7 +57,7 @@ enum TradeEvents_t {
 	ON_TRADE_CANCEL,
 };
 
-enum ItemDecayState_t {
+enum ItemDecayState_t : uint8_t {
 	DECAYING_FALSE = 0,
 	DECAYING_TRUE,
 	DECAYING_PENDING,
@@ -137,8 +137,8 @@ class ItemAttributes
 			return static_cast<time_t>(getIntAttr(ITEM_ATTRIBUTE_DATE));
 		}
 
-		void setWriter(const std::string& _writer) {
-			setStrAttr(ITEM_ATTRIBUTE_WRITER, _writer);
+		void setWriter(const std::string& writer) {
+			setStrAttr(ITEM_ATTRIBUTE_WRITER, writer);
 		}
 		void resetWriter() {
 			removeAttribute(ITEM_ATTRIBUTE_WRITER);
@@ -148,10 +148,6 @@ class ItemAttributes
 		}
 
 		void setActionId(uint16_t n) {
-			if (n < 100) {
-				n = 100;
-			}
-
 			setIntAttr(ITEM_ATTRIBUTE_ACTIONID, n);
 		}
 		uint16_t getActionId() const {
@@ -159,10 +155,6 @@ class ItemAttributes
 		}
 
 		void setUniqueId(uint16_t n) {
-			if (n < 1000) {
-				n = 1000;
-			}
-
 			setIntAttr(ITEM_ATTRIBUTE_UNIQUEID, n);
 		}
 		uint16_t getUniqueId() const {
@@ -183,15 +175,15 @@ class ItemAttributes
 			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_FLUIDTYPE));
 		}
 
-		void setOwner(uint32_t _owner) {
-			setIntAttr(ITEM_ATTRIBUTE_OWNER, _owner);
+		void setOwner(uint32_t owner) {
+			setIntAttr(ITEM_ATTRIBUTE_OWNER, owner);
 		}
 		uint32_t getOwner() const {
 			return getIntAttr(ITEM_ATTRIBUTE_OWNER);
 		}
 
-		void setCorpseOwner(uint32_t _corpseOwner) {
-			setIntAttr(ITEM_ATTRIBUTE_CORPSEOWNER, _corpseOwner);
+		void setCorpseOwner(uint32_t corpseOwner) {
+			setIntAttr(ITEM_ATTRIBUTE_CORPSEOWNER, corpseOwner);
 		}
 		uint32_t getCorpseOwner() const {
 			return getIntAttr(ITEM_ATTRIBUTE_CORPSEOWNER);
@@ -310,13 +302,13 @@ class Item : virtual public Thing
 {
 	public:
 		//Factory member to create item of right type based on type
-		static Item* CreateItem(const uint16_t _type, uint16_t _count = 0);
-		static Container* CreateItemAsContainer(const uint16_t _type, uint16_t size);
+		static Item* CreateItem(const uint16_t type, uint16_t count = 0);
+		static Container* CreateItemAsContainer(const uint16_t type, uint16_t size);
 		static Item* CreateItem(PropStream& propStream);
 		static Items items;
 
 		// Constructor for items
-		Item(const uint16_t _type, uint16_t _count = 0);
+		Item(const uint16_t type, uint16_t count = 0);
 		Item(const Item& i);
 		virtual Item* clone() const;
 
@@ -432,8 +424,8 @@ class Item : virtual public Thing
 			return static_cast<time_t>(getIntAttr(ITEM_ATTRIBUTE_DATE));
 		}
 
-		void setWriter(const std::string& _writer) {
-			setStrAttr(ITEM_ATTRIBUTE_WRITER, _writer);
+		void setWriter(const std::string& writer) {
+			setStrAttr(ITEM_ATTRIBUTE_WRITER, writer);
 		}
 		void resetWriter() {
 			removeAttribute(ITEM_ATTRIBUTE_WRITER);
@@ -483,8 +475,8 @@ class Item : virtual public Thing
 			return static_cast<uint16_t>(getIntAttr(ITEM_ATTRIBUTE_FLUIDTYPE));
 		}
 
-		void setOwner(uint32_t _owner) {
-			setIntAttr(ITEM_ATTRIBUTE_OWNER, _owner);
+		void setOwner(uint32_t owner) {
+			setIntAttr(ITEM_ATTRIBUTE_OWNER, owner);
 		}
 		uint32_t getOwner() const {
 			if (!attributes) {
@@ -493,8 +485,8 @@ class Item : virtual public Thing
 			return getIntAttr(ITEM_ATTRIBUTE_OWNER);
 		}
 
-		void setCorpseOwner(uint32_t _corpseOwner) {
-			setIntAttr(ITEM_ATTRIBUTE_CORPSEOWNER, _corpseOwner);
+		void setCorpseOwner(uint32_t corpseOwner) {
+			setIntAttr(ITEM_ATTRIBUTE_CORPSEOWNER, corpseOwner);
 		}
 		uint32_t getCorpseOwner() const {
 			if (!attributes) {
@@ -502,13 +494,6 @@ class Item : virtual public Thing
 			}
 			return getIntAttr(ITEM_ATTRIBUTE_CORPSEOWNER);
 		}
-		
-		void setRewardCorpse() {
- 			setCorpseOwner(static_cast<uint32_t>(std::numeric_limits<int32_t>::max()));
- 		}
- 		bool isRewardCorpse() {
- 			return getCorpseOwner() == static_cast<uint32_t>(std::numeric_limits<int32_t>::max());
- 		}
 
 		void setDuration(int32_t time) {
 			setIntAttr(ITEM_ATTRIBUTE_DURATION, time);
@@ -620,7 +605,7 @@ class Item : virtual public Thing
 			return items[id].hitChance;
 		}
 
-		int32_t getWorth() const;
+		uint32_t getWorth() const;
 		void getLight(LightInfo& lightInfo) const;
 
 		bool hasProperty(ITEMPROPERTY prop) const;
@@ -716,9 +701,6 @@ class Item : virtual public Thing
 
 		virtual void startDecaying();
 
-		bool isLoadedFromMap() const {
-			return loadedFromMap;
-		}
 		void setLoadedFromMap(bool value) {
 			loadedFromMap = value;
 		}

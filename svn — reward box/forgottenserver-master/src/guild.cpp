@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -40,12 +40,17 @@ void Guild::removeMember(Player* player)
 		g_game.updatePlayerHelpers(*member);
 	}
 	g_game.updatePlayerHelpers(*player);
+
+	if (membersOnline.empty()) {
+		g_game.removeGuild(id);
+		delete this;
+	}
 }
 
-GuildRank* Guild::getRankById(uint32_t id)
+GuildRank* Guild::getRankById(uint32_t rankId)
 {
 	for (size_t i = 0; i < ranks.size(); ++i) {
-		if (ranks[i].id == id) {
+		if (ranks[i].id == rankId) {
 			return &ranks[i];
 		}
 	}
@@ -62,7 +67,7 @@ const GuildRank* Guild::getRankByLevel(uint8_t level) const
 	return nullptr;
 }
 
-void Guild::addRank(uint32_t id, const std::string& name, uint8_t level)
+void Guild::addRank(uint32_t rankId, const std::string& rankName, uint8_t level)
 {
-	ranks.emplace_back(id, name, level);
+	ranks.emplace_back(rankId, rankName, level);
 }

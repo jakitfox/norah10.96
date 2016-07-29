@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,26 +24,18 @@
 #include "commands.h"
 #include "player.h"
 #include "npc.h"
-#include "monsters.h"
 #include "game.h"
 #include "actions.h"
-#include "house.h"
 #include "iologindata.h"
-#include "tools.h"
 #include "configmanager.h"
 #include "spells.h"
-#include "talkaction.h"
 #include "movement.h"
-#include "spells.h"
 #include "weapons.h"
-#include "raids.h"
-#include "quests.h"
-#include "mounts.h"
 #include "globalevent.h"
 #include "monster.h"
 #include "scheduler.h"
 #include "events.h"
-#include "chat.h"
+#include "modules.h"
 
 #include "pugicast.h"
 
@@ -60,6 +52,7 @@ extern GlobalEvents* g_globalEvents;
 extern Events* g_events;
 extern Chat* g_chat;
 extern LuaEnvironment g_luaEnvironment;
+extern Modules* g_modules;
 
 s_defcommands Commands::defined_commands[] = {
 	// TODO: move all commands to talkactions
@@ -74,19 +67,9 @@ s_defcommands Commands::defined_commands[] = {
 
 Commands::Commands()
 {
-	loaded = false;
-
-	//setup command map
+	// set up command map
 	for (uint32_t i = 0; i < sizeof(defined_commands) / sizeof(defined_commands[0]); i++) {
-		Command* cmd = new Command;
-		cmd->loadedGroupId = false;
-		cmd->loadedAccountType = false;
-		cmd->loadedLogging = false;
-		cmd->logged = true;
-		cmd->groupId = 1;
-		cmd->f = defined_commands[i].f;
-		std::string key = defined_commands[i].name;
-		commandMap[key] = cmd;
+		commandMap[defined_commands[i].name] = new Command(defined_commands[i].f, 1, ACCOUNT_TYPE_GOD, true);
 	}
 }
 
@@ -106,9 +89,7 @@ bool Commands::loadFromXml()
 		return false;
 	}
 
-	loaded = true;
-
-	for (pugi::xml_node commandNode = doc.child("commands").first_child(); commandNode; commandNode = commandNode.next_sibling()) {
+	for (auto commandNode : doc.child("commands").children()) {
 		pugi::xml_attribute cmdAttribute = commandNode.attribute("cmd");
 		if (!cmdAttribute) {
 			std::cout << "[Warning - Commands::loadFromXml] Missing cmd" << std::endl;
@@ -125,66 +106,36 @@ bool Commands::loadFromXml()
 
 		pugi::xml_attribute groupAttribute = commandNode.attribute("group");
 		if (groupAttribute) {
-			if (!command->loadedGroupId) {
-				command->groupId = pugi::cast<uint32_t>(groupAttribute.value());
-				command->loadedGroupId = true;
-			} else {
-				std::cout << "[Notice - Commands::loadFromXml] Duplicate command: " << it->first << std::endl;
-			}
+			command->groupId = pugi::cast<uint32_t>(groupAttribute.value());
+		} else {
+			std::cout << "[Warning - Commands::loadFromXml] Missing group for command " << it->first << std::endl;
 		}
 
 		pugi::xml_attribute acctypeAttribute = commandNode.attribute("acctype");
 		if (acctypeAttribute) {
-			if (!command->loadedAccountType) {
-				command->accountType = static_cast<AccountType_t>(pugi::cast<uint32_t>(acctypeAttribute.value()));
-				command->loadedAccountType = true;
-			} else {
-				std::cout << "[Notice - Commands::loadFromXml] Duplicate command: " << it->first << std::endl;
-			}
+			command->accountType = static_cast<AccountType_t>(pugi::cast<uint32_t>(acctypeAttribute.value()));
+		} else {
+			std::cout << "[Warning - Commands::loadFromXml] Missing acctype for command " << it->first << std::endl;
 		}
 
 		pugi::xml_attribute logAttribute = commandNode.attribute("log");
 		if (logAttribute) {
-			if (!command->loadedLogging) {
-				command->logged = booleanString(logAttribute.as_string());
-				command->loadedLogging = true;
-			} else {
-				std::cout << "[Notice - Commands::loadFromXml] Duplicate log tag for: " << it->first << std::endl;
-			}
+			command->log = booleanString(logAttribute.as_string());
+		} else {
+			std::cout << "[Warning - Commands::loadFromXml] Missing log for command " << it->first << std::endl;
 		}
+		g_game.addCommandTag(it->first.front());
 	}
-
-	for (const auto& it : commandMap) {
-		Command* command = it.second;
-		if (!command->loadedGroupId) {
-			std::cout << "[Warning - Commands::loadFromXml] Missing group id for command " << it.first << std::endl;
-		}
-
-		if (!command->loadedAccountType) {
-			std::cout << "[Warning - Commands::loadFromXml] Missing acctype level for command " << it.first << std::endl;
-		}
-
-		if (!command->loadedLogging) {
-			std::cout << "[Warning - Commands::loadFromXml] Missing log command " << it.first << std::endl;
-		}
-
-		g_game.addCommandTag(it.first.front());
-	}
-	return loaded;
+	return true;
 }
 
 bool Commands::reload()
 {
-	loaded = false;
-
 	for (const auto& it : commandMap) {
 		Command* command = it.second;
 		command->groupId = 1;
 		command->accountType = ACCOUNT_TYPE_GOD;
-		command->loadedGroupId = false;
-		command->loadedAccountType = false;
-		command->logged = true;
-		command->loadedLogging = false;
+		command->log = true;
 	}
 
 	g_game.resetCommandTag();
@@ -223,7 +174,7 @@ bool Commands::exeCommand(Player& player, const std::string& cmd)
 	CommandFunc cfunc = command->f;
 	(this->*cfunc)(player, str_param);
 
-	if (command->logged) {
+	if (command->log) {
 		player.sendTextMessage(MESSAGE_STATUS_CONSOLE_RED, cmd);
 
 		std::ostringstream logFile;
@@ -297,6 +248,9 @@ void Commands::reloadInfo(Player& player, const std::string& param)
 	} else if (tmpParam == "events") {
 		g_events->load();
 		player.sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Reloaded events.");
+	} else if (tmpParam == "modules") {
+		g_modules->reload();
+		player.sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Reloaded Modules.");
 	} else if (tmpParam == "chat" || tmpParam == "channel" || tmpParam == "chatchannels") {
 		g_chat->load();
 		player.sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Reloaded chatchannels.");

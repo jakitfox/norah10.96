@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,19 +23,7 @@
 
 #include "container.h"
 #include "creature.h"
-#include "player.h"
 
-#include "position.h"
-#include "rsa.h"
-
-int32_t NetworkMessage::decodeHeader()
-{
-	int32_t newSize = static_cast<int32_t>(buffer[0] | buffer[1] << 8);
-	length = newSize;
-	return length;
-}
-
-/******************************************************************************/
 std::string NetworkMessage::getString(uint16_t stringLen/* = 0*/)
 {
 	if (stringLen == 0) {
@@ -46,7 +34,7 @@ std::string NetworkMessage::getString(uint16_t stringLen/* = 0*/)
 		return std::string();
 	}
 
-	char* v = reinterpret_cast<char*>(buffer) + position;
+	char* v = reinterpret_cast<char*>(buffer) + position; //does not break strict aliasing
 	position += stringLen;
 	return std::string(v, stringLen);
 }
@@ -59,7 +47,6 @@ Position NetworkMessage::getPosition()
 	pos.z = getByte();
 	return pos;
 }
-/******************************************************************************/
 
 void NetworkMessage::addString(const std::string& value)
 {
@@ -74,23 +61,10 @@ void NetworkMessage::addString(const std::string& value)
 	length += stringLen;
 }
 
-void NetworkMessage::addString(const char* value)
-{
-	size_t stringLen = strlen(value);
-	if (!canAdd(stringLen + 2) || stringLen > 8192) {
-		return;
-	}
-
-	add<uint16_t>(stringLen);
-	memcpy(buffer + position, value, stringLen);
-	position += stringLen;
-	length += stringLen;
-}
-
 void NetworkMessage::addDouble(double value, uint8_t precision/* = 2*/)
 {
 	addByte(precision);
-	add<uint32_t>((value * std::pow(static_cast<float>(10), precision)) + INT_MAX);
+	add<uint32_t>((value * std::pow(static_cast<float>(10), precision)) + std::numeric_limits<int32_t>::max());
 }
 
 void NetworkMessage::addBytes(const char* bytes, size_t size)
@@ -110,7 +84,7 @@ void NetworkMessage::addPaddingBytes(size_t n)
 		return;
 	}
 
-	memset(&buffer[position], 0x33, n);
+	memset(buffer + position, 0x33, n);
 	length += n;
 }
 
@@ -127,7 +101,7 @@ void NetworkMessage::addItem(uint16_t id, uint8_t count)
 
 	add<uint16_t>(it.clientId);
 
-	addByte(0xFF);    // MARK_UNMARKED
+	addByte(0xFF); // MARK_UNMARKED
 
 	if (it.stackable) {
 		addByte(count);
@@ -136,7 +110,7 @@ void NetworkMessage::addItem(uint16_t id, uint8_t count)
 	}
 
 	if (it.isAnimation) {
-		addByte(0xFE);    // random phase (0xFF for async)
+		addByte(0xFE); // random phase (0xFF for async)
 	}
 }
 
@@ -145,7 +119,7 @@ void NetworkMessage::addItem(const Item* item)
 	const ItemType& it = Item::items[item->getID()];
 
 	add<uint16_t>(it.clientId);
-	addByte(0xFF);    // MARK_UNMARKED
+	addByte(0xFF); // MARK_UNMARKED
 
 	if (it.stackable) {
 		addByte(std::min<uint16_t>(0xFF, item->getItemCount()));
@@ -154,7 +128,7 @@ void NetworkMessage::addItem(const Item* item)
 	}
 
 	if (it.isAnimation) {
-		addByte(0xFE);    // random phase (0xFF for async)
+		addByte(0xFE); // random phase (0xFF for async)
 	}
 }
 

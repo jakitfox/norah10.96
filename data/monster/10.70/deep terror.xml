@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Deep Terror" nameDescription="a deep terror" race="venom" experience="28000" speed="270" manacost="0">
+	<health now="100000" max="100000" />
+	<look type="676" corpse="24269" />
+	<targetchange interval="5000" chance="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-945" />
+		<attack name="earth" interval="2000" chance="15" radius="6" target="0" min="-250" max="-300">
+			<attribute key="areaEffect" value="smallplants"/>
+		</attack>
+		<attack name="earth" interval="2000" chance="15" range="7" radius="6" target="0" min="-400" max="-900">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="greenbubble" />
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="50">
+		<defense name="healing" interval="2000" chance="15" min="0" max="920">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element deathPercent="10" />
+		<element holyPercent="10" />
+	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="5000" chance="7">
+		<voice sentence="Nenhum." />
+	</voices>
+	<loot>
+		<item id="2148" countmax="9" chance="100000" /><!-- gold coin -->
+		<item id="2152" countmax="2" chance="50000" /><!-- platinum coin -->
+		<item id="7591" chance="11180" /><!-- great health potion -->
+		<item id="23574" countmax="3" chance="10000" /><!-- glooth bag -->
+		<item id="11306" chance="7000" /><!-- sai -->
+		<item id="18414" chance="4000" /><!-- violet crystal shard -->
+		<item id="24268" chance="1500" /><!-- glooth glider tubes and wires -->
+	</loot>
+</monster>

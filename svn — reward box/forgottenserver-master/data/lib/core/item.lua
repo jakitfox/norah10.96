@@ -1,3 +1,7 @@
+function Item.getType(self)
+	return ItemType(self:getId())
+end
+
 function Item.isContainer(self)
 	return false
 end

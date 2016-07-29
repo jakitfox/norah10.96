@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Glooth Bandit" nameDescription="a glooth bandit" race="blood" experience="2000" speed="300" manacost="0">
+	<health now="2600" max="2600" />
+	<look type="129" head="115" body="62" legs="114" feet="114" corpse="24251" />
+	<targetchange interval="5000" chance="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+	<attack name="melee" interval="2000" min="0" max="-305" />
+		<attack name="physical" interval="2000" chance="15" range="7" min="-60" max="-200">
+			<attribute key="shootEffect" value="arrow" />
+		</attack>
+	</attacks>
+	<defenses armor="40" defense="30">
+	<defense name="healing" interval="2000" chance="15" min="200" max="250">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>	
+	<elements>
+		<element energyPercent="20" />
+		<element icePercent="10" />
+		<element firePercent="-5" />
+	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity earth="1" />
+	</immunities>
+	<loot>
+		<item id="2148" countmax="100" chance="100000" /><!-- gold coin -->
+		<item id="2152" countmax="3" chance="60380" /><!-- platinum coin -->
+		<item id="24185" chance="8230" /><!-- tainted glooth capsule -->
+		<item id="7591" chance="8010" /><!-- great health potion -->
+		<item id="7590" countmax="2" chance="7360" /><!-- great mana potion -->
+		<item id="23574" chance="4950" /><!-- glooth bag -->
+		<item id="8472" chance="3550" /><!-- great spirit potion -->
+		<item id="8473" chance="3420" /><!-- ultimate health potion -->
+		<item id="24183" chance="2850" /><!-- glooth capsule -->
+		<item id="9970" countmax="2" chance="2050" /><!-- small topaz -->
+		<item id="23517" chance="2042" /><!-- glooth steak -->
+		<item id="23514" chance="2034" /><!-- glooth sandwich -->
+		<item id="2149" countmax="2" chance="1096" /><!-- small emerald -->
+		<item id="23551" chance="1004" /><!-- glooth axe -->
+		<item id="23554" chance="1003" /><!-- glooth amulet -->
+		<item id="23529" chance="1000" /><!-- glooth spear -->
+		<item id="23549" chance="990" /><!-- glooth club -->
+		<item id="3962" chance="870" /><!-- beastslayer axe -->
+		<item id="23536" chance="680" /><!-- rubber cap -->
+		<item id="7903" chance="640" /><!-- terra hood -->
+		<item id="23535" chance="600" /><!-- glooth cape -->
+		<item id="7884" chance="600" /><!-- terra mantle -->
+		<item id="7886" chance="520" /><!-- terra boots -->
+		<item id="7885" chance="520" /><!-- terra legs -->
+		<item id="2436" chance="390" /><!-- skull staff -->
+		<item id="2155" chance="160" /><!-- green gem -->
+		<item id="2454" chance="100" /><!-- war axe -->
+	</loot>
+</monster>

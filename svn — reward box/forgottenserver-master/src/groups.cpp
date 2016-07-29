@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ bool Groups::load()
 		return false;
 	}
 
-	for (pugi::xml_node groupNode = doc.child("groups").first_child(); groupNode; groupNode = groupNode.next_sibling()) {
+	for (auto groupNode : doc.child("groups").children()) {
 		Group group;
 		group.id = pugi::cast<uint32_t>(groupNode.attribute("id").value());
 		group.name = groupNode.attribute("name").as_string();

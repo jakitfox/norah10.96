@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -68,7 +68,7 @@ class Spells final : public BaseEvents
 		std::map<std::string, InstantSpell*> instants;
 
 		friend class CombatSpell;
-		LuaScriptInterface m_scriptInterface;
+		LuaScriptInterface scriptInterface;
 };
 
 typedef bool (InstantSpellFunction)(const InstantSpell* spell, Creature* creature, const std::string& param);
@@ -87,7 +87,7 @@ class BaseSpell
 class CombatSpell final : public Event, public BaseSpell
 {
 	public:
-		CombatSpell(Combat* _combat, bool _needTarget, bool _needDirection);
+		CombatSpell(Combat* combat, bool needTarget, bool needDirection);
 		~CombatSpell();
 
 		// non-copyable
@@ -200,7 +200,7 @@ class Spell : public BaseSpell
 class InstantSpell : public TalkAction, public Spell
 {
 	public:
-		explicit InstantSpell(LuaScriptInterface* _interface);
+		explicit InstantSpell(LuaScriptInterface* interface);
 
 		bool configureEvent(const pugi::xml_node& node) override;
 		bool loadFunction(const pugi::xml_attribute& attr) override;
@@ -213,7 +213,7 @@ class InstantSpell : public TalkAction, public Spell
 		//scripting
 		bool executeCastSpell(Creature* creature, const LuaVariant& var);
 
-		bool isInstant() const {
+		bool isInstant() const final {
 			return true;
 		}
 		bool getHasParam() const {
@@ -253,7 +253,7 @@ class InstantSpell : public TalkAction, public Spell
 class ConjureSpell final : public InstantSpell
 {
 	public:
-		explicit ConjureSpell(LuaScriptInterface* _interface);
+		explicit ConjureSpell(LuaScriptInterface* interface);
 
 		bool configureEvent(const pugi::xml_node& node) final;
 		bool loadFunction(const pugi::xml_attribute& attr) final;
@@ -267,20 +267,8 @@ class ConjureSpell final : public InstantSpell
 			return false;
 		}
 
-		uint32_t getConjureId() const {
-			return conjureId;
-		}
-		uint32_t getConjureCount() const {
-			return conjureCount;
-		}
-		uint32_t getReagentId() const {
-			return conjureReagentId;
-		}
-
 	protected:
 		std::string getScriptEventName() const final;
-
-		static ReturnValue internalConjureItem(Player* player, uint32_t conjureId, uint32_t conjureCount);
 
 		bool conjureItem(Creature* creature) const;
 		bool internalCastSpell(Creature* creature, const LuaVariant& var);
@@ -288,13 +276,13 @@ class ConjureSpell final : public InstantSpell
 
 		uint32_t conjureId;
 		uint32_t conjureCount;
-		uint32_t conjureReagentId;
+		uint32_t reagentId;
 };
 
 class RuneSpell final : public Action, public Spell
 {
 	public:
-		explicit RuneSpell(LuaScriptInterface* _interface);
+		explicit RuneSpell(LuaScriptInterface* interface);
 
 		bool configureEvent(const pugi::xml_node& node) final;
 		bool loadFunction(const pugi::xml_attribute& attr) final;

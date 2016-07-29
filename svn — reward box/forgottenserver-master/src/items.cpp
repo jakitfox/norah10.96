@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,7 +21,6 @@
 
 #include "items.h"
 #include "spells.h"
-#include "condition.h"
 #include "movement.h"
 #include "weapons.h"
 
@@ -34,80 +33,26 @@ uint32_t Items::dwBuildNumber = 0;
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;
 
-ItemType::ItemType()
+ItemType::ItemType() :
+	group(ITEM_GROUP_NONE), type(ITEM_TYPE_NONE), id(0), clientId(0),
+	stackable(false), isAnimation(false), weight(0), levelDoor(0), decayTime(0),
+	wieldInfo(0), minReqLevel(0), minReqMagicLevel(0), charges(0), maxHitChance(-1),
+	decayTo(-1), attack(0), defense(0), extraDefense(0), armor(0), rotateTo(0),
+	runeMagLevel(0), runeLevel(0), combatType(COMBAT_NONE), transformToOnUse(),
+	transformToFree(0), destroyTo(0), maxTextLen(0), writeOnceItemId(0),
+	transformEquipTo(0), transformDeEquipTo(0), maxItems(8), slotPosition(SLOTP_HAND),
+	speed(0), wareId(0), magicEffect(CONST_ME_NONE), bedPartnerDir(DIRECTION_NONE),
+	weaponType(WEAPON_NONE), ammoType(AMMO_NONE), shootType(CONST_ANI_NONE),
+	corpseType(RACE_NONE), fluidSource(FLUID_NONE), floorChange(0),
+	alwaysOnTopOrder(0), lightLevel(0), lightColor(0), shootRange(1), hitChance(0),
+	forceUse(false), hasHeight(false), walkStack(true), blockSolid(false),
+	blockPickupable(false), blockProjectile(false), blockPathFind(false),
+	allowPickupable(false), showDuration(false), showCharges(false),
+	showAttributes(false), replaceable(true), pickupable(false), rotatable(false),
+	useable(false), moveable(false), alwaysOnTop(false), canReadText(false),
+	canWriteText(false), isVertical(false), isHorizontal(false), isHangable(false),
+	allowDistRead(false), lookThrough(false), stopTime(false), showCount(true)
 {
-	type = ITEM_TYPE_NONE;
-	alwaysOnTopOrder = 0;
-	rotateTo = 0;
-	walkStack = true;
-
-	floorChangeDown = false;
-	floorChangeNorth = false;
-	floorChangeSouth = false;
-	floorChangeSouthAlt = false;
-	floorChangeEast = false;
-	floorChangeEastAlt = false;
-	floorChangeWest = false;
-
-	allowPickupable = false;
-
-	wieldInfo = 0;
-	minReqLevel = 0;
-	minReqMagicLevel = 0;
-
-	runeMagLevel = 0;
-	runeLevel = 0;
-
-	speed = 0;
-	id = 0;
-	clientId = 0;
-	maxItems = 8;  // maximum size if this is a container
-	weight = 0;  // weight of the item, e.g. throwing distance depends on it
-	showCount = true;
-	weaponType = WEAPON_NONE;
-	slotPosition = SLOTP_HAND;
-	ammoType = AMMO_NONE;
-	shootType = CONST_ANI_NONE;
-	magicEffect = CONST_ME_NONE;
-	attack = 0;
-	defense = 0;
-	extraDefense = 0;
-	armor = 0;
-	decayTo = -1;
-	decayTime = 0;
-	stopTime = false;
-	corpseType = RACE_NONE;
-	fluidSource = FLUID_NONE;
-
-	lightLevel = 0;
-	lightColor = 0;
-
-	maxTextLen = 0;
-	canWriteText = false;
-	writeOnceItemId = 0;
-
-	transformEquipTo = 0;
-	transformDeEquipTo = 0;
-	showDuration = false;
-	showCharges = false;
-	showAttributes = false;
-	charges	= 0;
-	hitChance = 0;
-	maxHitChance = -1;
-	shootRange = 1;
-
-	combatType = COMBAT_NONE;
-
-	replaceable = true;
-
-	bedPartnerDir = DIRECTION_NORTH;
-	transformToOnUse[PLAYERSEX_MALE] = 0;
-	transformToOnUse[PLAYERSEX_FEMALE] = 0;
-	transformToFree = 0;
-
-	levelDoor = 0;
-
-	wareId = 0;
 }
 
 Items::Items()
@@ -175,14 +120,14 @@ FILELOADER_ERRORS Items::loadFromOtb(const std::string& file)
 				return ERROR_INVALID_FORMAT;
 			}
 
-			const VERSIONINFO* vi;
-			if (!props.readStruct(vi)) {
+			VERSIONINFO vi;
+			if (!props.read(vi)) {
 				return ERROR_INVALID_FORMAT;
 			}
 
-			Items::dwMajorVersion = vi->dwMajorVersion; //items otb format file version
-			Items::dwMinorVersion = vi->dwMinorVersion; //client version
-			Items::dwBuildNumber = vi->dwBuildNumber; //revision
+			Items::dwMajorVersion = vi.dwMajorVersion; //items otb format file version
+			Items::dwMinorVersion = vi.dwMinorVersion; //client version
+			Items::dwBuildNumber = vi.dwBuildNumber; //revision
 		}
 	}
 
@@ -191,7 +136,7 @@ FILELOADER_ERRORS Items::loadFromOtb(const std::string& file)
 	} else if (Items::dwMajorVersion != 3) {
 		std::cout << "Old version detected, a newer version of items.otb is required." << std::endl;
 		return ERROR_INVALID_FORMAT;
-	} else if (Items::dwMinorVersion < CLIENT_VERSION_1076) {
+	} else if ((CLIENT_VERSION_MIN < 1080 && Items::dwMinorVersion < CLIENT_VERSION_1076) || (CLIENT_VERSION_MIN > 1080 && Items::dwMinorVersion < CLIENT_VERSION_108x)) {
 		std::cout << "A newer version of items.otb is required." << std::endl;
 		return ERROR_INVALID_FORMAT;
 	}
@@ -266,13 +211,13 @@ FILELOADER_ERRORS Items::loadFromOtb(const std::string& file)
 						return ERROR_INVALID_FORMAT;
 					}
 
-					const lightBlock2* lb2;
-					if (!stream.readStruct(lb2)) {
+					lightBlock2 lb2;
+					if (!stream.read(lb2)) {
 						return ERROR_INVALID_FORMAT;
 					}
 
-					lightLevel = static_cast<uint8_t>(lb2->lightLevel);
-					lightColor = static_cast<uint8_t>(lb2->lightColor);
+					lightLevel = static_cast<uint8_t>(lb2.lightLevel);
+					lightColor = static_cast<uint8_t>(lb2.lightColor);
 					break;
 				}
 
@@ -308,9 +253,7 @@ FILELOADER_ERRORS Items::loadFromOtb(const std::string& file)
 			}
 		}
 
-		if (reverseItemMap.find(clientId) == reverseItemMap.end()) {
-			reverseItemMap[clientId] = serverId;
-		}
+		reverseItemMap.emplace(clientId, serverId);
 
 		// store the found item
 		if (serverId >= items.size()) {
@@ -360,7 +303,7 @@ FILELOADER_ERRORS Items::loadFromOtb(const std::string& file)
 		iType.isHorizontal = hasBitSet(FLAG_HORIZONTAL, flags);
 		iType.isHangable = hasBitSet(FLAG_HANGABLE, flags);
 		iType.allowDistRead = hasBitSet(FLAG_ALLOWDISTREAD, flags);
-		iType.rotatable = hasBitSet(FLAG_ROTABLE, flags);
+		iType.rotatable = hasBitSet(FLAG_ROTATABLE, flags);
 		iType.canReadText = hasBitSet(FLAG_READABLE, flags);
 		iType.lookThrough = hasBitSet(FLAG_LOOKTHROUGH, flags);
 		iType.isAnimation = hasBitSet(FLAG_ANIMATION, flags);
@@ -391,7 +334,7 @@ bool Items::loadFromXml()
 		return false;
 	}
 
-	for (pugi::xml_node itemNode = doc.child("items").first_child(); itemNode; itemNode = itemNode.next_sibling()) {
+	for (auto itemNode : doc.child("items").children()) {
 		pugi::xml_attribute idAttribute = itemNode.attribute("id");
 		if (idAttribute) {
 			parseItemNode(itemNode, pugi::cast<uint16_t>(idAttribute.value()));
@@ -448,7 +391,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 		it.pluralName = pluralAttribute.as_string();
 	}
 
-	for (pugi::xml_node attributeNode = itemNode.first_child(); attributeNode; attributeNode = attributeNode.next_sibling()) {
+	for (auto attributeNode : itemNode.children()) {
 		pugi::xml_attribute keyAttribute = attributeNode.attribute("key");
 		if (!keyAttribute) {
 			continue;
@@ -471,8 +414,6 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 				it.type = ITEM_TYPE_CONTAINER;
 			} else if (tmpStrValue == "depot") {
 				it.type = ITEM_TYPE_DEPOT;
-			} else if (tmpStrValue == "rewardchest") {
- 				it.type = ITEM_TYPE_REWARDCHEST;	
 			} else if (tmpStrValue == "mailbox") {
 				it.type = ITEM_TYPE_MAILBOX;
 			} else if (tmpStrValue == "trashholder") {
@@ -515,19 +456,19 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 		} else if (tmpStrValue == "floorchange") {
 			tmpStrValue = asLowerCaseString(valueAttribute.as_string());
 			if (tmpStrValue == "down") {
-				it.floorChangeDown = true;
+				it.floorChange = TILESTATE_FLOORCHANGE_DOWN;
 			} else if (tmpStrValue == "north") {
-				it.floorChangeNorth = true;
+				it.floorChange = TILESTATE_FLOORCHANGE_NORTH;
 			} else if (tmpStrValue == "south") {
-				it.floorChangeSouth = true;
-			} else if (tmpStrValue == "southalt" || tmpStrValue == "southex") {
-				it.floorChangeSouthAlt = true;
+				it.floorChange = TILESTATE_FLOORCHANGE_SOUTH;
+			} else if (tmpStrValue == "southalt") {
+				it.floorChange = TILESTATE_FLOORCHANGE_SOUTH_ALT;
 			} else if (tmpStrValue == "west") {
-				it.floorChangeWest = true;
+				it.floorChange = TILESTATE_FLOORCHANGE_WEST;
 			} else if (tmpStrValue == "east") {
-				it.floorChangeEast = true;
-			} else if (tmpStrValue == "eastalt" || tmpStrValue == "eastex") {
-				it.floorChangeEastAlt = true;
+				it.floorChange = TILESTATE_FLOORCHANGE_EAST;
+			} else if (tmpStrValue == "eastalt") {
+				it.floorChange = TILESTATE_FLOORCHANGE_EAST_ALT;
 			} else {
 				std::cout << "[Warning - Items::parseItemNode] Unknown floorChange: " << valueAttribute.as_string() << std::endl;
 			}
@@ -856,13 +797,13 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 
 			if (combatType != COMBAT_NONE) {
 				it.combatType = combatType;
-				it.conditionDamage.set(conditionDamage);
+				it.conditionDamage.reset(conditionDamage);
 				uint32_t ticks = 0;
 				int32_t damage = 0;
 				int32_t start = 0;
 				int32_t count = 1;
 
-				for (pugi::xml_node subAttributeNode = attributeNode.first_child(); subAttributeNode; subAttributeNode = subAttributeNode.next_sibling()) {
+				for (auto subAttributeNode : attributeNode.children()) {
 					pugi::xml_attribute subKeyAttribute = subAttributeNode.attribute("key");
 					if (!subKeyAttribute) {
 						continue;
@@ -934,6 +875,8 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			}
 		} else if (tmpStrValue == "transformto") {
 			it.transformToFree = pugi::cast<uint16_t>(valueAttribute.value());
+		} else if (tmpStrValue == "destroyto") {
+			it.destroyTo = pugi::cast<uint16_t>(valueAttribute.value());
 		} else if (tmpStrValue == "elementice") {
 			Abilities& abilities = it.getAbilities();
 			abilities.elementDamage = pugi::cast<uint16_t>(valueAttribute.value());

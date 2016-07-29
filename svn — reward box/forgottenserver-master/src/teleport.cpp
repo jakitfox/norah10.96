@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,9 +24,7 @@
 
 extern Game g_game;
 
-Teleport::Teleport(uint16_t _type) : Item(_type)
-{
-}
+Teleport::Teleport(uint16_t type) : Item(type) {}
 
 Attr_ReadValue Teleport::readAttr(AttrTypes_t attr, PropStream& propStream)
 {
@@ -81,24 +79,22 @@ void Teleport::addThing(int32_t, Thing* thing)
 		return;
 	}
 
-	const ItemType& it = Item::items[getID()];
+	const MagicEffectClasses effect = Item::items[id].magicEffect;
 
 	if (Creature* creature = thing->getCreature()) {
 		Position origPos = creature->getPosition();
 		g_game.internalCreatureTurn(creature, origPos.x > destPos.x ? DIRECTION_WEST : DIRECTION_EAST);
 		g_game.map.moveCreature(*creature, *destTile);
-		if (it.magicEffect != CONST_ME_NONE) {
-			g_game.addMagicEffect(origPos, it.magicEffect);
-			g_game.addMagicEffect(destTile->getPosition(), it.magicEffect);
+		if (effect != CONST_ME_NONE) {
+			g_game.addMagicEffect(origPos, effect);
+			g_game.addMagicEffect(destTile->getPosition(), effect);
 		}
 	} else if (Item* item = thing->getItem()) {
-		if (it.magicEffect != CONST_ME_NONE) {
-			g_game.addMagicEffect(item->getPosition(), it.magicEffect);
+		if (effect != CONST_ME_NONE) {
+			g_game.addMagicEffect(destTile->getPosition(), effect);
+			g_game.addMagicEffect(item->getPosition(), effect);
 		}
 		g_game.internalMoveItem(getTile(), destTile, INDEX_WHEREEVER, item, item->getItemCount(), nullptr);
-		if (it.magicEffect != CONST_ME_NONE) {
-			g_game.addMagicEffect(destTile->getPosition(), it.magicEffect);
-		}
 	}
 }
 

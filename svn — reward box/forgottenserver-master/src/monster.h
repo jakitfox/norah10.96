@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -120,8 +120,8 @@ class Monster final : public Creature
 		uint32_t getManaCost() const {
 			return mType->manaCost;
 		}
-		void setSpawn(Spawn* _spawn) {
-			spawn = _spawn;
+		void setSpawn(Spawn* spawn) {
+			this->spawn = spawn;
 		}
 
 		void onAttackedCreatureDisappear(bool isLogout) final;
@@ -134,7 +134,7 @@ class Monster final : public Creature
 		void drainHealth(Creature* attacker, int32_t damage) final;
 		void changeHealth(int32_t healthChange, bool sendHealthChange = true) final;
 		void onWalk() final;
-		bool getNextStep(Direction& dir, uint32_t& flags) final;
+		bool getNextStep(Direction& direction, uint32_t& flags) final;
 		void onFollowCreatureComplete(const Creature* creature) final;
 
 		void onThink(uint32_t interval) final;
@@ -165,10 +165,13 @@ class Monster final : public Creature
 			return getHealth() <= mType->runAwayHealth;
 		}
 
-		bool getDistanceStep(const Position& targetPos, Direction& dir, bool flee = false);
+		bool getDistanceStep(const Position& targetPos, Direction& direction, bool flee = false);
 		bool isTargetNearby() const {
 			return stepDuration >= 1;
 		}
+
+		bool canAttack(Creature* creature) const final;
+		bool canWalkThroughTileItems(Tile* tile) const final;
 
 		BlockType_t blockHit(Creature* attacker, CombatType_t combatType, int32_t& damage,
 		                     bool checkDefense = false, bool checkArmor = false, bool field = false);
@@ -217,10 +220,10 @@ class Monster final : public Creature
 		void clearTargetList();
 		void clearFriendList();
 
-		void death(Creature* _lastHitCreature) final;
-		Item* getCorpse(Creature* _lastHitCreature, Creature* mostDamageCreature) final;
+		void death(Creature* lastHitCreature) final;
+		Item* getCorpse(Creature* lastHitCreature, Creature* mostDamageCreature) final;
 
-		void setIdle(bool _idle);
+		void setIdle(bool idle);
 		void updateIdleStatus();
 		bool getIdleStatus() const {
 			return isIdle;
@@ -233,16 +236,16 @@ class Monster final : public Creature
 		bool canUseAttack(const Position& pos, const Creature* target) const;
 		bool canUseSpell(const Position& pos, const Position& targetPos,
 		                 const spellBlock_t& sb, uint32_t interval, bool& inRange, bool& resetTicks);
-		bool getRandomStep(const Position& creaturePos, Direction& dir) const;
-		bool getDanceStep(const Position& creaturePos, Direction& dir,
+		bool getRandomStep(const Position& creaturePos, Direction& direction) const;
+		bool getDanceStep(const Position& creaturePos, Direction& direction,
 		                  bool keepAttack = true, bool keepDistance = true);
 		bool isInSpawnRange(const Position& pos) const;
-		bool canWalkTo(Position pos, Direction dir) const;
+		bool canWalkTo(Position pos, Direction direction) const;
 
-		static bool pushItem(Item* item);
-		static void pushItems(Tile* tile);
-		static bool pushCreature(Creature* creature);
-		static void pushCreatures(Tile* tile);
+		bool pushItem(Item* item);
+		void pushItems(Tile* tile);
+		bool pushCreature(Creature* creature);
+		void pushCreatures(Tile* tile);
 
 		void onThinkTarget(uint32_t interval);
 		void onThinkYell(uint32_t interval);
@@ -257,7 +260,7 @@ class Monster final : public Creature
 		uint16_t getLookCorpse() const final {
 			return mType->lookcorpse;
 		}
-		void dropLoot(Container* corpse, Creature* _lastHitCreature) final;
+		void dropLoot(Container* corpse, Creature* lastHitCreature) final;
 		uint32_t getDamageImmunities() const final {
 			return mType->damageImmunities;
 		}

@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,30 +20,16 @@
 #include "otpch.h"
 
 #include "tasks.h"
-#include "outputmessage.h"
 #include "game.h"
 
 extern Game g_game;
 
-Dispatcher::Dispatcher()
+void Dispatcher::threadMain()
 {
-	threadState = THREAD_STATE_TERMINATED;
-}
-
-void Dispatcher::start()
-{
-	threadState = THREAD_STATE_RUNNING;
-	thread = std::thread(&Dispatcher::dispatcherThread, this);
-}
-
-void Dispatcher::dispatcherThread()
-{
-	OutputMessagePool* outputPool = OutputMessagePool::getInstance();
-
 	// NOTE: second argument defer_lock is to prevent from immediate locking
 	std::unique_lock<std::mutex> taskLockUnique(taskLock, std::defer_lock);
 
-	while (threadState != THREAD_STATE_TERMINATED) {
+	while (getState() != THREAD_STATE_TERMINATED) {
 		// check if there are tasks waiting
 		taskLockUnique.lock();
 
@@ -52,17 +38,16 @@ void Dispatcher::dispatcherThread()
 			taskSignal.wait(taskLockUnique);
 		}
 
-		if (!taskList.empty() && threadState != THREAD_STATE_TERMINATED) {
+		if (!taskList.empty()) {
 			// take the first task
 			Task* task = taskList.front();
 			taskList.pop_front();
 			taskLockUnique.unlock();
 
 			if (!task->hasExpired()) {
+				++dispatcherCycle;
 				// execute it
-				outputPool->startExecutionFrame();
 				(*task)();
-				outputPool->sendAll();
 
 				g_game.map.clearSpectatorCache();
 			}
@@ -79,7 +64,7 @@ void Dispatcher::addTask(Task* task, bool push_front /*= false*/)
 
 	taskLock.lock();
 
-	if (threadState == THREAD_STATE_RUNNING) {
+	if (getState() == THREAD_STATE_RUNNING) {
 		do_signal = taskList.empty();
 
 		if (push_front) {
@@ -99,42 +84,15 @@ void Dispatcher::addTask(Task* task, bool push_front /*= false*/)
 	}
 }
 
-void Dispatcher::flush()
-{
-	while (!taskList.empty()) {
-		Task* task = taskList.front();
-		taskList.pop_front();
-		(*task)();
-		delete task;
-
-		OutputMessagePool* outputPool = OutputMessagePool::getInstance();
-		if (outputPool) {
-			outputPool->sendAll();
-		}
-
-		g_game.map.clearSpectatorCache();
-	}
-}
-
-void Dispatcher::stop()
-{
-	taskLock.lock();
-	threadState = THREAD_STATE_CLOSING;
-	taskLock.unlock();
-}
-
 void Dispatcher::shutdown()
 {
-	taskLock.lock();
-	threadState = THREAD_STATE_TERMINATED;
-	flush();
-	taskLock.unlock();
-	taskSignal.notify_one();
-}
+	Task* task = createTask([this]() {
+		setState(THREAD_STATE_TERMINATED);
+		taskSignal.notify_one();
+	});
 
-void Dispatcher::join()
-{
-	if (thread.joinable()) {
-		thread.join();
-	}
+	std::lock_guard<std::mutex> lockGuard(taskLock);
+	taskList.push_back(task);
+
+	taskSignal.notify_one();
 }

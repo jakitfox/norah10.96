@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,14 +19,9 @@
 
 #include "otpch.h"
 
-#include <boost/range/adaptor/reversed.hpp>
 #include "iologindata.h"
-#include "item.h"
 #include "configmanager.h"
-#include "town.h"
 #include "game.h"
-#include "vocation.h"
-#include "house.h"
 
 extern ConfigManager g_config;
 extern Game g_game;
@@ -57,12 +52,41 @@ bool IOLoginData::saveAccount(const Account& acc)
 	return Database::getInstance()->executeQuery(query.str());
 }
 
+std::string decodeSecret(const std::string& secret)
+{
+	// simple base32 decoding
+	std::string key;
+	key.reserve(10);
+
+	uint32_t buffer = 0, left = 0;
+	for (const auto& ch : secret) {
+		buffer <<= 5;
+		if (ch >= 'A' && ch <= 'Z') {
+			buffer |= (ch & 0x1F) - 1;
+		} else if (ch >= '2' && ch <= '7') {
+			buffer |= ch - 24;
+		} else {
+			// if a key is broken, return empty and the comparison
+			// will always be false since the token must not be empty
+			return {};
+		}
+
+		left += 5;
+		if (left >= 8) {
+			left -= 8;
+			key.push_back(static_cast<char>(buffer >> left));
+		}
+	}
+
+	return key;
+}
+
 bool IOLoginData::loginserverAuthentication(const std::string& name, const std::string& password, Account& account)
 {
 	Database* db = Database::getInstance();
 
 	std::ostringstream query;
-	query << "SELECT `id`, `name`, `password`, `type`, `premdays`, `lastday` FROM `accounts` WHERE `name` = " << db->escapeString(name);
+	query << "SELECT `id`, `name`, `password`, `secret`, `type`, `premdays`, `lastday` FROM `accounts` WHERE `name` = " << db->escapeString(name);
 	DBResult_ptr result = db->storeQuery(query.str());
 	if (!result) {
 		return false;
@@ -74,6 +98,7 @@ bool IOLoginData::loginserverAuthentication(const std::string& name, const std::
 
 	account.id = result->getNumber<uint32_t>("id");
 	account.name = result->getString("name");
+	account.key = decodeSecret(result->getString("secret"));
 	account.accountType = static_cast<AccountType_t>(result->getNumber<int32_t>("type"));
 	account.premiumDays = result->getNumber<uint16_t>("premdays");
 	account.lastDay = result->getNumber<time_t>("lastday");
@@ -378,7 +403,7 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 				g_game.addGuild(guild);
 
 				query.str(std::string());
-				query << "SELECT `id`, `name`, `level` FROM `guild_ranks` WHERE `guild_id` = " << guildId << " LIMIT 3";
+				query << "SELECT `id`, `name`, `level` FROM `guild_ranks` WHERE `guild_id` = " << guildId;
 
 				if ((result = db->storeQuery(query.str()))) {
 					do {
@@ -390,12 +415,22 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 
 		if (guild) {
 			player->guild = guild;
-			GuildRank* rank = guild->getRankById(playerRankId);
-			if (rank) {
-				player->guildLevel = rank->level;
-			} else {
-				player->guildLevel = 1;
+			const GuildRank* rank = guild->getRankById(playerRankId);
+			if (!rank) {
+				query.str(std::string());
+				query << "SELECT `id`, `name`, `level` FROM `guild_ranks` WHERE `id` = " << playerRankId;
+
+				if ((result = db->storeQuery(query.str()))) {
+					guild->addRank(result->getNumber<uint32_t>("id"), result->getString("name"), result->getNumber<uint16_t>("level"));
+				}
+
+				rank = guild->getRankById(playerRankId);
+				if (!rank) {
+					player->guild = nullptr;
+				}
 			}
+
+			player->guildRank = rank;
 
 			IOGuild::getWarList(guildId, player->guildWarList);
 
@@ -475,55 +510,6 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 		}
 	}
 
-	//load reward chest items
- 	itemMap.clear();
- 
- 	query.str(std::string());
- 	query << "SELECT `pid`, `sid`, `itemtype`, `count`, `attributes` FROM `player_rewards` WHERE `player_id` = " << player->getGUID() << " ORDER BY `sid` DESC";
- 	if ((result = db->storeQuery(query.str()))) {
- 		loadItems(itemMap, result);
- 
- 		//first loop handles the reward containers to retrieve its date attribute
- 		//for (ItemMap::iterator it = itemMap.begin(), end = itemMap.end(); it != end; ++it) {
- 		for (auto& it : itemMap) {
- 			const std::pair<Item*, int32_t>& pair = it.second;
- 			Item* item = pair.first;
- 
- 			int32_t pid = pair.second; 
- 			if (pid >= 0 && pid < 100) {
- 				Reward* reward = player->getReward(item->getIntAttr(ITEM_ATTRIBUTE_DATE), true);
- 				if (reward) {
- 					it.second = std::pair<Item*, int32_t>(reward->getItem(), pid); //update the map with the special reward container
- 				}
- 			} else {
- 				break;
- 			}
- 		}
- 
- 		//second loop (this time a reverse one) to insert the items in the correct order
- 		//for (ItemMap::const_reverse_iterator it = itemMap.rbegin(), end = itemMap.rend(); it != end; ++it) {
- 		for (const auto& it : boost::adaptors::reverse(itemMap)) {
- 			const std::pair<Item*, int32_t>& pair = it.second;
- 			Item* item = pair.first;
- 
- 			int32_t pid = pair.second;
- 			if (pid >= 0 && pid < 100) {
- 				break;
- 			}
- 			
- 			ItemMap::const_iterator it2 = itemMap.find(pid);
- 			if (it2 == itemMap.end()) {
- 				continue;
- 			}
- 
- 			Container* container = it2->second.first->getContainer();
- 			if (container) {
- 				container->internalAddThing(item);
- 			}
- 		}
- 	}
- 
-	
 	//load inbox items
 	itemMap.clear();
 
@@ -830,34 +816,6 @@ bool IOLoginData::savePlayer(Player* player)
 		}
 	}
 
-		auto rewardList = player->getRewardList();
-	//save reward items
- 	query.str(std::string());
- 	query << "DELETE FROM `player_rewards` WHERE `player_id` = " << player->getGUID();
- 
- 	if (!db->executeQuery(query.str())) {
- 		return false;
- 	}
- 
- 	if (!rewardList.empty()) {
- 		DBInsert rewardQuery("INSERT INTO `player_rewards` (`player_id`, `pid`, `sid`, `itemtype`, `count`, `attributes`) VALUES ");
- 		itemList.clear();
- 
- 		int running = 0;
- 		for (const auto& rewardId : rewardList) {
- 			Reward* reward = player->getReward(rewardId, false);
- 			// rewards that are empty or older than 7 days aren't stored
- 			if (!reward->empty() && (time(nullptr) - rewardId <= 60 * 60 * 24 * 7)) {
- 				itemList.emplace_back(++running, reward);
- 			}
- 		}
- 
- 		if (!saveItems(player, itemList, rewardQuery, propWriteStream)) {
- 			return false;
- 		}
- 	}
- 
-	
 	//save inbox items
 	query.str(std::string());
 	query << "DELETE FROM `player_inboxitems` WHERE `player_id` = " << player->getGUID();

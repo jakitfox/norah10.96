@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@
 class Town
 {
 	public:
-		explicit Town(uint32_t _id) : id(_id) {}
+		explicit Town(uint32_t id) : id(id) {}
 
 		const Position& getTemplePosition() const {
 			return templePosition;
@@ -67,13 +67,7 @@ class Towns
 		Towns& operator=(const Towns&) = delete;
 
 		bool addTown(uint32_t townId, Town* town) {
-			auto it = townMap.find(townId);
-			if (it != townMap.end()) {
-				return false;
-			}
-
-			townMap[townId] = town;
-			return true;
+			return townMap.emplace(townId, town).second;
 		}
 
 		Town* getTown(const std::string& townName) const {

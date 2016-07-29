@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,17 +29,16 @@
 #include "mailbox.h"
 #include "monster.h"
 #include "movement.h"
-#include "player.h"
 #include "teleport.h"
 #include "trashholder.h"
 
 extern Game g_game;
 extern MoveEvents* g_moveEvents;
 
-StaticTile real_nullptr_tile(0xFFFF, 0xFFFF, 0xFFFF);
+StaticTile real_nullptr_tile(0xFFFF, 0xFFFF, 0xFF);
 Tile& Tile::nullptr_tile = real_nullptr_tile;
 
-bool Tile::hasProperty(ITEMPROPERTY prop) const
+bool Tile::hasProperty(ITEMPROPERTY prop, Creature* caster) const
 {
 	if (ground && ground->hasProperty(prop)) {
 		return true;
@@ -49,6 +48,17 @@ bool Tile::hasProperty(ITEMPROPERTY prop) const
 		for (const Item* item : *items) {
 			if (item->hasProperty(prop)) {
 				return true;
+			} else if (g_game.isExpertPvpEnabled() && prop == CONST_PROP_BLOCKPROJECTILE && caster && !caster->isRemoved() && item->getID() == ITEM_MAGICWALL_NOPVP) {
+				if (Player* owner = g_game.getPlayerByID(item->getOwner())) {
+					Player* casterPlayer = caster->getPlayer();
+					if (!casterPlayer && caster->isSummon()) {
+						casterPlayer = caster->getMaster()->getPlayer();
+					}
+
+					if (!casterPlayer || (casterPlayer == owner || casterPlayer->hasPvpActivity(owner))) {
+						return true;
+					}
+				}
 			}
 		}
 	}
@@ -484,22 +494,20 @@ ReturnValue Tile::queryAdd(int32_t, const Thing& thing, uint32_t, uint32_t flags
 			return RETURNVALUE_NOERROR;
 		}
 
-		if (hasBitSet(FLAG_PATHFINDING, flags)) {
-			if (floorChange() || positionChange()) {
-				return RETURNVALUE_NOTPOSSIBLE;
-			}
+		if (hasBitSet(FLAG_PATHFINDING, flags) && hasFlag(TILESTATE_FLOORCHANGE | TILESTATE_TELEPORT)) {
+			return RETURNVALUE_NOTPOSSIBLE;
 		}
 
 		if (ground == nullptr) {
 			return RETURNVALUE_NOTPOSSIBLE;
 		}
 
-		if (const Monster* monster = creature->getMonster()) {
-			if (hasFlag(TILESTATE_PROTECTIONZONE)) {
-				return RETURNVALUE_NOTPOSSIBLE;
-			}
+		if (!creature->canWalkThroughTileItems(const_cast<Tile*>(this))) {
+			return RETURNVALUE_NOTENOUGHROOM;
+		}
 
-			if (floorChange() || positionChange()) {
+		if (const Monster* monster = creature->getMonster()) {
+			if (hasFlag(TILESTATE_PROTECTIONZONE | TILESTATE_FLOORCHANGE | TILESTATE_TELEPORT)) {
 				return RETURNVALUE_NOTPOSSIBLE;
 			}
 
@@ -567,7 +575,38 @@ ReturnValue Tile::queryAdd(int32_t, const Thing& thing, uint32_t, uint32_t flags
 			if (creatures && !creatures->empty() && !hasBitSet(FLAG_IGNOREBLOCKCREATURE, flags) && !player->isAccessPlayer()) {
 				for (const Creature* tileCreature : *creatures) {
 					if (!player->canWalkthrough(tileCreature)) {
-						return RETURNVALUE_NOTPOSSIBLE;
+						if (!g_game.isExpertPvpEnabled()) {
+							return RETURNVALUE_NOTPOSSIBLE;
+						}
+
+						g_game.updateCreatureWalkthrough(tileCreature);
+						if (Player* tilePlayer = const_cast<Creature*>(tileCreature)->getPlayer()) {
+							if (tilePlayer->getPvpMode() == PVP_MODE_RED_FIST) {
+								tilePlayer->addAttacked(player);
+								tilePlayer->addInFightTicks(true);
+								if (tilePlayer->getSkull() == SKULL_NONE) {
+									tilePlayer->setSkull(SKULL_WHITE);
+								}
+							}
+							return RETURNVALUE_YOUCANNOTPASSTHROUGHAGGRESSIVEPLAYERS;
+						} else if (Monster* tileMonster = const_cast<Creature*>(tileCreature)->getMonster()) {
+							if (!tileMonster->isSummon() || !tileMonster->getMaster()->getPlayer()) {
+								return RETURNVALUE_NOTPOSSIBLE;
+							}
+							Player* master = tileMonster->getMaster()->getPlayer();
+							if (master->getPvpMode() == PVP_MODE_RED_FIST) {
+								master->addAttacked(player);
+								master->addInFightTicks(true);
+								if (master->getSkull() == SKULL_NONE) {
+									master->setSkull(SKULL_WHITE);
+								}
+							}
+						}
+						if ((OTSYS_TIME() - player->getLastWalkThroughAttempt()) > 2000) {
+							return RETURNVALUE_NOTPOSSIBLE;
+						} else {
+							return RETURNVALUE_YOUCANNOTPASSTHROUGHAGGRESSIVECREATURES;
+						}
 					}
 				}
 			}
@@ -603,22 +642,21 @@ ReturnValue Tile::queryAdd(int32_t, const Thing& thing, uint32_t, uint32_t flags
 			}
 		}
 
-		const TileItemVector* items = getItemList();
-		if (items) {
-			if (!hasBitSet(FLAG_IGNOREBLOCKITEM, flags)) {
-				//If the FLAG_IGNOREBLOCKITEM bit isn't set we dont have to iterate every single item
-				if (hasFlag(TILESTATE_BLOCKSOLID)) {
-					return RETURNVALUE_NOTENOUGHROOM;
+		if (!hasBitSet(FLAG_IGNOREBLOCKITEM, flags)) {
+			//If the FLAG_IGNOREBLOCKITEM bit isn't set we dont have to iterate every single item
+			if (hasFlag(TILESTATE_BLOCKSOLID)) {
+				return RETURNVALUE_NOTENOUGHROOM;
+			}
+		} else {
+			//FLAG_IGNOREBLOCKITEM is set
+			if (ground) {
+				const ItemType& iiType = Item::items[ground->getID()];
+				if (iiType.blockSolid && (!iiType.moveable || ground->hasAttribute(ITEM_ATTRIBUTE_UNIQUEID))) {
+					return RETURNVALUE_NOTPOSSIBLE;
 				}
-			} else {
-				//FLAG_IGNOREBLOCKITEM is set
-				if (ground) {
-					const ItemType& iiType = Item::items[ground->getID()];
-					if (iiType.blockSolid && (!iiType.moveable || ground->hasAttribute(ITEM_ATTRIBUTE_UNIQUEID))) {
-						return RETURNVALUE_NOTPOSSIBLE;
-					}
-				}
+			}
 
+			if (const auto items = getItemList()) {
 				for (const Item* item : *items) {
 					const ItemType& iiType = Item::items[item->getID()];
 					if (iiType.blockSolid && (!iiType.moveable || item->hasAttribute(ITEM_ATTRIBUTE_UNIQUEID))) {
@@ -678,6 +716,10 @@ ReturnValue Tile::queryAdd(int32_t, const Thing& thing, uint32_t, uint32_t flags
 			if (items) {
 				for (const Item* tileItem : *items) {
 					const ItemType& iiType = Item::items[tileItem->getID()];
+					if (g_game.isExpertPvpEnabled() && (iiType.id == ITEM_MAGICWALL_NOPVP || iiType.id == ITEM_WILDGROWTH_NOPVP)) {
+						return RETURNVALUE_NOTENOUGHROOM;
+					}
+
 					if (!iiType.blockSolid) {
 						continue;
 					}
@@ -734,44 +776,44 @@ Tile* Tile::queryDestination(int32_t&, const Thing&, Item** destItem, uint32_t& 
 	Tile* destTile = nullptr;
 	*destItem = nullptr;
 
-	if (floorChangeDown()) {
+	if (hasFlag(TILESTATE_FLOORCHANGE_DOWN)) {
 		uint16_t dx = tilePos.x;
 		uint16_t dy = tilePos.y;
 		uint8_t dz = tilePos.z + 1;
 
 		Tile* southDownTile = g_game.map.getTile(dx, dy - 1, dz);
-		if (southDownTile && southDownTile->floorChange(DIRECTION_SOUTH_ALT)) {
+		if (southDownTile && southDownTile->hasFlag(TILESTATE_FLOORCHANGE_SOUTH_ALT)) {
 			dy -= 2;
 			destTile = g_game.map.getTile(dx, dy, dz);
 		} else {
 			Tile* eastDownTile = g_game.map.getTile(dx - 1, dy, dz);
-			if (eastDownTile && eastDownTile->floorChange(DIRECTION_EAST_ALT)) {
+			if (eastDownTile && eastDownTile->hasFlag(TILESTATE_FLOORCHANGE_EAST_ALT)) {
 				dx -= 2;
 				destTile = g_game.map.getTile(dx, dy, dz);
 			} else {
 				Tile* downTile = g_game.map.getTile(dx, dy, dz);
 				if (downTile) {
-					if (downTile->floorChange(DIRECTION_NORTH)) {
+					if (downTile->hasFlag(TILESTATE_FLOORCHANGE_NORTH)) {
 						++dy;
 					}
 
-					if (downTile->floorChange(DIRECTION_SOUTH)) {
+					if (downTile->hasFlag(TILESTATE_FLOORCHANGE_SOUTH)) {
 						--dy;
 					}
 
-					if (downTile->floorChange(DIRECTION_SOUTH_ALT)) {
+					if (downTile->hasFlag(TILESTATE_FLOORCHANGE_SOUTH_ALT)) {
 						dy -= 2;
 					}
 
-					if (downTile->floorChange(DIRECTION_EAST)) {
+					if (downTile->hasFlag(TILESTATE_FLOORCHANGE_EAST)) {
 						--dx;
 					}
 
-					if (downTile->floorChange(DIRECTION_EAST_ALT)) {
+					if (downTile->hasFlag(TILESTATE_FLOORCHANGE_EAST_ALT)) {
 						dx -= 2;
 					}
 
-					if (downTile->floorChange(DIRECTION_WEST)) {
+					if (downTile->hasFlag(TILESTATE_FLOORCHANGE_WEST)) {
 						++dx;
 					}
 
@@ -779,32 +821,32 @@ Tile* Tile::queryDestination(int32_t&, const Thing&, Item** destItem, uint32_t& 
 				}
 			}
 		}
-	} else if (floorChange()) {
+	} else if (hasFlag(TILESTATE_FLOORCHANGE)) {
 		uint16_t dx = tilePos.x;
 		uint16_t dy = tilePos.y;
 		uint8_t dz = tilePos.z - 1;
 
-		if (floorChange(DIRECTION_NORTH)) {
+		if (hasFlag(TILESTATE_FLOORCHANGE_NORTH)) {
 			--dy;
 		}
 
-		if (floorChange(DIRECTION_SOUTH)) {
+		if (hasFlag(TILESTATE_FLOORCHANGE_SOUTH)) {
 			++dy;
 		}
 
-		if (floorChange(DIRECTION_EAST)) {
+		if (hasFlag(TILESTATE_FLOORCHANGE_EAST)) {
 			++dx;
 		}
 
-		if (floorChange(DIRECTION_WEST)) {
+		if (hasFlag(TILESTATE_FLOORCHANGE_WEST)) {
 			--dx;
 		}
 
-		if (floorChange(DIRECTION_SOUTH_ALT)) {
+		if (hasFlag(TILESTATE_FLOORCHANGE_SOUTH_ALT)) {
 			dy += 2;
 		}
 
-		if (floorChange(DIRECTION_EAST_ALT)) {
+		if (hasFlag(TILESTATE_FLOORCHANGE_EAST_ALT)) {
 			dx += 2;
 		}
 
@@ -823,7 +865,6 @@ Tile* Tile::queryDestination(int32_t&, const Thing&, Item** destItem, uint32_t& 
 			*destItem = destThing->getItem();
 		}
 	}
-
 	return destTile;
 }
 
@@ -934,7 +975,7 @@ void Tile::addThing(int32_t, Thing* thing)
 
 			items = makeItemList();
 			items->insert(items->getBeginDownItem(), item);
-			++items->downItemCount;
+			items->addDownItemCount(1);
 			onAddTileItem(item);
 		}
 	}
@@ -1116,7 +1157,7 @@ void Tile::removeThing(Thing* thing, uint32_t count)
 
 			item->setParent(nullptr);
 			items->erase(it);
-			--items->downItemCount;
+			items->addDownItemCount(-1);
 			onRemoveTileItem(list, oldStackPosVector, item);
 		}
 	}
@@ -1124,7 +1165,7 @@ void Tile::removeThing(Thing* thing, uint32_t count)
 
 void Tile::removeCreature(Creature* creature)
 {
-	qt_node->removeCreature(creature);
+	g_game.map.getQTNode(tilePos.x, tilePos.y)->removeCreature(creature);
 	removeThing(creature, 0);
 }
 
@@ -1329,7 +1370,7 @@ Thing* Tile::getThing(size_t index) const
 	if (items) {
 		uint32_t topItemSize = items->getTopItemCount();
 		if (index < topItemSize) {
-			return items->at(items->downItemCount + index);
+			return items->at(items->getDownItemCount() + index);
 		}
 		index -= topItemSize;
 	}
@@ -1387,7 +1428,6 @@ void Tile::postAddNotification(Thing* thing, const Cylinder* oldParent, int32_t 
 		}
 
 		//calling movement scripts
-		Creature* creature = thing->getCreature();
 		if (creature) {
 			g_moveEvents->onCreatureMove(creature, this, oldParent ? oldParent->getPosition() : getPosition(), MOVE_EVENT_STEP_IN);
 		} else if (item) {
@@ -1448,17 +1488,21 @@ void Tile::internalAddThing(uint32_t, Thing* thing)
 			return;
 		}
 
+		const ItemType& itemType = Item::items[item->getID()];
+		if (itemType.isGroundTile()) {
+			if (ground == nullptr) {
+				ground = item;
+				setTileFlags(item);
+			}
+			return;
+		}
+
 		TileItemVector* items = makeItemList();
 		if (items->size() >= 0xFFFF) {
 			return /*RETURNVALUE_NOTPOSSIBLE*/;
 		}
 
-		const ItemType& itemType = Item::items[item->getID()];
-		if (itemType.isGroundTile()) {
-			if (ground == nullptr) {
-				ground = item;
-			}
-		} else if (itemType.alwaysOnTop) {
+		if (itemType.alwaysOnTop) {
 			bool isInserted = false;
 			for (ItemVector::iterator it = items->getBeginTopItem(), end = items->getEndTopItem(); it != end; ++it) {
 				if (Item::items[(*it)->getID()].alwaysOnTopOrder > itemType.alwaysOnTopOrder) {
@@ -1473,7 +1517,7 @@ void Tile::internalAddThing(uint32_t, Thing* thing)
 			}
 		} else {
 			items->insert(items->getBeginDownItem(), item);
-			++items->downItemCount;
+			items->addDownItemCount(1);
 		}
 
 		setTileFlags(item);
@@ -1484,39 +1528,8 @@ void Tile::setTileFlags(const Item* item)
 {
 	if (!hasFlag(TILESTATE_FLOORCHANGE)) {
 		const ItemType& it = Item::items[item->getID()];
-		if (it.floorChangeDown) {
-			setFlag(TILESTATE_FLOORCHANGE);
-			setFlag(TILESTATE_FLOORCHANGE_DOWN);
-		}
-
-		if (it.floorChangeNorth) {
-			setFlag(TILESTATE_FLOORCHANGE);
-			setFlag(TILESTATE_FLOORCHANGE_NORTH);
-		}
-
-		if (it.floorChangeSouth) {
-			setFlag(TILESTATE_FLOORCHANGE);
-			setFlag(TILESTATE_FLOORCHANGE_SOUTH);
-		}
-
-		if (it.floorChangeEast) {
-			setFlag(TILESTATE_FLOORCHANGE);
-			setFlag(TILESTATE_FLOORCHANGE_EAST);
-		}
-
-		if (it.floorChangeWest) {
-			setFlag(TILESTATE_FLOORCHANGE);
-			setFlag(TILESTATE_FLOORCHANGE_WEST);
-		}
-
-		if (it.floorChangeSouthAlt) {
-			setFlag(TILESTATE_FLOORCHANGE);
-			setFlag(TILESTATE_FLOORCHANGE_SOUTH_ALT);
-		}
-
-		if (it.floorChangeEastAlt) {
-			setFlag(TILESTATE_FLOORCHANGE);
-			setFlag(TILESTATE_FLOORCHANGE_EAST_ALT);
+		if (it.floorChange != 0) {
+			setFlag(it.floorChange);
 		}
 	}
 
@@ -1573,39 +1586,8 @@ void Tile::setTileFlags(const Item* item)
 void Tile::resetTileFlags(const Item* item)
 {
 	const ItemType& it = Item::items[item->getID()];
-	if (it.floorChangeDown) {
+	if (it.floorChange != 0) {
 		resetFlag(TILESTATE_FLOORCHANGE);
-		resetFlag(TILESTATE_FLOORCHANGE_DOWN);
-	}
-
-	if (it.floorChangeNorth) {
-		resetFlag(TILESTATE_FLOORCHANGE);
-		resetFlag(TILESTATE_FLOORCHANGE_NORTH);
-	}
-
-	if (it.floorChangeSouth) {
-		resetFlag(TILESTATE_FLOORCHANGE);
-		resetFlag(TILESTATE_FLOORCHANGE_SOUTH);
-	}
-
-	if (it.floorChangeEast) {
-		resetFlag(TILESTATE_FLOORCHANGE);
-		resetFlag(TILESTATE_FLOORCHANGE_EAST);
-	}
-
-	if (it.floorChangeWest) {
-		resetFlag(TILESTATE_FLOORCHANGE);
-		resetFlag(TILESTATE_FLOORCHANGE_WEST);
-	}
-
-	if (it.floorChangeSouthAlt) {
-		resetFlag(TILESTATE_FLOORCHANGE);
-		resetFlag(TILESTATE_FLOORCHANGE_SOUTH_ALT);
-	}
-
-	if (it.floorChangeEastAlt) {
-		resetFlag(TILESTATE_FLOORCHANGE);
-		resetFlag(TILESTATE_FLOORCHANGE_EAST_ALT);
 	}
 
 	if (item->hasProperty(CONST_PROP_BLOCKSOLID) && !hasProperty(item, CONST_PROP_BLOCKSOLID)) {
@@ -1674,7 +1656,7 @@ Item* Tile::getUseItem() const
 		return ground;
 	}
 
-	for (Item* item : *items) {
+	for (Item* item : boost::adaptors::reverse(*items)) {
 		if (Item::items[item->getID()].forceUse) {
 			return item;
 		}

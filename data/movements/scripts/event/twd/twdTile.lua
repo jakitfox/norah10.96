@@ -35,9 +35,9 @@ function onStepIn(creature, item, position, fromPosition)
                 end
  
 				if creature:getStorageValue(Storage.TwD.Storage06) >= os.time() then
-						creature:teleportTo(fromPosition, true)
-                        fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
-                        creature:sendTextMessage(MESSAGE_INFO_DESCR, "You have to wait " .. creature:getStorageValue(Storage.TwD.Storage06) - os.time() .. " seconds :)")
+					creature:teleportTo(fromPosition, true)
+					fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
+					creature:sendTextMessage(MESSAGE_INFO_DESCR, "You have to wait " .. creature:getStorageValue(Storage.TwD.Storage06) - os.time() .. " seconds :)")
 				return true
                 end
 				

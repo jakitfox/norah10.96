@@ -24,6 +24,14 @@
 	<monster name="Rustheap Golem" file="machines/rustheap golem.xml" />
 	<monster name="Walker" file="machines/walker.xml" />
 	
+	<!-- Tibia 10.70 -->
+	<monster name="Deep Terror" file="10.70/deep terror.xml" />
+	<monster name="Empowered Glooth Horror" file="10.70/empowered glooth horror.xml" />
+	<monster name="Glooth Bandit" file="10.70/glooth bandit.xml" />
+	<monster name="Control Tower" file="10.70/control tower.xml" />
+	<monster name="Glooth Battery" file="10.70/glooth battery.xml" />
+	<monster name="Glooth Brigand" file="10.70/glooth brigand.xml" />
+	
 	<!--Norah -->
 	<monster name="Fleshcrawler" file="Norah/fleshcrawler.xml" />
 	<monster name="Tormentor" file="Norah/tormentor.xml" />

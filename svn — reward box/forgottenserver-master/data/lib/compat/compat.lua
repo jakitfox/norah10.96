@@ -19,6 +19,10 @@ STACKPOS_TOP_CREATURE = 253
 STACKPOS_TOP_FIELD = 254
 STACKPOS_TOP_MOVEABLE_ITEM_OR_CREATURE = 255
 
+THING_TYPE_PLAYER = CREATURETYPE_PLAYER + 1
+THING_TYPE_MONSTER = CREATURETYPE_MONSTER + 1
+THING_TYPE_NPC = CREATURETYPE_NPC + 1
+
 COMBAT_POISONDAMAGE = COMBAT_EARTHDAMAGE
 CONDITION_EXHAUST = CONDITION_EXHAUST_WEAPON
 TALKTYPE_ORANGE_1 = TALKTYPE_MONSTER_SAY
@@ -32,6 +36,52 @@ SOUTHWEST = DIRECTION_SOUTHWEST
 SOUTHEAST = DIRECTION_SOUTHEAST
 NORTHWEST = DIRECTION_NORTHWEST
 NORTHEAST = DIRECTION_NORTHEAST
+
+do
+	local function CreatureIndex(self, key)
+		local methods = getmetatable(self)
+		if key == "uid" then
+			return methods.getId(self)
+		elseif key == "type" then
+			local creatureType = 0
+			if methods.isPlayer(self) then
+				creatureType = THING_TYPE_PLAYER
+			elseif methods.isMonster(self) then
+				creatureType = THING_TYPE_MONSTER
+			elseif methods.isNpc(self) then
+				creatureType = THING_TYPE_NPC
+			end
+			return creatureType
+		elseif key == "itemid" then
+			return 1
+		elseif key == "actionid" then
+			return 0
+		end
+		return methods[key]
+	end
+	rawgetmetatable("Player").__index = CreatureIndex
+	rawgetmetatable("Monster").__index = CreatureIndex
+	rawgetmetatable("Npc").__index = CreatureIndex
+end
+
+do
+	local function ItemIndex(self, key)
+		local methods = getmetatable(self)
+		if key == "itemid" then
+			return methods.getId(self)
+		elseif key == "actionid" then
+			return methods.getActionId(self)
+		elseif key == "uid" then
+			return methods.getUniqueId(self)
+		elseif key == "type" then
+			return methods.getSubType(self)
+		end
+		return methods[key]
+	end
+	rawgetmetatable("Item").__index = ItemIndex
+	rawgetmetatable("Container").__index = ItemIndex
+	rawgetmetatable("Teleport").__index = ItemIndex
+end
 
 function pushThing(thing)
 	local t = {uid = 0, itemid = 0, type = 0, actionid = 0}
@@ -47,16 +97,31 @@ function pushThing(thing)
 			t.uid = thing:getId()
 			t.itemid = 1
 			if thing:isPlayer() then
-				t.type = 1
+				t.type = THING_TYPE_PLAYER
 			elseif thing:isMonster() then
-				t.type = 2
+				t.type = THING_TYPE_MONSTER
 			else
-				t.type = 3
+				t.type = THING_TYPE_NPC
 			end
 		end
 	end
 	return t
 end
+
+createCombatObject = Combat
+setCombatArea = Combat.setArea
+setCombatCallback = Combat.setCallback
+setCombatCondition = Combat.setCondition
+setCombatFormula = Combat.setFormula
+setCombatParam = Combat.setParameter
+
+createConditionObject = Condition
+setConditionParam = Condition.setParameter
+setConditionFormula = Condition.setFormula
+addDamageCondition = Condition.addDamage
+addOutfitCondition = Condition.setOutfit
+
+function doCombat(cid, combat, var) return combat:execute(cid, var) end
 
 function isCreature(cid) return Creature(cid) ~= nil end
 function isPlayer(cid) return Player(cid) ~= nil end
@@ -309,6 +374,7 @@ function setPlayerGroupId(cid, groupId) local p = Player(cid) return p ~= nil an
 function doPlayerSetSex(cid, sex) local p = Player(cid) return p ~= nil and p:setSex(sex) or false end
 function doPlayerSetGuildLevel(cid, level) local p = Player(cid) return p ~= nil and p:setGuildLevel(level) or false end
 function doPlayerSetGuildNick(cid, nick) local p = Player(cid) return p ~= nil and p:setGuildNick(nick) or false end
+function doPlayerSetOfflineTrainingSkill(cid, skillId) local p = Player(cid) return p ~= nil and p:setOfflineTrainingSkill(skillId) or false end
 function doShowTextDialog(cid, itemId, text) local p = Player(cid) return p ~= nil and p:showTextDialog(itemId, text) or false end
 function doPlayerAddItemEx(cid, uid, ...) local p = Player(cid) return p ~= nil and p:addItemEx(Item(uid), ...) or false end
 function doPlayerRemoveItem(cid, itemid, count, ...) local p = Player(cid) return p ~= nil and p:removeItem(itemid, count, ...) or false end
@@ -691,7 +757,7 @@ function getTileInfo(position)
 	ret.nopz = ret.protection
 	ret.nologout = t:hasFlag(TILESTATE_NOLOGOUT)
 	ret.refresh = t:hasFlag(TILESTATE_REFRESH)
-	ret.house = t:hasFlag(TILESTATE_HOUSE)
+	ret.house = t:getHouse() ~= nil
 	ret.bed = t:hasFlag(TILESTATE_BED)
 	ret.depot = t:hasFlag(TILESTATE_DEPOT)
 
@@ -777,10 +843,14 @@ end
 
 function getThingPos(uid)
 	local thing
-	if uid >= 0x10000000 then
-		thing = Creature(uid)
+	if type(uid) ~= "userdata" then
+		if uid >= 0x10000000 then
+			thing = Creature(uid)
+		else
+			thing = Item(uid)
+		end
 	else
-		thing = Item(uid)
+		thing = uid
 	end
 
 	if thing == nil then
@@ -927,4 +997,11 @@ end
 function broadcastMessage(message, messageType)
 	Game.broadcastMessage(message, messageType)
 	print("> Broadcasted message: \"" .. message .. "\".")
+end
+
+function Guild.addMember(self, player)
+	return player:setGuild(guild)
+end
+function Guild.removeMember(self, player)
+	return player:getGuild() == self and player:setGuild(nil)
 end

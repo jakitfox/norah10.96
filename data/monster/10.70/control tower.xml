@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Control Tower" nameDescription="a control tower" race="undead" experience="3000" speed="0" manacost="0">
+	<health now="7500" max="7500" />
+	<look typeex="23265" corpse="24309" />
+	<targetchange interval="5000" chance="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+	<attack name="melee" interval="2000" min="0" max="-45" />
+		<attack name="physical" interval="2000" range="7" min="-60" max="-350">
+			<attribute key="shootEffect" value="poisonarrow" />
+		</attack>
+	</attacks>
+	<defenses armor="40" defense="30">
+	<defense name="healing" interval="2000" chance="15" min="100" max="150">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>	
+	<elements>
+		<element energyPercent="55" />
+		<element firePercent="55" />
+		<element holyPercent="55" />
+	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<loot>
+		<item id="2152" countmax="5" chance="85700" /><!-- platinum coin -->
+		<item id="7591" chance="8010" /><!-- great health potion -->
+		<item id="7590" countmax="2" chance="7360" /><!-- great mana potion -->
+		<item id="9930" chance="6000" /><!-- flask of rust remover -->
+		<item id="23539" chance="1520" /><!-- alloy legs -->
+		<item id="9690" chance="1200" /><!-- gear wheel -->
+		<item id="23541" chance="1100" /><!-- gearwheel chain -->
+		<item id="10571" chance="700" /><!-- war crystal -->
+	</loot>
+</monster>

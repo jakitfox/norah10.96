@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,6 @@
 #include "pugicast.h"
 
 #include "game.h"
-#include "player.h"
 #include "configmanager.h"
 #include "scheduler.h"
 #include "monster.h"
@@ -64,7 +63,7 @@ bool Raids::loadFromXml()
 		return false;
 	}
 
-	for (pugi::xml_node raidNode = doc.child("raids").first_child(); raidNode; raidNode = raidNode.next_sibling()) {
+	for (auto raidNode : doc.child("raids").children()) {
 		std::string name, file;
 		uint32_t interval, margin;
 
@@ -200,20 +199,20 @@ Raid::~Raid()
 	}
 }
 
-bool Raid::loadFromXml(const std::string& _filename)
+bool Raid::loadFromXml(const std::string& filename)
 {
 	if (isLoaded()) {
 		return true;
 	}
 
 	pugi::xml_document doc;
-	pugi::xml_parse_result result = doc.load_file(_filename.c_str());
+	pugi::xml_parse_result result = doc.load_file(filename.c_str());
 	if (!result) {
-		printXMLError("Error - Raid::loadFromXml", _filename, result);
+		printXMLError("Error - Raid::loadFromXml", filename, result);
 		return false;
 	}
 
-	for (pugi::xml_node eventNode = doc.child("raid").first_child(); eventNode; eventNode = eventNode.next_sibling()) {
+	for (auto eventNode : doc.child("raid").children()) {
 		RaidEvent* event;
 		if (strcasecmp(eventNode.name(), "announce") == 0) {
 			event = new AnnounceEvent();
@@ -230,7 +229,7 @@ bool Raid::loadFromXml(const std::string& _filename)
 		if (event->configureRaidEvent(eventNode)) {
 			raidEvents.push_back(event);
 		} else {
-			std::cout << "[Error - Raid::loadFromXml] In file (" << _filename << "), eventNode: " << eventNode.name() << std::endl;
+			std::cout << "[Error - Raid::loadFromXml] In file (" << filename << "), eventNode: " << eventNode.name() << std::endl;
 			delete event;
 		}
 	}
@@ -487,7 +486,7 @@ bool AreaSpawnEvent::configureRaidEvent(const pugi::xml_node& eventNode)
 		}
 	}
 
-	for (pugi::xml_node monsterNode = eventNode.first_child(); monsterNode; monsterNode = monsterNode.next_sibling()) {
+	for (auto monsterNode : eventNode.children()) {
 		const char* name;
 
 		if ((attr = monsterNode.attribute("name"))) {
@@ -554,10 +553,7 @@ bool AreaSpawnEvent::executeEvent()
 	return true;
 }
 
-ScriptEvent::ScriptEvent(LuaScriptInterface* _interface) :
-	Event(_interface)
-{
-}
+ScriptEvent::ScriptEvent(LuaScriptInterface* interface) : Event(interface) {}
 
 bool ScriptEvent::configureRaidEvent(const pugi::xml_node& eventNode)
 {
@@ -586,15 +582,15 @@ std::string ScriptEvent::getScriptEventName() const
 bool ScriptEvent::executeEvent()
 {
 	//onRaid()
-	if (!m_scriptInterface->reserveScriptEnv()) {
+	if (!scriptInterface->reserveScriptEnv()) {
 		std::cout << "[Error - ScriptEvent::onRaid] Call stack overflow" << std::endl;
 		return false;
 	}
 
-	ScriptEnvironment* env = m_scriptInterface->getScriptEnv();
-	env->setScriptId(m_scriptId, m_scriptInterface);
+	ScriptEnvironment* env = scriptInterface->getScriptEnv();
+	env->setScriptId(scriptId, scriptInterface);
 
-	m_scriptInterface->pushFunction(m_scriptId);
+	scriptInterface->pushFunction(scriptId);
 
-	return m_scriptInterface->callFunction(0);
+	return scriptInterface->callFunction(0);
 }

@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@
 #define FS_TASKS_H_A66AC384766041E59DCA059DAB6E1976
 
 #include <condition_variable>
-
+#include "thread_holder_base.h"
 #include "enums.h"
 
 const int DISPATCHER_TASK_EXPIRATION = 2000;
@@ -37,6 +37,7 @@ class Task
 		explicit Task(const std::function<void (void)>& f)
 			: expiration(SYSTEM_TIME_ZERO), func(f) {}
 
+		virtual ~Task() = default;
 		void operator()() {
 			func();
 		}
@@ -70,29 +71,23 @@ inline Task* createTask(uint32_t expiration, const std::function<void (void)>& f
 	return new Task(expiration, f);
 }
 
-class Dispatcher
+class Dispatcher : public ThreadHolder<Dispatcher>
 {
 	public:
-		Dispatcher();
-
 		void addTask(Task* task, bool push_front = false);
-
-		void start();
-		void stop();
 		void shutdown();
-		void join();
 
+		uint64_t getDispatcherCycle() const {
+			return dispatcherCycle;
+		}
+		void threadMain();
 	protected:
-		void dispatcherThread();
-
-		void flush();
-
 		std::thread thread;
 		std::mutex taskLock;
 		std::condition_variable taskSignal;
 
 		std::list<Task*> taskList;
-		ThreadState threadState;
+		uint64_t dispatcherCycle {0};
 };
 
 extern Dispatcher g_dispatcher;

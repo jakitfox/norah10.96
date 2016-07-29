@@ -15,6 +15,7 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="15" />
+		<flag isblockable="0" />
 	</flags>
 	<defenses armor="5" defense="5" />
 	<loot>

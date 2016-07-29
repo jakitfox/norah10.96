@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,11 +21,8 @@
 
 #include "monsters.h"
 #include "monster.h"
-#include "container.h"
-#include "tools.h"
 #include "spells.h"
 #include "combat.h"
-#include "luascript.h"
 #include "weapons.h"
 #include "configmanager.h"
 #include "game.h"
@@ -36,6 +33,13 @@ extern Game g_game;
 extern Spells* g_spells;
 extern Monsters g_monsters;
 extern ConfigManager g_config;
+
+spellBlock_t::~spellBlock_t()
+{
+	if (combatSpell) {
+		delete spell;
+	}
+}
 
 MonsterType::MonsterType()
 {
@@ -62,14 +66,7 @@ void MonsterType::reset()
 	health = 100;
 	healthMax = 100;
 
-	outfit.lookHead = 0;
-	outfit.lookBody = 0;
-	outfit.lookLegs = 0;
-	outfit.lookFeet = 0;
-	outfit.lookType = 0;
-	outfit.lookTypeEx = 0;
-	outfit.lookAddons = 0;
-	outfit.lookMount = 0;
+	outfit.reset();
 	lookcorpse = 0;
 
 	skull = SKULL_NONE;
@@ -82,29 +79,18 @@ void MonsterType::reset()
 	isConvinceable = false;
 	isAttackable = true;
 	isHostile = true;
-	isRewardBoss = false;
+	isBlockable = true;
 
 	lightLevel = 0;
 	lightColor = 0;
 
 	manaCost = 0;
-	summonList.clear();
+	summons.clear();
 	lootItems.clear();
 	elementMap.clear();
 
-	for (const spellBlock_t& spellBlock : spellAttackList) {
-		if (spellBlock.combatSpell) {
-			delete spellBlock.spell;
-		}
-	}
-	spellAttackList.clear();
-
-	for (const spellBlock_t& spellBlock : spellDefenseList) {
-		if (spellBlock.combatSpell) {
-			delete spellBlock.spell;
-		}
-	}
-	spellDefenseList.clear();
+	attackSpells.clear();
+	defenseSpells.clear();
 
 	yellSpeedTicks = 0;
 	yellChance = 0;
@@ -120,12 +106,7 @@ void MonsterType::reset()
 	creatureSayEvent = -1;
 	thinkEvent = -1;
 
-	scriptList.clear();
-}
-
-MonsterType::~MonsterType()
-{
-	reset();
+	scripts.clear();
 }
 
 uint32_t Monsters::getLootRandom()
@@ -139,23 +120,11 @@ void MonsterType::createLoot(Container* corpse)
 		corpse->startDecaying();
 		return;
 	}
-	
-		if (isRewardBoss) {
- 		auto timestamp = time(nullptr);
- 		Item* rewardContainer = Item::CreateItem(ITEM_REWARD_CONTAINER);
- 		rewardContainer->setIntAttr(ITEM_ATTRIBUTE_DATE, timestamp);	
- 		corpse->setIntAttr(ITEM_ATTRIBUTE_DATE, timestamp);
- 		corpse->internalAddThing(rewardContainer);
- 		corpse->setRewardCorpse();
- 		corpse->startDecaying();
- 		return;
- 	}
- 
 
 	Player* owner = g_game.getPlayerByID(corpse->getCorpseOwner());
 	if (!owner || owner->getStaminaMinutes() > 840) {
 		for (auto it = lootItems.rbegin(), end = lootItems.rend(); it != end; ++it) {
-			std::list<Item*> itemList = createLootItem(*it);
+			auto itemList = createLootItem(*it);
 			if (itemList.empty()) {
 				continue;
 			}
@@ -168,7 +137,7 @@ void MonsterType::createLoot(Container* corpse)
 						continue;
 					}
 				}
-				
+
 				if (g_game.internalAddItem(corpse, item) != RETURNVALUE_NOERROR) {
 					corpse->internalAddThing(item);
 				}
@@ -182,7 +151,7 @@ void MonsterType::createLoot(Container* corpse)
 			if (owner->getParty()) {
 				owner->getParty()->broadcastPartyLoot(ss.str());
 			} else {
-				owner->sendTextMessage(MESSAGE_INFO_DESCR, ss.str());
+				owner->sendTextMessage(MESSAGE_LOOT, ss.str());
 			}
 		}
 	} else {
@@ -192,14 +161,14 @@ void MonsterType::createLoot(Container* corpse)
 		if (owner->getParty()) {
 			owner->getParty()->broadcastPartyLoot(ss.str());
 		} else {
-			owner->sendTextMessage(MESSAGE_INFO_DESCR, ss.str());
+			owner->sendTextMessage(MESSAGE_LOOT, ss.str());
 		}
 	}
 
 	corpse->startDecaying();
 }
 
-std::list<Item*> MonsterType::createLootItem(const LootBlock& lootBlock)
+std::vector<Item*> MonsterType::createLootItem(const LootBlock& lootBlock)
 {
 	int32_t itemCount = 0;
 
@@ -212,7 +181,7 @@ std::list<Item*> MonsterType::createLootItem(const LootBlock& lootBlock)
 		}
 	}
 
-	std::list<Item*> itemList;
+	std::vector<Item*> itemList;
 	while (itemCount > 0) {
 		uint16_t n = static_cast<uint16_t>(std::min<int32_t>(itemCount, 100));
 		Item* tmpItem = Item::CreateItem(lootBlock.id, n);
@@ -247,7 +216,7 @@ bool MonsterType::createLootContainer(Container* parent, const LootBlock& lootbl
 	}
 
 	for (; it != end && parent->size() < parent->capacity(); ++it) {
-		std::list<Item*> itemList = createLootItem(*it);
+		auto itemList = createLootItem(*it);
 		for (Item* tmpItem : itemList) {
 			if (Container* container = tmpItem->getContainer()) {
 				if (!createLootContainer(container, *it)) {
@@ -266,15 +235,6 @@ bool MonsterType::createLootContainer(Container* parent, const LootBlock& lootbl
 Monsters::Monsters()
 {
 	loaded = false;
-	scriptInterface = nullptr;
-}
-
-Monsters::~Monsters()
-{
-	for (const auto& it : monsters) {
-		delete it.second;
-	}
-	delete scriptInterface;
 }
 
 bool Monsters::loadFromXml(bool reloading /*= false*/)
@@ -287,20 +247,22 @@ bool Monsters::loadFromXml(bool reloading /*= false*/)
 	}
 
 	loaded = true;
-	for (pugi::xml_node monsterNode = doc.child("monsters").first_child(); monsterNode; monsterNode = monsterNode.next_sibling()) {
-		loadMonster("data/monster/" + std::string(monsterNode.attribute("file").as_string()), monsterNode.attribute("name").as_string(), reloading);
+
+	std::list<std::pair<MonsterType*, std::string>> monsterScriptList;
+	for (auto monsterNode : doc.child("monsters").children()) {
+		loadMonster("data/monster/" + std::string(monsterNode.attribute("file").as_string()), monsterNode.attribute("name").as_string(), monsterScriptList, reloading);
 	}
 
 	if (!monsterScriptList.empty()) {
 		if (!scriptInterface) {
-			scriptInterface = new LuaScriptInterface("Monster Interface");
+			scriptInterface.reset(new LuaScriptInterface("Monster Interface"));
 			scriptInterface->initState();
 		}
 
 		for (const auto& scriptEntry : monsterScriptList) {
 			MonsterType* mType = scriptEntry.first;
 			if (scriptInterface->loadFile("data/monster/scripts/" + scriptEntry.second) == 0) {
-				mType->scriptInterface = scriptInterface;
+				mType->scriptInterface = scriptInterface.get();
 				mType->creatureAppearEvent = scriptInterface->getEvent("onCreatureAppear");
 				mType->creatureDisappearEvent = scriptInterface->getEvent("onCreatureDisappear");
 				mType->creatureMoveEvent = scriptInterface->getEvent("onCreatureMove");
@@ -319,9 +281,7 @@ bool Monsters::reload()
 {
 	loaded = false;
 
-	delete scriptInterface;
-	scriptInterface = nullptr;
-	monsterScriptList.clear();
+	scriptInterface.reset();
 
 	return loadFromXml(true);
 }
@@ -329,7 +289,7 @@ bool Monsters::reload()
 ConditionDamage* Monsters::getDamageCondition(ConditionType_t conditionType,
         int32_t maxDamage, int32_t minDamage, int32_t startDamage, uint32_t tickInterval)
 {
-	ConditionDamage* condition = reinterpret_cast<ConditionDamage*>(Condition::createCondition(CONDITIONID_COMBAT, conditionType, 0, 0));
+	ConditionDamage* condition = static_cast<ConditionDamage*>(Condition::createCondition(CONDITIONID_COMBAT, conditionType, 0, 0));
 	condition->setParam(CONDITION_PARAM_TICKINTERVAL, tickInterval);
 	condition->setParam(CONDITION_PARAM_MINVALUE, minDamage);
 	condition->setParam(CONDITION_PARAM_MAXVALUE, maxDamage);
@@ -340,14 +300,6 @@ ConditionDamage* Monsters::getDamageCondition(ConditionType_t conditionType,
 
 bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, const std::string& description)
 {
-	sb.chance = 100;
-	sb.speed = 2000;
-	sb.range = 0;
-	sb.minCombatValue = 0;
-	sb.maxCombatValue = 0;
-	sb.combatSpell = false;
-	sb.isMelee = false;
-
 	std::string name;
 	std::string scriptName;
 	bool isScripted;
@@ -398,8 +350,8 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 		}
 	}
 
-	sb.spell = g_spells->getSpellByName(name);
-	if (sb.spell) {
+	if (auto spell = g_spells->getSpellByName(name)) {
+		sb.spell = spell;
 		return true;
 	}
 
@@ -429,8 +381,6 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 		combatSpell->getCombat()->setPlayerCombatValues(COMBAT_FORMULA_DAMAGE, sb.minCombatValue, 0, sb.maxCombatValue, 0);
 	} else {
 		Combat* combat = new Combat;
-		sb.combatSpell = true;
-
 		if ((attr = node.attribute("length"))) {
 			int32_t length = pugi::cast<int32_t>(attr.value());
 			if (length > 0) {
@@ -593,7 +543,7 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 				conditionType = CONDITION_PARALYZE;
 			}
 
-			ConditionSpeed* condition = reinterpret_cast<ConditionSpeed*>(Condition::createCondition(CONDITIONID_COMBAT, conditionType, duration, 0));
+			ConditionSpeed* condition = static_cast<ConditionSpeed*>(Condition::createCondition(CONDITIONID_COMBAT, conditionType, duration, 0));
 			condition->setFormulaVars(speedChange / 1000.0, 0, speedChange / 1000.0, 0);
 			combat->setCondition(condition);
 		} else if (tmpName == "outfit") {
@@ -606,7 +556,7 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 			if ((attr = node.attribute("monster"))) {
 				MonsterType* mType = g_monsters.getMonsterType(attr.as_string());
 				if (mType) {
-					ConditionOutfit* condition = reinterpret_cast<ConditionOutfit*>(Condition::createCondition(CONDITIONID_COMBAT, CONDITION_OUTFIT, duration, 0));
+					ConditionOutfit* condition = static_cast<ConditionOutfit*>(Condition::createCondition(CONDITIONID_COMBAT, CONDITION_OUTFIT, duration, 0));
 					condition->setOutfit(mType->outfit);
 					combat->setParam(COMBAT_PARAM_AGGRESSIVE, 0);
 					combat->setCondition(condition);
@@ -615,7 +565,7 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 				Outfit_t outfit;
 				outfit.lookTypeEx = pugi::cast<uint16_t>(attr.value());
 
-				ConditionOutfit* condition = reinterpret_cast<ConditionOutfit*>(Condition::createCondition(CONDITIONID_COMBAT, CONDITION_OUTFIT, duration, 0));
+				ConditionOutfit* condition = static_cast<ConditionOutfit*>(Condition::createCondition(CONDITIONID_COMBAT, CONDITION_OUTFIT, duration, 0));
 				condition->setOutfit(outfit);
 				combat->setParam(COMBAT_PARAM_AGGRESSIVE, 0);
 				combat->setCondition(condition);
@@ -714,7 +664,7 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 		combat->setPlayerCombatValues(COMBAT_FORMULA_DAMAGE, sb.minCombatValue, 0, sb.maxCombatValue, 0);
 		combatSpell = new CombatSpell(combat, needTarget, needDirection);
 
-		for (pugi::xml_node attributeNode = node.first_child(); attributeNode; attributeNode = attributeNode.next_sibling()) {
+		for (auto attributeNode : node.children()) {
 			if ((attr = attributeNode.attribute("key"))) {
 				const char* value = attr.value();
 				if (strcasecmp(value, "shooteffect") == 0) {
@@ -743,24 +693,16 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 	}
 
 	sb.spell = combatSpell;
+	if (combatSpell) {
+		sb.combatSpell = true;
+	}
 	return true;
 }
 
-bool Monsters::loadMonster(const std::string& file, const std::string& monster_name, bool reloading /*= false*/)
+bool Monsters::loadMonster(const std::string& file, const std::string& monsterName, std::list<std::pair<MonsterType*, std::string>>& monsterScriptList, bool reloading /*= false*/)
 {
 	MonsterType* mType = nullptr;
 	bool new_mType = true;
-
-	if (reloading) {
-		uint32_t id = getIdByName(monster_name);
-		if (id != 0) {
-			mType = getMonsterType(id);
-			if (mType != nullptr) {
-				new_mType = false;
-				mType->reset();
-			}
-		}
-	}
 
 	pugi::xml_document doc;
 	pugi::xml_parse_result result = doc.load_file(file.c_str());
@@ -781,9 +723,18 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 		return false;
 	}
 
-	if (mType == nullptr) {
-		mType = new MonsterType();
+	if (reloading) {
+		mType = getMonsterType(monsterName);
+		if (mType != nullptr) {
+			new_mType = false;
+			mType->reset();
+		}
 	}
+
+	if (new_mType) {
+		mType = &monsters[asLowerCaseString(monsterName)];
+	}
+
 	mType->name = attr.as_string();
 
 	if ((attr = monsterNode.attribute("nameDescription"))) {
@@ -828,7 +779,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 	}
 
 	if ((attr = monsterNode.attribute("script"))) {
-		monsterScriptList[mType] = attr.as_string();
+		monsterScriptList.emplace_back(mType, attr.as_string());
 	}
 
 	pugi::xml_node node;
@@ -847,13 +798,11 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 	}
 
 	if ((node = monsterNode.child("flags"))) {
-		for (pugi::xml_node flagNode = node.first_child(); flagNode; flagNode = flagNode.next_sibling()) {
+		for (auto flagNode : node.children()) {
 			attr = flagNode.first_attribute();
 			const char* attrName = attr.name();
 			if (strcasecmp(attrName, "summonable") == 0) {
 				mType->isSummonable = attr.as_bool();
-			} else if (strcasecmp(attrName, "rewardboss") == 0) {
- 				mType->isRewardBoss = attr.as_bool();
 			} else if (strcasecmp(attrName, "attackable") == 0) {
 				mType->isAttackable = attr.as_bool();
 			} else if (strcasecmp(attrName, "hostile") == 0) {
@@ -886,6 +835,8 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 				mType->runAwayHealth = pugi::cast<int32_t>(attr.value());
 			} else if (strcasecmp(attrName, "hidehealth") == 0) {
 				mType->hiddenHealth = attr.as_bool();
+			} else if (strcasecmp(attrName, "isblockable") == 0) {
+				mType->isBlockable = attr.as_bool();
 			} else {
 				std::cout << "[Warning - Monsters::loadMonster] Unknown flag attribute: " << attrName << ". " << file << std::endl;
 			}
@@ -951,10 +902,10 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 	}
 
 	if ((node = monsterNode.child("attacks"))) {
-		for (pugi::xml_node attackNode = node.first_child(); attackNode; attackNode = attackNode.next_sibling()) {
+		for (auto attackNode : node.children()) {
 			spellBlock_t sb;
-			if (deserializeSpell(attackNode, sb, monster_name)) {
-				mType->spellAttackList.push_back(sb);
+			if (deserializeSpell(attackNode, sb, monsterName)) {
+				mType->attackSpells.emplace_back(std::move(sb));
 			} else {
 				std::cout << "[Warning - Monsters::loadMonster] Cant load spell. " << file << std::endl;
 			}
@@ -970,10 +921,10 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 			mType->armor = pugi::cast<int32_t>(attr.value());
 		}
 
-		for (pugi::xml_node defenseNode = node.first_child(); defenseNode; defenseNode = defenseNode.next_sibling()) {
+		for (auto defenseNode : node.children()) {
 			spellBlock_t sb;
-			if (deserializeSpell(defenseNode, sb, monster_name)) {
-				mType->spellDefenseList.push_back(sb);
+			if (deserializeSpell(defenseNode, sb, monsterName)) {
+				mType->defenseSpells.emplace_back(std::move(sb));
 			} else {
 				std::cout << "[Warning - Monsters::loadMonster] Cant load spell. " << file << std::endl;
 			}
@@ -981,7 +932,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 	}
 
 	if ((node = monsterNode.child("immunities"))) {
-		for (pugi::xml_node immunityNode = node.first_child(); immunityNode; immunityNode = immunityNode.next_sibling()) {
+		for (auto immunityNode : node.children()) {
 			if ((attr = immunityNode.attribute("name"))) {
 				std::string tmpStrValue = asLowerCaseString(attr.as_string());
 				if (tmpStrValue == "physical") {
@@ -1113,7 +1064,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 			std::cout << "[Warning - Monsters::loadMonster] Missing voices chance. " << file << std::endl;
 		}
 
-		for (pugi::xml_node voiceNode = node.first_child(); voiceNode; voiceNode = voiceNode.next_sibling()) {
+		for (auto voiceNode : node.children()) {
 			voiceBlock_t vb;
 			if ((attr = voiceNode.attribute("sentence"))) {
 				vb.text = attr.as_string();
@@ -1126,15 +1077,15 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 			} else {
 				vb.yellText = false;
 			}
-			mType->voiceVector.push_back(vb);
+			mType->voiceVector.emplace_back(vb);
 		}
 	}
 
 	if ((node = monsterNode.child("loot"))) {
-		for (pugi::xml_node lootNode = node.first_child(); lootNode; lootNode = lootNode.next_sibling()) {
+		for (auto lootNode : node.children()) {
 			LootBlock lootBlock;
 			if (loadLootItem(lootNode, lootBlock)) {
-				mType->lootItems.push_back(lootBlock);
+				mType->lootItems.emplace_back(std::move(lootBlock));
 			} else {
 				std::cout << "[Warning - Monsters::loadMonster] Cant load loot. " << file << std::endl;
 			}
@@ -1142,7 +1093,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 	}
 
 	if ((node = monsterNode.child("elements"))) {
-		for (pugi::xml_node elementNode = node.first_child(); elementNode; elementNode = elementNode.next_sibling()) {
+		for (auto elementNode : node.children()) {
 			if ((attr = elementNode.attribute("physicalPercent"))) {
 				mType->elementMap[COMBAT_PHYSICALDAMAGE] = pugi::cast<int32_t>(attr.value());
 			} else if ((attr = elementNode.attribute("icePercent"))) {
@@ -1176,9 +1127,10 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 			std::cout << "[Warning - Monsters::loadMonster] Missing summons maxSummons. " << file << std::endl;
 		}
 
-		for (pugi::xml_node summonNode = node.first_child(); summonNode; summonNode = summonNode.next_sibling()) {
+		for (auto summonNode : node.children()) {
 			int32_t chance = 100;
 			int32_t speed = 1000;
+			bool force = false;
 
 			if ((attr = summonNode.attribute("speed")) || (attr = summonNode.attribute("interval"))) {
 				speed = pugi::cast<int32_t>(attr.value());
@@ -1187,13 +1139,18 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 			if ((attr = summonNode.attribute("chance"))) {
 				chance = pugi::cast<int32_t>(attr.value());
 			}
+			
+			if ((attr = summonNode.attribute("force"))) {
+				force = attr.as_bool();
+			}
 
 			if ((attr = summonNode.attribute("name"))) {
 				summonBlock_t sb;
 				sb.name = attr.as_string();
 				sb.speed = speed;
 				sb.chance = chance;
-				mType->summonList.push_back(sb);
+				sb.force = force;
+				mType->summons.emplace_back(sb);
 			} else {
 				std::cout << "[Warning - Monsters::loadMonster] Missing summon name. " << file << std::endl;
 			}
@@ -1201,23 +1158,21 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monster_n
 	}
 
 	if ((node = monsterNode.child("script"))) {
-		for (pugi::xml_node eventNode = node.first_child(); eventNode; eventNode = eventNode.next_sibling()) {
+		for (auto eventNode : node.children()) {
 			if ((attr = eventNode.attribute("name"))) {
-				mType->scriptList.push_back(attr.as_string());
+				mType->scripts.emplace_back(attr.as_string());
 			} else {
 				std::cout << "[Warning - Monsters::loadMonster] Missing name for script event. " << file << std::endl;
 			}
 		}
 	}
 
-	static uint32_t id = 0;
-	if (new_mType) {
-		std::string lowername = monster_name;
-		toLowerCaseString(lowername);
-
-		monsterNames[lowername] = ++id;
-		monsters[id] = mType;
-	}
+	mType->summons.shrink_to_fit();
+	mType->lootItems.shrink_to_fit();
+	mType->attackSpells.shrink_to_fit();
+	mType->defenseSpells.shrink_to_fit();
+	mType->voiceVector.shrink_to_fit();
+	mType->scripts.shrink_to_fit();
 	return true;
 }
 
@@ -1265,46 +1220,25 @@ bool Monsters::loadLootItem(const pugi::xml_node& node, LootBlock& lootBlock)
 	if ((attr = node.attribute("text"))) {
 		lootBlock.text = attr.as_string();
 	}
-	
-	if ((attr = node.attribute("unique"))) {
- 		lootBlock.unique = attr.as_bool();
- 	}
 	return true;
 }
 
 void Monsters::loadLootContainer(const pugi::xml_node& node, LootBlock& lBlock)
 {
-	for (pugi::xml_node subNode = node.first_child(); subNode; subNode = subNode.next_sibling()) {
+	for (auto subNode : node.children()) {
 		LootBlock lootBlock;
 		if (loadLootItem(subNode, lootBlock)) {
-			lBlock.childLoot.push_back(lootBlock);
+			lBlock.childLoot.emplace_back(std::move(lootBlock));
 		}
 	}
 }
 
 MonsterType* Monsters::getMonsterType(const std::string& name)
 {
-	uint32_t mId = getIdByName(name);
-	if (mId == 0) {
-		return nullptr;
-	}
-	return getMonsterType(mId);
-}
+	auto it = monsters.find(asLowerCaseString(name));
 
-MonsterType* Monsters::getMonsterType(uint32_t mid)
-{
-	auto it = monsters.find(mid);
 	if (it == monsters.end()) {
 		return nullptr;
 	}
-	return it->second;
-}
-
-uint32_t Monsters::getIdByName(const std::string& name)
-{
-	auto it = monsterNames.find(asLowerCaseString(name));
-	if (it == monsterNames.end()) {
-		return 0;
-	}
-	return it->second;
+	return &it->second;
 }

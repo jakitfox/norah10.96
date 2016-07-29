@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,8 +22,9 @@
 
 #include "creature.h"
 
-#define MAX_LOOTCHANCE 100000
-#define MAX_STATICWALK 100
+
+const uint32_t MAX_LOOTCHANCE = 100000;
+const uint32_t MAX_STATICWALK = 100;
 
 struct LootBlock {
 	uint16_t id;
@@ -34,9 +35,8 @@ struct LootBlock {
 	int32_t subType;
 	int32_t actionId;
 	std::string text;
-	bool unique;
 
-	std::list<LootBlock> childLoot;
+	std::vector<LootBlock> childLoot;
 	LootBlock() {
 		id = 0;
 		countmax = 0;
@@ -44,7 +44,6 @@ struct LootBlock {
 
 		subType = -1;
 		actionId = -1;
-		unique = false;
 	}
 };
 
@@ -52,24 +51,39 @@ struct summonBlock_t {
 	std::string name;
 	uint32_t chance;
 	uint32_t speed;
+	bool force = false;
 };
 
 class BaseSpell;
-
 struct spellBlock_t {
-	BaseSpell* spell;
-	uint32_t chance;
-	uint32_t speed;
-	uint32_t range;
-	int32_t minCombatValue;
-	int32_t maxCombatValue;
-	bool combatSpell;
-	bool isMelee;
+	spellBlock_t() = default;
+	~spellBlock_t();
+	spellBlock_t(const spellBlock_t& other) = delete;
+	spellBlock_t& operator=(const spellBlock_t& other) = delete;
+	spellBlock_t(spellBlock_t&& other):
+		spell(other.spell),
+		chance(other.chance),
+		speed(other.speed),
+		range(other.range),
+		minCombatValue(other.minCombatValue),
+		maxCombatValue(other.maxCombatValue),
+		combatSpell(other.combatSpell),
+		isMelee(other.isMelee) {
+		other.spell = nullptr;
+	}
+
+	BaseSpell* spell = nullptr;
+	uint32_t chance = 100;
+	uint32_t speed = 2000;
+	uint32_t range = 0;
+	int32_t minCombatValue = 0;
+	int32_t maxCombatValue = 0;
+	bool combatSpell = false;
+	bool isMelee = false;
 };
 
 struct voiceBlock_t {
 	std::string text;
-	bool unique;
 	bool yellText;
 };
 
@@ -77,7 +91,7 @@ class MonsterType
 {
 	public:
 		MonsterType();
-		~MonsterType();
+		~MonsterType() = default;
 
 		// non-copyable
 		MonsterType(const MonsterType&) = delete;
@@ -89,11 +103,11 @@ class MonsterType
 
 		std::vector<voiceBlock_t> voiceVector;
 
-		std::list<LootBlock> lootItems;
-		std::list<std::string> scriptList;
-		std::list<spellBlock_t> spellAttackList;
-		std::list<spellBlock_t> spellDefenseList;
-		std::list<summonBlock_t> summonList;
+		std::vector<LootBlock> lootItems;
+		std::vector<std::string> scripts;
+		std::vector<spellBlock_t> attackSpells;
+		std::vector<spellBlock_t> defenseSpells;
+		std::vector<summonBlock_t> summons;
 
 		std::string name;
 		std::string nameDescription;
@@ -139,24 +153,23 @@ class MonsterType
 		bool canPushCreatures;
 		bool pushable;
 		bool isSummonable;
-		bool isRewardBoss;
 		bool isIllusionable;
 		bool isConvinceable;
 		bool isAttackable;
 		bool isHostile;
 		bool hiddenHealth;
+		bool isBlockable;
 
 		void createLoot(Container* corpse);
 		bool createLootContainer(Container* parent, const LootBlock& lootblock);
-		std::list<Item*> createLootItem(const LootBlock& lootblock);
+		std::vector<Item*> createLootItem(const LootBlock& lootBlock);
 };
 
 class Monsters
 {
 	public:
 		Monsters();
-		~Monsters();
-
+		~Monsters() = default;
 		// non-copyable
 		Monsters(const Monsters&) = delete;
 		Monsters& operator=(const Monsters&) = delete;
@@ -168,7 +181,6 @@ class Monsters
 		bool reload();
 
 		MonsterType* getMonsterType(const std::string& name);
-		MonsterType* getMonsterType(uint32_t mid);
 		uint32_t getIdByName(const std::string& name);
 
 		static uint32_t getLootRandom();
@@ -178,15 +190,13 @@ class Monsters
 		                                    int32_t maxDamage, int32_t minDamage, int32_t startDamage, uint32_t tickInterval);
 		bool deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, const std::string& description = "");
 
-		bool loadMonster(const std::string& file, const std::string& monster_name, bool reloading = false);
+		bool loadMonster(const std::string& file, const std::string& monsterName, std::list<std::pair<MonsterType*, std::string>>& monsterScriptList, bool reloading = false);
 
 		void loadLootContainer(const pugi::xml_node& node, LootBlock&);
 		bool loadLootItem(const pugi::xml_node& node, LootBlock&);
 
-		std::map<std::string, uint32_t> monsterNames;
-		std::map<MonsterType*, std::string> monsterScriptList;
-		std::map<uint32_t, MonsterType*> monsters;
-		LuaScriptInterface* scriptInterface;
+		std::map<std::string, MonsterType> monsters;
+		std::unique_ptr<LuaScriptInterface> scriptInterface;
 
 		bool loaded;
 };

@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `houses` (
   KEY `owner` (`owner`),
   KEY `town_id` (`town_id`)
 ) ENGINE=InnoDB;
-  
+
 CREATE TABLE IF NOT EXISTS `house_lists` (
   `house_id` int(11) NOT NULL,
   `listid` int(11) NOT NULL,
@@ -271,17 +271,6 @@ CREATE TABLE IF NOT EXISTS `player_deaths` (
 CREATE TABLE IF NOT EXISTS `player_depotitems` (
   `player_id` int(11) NOT NULL,
   `sid` int(11) NOT NULL COMMENT 'any given range eg 0-100 will be reserved for depot lockers and all > 100 will be then normal items inside depots',
-  `pid` int(11) NOT NULL DEFAULT '0',
-  `itemtype` smallint(6) NOT NULL,
-  `count` smallint(5) NOT NULL DEFAULT '0',
-  `attributes` blob NOT NULL,
-  UNIQUE KEY `player_id_2` (`player_id`, `sid`),
-  FOREIGN KEY (`player_id`) REFERENCES `players`(`id`) ON DELETE CASCADE
-) ENGINE=InnoDB;
-
-CREATE TABLE IF NOT EXISTS `player_rewards` (
-  `player_id` int(11) NOT NULL,
-  `sid` int(11) NOT NULL,
   `pid` int(11) NOT NULL DEFAULT '0',
   `itemtype` smallint(6) NOT NULL,
   `count` smallint(5) NOT NULL DEFAULT '0',

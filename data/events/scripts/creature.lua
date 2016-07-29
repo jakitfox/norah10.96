@@ -63,6 +63,7 @@ function Creature:onTargetCombat(target)
 	return true
 end
 
+
 function Creature:onTargetCombat(target)
 	if not self then
 		return true

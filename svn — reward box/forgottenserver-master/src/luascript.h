@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2015  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,11 +23,11 @@
 #include <lua.hpp>
 
 #if LUA_VERSION_NUM >= 502
-// NOTE: Define LUA_COMPAT_ALL as a workaround if this doesn't work
 #ifndef LUA_COMPAT_ALL
 #ifndef LUA_COMPAT_MODULE
 #define luaL_register(L, libname, l) (luaL_newlib(L, l), lua_pushvalue(L, -1), lua_setglobal(L, libname))
 #endif
+#undef lua_equal
 #define lua_equal(L, i1, i2) lua_compare(L, (i1), (i2), LUA_OPEQ)
 #endif
 #endif
@@ -95,6 +95,7 @@ struct LuaTimerEventDesc {
 };
 
 class LuaScriptInterface;
+class Cylinder;
 class Game;
 class Npc;
 
@@ -111,52 +112,38 @@ class ScriptEnvironment
 		void resetEnv();
 
 		void setScriptId(int32_t scriptId, LuaScriptInterface* scriptInterface) {
-			m_scriptId = scriptId;
-			m_interface = scriptInterface;
+			this->scriptId = scriptId;
+			interface = scriptInterface;
 		}
 		bool setCallbackId(int32_t callbackId, LuaScriptInterface* scriptInterface);
-		void setEventDesc(std::string desc) {
-			m_eventdesc = desc;
-		}
 
-		std::string getEventDesc() const {
-			return m_eventdesc;
-		}
 		int32_t getScriptId() const {
-			return m_scriptId;
-		}
-		int32_t getCallbackId() const {
-			return m_callbackId;
+			return scriptId;
 		}
 		LuaScriptInterface* getScriptInterface() {
-			return m_interface;
+			return interface;
 		}
 
 		void setTimerEvent() {
-			m_timerEvent = true;
-		}
-		void resetTimerEvent() {
-			m_timerEvent = false;
+			timerEvent = true;
 		}
 
-		void getEventInfo(int32_t& scriptId, std::string& desc, LuaScriptInterface*& scriptInterface, int32_t& callbackId, bool& timerEvent) const;
+		void getEventInfo(int32_t& scriptId, LuaScriptInterface*& scriptInterface, int32_t& callbackId, bool& timerEvent) const;
 
-		static void addTempItem(ScriptEnvironment* env, Item* item);
+		void addTempItem(Item* item);
 		static void removeTempItem(Item* item);
-		static void addUniqueThing(Thing* thing);
-		static void removeUniqueThing(Thing* thing);
 		uint32_t addThing(Thing* thing);
-		void insertThing(uint32_t uid, Thing* thing);
+		void insertItem(uint32_t uid, Item* item);
 
 		static DBResult_ptr getResultByID(uint32_t id);
 		static uint32_t addResult(DBResult_ptr res);
 		static bool removeResult(uint32_t id);
 
 		void setNpc(Npc* npc) {
-			m_curNpc = npc;
+			curNpc = npc;
 		}
 		Npc* getNpc() const {
-			return m_curNpc;
+			return curNpc;
 		}
 
 		Thing* getThingByUID(uint32_t uid);
@@ -165,36 +152,29 @@ class ScriptEnvironment
 		void removeItemByUID(uint32_t uid);
 
 	private:
-		typedef std::unordered_map<uint32_t, Thing*> ThingMap;
 		typedef std::vector<const LuaVariant*> VariantVector;
 		typedef std::map<uint32_t, int32_t> StorageMap;
 		typedef std::map<uint32_t, DBResult_ptr> DBResultMap;
 
 		//script file id
-		int32_t m_scriptId;
-		int32_t m_callbackId;
-		bool m_timerEvent;
-		LuaScriptInterface* m_interface;
-		//script event desc
-		std::string m_eventdesc;
+		int32_t scriptId;
+		int32_t callbackId;
+		bool timerEvent;
+		LuaScriptInterface* interface;
 
-		//unique id map
-		static ThingMap m_globalMap;
-
-		//item/creature map
-		uint32_t m_lastUID;
-		ThingMap m_localMap;
+		//local item map
+		uint32_t lastUID;
+		std::unordered_map<uint32_t, Item*> localMap;
 
 		//temporary item list
-		typedef std::map<ScriptEnvironment*, std::list<Item*>> TempItemListMap;
-		static TempItemListMap m_tempItems;
+		static std::multimap<ScriptEnvironment*, Item*> tempItems;
 
 		//result map
-		static uint32_t m_lastResultId;
-		static DBResultMap m_tempResults;
+		static uint32_t lastResultId;
+		static DBResultMap tempResults;
 
 		//for npc scripts
-		Npc* m_curNpc;
+		Npc* curNpc;
 };
 
 #define reportErrorFunc(a)  reportError(__FUNCTION__, a, true)
@@ -235,30 +215,30 @@ class LuaScriptInterface
 		int32_t getMetaEvent(const std::string& globalName, const std::string& eventName);
 
 		static ScriptEnvironment* getScriptEnv() {
-			assert(m_scriptEnvIndex >= 0 && m_scriptEnvIndex < 16);
-			return &m_scriptEnv[m_scriptEnvIndex];
+			assert(scriptEnvIndex >= 0 && scriptEnvIndex < 16);
+			return scriptEnv + scriptEnvIndex;
 		}
 
 		static bool reserveScriptEnv() {
-			return ++m_scriptEnvIndex < 16;
+			return ++scriptEnvIndex < 16;
 		}
 
 		static void resetScriptEnv() {
-			assert(m_scriptEnvIndex >= 0);
-			m_scriptEnv[m_scriptEnvIndex--].resetEnv();
+			assert(scriptEnvIndex >= 0);
+			scriptEnv[scriptEnvIndex--].resetEnv();
 		}
 
 		static void reportError(const char* function, const std::string& error_desc, bool stack_trace = false);
 
 		const std::string& getInterfaceName() const {
-			return m_interfaceName;
+			return interfaceName;
 		}
 		const std::string& getLastLuaError() const {
-			return m_lastLuaError;
+			return lastLuaError;
 		}
 
 		lua_State* getLuaState() const {
-			return m_luaState;
+			return luaState;
 		}
 
 		bool pushFunction(int32_t functionId);
@@ -272,6 +252,7 @@ class LuaScriptInterface
 		static void pushVariant(lua_State* L, const LuaVariant& var);
 		static void pushString(lua_State* L, const std::string& value);
 		static void pushCallback(lua_State* L, int32_t callback);
+		static void pushCylinder(lua_State* L, Cylinder* cylinder);
 
 		static std::string popString(lua_State* L);
 		static int32_t popCallback(lua_State* L);
@@ -325,7 +306,7 @@ class LuaScriptInterface
 		template<class T>
 		inline static T** getRawUserdata(lua_State* L, int32_t arg)
 		{
-			return reinterpret_cast<T**>(lua_touserdata(L, arg));
+			return static_cast<T**>(lua_touserdata(L, arg));
 		}
 
 		inline static bool getBoolean(lua_State* L, int32_t arg)
@@ -365,7 +346,7 @@ class LuaScriptInterface
 		// Is
 		inline static bool isNumber(lua_State* L, int32_t arg)
 		{
-			return lua_isnumber(L, arg) != 0;
+			return lua_type(L, arg) == LUA_TNUMBER;
 		}
 		inline static bool isString(lua_State* L, int32_t arg)
 		{
@@ -468,20 +449,7 @@ class LuaScriptInterface
 		static int luaDoAddContainerItem(lua_State* L);
 
 		//
-		static int luaCreateCombatObject(lua_State* L);
 		static int luaCreateCombatArea(lua_State* L);
-		static int luaSetCombatArea(lua_State* L);
-		static int luaSetCombatCondition(lua_State* L);
-		static int luaSetCombatParam(lua_State* L);
-		static int luaCreateConditionObject(lua_State* L);
-		static int luaSetConditionParam(lua_State* L);
-		static int luaAddDamageCondition(lua_State* L);
-		static int luaAddOutfitCondition(lua_State* L);
-
-		static int luaSetCombatCallBack(lua_State* L);
-		static int luaSetCombatFormula(lua_State* L);
-		static int luaSetConditionFormula(lua_State* L);
-		static int luaDoCombat(lua_State* L);
 
 		static int luaDoAreaCombatHealth(lua_State* L);
 		static int luaDoTargetCombatHealth(lua_State* L);
@@ -511,7 +479,6 @@ class LuaScriptInterface
 		static int luaCleanMap(lua_State* L);
 
 		static int luaIsInWar(lua_State* L);
-		static int luaDoPlayerSetOfflineTrainingSkill(lua_State* L);
 
 		static int luaGetWaypointPositionByName(lua_State* L);
 
@@ -552,6 +519,7 @@ class LuaScriptInterface
 
 		// _G
 		static int luaIsType(lua_State* L);
+		static int luaRawGetMetatable(lua_State* L);
 
 		// os
 		static int luaSystemTime(lua_State* L);
@@ -588,6 +556,7 @@ class LuaScriptInterface
 
 		static int luaGameStartRaid(lua_State* L);
 
+		static int luaGameGetItemByClientId(lua_State* L);
 		// Variant
 		static int luaVariantCreate(lua_State* L);
 
@@ -702,7 +671,6 @@ class LuaScriptInterface
 
 		// Item
 		static int luaItemCreate(lua_State* L);
-		static int luaItemIndex(lua_State* L);
 
 		static int luaItemIsItem(lua_State* L);
 
@@ -710,7 +678,6 @@ class LuaScriptInterface
 		static int luaItemGetTopParent(lua_State* L);
 
 		static int luaItemGetId(lua_State* L);
-		static int luaItemGetType(lua_State* L);
 
 		static int luaItemClone(lua_State* L);
 		static int luaItemSplit(lua_State* L);
@@ -738,11 +705,11 @@ class LuaScriptInterface
 		static int luaItemGetAttribute(lua_State* L);
 		static int luaItemSetAttribute(lua_State* L);
 		static int luaItemRemoveAttribute(lua_State* L);
-		static int luaItemSerializeAttributes(lua_State* L);
 
 		static int luaItemMoveTo(lua_State* L);
 		static int luaItemTransform(lua_State* L);
 		static int luaItemDecay(lua_State* L);
+		static int luaItemMoveToSlot(lua_State* L);
 
 		static int luaItemGetDescription(lua_State* L);
 
@@ -771,7 +738,6 @@ class LuaScriptInterface
 
 		// Creature
 		static int luaCreatureCreate(lua_State* L);
-		static int luaCreatureIndex(lua_State* L);
 
 		static int luaCreatureRegisterEvent(lua_State* L);
 		static int luaCreatureUnregisterEvent(lua_State* L);
@@ -862,10 +828,6 @@ class LuaScriptInterface
 		static int luaPlayerSetCapacity(lua_State* L);
 
 		static int luaPlayerGetFreeCapacity(lua_State* L);
-		
-		static int luaPlayerGetReward(lua_State* L);
- 		static int luaPlayerRemoveReward(lua_State* L);
- 		static int luaPlayerGetRewardList(lua_State* L);
 
 		static int luaPlayerGetDepotChest(lua_State* L);
 		static int luaPlayerGetInbox(lua_State* L);
@@ -885,11 +847,23 @@ class LuaScriptInterface
 		static int luaPlayerGetManaSpent(lua_State* L);
 		static int luaPlayerAddManaSpent(lua_State* L);
 
+		static int luaPlayerGetBaseMaxHealth(lua_State* L);
+		static int luaPlayerGetBaseMaxMana(lua_State* L);
+
 		static int luaPlayerGetSkillLevel(lua_State* L);
 		static int luaPlayerGetEffectiveSkillLevel(lua_State* L);
 		static int luaPlayerGetSkillPercent(lua_State* L);
 		static int luaPlayerGetSkillTries(lua_State* L);
 		static int luaPlayerAddSkillTries(lua_State* L);
+
+		static int luaPlayerAddOfflineTrainingTime(lua_State* L);
+		static int luaPlayerGetOfflineTrainingTime(lua_State* L);
+		static int luaPlayerRemoveOfflineTrainingTime(lua_State* L);
+
+		static int luaPlayerAddOfflineTrainingTries(lua_State* L);
+
+		static int luaPlayerGetOfflineTrainingSkill(lua_State* L);
+		static int luaPlayerSetOfflineTrainingSkill(lua_State* L);
 
 		static int luaPlayerGetItemCount(lua_State* L);
 		static int luaPlayerGetItemById(lua_State* L);
@@ -989,6 +963,15 @@ class LuaScriptInterface
 		static int luaPlayerGetContainerId(lua_State* L);
 		static int luaPlayerGetContainerById(lua_State* L);
 		static int luaPlayerGetContainerIndex(lua_State* L);
+		static int luaPlayerGetChaseMode(lua_State* L);
+		static int luaPlayerGetFightMode(lua_State* L);
+		static int luaPlayerGetSecureMode(lua_State* L);
+		static int luaPlayerGetPvpMode(lua_State* L);
+
+		static int luaPlayerSetChaseMode(lua_State* L);
+		static int luaPlayerSetFightMode(lua_State* L);
+		static int luaPlayerSetSecureMode(lua_State* L);
+		static int luaPlayerSetPvpMode(lua_State* L);
 
 		// Monster
 		static int luaMonsterCreate(lua_State* L);
@@ -1036,9 +1019,6 @@ class LuaScriptInterface
 		static int luaGuildGetId(lua_State* L);
 		static int luaGuildGetName(lua_State* L);
 		static int luaGuildGetMembersOnline(lua_State* L);
-
-		static int luaGuildAddMember(lua_State* L);
-		static int luaGuildRemoveMember(lua_State* L);
 
 		static int luaGuildAddRank(lua_State* L);
 		static int luaGuildGetRankById(lua_State* L);
@@ -1158,6 +1138,7 @@ class LuaScriptInterface
 
 		static int luaItemTypeGetTransformEquipId(lua_State* L);
 		static int luaItemTypeGetTransformDeEquipId(lua_State* L);
+		static int luaItemTypeGetDestroyId(lua_State* L);
 		static int luaItemTypeGetDecayId(lua_State* L);
 		static int luaItemTypeGetRequiredLevel(lua_State* L);
 
@@ -1207,7 +1188,6 @@ class LuaScriptInterface
 		static int luaMonsterTypeIsHostile(lua_State* L);
 		static int luaMonsterTypeIsPushable(lua_State* L);
 		static int luaMonsterTypeIsHealthShown(lua_State* L);
-		static int luaMonsterTypeIsRewardBoss(lua_State* L);
 
 		static int luaMonsterTypeCanPushItems(lua_State* L);
 		static int luaMonsterTypeCanPushCreatures(lua_State* L);
@@ -1274,20 +1254,20 @@ class LuaScriptInterface
 		static int luaPartySetSharedExperience(lua_State* L);
 
 		//
-		lua_State* m_luaState;
-		std::string m_lastLuaError;
+		lua_State* luaState;
+		std::string lastLuaError;
 
-		std::string m_interfaceName;
-		int32_t m_eventTableRef;
+		std::string interfaceName;
+		int32_t eventTableRef;
 
-		static ScriptEnvironment m_scriptEnv[16];
-		static int32_t m_scriptEnvIndex;
+		static ScriptEnvironment scriptEnv[16];
+		static int32_t scriptEnvIndex;
 
-		int32_t m_runningEventId;
-		std::string m_loadingFile;
+		int32_t runningEventId;
+		std::string loadingFile;
 
 		//script file cache
-		std::map<int32_t, std::string> m_cacheFiles;
+		std::map<int32_t, std::string> cacheFiles;
 };
 
 class LuaEnvironment : public LuaScriptInterface
@@ -1307,11 +1287,8 @@ class LuaEnvironment : public LuaScriptInterface
 		LuaScriptInterface* getTestInterface();
 
 		Combat* getCombatObject(uint32_t id) const;
-		uint32_t createCombatObject(LuaScriptInterface* interface);
+		Combat* createCombatObject(LuaScriptInterface* interface);
 		void clearCombatObjects(LuaScriptInterface* interface);
-
-		Condition* getConditionObject(uint32_t id) const;
-		bool createConditionObject(ConditionType_t conditionType, ConditionId_t conditionId, uint32_t& id);
 
 		AreaCombat* getAreaObject(uint32_t id) const;
 		uint32_t createAreaObject(LuaScriptInterface* interface);
@@ -1321,20 +1298,18 @@ class LuaEnvironment : public LuaScriptInterface
 		void executeTimerEvent(uint32_t eventIndex);
 
 		//
-		std::unordered_map<uint32_t, LuaTimerEventDesc> m_timerEvents;
-		std::unordered_map<uint32_t, Combat*> m_combatMap;
-		std::unordered_map<uint32_t, Condition*> m_conditionMap;
-		std::unordered_map<uint32_t, AreaCombat*> m_areaMap;
+		std::unordered_map<uint32_t, LuaTimerEventDesc> timerEvents;
+		std::unordered_map<uint32_t, Combat*> combatMap;
+		std::unordered_map<uint32_t, AreaCombat*> areaMap;
 
-		std::unordered_map<LuaScriptInterface*, std::vector<uint32_t>> m_combatIdMap;
-		std::unordered_map<LuaScriptInterface*, std::vector<uint32_t>> m_areaIdMap;
+		std::unordered_map<LuaScriptInterface*, std::vector<uint32_t>> combatIdMap;
+		std::unordered_map<LuaScriptInterface*, std::vector<uint32_t>> areaIdMap;
 
-		LuaScriptInterface* m_testInterface;
+		LuaScriptInterface* testInterface;
 
-		uint32_t m_lastEventTimerId;
-		uint32_t m_lastCombatId;
-		uint32_t m_lastConditionId;
-		uint32_t m_lastAreaId;
+		uint32_t lastEventTimerId;
+		uint32_t lastCombatId;
+		uint32_t lastAreaId;
 
 		//
 		friend class LuaScriptInterface;
