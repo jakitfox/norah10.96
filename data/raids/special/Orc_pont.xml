@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="Event" message="Orc activity near Pont Vanis reported! Beware!." />
+	<announce delay="21000" type="Event" message="Pont Vanis is under attack!." />
+	
+	<!-- brama zachod -->
+	<areaspawn delay="30000" fromx="611" fromy="596" fromz="7" tox="546" toy="576" toz="7">
+    <monster name="Orc" amount="20" />
+	<monster name="Orc Spearman" amount="15" />
+	<monster name="Orc Warrior" amount="12" />
+	<monster name="War Wolf" amount="7" />
+	<monster name="Orc Rider" amount="7" />
+	<monster name="Orc Shaman" amount="7" />
+	<monster name="Orc Berserker" amount="7" />
+	<monster name="Orc Leader" amount="5" />
+	<monster name="Orc Warlord Event" amount="7" />
+	</areaspawn>
+
+</raid>

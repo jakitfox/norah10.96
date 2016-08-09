@@ -72,5 +72,7 @@
 		<item id="2515" chance="1333" /><!-- guardian shield -->
 		<item id="2136" chance="909" /><!-- demonbone amulet -->
 		<item id="2542" chance="500" /><!-- tempest shield -->
+		<item id="2493" chance="500" /><!-- demon helmet -->
+		<item id="6300" chance="500" /><!-- death ring -->
 	</loot>
 </monster>

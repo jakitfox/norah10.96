@@ -29,6 +29,12 @@ local potions = {
 	-- First skip is for vocations(string), second skip is for level(int)!
 	stringOfVocation = "This potion can only be consumed by %s of level %d or higher", -- (Required*)
 	-- Health & Spirit Potions
+	[26031] = { -- supreme health potion
+		vocations = {4, 8},
+		minLevel = 200,
+		healthToAdd = { min = 900, max = 1200 },
+		emptyFlask = 7635
+	},
 	[8473] = { -- ultimate health potion
 		vocations = {4, 8},
 		minLevel = 130,
@@ -39,6 +45,13 @@ local potions = {
 		vocations = {4, 8},
 		minLevel = 80,
 		healthToAdd = { min = 425, max = 575},
+		emptyFlask = 7635
+	},
+	[26030] = { -- ultimate spirit potion
+		vocations = {3, 7},
+		minLevel = 130,
+		healthToAdd = { min = 400, max = 600},
+		manaToAdd = { min = 150, max = 250},
 		emptyFlask = 7635
 	},
 	[8472] = { -- great spitit potion
@@ -59,6 +72,12 @@ local potions = {
 		emptyFlask = 7636
 	},
 	-- Mana Potions
+	[26029] = { -- ultimate mana potion
+		vocations = {1, 2, 5, 6},
+		minLevel = 80,
+		manaToAdd = { min = 400, max = 600},
+		emptyFlask = 7635
+	},
 	[7590] = { -- great mana potion
 		vocations = {1, 2, 5, 6},
 		minLevel = 80,

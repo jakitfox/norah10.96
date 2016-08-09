@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="warning" message="The Horned Fox was show in his headquarters!" />
+	<singlespawn delay="10000" name="The Horned Fox" x="743" y="512" z="7"/>
+</raid>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="warning" message="Zulazza the Corruptor was entred the Dry Hills to regain authority!" />
+	<singlespawn delay="10000" name="Zulazza The Corruptor" x="364" y="523" z="9"/>
+</raid>

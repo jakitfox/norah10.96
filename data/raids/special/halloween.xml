@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+<announce delay="1000" type="event" message="Beware! Beware of the Halloween Hare!" />
+  <!--Single Spawns-->
+  <singlespawn delay="1000" name="The Mutated Pumpkin" x="532" y="273" z="6" />
+</raid>

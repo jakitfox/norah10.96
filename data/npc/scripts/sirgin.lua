@@ -65,6 +65,9 @@ local shopItems = {
 	["great mana"] = {id = 7590, buy = 120, desc = 'great mana'},
 	["great spirit"] = {id = 8472, buy = 190, desc = 'great spirit'},
 	["ultimate health"] = {id = 8473, buy = 310, desc = 'ultimate health'},
+	["supreme health potion"] = {id = 26031, buy = 500, desc = 'supreme health potion'},
+	["ultimate mana potion"] = {id = 26029, buy = 350, desc = 'ultimate mana potion'},
+	["ultimate spirit potion"] = {id = 26030, buy = 350, desc = 'ultimate spirit potion'},
 	-------Magical Items------
 	["crystal ball"] = {id = 2192, buy = 530, sell = 190, desc = 'crystal ball'},
 	["life crystal"] = {id = 2177, sell = 85, desc = 'life crystal'},

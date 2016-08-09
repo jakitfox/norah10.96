@@ -3,6 +3,7 @@ dofile('data/lib/core/core.lua')
 
 -- Compatibility library for our old Lua API
 dofile('data/lib/compat/compat.lua')
+dofile('data/lib/custom/rewardboss.lua')
 
 -- Norah 
 dofile('data/lib/Norah/storage tables.lua')

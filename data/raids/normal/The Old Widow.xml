@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+
+	<announce delay="1000" type="Event" message="The mating season of the giant spiders is at hand. Leave the Dharel as fast as you can.." />
+
+	<singlespawn delay="1000" name="The Old Widow" x="1134" y="998" z="7" />
+	
+</raid>

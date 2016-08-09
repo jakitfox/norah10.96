@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="Event" message="The dragons of the Dragonblaze Mountains have descended to Riwen." />
+	
+	<areaspawn delay="20000" fromx="405" fromy="1096" fromz="7" tox="432" toy="1137" toz="7">
+    <monster name="Draptor" amount="2" />
+	<monster name="Grand Mother Foulscale" amount="8" />
+	<monster name="Dragon" amount="8" />
+	</areaspawn>
+  
+</raid>

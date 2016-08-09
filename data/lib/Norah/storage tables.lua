@@ -259,10 +259,12 @@ Storage = {
 		Storage01 = 3710, --zeStartedGlobalStorage
 		Storage02 = 3711, --zeJoinedCountGlobalStorage
 		Storage03 = 3712,
-		Storage04 = 3713,
-	}
+		Storage04 = 3713
+	},
 	-- 3300 - uid schody
 	
 	-- 3900 - 3920
+	
+	SwampDiggingTimeout = 3720
 	
 }

@@ -41,7 +41,8 @@
 		<voice sentence="*clank*" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="200" chance="100000" /><!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" /><!-- gold coin -->
+		<item id="2148" countmax="100" chance="60000" /><!-- gold coin -->
 		<item id="2152" countmax="4" chance="59580" /><!-- platinum coin -->
 		<item id="23474" chance="15930" /><!-- glooth injection tube -->
 		<item id="7590" chance="11180" /><!-- great mana potion -->

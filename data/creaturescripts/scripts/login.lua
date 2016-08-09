@@ -1,18 +1,3 @@
-local function onMovementRemoveProtection(cid, oldPosition, time)
-	local player = Player(cid)
-	if not player then
-		return true
-	end
-
-	local playerPosition = player:getPosition()
-	if (playerPosition.x ~= oldPosition.x or playerPosition.y ~= oldPosition.y or playerPosition.z ~= oldPosition.z) or player:getTarget() then
-		player:setStorageValue(Storage.combatProtectionStorage, 0)
-		return true
-	end
-
-	addEvent(onMovementRemoveProtection, 1000, cid, oldPosition, time - 1)
-end
-
 function onLogin(player)
 	local loginStr = "Welcome to " .. configManager.getString(configKeys.SERVER_NAME) .. "!"
 	if player:getLastLoginSaved() <= 0 then
@@ -43,30 +28,26 @@ function onLogin(player)
 	elseif not promotion then
 		player:setVocation(vocation:getDemotion())
 	end
-
-	-- Events
-    player:registerEvent("PlayerDeath")
-	player:registerEvent("DropLoot")
-    player:registerEvent("FirstItem")
-    player:registerEvent("MonsterCounter")
-    player:registerEvent("KillingInTheNameOfKills")
-    player:registerEvent("inServiceOfYalaharQuestsMorik")
-	player:registerEvent("SvargrondArenaKill")
-	player:registerEvent("AdvanceSave")
-	player:registerEvent("ZE_Death")
 	
-    if player:getStorageValue(1000) == 1 then --write ze_join_storage number here
+	-- Rewards notice
+	local rewards = #player:getRewardList()
+	if rewards > 0 then
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("You have %s %s in your reward chest.", rewards == 1 and 'one' or rewards, rewards > 1 and "rewards" or "reward"))
+	end
+
+	-- Update player id 
+	local stats = player:inBossFight()
+	if stats then
+		stats.playerId = player:getId()
+	end
+
+	if player:getStorageValue(1000) == 1 then --write ze_join_storage number here
         player:setStorageValue(1000, 0) --write ze_join_storage number here
     end
 	
-	if player:getStorageValue(Storage.combatProtectionStorage) <= os.time() then
-		player:setStorageValue(Storage.combatProtectionStorage, os.time() + 10)
-		onMovementRemoveProtection(player.uid, player:getPosition(), 10)
-	end
-	
-	  -- Free bless
+	-- Free bless
     local freeBless = {
-        level = 50,
+        level = 60,
         blesses = {1, 2, 3, 4, 5}
     }
 
@@ -76,5 +57,16 @@ function onLogin(player)
         end
     end
 	
-return true
+	-- Events
+	player:registerEvent("PlayerDeath")
+	player:registerEvent("DropLoot")
+	player:registerEvent("BossParticipation")
+	player:registerEvent("MonsterCounter")
+    player:registerEvent("KillingInTheNameOfKills")
+    player:registerEvent("inServiceOfYalaharQuestsMorik")
+	player:registerEvent("SvargrondArenaKill")
+	player:registerEvent("AdvanceSave")
+	player:registerEvent("ZE_Death")
+	
+	return true
 end

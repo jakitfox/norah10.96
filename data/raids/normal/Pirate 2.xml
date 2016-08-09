@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="Event" message="Pirates are launching a surprise attack on Liberty Bay! Take care, they seem to be everywhere." />
+	
+	<areaspawn delay="20000" fromx="465" fromy="1365" fromz="7" tox="556" toy="1396" toz="7">
+    <monster name="Smuggler" amount="25" />
+	<monster name="Pirate Marauder" amount="20" />
+	<monster name="Pirate Cutthroat" amount="20" />
+	<monster name="Pirate Buccaneer" amount="5" />
+	<monster name="Pirate Corsair" amount="7" />
+	<monster name="Ron The Ripper" amount="1" />
+	</areaspawn>
+  
+</raid>

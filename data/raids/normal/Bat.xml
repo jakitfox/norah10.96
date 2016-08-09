@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="Event" message="There seems to be a bat problem in the Pont Vanis cemetery." />
+	
+	<areaspawn delay="5000" fromx="676" fromy="671" fromz="7" tox="720" toy="699" toz="7">
+    <monster name="Bat" amount="45" />
+	</areaspawn>
+</raid>

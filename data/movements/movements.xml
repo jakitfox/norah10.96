@@ -103,6 +103,35 @@
 	<movevent event="StepIn" itemid="293" script="decay.lua" />
 	<movevent event="StepIn" itemid="461" script="decay.lua" />
 
+	<!-- (Depot & Level) tiles -->
+	<movevent event="StepIn" itemid="416" script="tiles.lua" />
+	<movevent event="StepOut" itemid="417" script="tiles.lua" />
+	<movevent event="StepIn" itemid="426" script="tiles.lua" />
+	<movevent event="StepOut" itemid="425" script="tiles.lua" />
+	<movevent event="StepIn" itemid="446" script="tiles.lua" />
+	<movevent event="StepOut" itemid="447" script="tiles.lua" />
+	<movevent event="StepIn" itemid="3216" script="tiles.lua" />
+	<movevent event="StepOut" itemid="3217" script="tiles.lua" />
+	<movevent event="StepIn" itemid="11062" script="tiles.lua" />
+	<movevent event="StepOut" itemid="11063" script="tiles.lua" />
+
+	<!-- Traps -->
+	<movevent event="StepIn" itemid="1510" script="trap.lua" />
+	<movevent event="StepOut" itemid="1511" script="trap.lua" />
+	<movevent event="StepIn" itemid="1513" script="trap.lua" />
+	<movevent event="StepIn" itemid="2579" script="trap.lua" />
+	<movevent event="RemoveItem" itemid="2579" script="trap.lua" />
+	<movevent event="StepIn" itemid="4208" script="trap.lua" />
+	<movevent event="StepOut" itemid="4209" script="trap.lua" />
+
+	<!-- Citizen teleport -->
+	<movevent event="StepIn" itemid="1387" script="citizen.lua" />
+
+	<!-- Walkback when walking on quest chest -->
+	<movevent event="StepIn" itemid="1738" script="walkback.lua" />
+	<movevent event="StepIn" itemid="1740" script="walkback.lua" />
+	<movevent event="StepIn" fromid="1746" toid="1749" script="walkback.lua" />
+
 	<!-- (Level & quest) doors -->
 	<movevent event="StepOut" itemid="1224" script="closingdoor.lua" />
 	<movevent event="StepIn" itemid="1224" script="quest_door.lua" />
@@ -356,10 +385,6 @@
 	<movevent event="AddItem" itemid="1507" function="onAddField" />
 	<movevent event="StepIn" itemid="7359" function="onStepInField" />
 	<movevent event="AddItem" itemid="7360" function="onAddField" />
-	<movevent event="StepIn" itemid="20669" function="onStepInField" />
- 	<movevent event="AddItem" itemid="20669" function="onAddField" />
- 	<movevent event="StepIn" itemid="20670" function="onStepInField" />
- 	<movevent event="AddItem" itemid="20670" function="onAddField" />
 
 	<!-- Swimming -->
 	<movevent event="StepIn" fromid="4620" toid="4625" script="swimming.lua" />

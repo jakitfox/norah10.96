@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <raids>
-	<!--
-		<raid name="Testraid" file="testraid.xml" interval2="30" margin="0" />
-		executed on average once every 30 minutes
-	-->
+
+	<!-- Bosses -->
+	 <raid name="Morgaroth" file="boss/morg.xml" interval2="1440" margin="180" />
+	<raid name="Ferumbras" file="boss/ferumbras.xml" interval2="1440" margin="180" />
+	<raid name="Ghazbaran" file="boss/ghazbaran.xml" interval2="1440" margin="180" />
+	<raid name="Orshabaal" file="boss/orshabaal.xml" interval2="1440" margin="180" />
+
+	<!-- Regular Raids -->
+	<raid name="Undead Minion" file="normal/Undead Minion.xml" interval2="500" margin="180" />
+	<raid name="Fluffy" file="normal/Fluffy.xml" interval2="500" margin="180" />
+	<raid name="Minishabaal" file="normal/Minishabaal.xml" interval2="500" margin="180" />
+	<raid name="Hacker" file="normal/Hacker.xml" interval2="500" margin="180" />
+	<raid name="The Old Widow" file="normal/The Old Widow.xml" interval2="500" margin="180" />
+	<raid name="Bat" file="normal/Bat.xml" interval2="500" margin="180" />
+	<raid name="Pirate 1" file="normal/Pirate 1.xml" interval2="500" margin="180" />
+	<raid name="Pirate 2" file="normal/Pirate 2.xml" interval2="500" margin="180" />
+	<raid name="Pirate 3" file="normal/Pirate 3.xml" interval2="500" margin="180" />
+	<raid name="Pirate 4" file="normal/Pirate 4.xml" interval2="500" margin="180" />
+	<raid name="Ladybug" file="normal/Ladybug.xml" interval2="500" margin="180" />
+	<raid name="Manta Ray" file="normal/Manta Ray.xml" interval2="500" margin="180" />
+	<raid name="Draptor" file="normal/Draptor.xml" interval2="500" margin="180" />
+	<raid name="Draptor" file="normal/Draptor.xml" interval2="500" margin="180" />
+	
+	
+	
+	
+	
+	<raid name="Demodras" file="normal/demodras.xml" interval2="500" margin="180" />
+	<raid name="The Horned Fox" file="normal/the_horned_fox.xml" interval2="500" margin="180" />
+	<raid name="Necropharus" file="normal/necropharus.xml" interval2="500" margin="180" />
+	<raid name="Massacre" file="normal/massacre.xml" interval2="500" margin="180" />
+	<raid name="Yeti" file="normal/yeti.xml" interval2="1440" chance="1" margin="60" enabled="yes"/>
+	<raid name="The Imperor" file="normal/imperor.xml" interval2="500" margin="180" />
+	
+	<!-- Special -->
+	<raid name="Halloween Hare" file="special/halloween.xml" interval2="1940" chance="1" margin="60" enabled="no" />
+	<raid name="Orc nilf" file="special/Orc_nilf.xml" interval2="500" margin="180" />
+	<raid name="Orc pont" file="special/Orc_pont.xml" interval2="500" margin="180" />
 </raids>

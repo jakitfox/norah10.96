@@ -45,5 +45,6 @@
 		<item id="7159" chance="190" /><!-- green perch -->
 		<item id="2669" chance="90" /><!-- northern pike -->
 		<item id="2406" chance="4680" /><!-- short sword -->
+		<item id="22727" chance="450" /><!-- Fireproof Horn -->
 	</loot>
 </monster>

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talkactions>
 	<!-- commands -->
-	<talkaction words="!events" separator=" " script="events.lua"/>
-	<talkaction words="/save" separator=" " script="save.lua" />
 	<talkaction words="!help" separator=" " script="commands.lua"/>
 	<talkaction words="!commands" separator=" " script="commands.lua"/>
 	<talkaction words="/help" separator=" " script="commands.lua"/>
 	<talkaction words="/commands" separator=" " script="commands.lua"/>
+	<talkaction words="!events" separator=" " script="events.lua"/>
+	<talkaction words="/save" separator=" " script="save.lua" />
+	<talkaction words="!bug" separator=" " script="bugreport.lua"/>
 	<talkaction words="!exp" script="expmana.lua"/>
 	<talkaction words="!mana" script="expmana.lua"/>
-	<talkaction words="!bug" separator=" " script="bugreport.lua"/>
-	
 	<talkaction words="/ban" separator=" " script="ban.lua" />
 	<talkaction words="/ipban" separator=" " script="ipban.lua" />
 	<talkaction words="/unban" separator=" " script="unban.lua" />
@@ -44,8 +43,6 @@
 	<talkaction words="/hide" script="hide.lua" />
 
 	<!-- player talkactions -->
-	<talkaction words="!spider" separator=" " script="spider.lua"/>
-	
 	<talkaction words="!buypremium" script="buyprem.lua" />
 	<talkaction words="!buyhouse" script="buyhouse.lua" />
 	<talkaction words="!leavehouse" script="leavehouse.lua" />
@@ -55,6 +52,8 @@
 	<talkaction words="!kills" script="kills.lua" />
 	<talkaction words="!online" script="online.lua" />
 	<talkaction words="!serverinfo" script="serverinfo.lua" />
+ 	<talkaction words="!cast" separator=" " script="start_cast.lua" />
+	<talkaction words="!stopcast" script="stop_cast.lua" />
 
 	<!-- test talkactions -->
 	<talkaction words="!z" separator=" " script="magiceffect.lua" />

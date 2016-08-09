@@ -1,6 +1,6 @@
 -- Combat settings
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
-worldType = "no-pvp"
+worldType = "pvp"
 hotkeyAimbotEnabled = true
 protectionLevel = 1
 killsToRedSkull = 3
@@ -12,10 +12,11 @@ whiteSkullTime = 15 * 60 * 1000
 stairJumpExhaustion = 2000
 experienceByKillingPlayers = false
 expFromPlayersLevelRange = 75
+allowWalkthrough = true
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
-ip = "norah.no-ip.org"
+ip = "norah.zapto.org"
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
 gameProtocolPort = 7172
@@ -28,6 +29,14 @@ serverName = "Norah"
 statusTimeout = 5000
 replaceKickOnLogin = true
 maxPacketsPerSecond = 25
+
+-- Cast
+enableLiveCasting = false
+liveCastPort = 7173
+
+-- Store Config
+storeImagesUrl = "http://link/to/store"
+storeCoinPacket = 5
 
 -- Deaths
 -- NOTE: Leave deathLosePercent as -1 if you want to use the default
@@ -47,11 +56,11 @@ timeBetweenExActions = 1000
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
 mapName = "Mapa1"
-mapAuthor = "Genius&Apoc"
+mapAuthor = "Genius"
 
 -- Market
 marketOfferDuration = 30 * 24 * 60 * 60
-premiumToCreateMarketOffer = false
+premiumToCreateMarketOffer = true
 checkExpiredMarketOffersEachMinutes = 60
 maxMarketOffersAtATimePerPlayer = 100
 
@@ -59,10 +68,9 @@ maxMarketOffersAtATimePerPlayer = 100
 mysqlHost = "127.0.0.1"
 mysqlUser = "root"
 mysqlPass = ""
-mysqlDatabase = "norah"
+mysqlDatabase = "norah1"
 mysqlPort = 3306
 mysqlSock = ""
-passwordType = "sha1"
 
 -- Misc.
 allowChangeOutfit = true
@@ -74,9 +82,9 @@ classicEquipmentSlots = false
 
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml
-rateExp = 5
-rateSkill = 3
-rateLoot = 2
+rateExp = 2
+rateSkill = 5
+rateLoot = 1
 rateMagic = 3
 rateSpawn = 1
 
@@ -98,7 +106,7 @@ defaultPriority = "high"
 startupDatabaseOptimization = false
 
 -- Status server information
-ownerName = ""
+ownerName = "Genius"
 ownerEmail = ""
-url = "http://otland.net/"
-location = "Sweden"
+url = "https://otland.net/"
+location = "Polish"

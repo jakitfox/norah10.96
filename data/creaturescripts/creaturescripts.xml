@@ -9,6 +9,10 @@
 	<event type="death" name="DropLoot" script="droploot.lua" />
 	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua" />
 	
+	<event type="death" name="BossDeath" script="boss.lua" />
+	<event type="healthchange" name="BossParticipation" script="boss.lua" />
+	<event type="think" name="BossThink" script="boss.lua" />
+	
 	<!-- QUEST -->
 	<event type="kill" name="MonsterCounter" script="quest/monster_counter.lua" />
 	<!-- Killing In The Name Of Quest -->
@@ -19,6 +23,10 @@
 	<event type="kill" name="SvargrondArenaKill" script="quest/arena/arena_kill.lua" />
 	<!-- Auto Open Channel-->
 	<event type="login" name="ChatChannels" script="chatchannels.lua" />
+	<!-- Others -->
+	<event type="death" name="WhiteDeerDeath" script="other/whitedeer.lua" />
+	<event type="death" name="WhiteDeerScoutsDeath" script="other/whitedeer_scouts.lua" />
+	
 	
 	<!-- EVENTS -->
 	<!-- EVENT TEST -->
@@ -30,4 +38,5 @@
     <event type="modalwindow" name="TWDBuildWindow" script="event/twd/twdBuildWindow.lua" />
     <event type="modalwindow" name="TWDOtherWindow" script="event/twd/twdOtherWindow.lua" />
     <event type="healthchange" name="TWDHealthChange" script="event/twd/twdHealthChange.lua" />
+	
 </creaturescripts>

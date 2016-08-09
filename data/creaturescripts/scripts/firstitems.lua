@@ -1,95 +1,52 @@
-FIRSTITEMS = {
-			[1] = {	[2175] = {amount = 1, slot = 6}, -- r. hand
-					[2190] = {amount = 1, slot = 5}, -- l. hand
-					[8820] = {amount = 1, slot = 1}, --head,
-					[8819] = {amount = 1, slot = 4}, --body
-					[2643] =  {amount = 1, slot = 8}, --boots
-					[2000] = {amount = 1, slot = 3, -- bp
-												inside = {
-															[7618] = {amount = 10},
-															[7620]= {amount = 10},
-															[2554]= {amount = 1},
-															[2120]= {amount = 1} 
-														}
-										} 
-					},
-			[2] = {	[2175] = {amount = 1, slot = 6}, -- r. hand
-					[2182] = {amount = 1, slot = 5}, -- l. hand
-					[8820] = {amount = 1, slot = 1}, --head,
-					[8819] = {amount = 1, slot = 4}, --body
-					[2643] =  {amount = 1, slot = 8}, --boots
-					[2000] = {amount = 1, slot = 3, -- bp
-												inside = {
-															[7618] = {amount = 10},
-															[7620]= {amount = 10},
-															[2554]= {amount = 1},
-															[2120]= {amount = 1} 
-														}
-										} 
-					},
-			[3] = {	[2660] = {amount = 1, slot = 4}, --body
-					[2456] = {amount = 1, slot = 5}, --l. hand
-					[8923] =  {amount = 1, slot = 7}, --legs
-					[2643] =  {amount = 1, slot = 8}, --boots
-					[2544] = {amount = 10, slot = 100}, -- ammo
-					[2000] = {amount = 1, slot = 3, -- bp
-												inside = {
-															[7618] = {amount = 10},
-															[7620]= {amount = 10},
-															[2389]= {amount = 1},
-															[2554]= {amount = 1},
-															[2120]= {amount = 1} 
-														}
-										} 
-					},
-			[4] = {	[2509] = {amount = 1, slot = 6}, -- r. hand
-					[2481] = {amount = 1, slot = 1}, --head
-					[8602] = {amount = 1, slot = 7}, --l. hand
-					[2478] = {amount = 1, slot = 7}, --legs
-					[2465] = {amount = 1, slot = 4}, --body
-					[2643] =  {amount = 1, slot = 8}, --boots
-					[2000] = {amount = 1, slot = 3, -- bp
-												inside = {
-															[7618] = {amount = 10},
-															[7620]= {amount = 10},
-															[8601]= {amount = 1},
-															[2439]= {amount = 1},
-															[2554]= {amount = 1},
-															[2120]= {amount = 1},
-															[8602] = {amount = 1}
-														}
-										} 
-					}
-			}
+-- Without Rookgaard
+local config = {
+	[1] = {
+		--equipment spellbook, wand of vortex, magician's robe, mage hat, studded legs, leather boots, scarf
+		items = {{2175, 1}, {2190, 1}, {8819, 1}, {8820, 1}, {2468, 1}, {2643, 1}, {2661, 1}},
+		--container rope, shovel, mana potion
+		container = {{2120, 1}, {2554, 1}, {7620, 1}}
+	},
+	[2] = {
+		--equipment spellbook, snakebite rod, magician's robe, mage hat, studded legs, leather boots scarf
+		items = {{2175, 1}, {2182, 1}, {8819, 1}, {8820, 1}, {2468, 1}, {2643, 1}, {2661, 1}},
+		--container rope, shovel, mana potion
+		container = {{2120, 1}, {2554, 1}, {7620, 1}}
+	},
+	[3] = {
+		--equipment dwrven shield, 5 spear, ranger's cloak, ranger legs scarf, legion helmet
+		items = {{2525, 1}, {2389, 5}, {2660, 1}, {8923, 1}, {2643, 1}, {2661, 1}, {2480, 1}},
+		--container rope, shovel, health potion, bow, 50 arrow
+		container = {{2120, 1}, {2554, 1}, {7618, 1}, {2456, 1}, {2544, 50}}
+	},
+	[4] = {
+		--equipment dwarven shield, steel axe, brass armor, brass helmet, brass legs scarf
+		items = {{2525, 1}, {8601, 1}, {2465, 1}, {2460, 1}, {2478, 1}, {2643, 1}, {2661, 1}},
+		--container jagged sword, daramian mace, rope, shovel, health potion
+		container = {{8602, 1}, {2439, 1}, {2120, 1}, {2554, 1}, {7618, 1}}
+	}
+}
 
-function onLogin(cid)
-	if getPlayerStorageValue(cid, 127655) == 1 then return true end
-		local tab = FIRSTITEMS[getPlayerVocation(cid)]
-	if getPlayerVocation(cid) <= 8 and getPlayerVocation(cid) >= 5 then
-		a=getPlayerVocation(cid)-4
-		local tab = FIRSTITEMS[a]
-	end
-	if not tab then
+function onLogin(player)
+	local targetVocation = config[player:getVocation():getId()]
+	if not targetVocation then
 		return true
 	end
-	for k, v in pairs(tab) do
-		if v.slot == 6 or v.slot == 5 then
-			doPlayerAddItem(cid, k, v.amount)
-		end
+
+	if player:getLastLoginSaved() ~= 0 then
+		return true
 	end
-	for k, v in pairs(tab) do
-		if v.slot ~= 6 and v.slot ~= 5 and v.slot ~= 3 then
-			doPlayerAddItem(cid, k, v.ammount, false, v.slot)
-		end
+
+	for i = 1, #targetVocation.items do
+		player:addItem(targetVocation.items[i][1], targetVocation.items[i][2])
 	end
-	for k, v in pairs(tab) do
-		if v.slot == 3 then
-			doPlayerAddItem(cid, k, v.ammount)
-			for id, amm in pairs(v.inside) do
-				doAddContainerItem(getPlayerSlotItem(cid, v.slot).uid, id, amm.amount)
-			end
-		end
+
+	local backpack = player:addItem(1988)
+	if not backpack then
+		return true
 	end
-	setPlayerStorageValue(cid, 127655, 1)
+
+	for i = 1, #targetVocation.container do
+		backpack:addItem(targetVocation.container[i][1], targetVocation.container[i][2])
+	end
 	return true
 end

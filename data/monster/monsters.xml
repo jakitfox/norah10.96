@@ -31,8 +31,12 @@
 	<monster name="Control Tower" file="10.70/control tower.xml" />
 	<monster name="Glooth Battery" file="10.70/glooth battery.xml" />
 	<monster name="Glooth Brigand" file="10.70/glooth brigand.xml" />
+	<monster name="Glooth Blob" file="10.70/glooth blob.xml" />
 	
 	<!--Norah -->
+	<monster name="Inoperative Uniwheel" file="Norah/inoperative uniwheel.xml" />
+	<monster name="Inoperative Tin Lizzard" file="Norah/inoperative tin lizzard.xml" />
+	<monster name="Orc Warlord Event" file="Norah/orc warlord event.xml" />
 	<monster name="Fleshcrawler" file="Norah/fleshcrawler.xml" />
 	<monster name="Tormentor" file="Norah/tormentor.xml" />
 	<monster name="Flameborn" file="Norah/flameborn.xml" />
@@ -227,7 +231,6 @@
 	<monster name="Floor Blob" file="Blobs/floor blob.xml" />
 	<monster name="Mercury Blob" file="Blobs/mercury blob.xml" />
 	<monster name="Midnight Spawn" file="Blobs/midnight spawn.xml" />
-	<monster name="Glooth Blob" file="blobs/glooth blob.xml" />
 
 	<!-- Bonelords -->
 	<monster name="Bonelord" file="Bonelords/bonelord.xml" />
