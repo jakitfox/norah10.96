@@ -106,7 +106,6 @@ Player::Player(ProtocolGame_ptr p) :
 
 	chaseMode = CHASEMODE_STANDSTILL;
 	fightMode = FIGHTMODE_ATTACK;
-	pvpMode = PVP_MODE_DOVE;
 
 	bedItem = nullptr;
 
@@ -156,6 +155,8 @@ Player::Player(ProtocolGame_ptr p) :
 	operatingSystem = CLIENTOS_NONE;
 	secureMode = false;
 	guid = 0;
+
+	rewardChest = nullptr;
 }
 
 Player::~Player()
@@ -172,6 +173,10 @@ Player::~Player()
 		it.second->decrementReferenceCounter();
 	}
 
+	for (const auto& it : rewardMap) {
+		it.second->decrementReferenceCounter();
+	}
+	
 	inbox->decrementReferenceCounter();
 
 	setWriteItem(nullptr);
@@ -820,28 +825,12 @@ bool Player::canWalkthrough(const Creature* creature) const
 	}
 
 	const Player* player = creature->getPlayer();
-	if (!player) {
-		if (!g_game.isExpertPvpEnabled()) {
-			return false;
-		}
-		if (const Monster* monster = creature->getMonster()) {
-			if (!monster->isSummon() || !monster->getMaster()->getPlayer()) {
-				return false;
-			}
-			return canWalkthrough(monster->getMaster()->getPlayer());
-		}
-
+	if (!player || !g_config.getBoolean(ConfigManager::ALLOW_WALKTHROUGH)) {
 		return false;
 	}
 
-	if (g_game.isExpertPvpEnabled() && !player->getGroup()->access) {
-		if (player->pvpMode == PVP_MODE_RED_FIST || hasPvpActivity(const_cast<Player*>(player)) || (pvpMode >= PVP_MODE_WHITE_HAND && hasPvpActivity(const_cast<Player*>(player), true))) {
-			return false;
-		}
-	}
-
 	const Tile* playerTile = player->getTile();
-	if (!playerTile || (!g_game.isExpertPvpEnabled() && !playerTile->hasFlag(TILESTATE_PROTECTIONZONE))) {
+	if (!playerTile || !playerTile->hasFlag(TILESTATE_PROTECTIONZONE)) {
 		return false;
 	}
 
@@ -872,34 +861,12 @@ bool Player::canWalkthroughEx(const Creature* creature) const
 	}
 
 	const Player* player = creature->getPlayer();
-	if (!player) {
-		if (!g_game.isExpertPvpEnabled()) {
-			return false;
-		}
-		if (const Monster* monster = creature->getMonster()) {
-			if (!monster->isSummon() || !monster->getMaster()->getPlayer()) {
-				return false;
-			}
-			return canWalkthroughEx(monster->getMaster()->getPlayer());
-		}
-		return false;
-	}
-
-	if (g_game.isExpertPvpEnabled() && player->pvpMode == PVP_MODE_RED_FIST) {
+	if (!player || !g_config.getBoolean(ConfigManager::ALLOW_WALKTHROUGH)) {
 		return false;
 	}
 
 	const Tile* playerTile = player->getTile();
-	if (!playerTile) {
-		return false;
-	}
-
-	if (!g_game.isExpertPvpEnabled()) {
-		return playerTile->hasFlag(TILESTATE_PROTECTIONZONE);
-	}
-	else {
-		return !hasPvpActivity(const_cast<Player*>(player), true);
-	}
+	return playerTile && playerTile->hasFlag(TILESTATE_PROTECTIONZONE);
 }
 
 void Player::onReceiveMail() const
@@ -927,6 +894,17 @@ bool Player::isNearDepotBox() const
 	return false;
 }
 
+DepotChest* Player::getDepotBox()
+{
+	DepotChest* depotBoxs = new DepotChest(ITEM_DEPOT);
+	depotBoxs->incrementReferenceCounter();
+	depotBoxs->setMaxDepotItems(getMaxDepotItems());
+	for (uint32_t index = 1; index <= 17; ++index) {
+		depotBoxs->internalAddThing(getDepotChest(18 - index, true));
+	}
+	return depotBoxs;
+}
+
 DepotChest* Player::getDepotChest(uint32_t depotId, bool autoCreate)
 {
 	auto it = depotChests.find(depotId);
@@ -938,9 +916,8 @@ DepotChest* Player::getDepotChest(uint32_t depotId, bool autoCreate)
 		return nullptr;
 	}
 
-	DepotChest* depotChest = new DepotChest(ITEM_DEPOT);
+	DepotChest* depotChest = new DepotChest(ITEM_DEPOT_NULL + depotId, true);
 	depotChest->incrementReferenceCounter();
-	depotChest->setMaxDepotItems(getMaxDepotItems());
 	depotChests[depotId] = depotChest;
 	return depotChest;
 }
@@ -950,6 +927,7 @@ DepotLocker* Player::getDepotLocker(uint32_t depotId)
 	auto it = depotLockerMap.find(depotId);
 	if (it != depotLockerMap.end()) {
 		inbox->setParent(it->second);
+		getDepotBox()->setParent(it->second);
 		return it->second;
 	}
 
@@ -957,9 +935,51 @@ DepotLocker* Player::getDepotLocker(uint32_t depotId)
 	depotLocker->setDepotId(depotId);
 	depotLocker->internalAddThing(Item::CreateItem(ITEM_MARKET));
 	depotLocker->internalAddThing(inbox);
-	depotLocker->internalAddThing(getDepotChest(depotId, true));
+	depotLocker->internalAddThing(getDepotBox());
 	depotLockerMap[depotId] = depotLocker;
 	return depotLocker;
+}
+
+RewardChest* Player::getRewardChest()
+{
+	if (rewardChest != nullptr) {
+		return rewardChest;
+	}
+
+	rewardChest = new RewardChest(ITEM_REWARD_CHEST);
+	return rewardChest;
+}
+
+Reward* Player::getReward(uint32_t rewardId, bool autoCreate)
+{
+	auto it = rewardMap.find(rewardId);
+	if (it != rewardMap.end()) {
+		return it->second;
+	}
+
+	if (!autoCreate) {
+		return nullptr;
+	}
+
+	Reward* reward = new Reward();
+	reward->incrementReferenceCounter();
+	reward->setIntAttr(ITEM_ATTRIBUTE_DATE, rewardId);
+	rewardMap[rewardId] = reward;
+
+	g_game.internalAddItem(getRewardChest(), reward, INDEX_WHEREEVER, FLAG_NOLIMIT);
+
+	return reward;
+}
+
+void Player::removeReward(uint32_t rewardId) {
+	rewardMap.erase(rewardId);
+}
+
+void Player::getRewardList(std::vector<uint32_t>& rewards) {
+	rewards.reserve(rewardMap.size());
+	for (auto& it : rewardMap) {
+		rewards.push_back(it.first);
+	}
 }
 
 void Player::sendCancelMessage(ReturnValue message) const
@@ -1605,10 +1625,6 @@ void Player::onThink(uint32_t interval)
 	if (lastStatsTrainingTime != getOfflineTrainingTime() / 60 / 1000) {
 		sendStats();
 	}
-
-	if (g_game.isExpertPvpEnabled()) {
-		g_game.updateSpectatorsPvp(const_cast<Player*>(this));
-	}
 }
 
 uint32_t Player::isMuted() const
@@ -1965,7 +1981,7 @@ BlockType_t Player::blockHit(Creature* attacker, CombatType_t combatType, int32_
 {
 	BlockType_t blockType = Creature::blockHit(attacker, combatType, damage, checkDefense, checkArmor, field);
 
-	if (!g_game.isExpertPvpEnabled() && attacker) {
+	if (attacker) {
 		sendCreatureSquare(attacker, SQ_COLOR_BLACK);
 	}
 
@@ -1988,7 +2004,7 @@ BlockType_t Player::blockHit(Creature* attacker, CombatType_t combatType, int32_
 			if (it.abilities) {
 				const int16_t& absorbPercent = it.abilities->absorbPercent[combatTypeToIndex(combatType)];
 				if (absorbPercent != 0) {
-					damage -= std::round(damage * (absorbPercent / 100.));
+					damage -= std::ceil(damage * (absorbPercent / 100.));
 
 					uint16_t charges = item->getCharges();
 					if (charges != 0) {
@@ -1999,7 +2015,7 @@ BlockType_t Player::blockHit(Creature* attacker, CombatType_t combatType, int32_
 				if (field) {
 					const int16_t& fieldAbsorbPercent = it.abilities->fieldAbsorbPercent[combatTypeToIndex(combatType)];
 					if (fieldAbsorbPercent != 0) {
-						damage -= std::round(damage * (fieldAbsorbPercent / 100.));
+						damage -= std::ceil(damage * (fieldAbsorbPercent / 100.));
 
 						uint16_t charges = item->getCharges();
 						if (charges != 0) {
@@ -2746,7 +2762,7 @@ Cylinder* Player::queryDestination(int32_t& index, const Thing& thing, Item** de
 
 		std::vector<Container*> containers;
 
-		for (uint32_t slotIndex = CONST_SLOT_FIRST; slotIndex <= CONST_SLOT_LAST; ++slotIndex) {
+		for (uint32_t slotIndex = CONST_SLOT_FIRST; slotIndex <= CONST_SLOT_AMMO; ++slotIndex) {
 			Item* inventoryItem = inventory[slotIndex];
 			if (inventoryItem) {
 				if (inventoryItem == tradeItem) {
@@ -3091,7 +3107,7 @@ Item* Player::getItemByClientId(uint16_t clientId) const
 		if (item->getClientID() == clientId) {
 			return item;
 		}
-		
+
 		if (Container* container = item->getContainer()) {
 			for (ContainerIterator it = container->iterator(); it.hasNext(); it.advance()) {
 				if ((*it)->getClientID() == clientId) {
@@ -3310,7 +3326,7 @@ void Player::internalAddThing(uint32_t index, Thing* thing)
 	}
 
 	//index == 0 means we should equip this item at the most appropiate slot (no action required here)
-	if (index > 0 && index < 11) {
+	if (index > 0 && index < 12) {
 		if (inventory[index]) {
 			return;
 		}
@@ -3351,20 +3367,6 @@ bool Player::setAttackedCreature(Creature* creature)
 	}
 
 	if (creature) {
-		if (Monster* monster = creature->getMonster()) {
-			if (monster->isSummon()) {
-				if (Player* owner = monster->getMaster()->getPlayer()) {
-					if (owner != const_cast<Player*>(this)) {
-						addAttacked(owner);
-						addInFightTicks(true);
-						if (skull == SKULL_NONE && owner->skull == SKULL_NONE) {
-							setSkull(SKULL_WHITE);
-						}
-						sendIcons();
-					}
-				}
-			}
-		}
 		g_dispatcher.addTask(createTask(std::bind(&Game::checkCreatureAttack, &g_game, getID())));
 	}
 	return true;
@@ -3980,7 +3982,7 @@ Skulls_t Player::getSkullClient(const Creature* creature) const
 			return SKULL_YELLOW;
 		}
 
-		if (isPartner(player) && !g_game.isExpertPvpEnabled()) {
+		if (isPartner(player)) {
 			return SKULL_GREEN;
 		}
 	}
@@ -4684,9 +4686,9 @@ size_t Player::getMaxDepotItems() const
 	if (group->maxDepotItems != 0) {
 		return group->maxDepotItems;
 	} else if (isPremium()) {
-		return 2000;
+		return 8000;
 	}
-	return 1000;
+	return 6000;
 }
 
 std::forward_list<Condition*> Player::getMuteConditions() const
@@ -4732,135 +4734,5 @@ void Player::setGuild(Guild* guild)
 
 	if (oldGuild) {
 		oldGuild->removeMember(this);
-	}
-}
-
-bool Player::hasPvpActivity(Player* player, bool guildAndParty/* = false*/) const
-{
-	if (!g_game.isExpertPvpEnabled() || !player || player == const_cast<Player*>(this)) {
-		return false;
-	}
-
-	if (hasAttacked(player) || player->hasAttacked(this)) {
-		return true;
-	}
-
-	if (guildAndParty) {
-		if (guild) {
-			for (auto it : guild->getMembersOnline()) {
-				if (it->hasPvpActivity(player)) {
-					return true;
-				}
-			}
-		}
-		if (party) {
-			for (auto it : party->getMembers()) {
-				if (it->hasPvpActivity(player)) {
-					return true;
-				}
-			}
-		}
-	}
-
-	return false;
-}
-
-bool Player::canAttack(Creature* creature) const
-{
-	if (!g_game.isExpertPvpEnabled()) {
-		return true;
-	}
-
-	if (Monster* monster = creature->getMonster()) {
-		if (!monster->isSummon()) {
-			return true;
-		}
-
-		Player* owner = monster->getMaster()->getPlayer();
-		if (!owner) {
-			return true;
-		}
-		
-		// It has an player (master) so, it's treated as it's master
-		return canAttack(owner);
-	} else if (Player* player = creature->getPlayer()) {
-		if (!hasSecureMode() || pvpMode == PVP_MODE_RED_FIST) {
-			return true; // a non-secure mode or red-fist mode can attack anyone
-		}
-
-		// Player is trying to attack someone with dove mode, while they didn't attack each other with fist|non-secure modes before.
-		if (pvpMode == PVP_MODE_DOVE && !hasPvpActivity(player)) {
-			return false;
-		}
-
-		// Same as dove in addition to guilds/parties.
-		if (pvpMode == PVP_MODE_WHITE_HAND && !hasPvpActivity(player, true)) {
-			return false;
-		}
-
-		// You can only attack both skulled and who attacked you before!
-		if (pvpMode == PVP_MODE_YELLOW_HAND && !hasPvpActivity(player) && player->getSkull() == SKULL_NONE) {
-			return false;
-		}
-	}
-
-	return true;
-}
-
-bool Player::canWalkThroughTileItems(Tile* tile) const
-{
-	if (!g_game.isExpertPvpEnabled() || !tile) {
-		return true;
-	}
-
-	TileItemVector* itemList = tile->getItemList();
-	if (!itemList) {
-		return true;
-	}
-
-	for (auto it : *itemList) {
-		if (it->getID() != ITEM_WILDGROWTH_NOPVP && it->getID() != ITEM_MAGICWALL_NOPVP) {
-			continue;
-		}
-
-		Player* owner = g_game.getPlayerByID(it->getOwner());
-		if (!owner) {
-			continue;
-		}
-
-		// only reason you can't walk is you already have activity with the owner or you are the owner!
-		if (owner == const_cast<Player*>(this) || hasPvpActivity(owner) || owner->pvpMode == PVP_MODE_RED_FIST) {
-			return false;
-		}
-	}
-
-	return true;
-}
-
-bool Player::isInPvpSituation()
-{
-	if (pzLocked || attackedSet.size() > 0) {
-		return true;
-	}
-
-	for (auto it : g_game.getPlayers()) {
-		Player* itPlayer = it.second;
-		if (!itPlayer || itPlayer->isRemoved()) {
-			continue;
-		}
-
-		if (itPlayer->hasAttacked(this)) {
-			return true;
-		}
-	}
-	return false;
-}
-
-void Player::sendPvpSquare(Creature* target, SquareColor_t squareColor)
-{
-	sendCreatureSquare(target, squareColor);
-
-	if (squareColor == SQ_COLOR_YELLOW) {
-		sendCreatureSquare(this, squareColor); // Only add to self if it's yellow.
 	}
 }

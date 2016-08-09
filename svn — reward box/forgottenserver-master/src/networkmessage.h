@@ -152,7 +152,7 @@ class NetworkMessage
 			position = 2;
 			return buffer + HEADER_LENGTH;
 		}
-		
+
 	protected:
 		inline bool canAdd(size_t size) const {
 			return (size + position) < MAX_BODY_LENGTH;

@@ -43,9 +43,10 @@ enum slots_t : uint8_t {
 	CONST_SLOT_FEET = 8,
 	CONST_SLOT_RING = 9,
 	CONST_SLOT_AMMO = 10,
+	CONST_SLOT_STORE_INBOX = 11,
 
 	CONST_SLOT_FIRST = CONST_SLOT_HEAD,
-	CONST_SLOT_LAST = CONST_SLOT_AMMO,
+	CONST_SLOT_LAST = CONST_SLOT_STORE_INBOX,
 };
 
 struct FindPathParams {
@@ -342,14 +343,6 @@ class Creature : virtual public Thing
 			return 0;
 		}
 		virtual bool isAttackable() const {
-			return true;
-		}
-
-		// both functions are not related to expert pvp disabled.
-		virtual bool canAttack(Creature*) const {
-			return true;
-		}
-		virtual bool canWalkThroughTileItems(Tile*) const {
 			return true;
 		}
 

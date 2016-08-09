@@ -277,7 +277,8 @@ void Spawn::scheduleSpawn(uint32_t spawnId, spawnBlock_t& sb, uint16_t interval)
 {
 	if (interval <= 0) {
 		spawnMonster(spawnId, sb.mType, sb.pos, sb.direction);
-	} else {
+	}
+	else {
 		g_game.addMagicEffect(sb.pos, CONST_ME_TELEPORT);
 		g_scheduler.addEvent(createSchedulerTask(1400, std::bind(&Spawn::scheduleSpawn, this, spawnId, sb, interval - NONBLOCKABLE_SPAWN_INTERVAL)));
 	}

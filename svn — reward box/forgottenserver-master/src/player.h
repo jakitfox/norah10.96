@@ -12,7 +12,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public LicegetPvpItemIdnse along
+ * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
@@ -36,6 +36,8 @@
 #include "groups.h"
 #include "town.h"
 #include "mounts.h"
+#include "reward.h"
+#include "rewardchest.h"
 
 class House;
 class NetworkMessage;
@@ -508,6 +510,12 @@ class Player final : public Creature, public Cylinder
 		void addConditionSuppressions(uint32_t conditions);
 		void removeConditionSuppressions(uint32_t conditions);
 
+		Reward* getReward(uint32_t rewardId, bool autoCreate);
+		void removeReward(uint32_t rewardId);
+		void getRewardList(std::vector<uint32_t>& rewards);
+		RewardChest* getRewardChest();
+		
+		DepotChest* getDepotBox();
 		DepotChest* getDepotChest(uint32_t depotId, bool autoCreate);
 		DepotLocker* getDepotLocker(uint32_t depotId);
 		void onReceiveMail() const;
@@ -583,9 +591,6 @@ class Player final : public Creature, public Cylinder
 		void setChaseMode(chaseMode_t mode);
 		void setFightMode(fightMode_t mode) {
 			fightMode = mode;
-		}
-		void setPvpMode(pvpMode_t mode) {
-			pvpMode = mode;
 		}
 		void setSecureMode(bool mode) {
 			secureMode = mode;
@@ -715,15 +720,6 @@ class Player final : public Creature, public Cylinder
 				}
 			}
 		}
-
-		void sendUpdateTileItem(const Tile*, const Position& pos, const Item* item, int32_t stackpos) {
-			if (client) {
-				if (stackpos != -1) {
-					client->sendUpdateTileItem(pos, stackpos, item);
-				}
-			}
-		}
-
 		void sendRemoveTileThing(const Position& pos, int32_t stackpos) {
 			if (stackpos != -1 && client) {
 				client->sendRemoveTileThing(pos, stackpos);
@@ -863,6 +859,7 @@ class Player final : public Creature, public Cylinder
 				client->sendInventoryItem(slot, item);
 			}
 		}
+
 		void sendInventoryClientIds() {
 			if (client) {
 				client->sendInventoryClientIds();
@@ -1118,9 +1115,9 @@ class Player final : public Creature, public Cylinder
 				client->sendFightModes();
 			}
 		}
-		void sendNetworkMessage(const NetworkMessage& message) {
+		void sendNetworkMessage(const NetworkMessage& message, bool broadcast = true) {
 			if (client) {
-				client->writeToOutputBuffer(message);
+				client->writeToOutputBuffer(message, broadcast);
 			}
 		}
 
@@ -1165,20 +1162,22 @@ class Player final : public Creature, public Cylinder
 		void forgetInstantSpell(const std::string& spellName);
 		bool hasLearnedInstantSpell(const std::string& spellName) const;
 
-		bool hasPvpActivity(Player* player, bool guildAndParty = false) const;
-
-		bool canAttack(Creature* creature)const final;
-		bool canWalkThroughTileItems(Tile* creature)const final;
-		bool isInPvpSituation();
-
-		void sendPvpSquare(Creature* creature, SquareColor_t squareColor);
-		pvpMode_t getPvpMode() const {
-			return pvpMode;
+		bool startLiveCast(const std::string& password) {
+			return client && client->startLiveCast(password);
+		}
+		
+		bool stopLiveCast() {
+			return client && client->stopLiveCast();
+		}
+		
+		bool isLiveCaster() const {
+			return client && client->isLiveCaster();
 		}
 
-		int64_t getLastWalkThroughAttempt() const {
-			return lastWalkthroughAttempt;
+		const std::map<uint8_t, OpenContainer>& getOpenContainers() const {
+			return openContainers;
 		}
+
 	protected:
 		std::forward_list<Condition*> getMuteConditions() const;
 
@@ -1236,6 +1235,9 @@ class Player final : public Creature, public Cylinder
 		std::map<uint32_t, DepotChest*> depotChests;
 		std::map<uint32_t, int32_t> storageMap;
 		std::map<uint8_t, int64_t> moduleDelayMap;
+
+		std::map<uint32_t, Reward*> rewardMap;
+		RewardChest* rewardChest;
 
 		std::vector<OutfitEntry> outfits;
 		GuildWarList guildWarList;
@@ -1333,7 +1335,6 @@ class Player final : public Creature, public Cylinder
 		tradestate_t tradeState;
 		chaseMode_t chaseMode;
 		fightMode_t fightMode;
-		pvpMode_t pvpMode;
 		AccountType_t accountType;
 
 		bool secureMode;
@@ -1388,6 +1389,7 @@ class Player final : public Creature, public Cylinder
 		friend class Map;
 		friend class Actions;
 		friend class IOLoginData;
+		friend class ProtocolGameBase;
 		friend class ProtocolGame;
 };
 
