@@ -88,16 +88,12 @@
 		<item id="7410" chance="8000" /><!-- queens sceptre -->
 		<item id="8884" chance="8000" /><!-- runed sword -->
 		<item id="2160" countmax="10" chance="54875" /><!-- crystal coin -->
-		<item id="1987" chance="100000">
-		<inside>
 			<item id="2520" chance="7650"/> 
 			<item id="2145" chance1="5800"/> 
 			<item id="2432" chance="8000"/> 
 			<item id="2436" chance="8000"/> 
 			<item id="2393" chance="8000"/> 
 			<item id="2462" chance="8000"/> 
-		</inside>
-		</item>
 	</loot>
 </monster>
 

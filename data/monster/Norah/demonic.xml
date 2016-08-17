@@ -73,10 +73,10 @@
 		<item id="2387" chance="14285"/><!-- double axe -->
 		<item id="2149" chance="10000"/><!-- small emerald -->
 		<item id="7368" countmax="5" chance="5263"/><!-- assassin star -->
-		<item id="2432" chance="8000"/><!-- fire axe -->
+		<item id="2432" chance="7000"/><!-- fire axe -->
 		<item id="2151" chance="3571"/><!-- talon -->
 		<item id="2176" chance="2854"/><!-- orb -->
-		<item id="2393" chance="4500"/><!-- giant sword -->
+		<item id="2393" chance="3500"/><!-- giant sword -->
 		<item id="2418" chance="1428"/><!-- golden sickle -->
 		<item id="2165" chance="1333"/><!-- stealth ring -->
 		<item id="2462" chance="1204"/><!-- devil helmet -->
@@ -91,7 +91,7 @@
 		<item id="2514" chance="1000"/><!-- mastermind shield -->
 		<item id="2164" chance="170"/><!-- might ring -->
 		<item id="2472" chance="450"/><!-- magic plate armor -->
-		<item id="7393" chance="600"/><!-- demon trophy -->
-		<item id="7382" chance="450"/><!-- demonrage sword -->
+		<item id="7393" chance="100"/><!-- demon trophy -->
+		<item id="7382" chance="350"/><!-- demonrage sword -->
   </loot>
 </monster>

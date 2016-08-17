@@ -5,6 +5,6 @@
   <announce delay="3000" type="Event" message="Ferumbras has returned to his citadel once more. Stop him before its too late." />
   <announce delay="6000" type="Event" message="Oh no! Ferumbras is here! Only choosens can kill him!" />
   <!--Single Spawns-->
-  <singlespawn delay="80000" name="Ferumbras" x="497" y="292" z="4"	/>
+  <singlespawn delay="80000" name="Ferumbras" x="448" y="290" z="4"	/>
 </raid>
 

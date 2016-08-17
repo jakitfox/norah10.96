@@ -74,9 +74,8 @@ Storage = {
 		Questline = 3070,
 		Mission01 = 3071,
 		Mission02 = 3072,
-		Mission02 = 3073,
+		Mission03 = 3073,
 		Helmet = 3074,
-		Ucker = 3074,
 		DoorPass = 3075,-- Door
 		YalaharTP = 3076,
 		Menor = 3077,
@@ -89,10 +88,12 @@ Storage = {
 		RewardDoor = 3084, --Door
 		FinalBoss = 3085,
 		Reward = 3086,
-		Addon = 3087
+		Addon = 3087,
+		Ucker = 3088
 	},
 	
 	Elemental = {
+		Reward = 3094, -- uid 2020,2019,2018
 		Questline = 3095,
 		-- Rooms --
 		Mechanicals = 3096,
@@ -106,7 +107,7 @@ Storage = {
 		-- energy wall id {3111-3118}
 	},
 	
-	Riwen = {
+	RiwenTown = {
 		Lever01 = 3120,
 		Lever02 = 3121,
 		Lever03 = 3122,
@@ -131,11 +132,11 @@ Storage = {
 		Brama01 = 3142,
 		Brama02 = 3143,
 		Brama03 = 3144,
-		Final = 3144,
 		TpFinal = 3145, -- aid
 		Mount = 3146, -- mount id 39
 		Reward = 3147,
-		Gazh = 3148
+		Gazh = 3148,
+		Final = 3149
 	},
 	
 	Blue = {
@@ -265,6 +266,9 @@ Storage = {
 	
 	-- 3900 - 3920
 	
-	SwampDiggingTimeout = 3720
+	SwampDiggingTimeout = 3720,
+	EXP_Event = 3725,
+	
+	Admin_Report = 3728
 	
 }

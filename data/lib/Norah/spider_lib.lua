@@ -9,7 +9,7 @@ zeZombieCountGlobalStorage = 110
 -- Players Variables
 zeJoinStorage = 1000 --player join storage
 zeMinPlayers = 2 --min players needed when time runout
-zeMaxPlayers = 30 --max players to join
+zeMaxPlayers = 40 --max players to join
 zeTrophy = 7369 --trophy itemid
 zeJoinedCountGlobalStorage = 101 --Zombie spawned Count
 
@@ -34,6 +34,7 @@ function startZombie()
                     specs[i]:setStorageValue(zeJoinStorage, 0)
             end
             resetVariables()
+			table.remove(active_events, table.find(active_events,4))
 			sendChannelMessage(events_calendar.channel_id, TALKTYPE_CHANNEL_O, '[Spider Event]: Spider Event failed to start, because of to little players joined the event!')
             return true
         end
@@ -77,7 +78,7 @@ function doClearZombieArena()
 end
 
 function SPIDER_init()
-	table.insert(active_events,7)	
+	table.insert(active_events,4)	
 	sendChannelMessage(events_calendar.channel_id, TALKTYPE_CHANNEL_O, '[Spider Event]: The Spider Event has started! You have '.. zeWaitMinutes ..' minutes to join!')
 	Game.setStorageValue(zeJoinedCountGlobalStorage, 0)
 	Game.setStorageValue(zeStartedGlobalStorage, 1)

@@ -37,7 +37,7 @@ end
 	
 elseif msgcontains(msg, 'reward') or msgcontains(msg, 'prize') then
 if player:getStorageValue(Storage.Doll.Mission01) == 2 then
-	if player:getStorageValue(Storage.Doll.Tropy01) == 2 and player:getStorageValue(Storage.Doll.Tropy02) == 2 and player:getStorageValue(Storage.Doll.Tropy03) == 2 and player:getStorageValue(Storage.Doll.Tropy04) == 2 and player:getStorageValue(Storage.Doll.Tropy05) == 2 and player:getStorageValue(Storage.Doll.Tropy06) == 2 and player:getStorageValue(Storage.Doll.Tropy07) == 2 and player:getStorageValue(Storage.Doll.Tropy08) == 2 then
+	if player:getStorageValue(Storage.Doll.Tropy01) == 3 and player:getStorageValue(Storage.Doll.Tropy02) == 3 and player:getStorageValue(Storage.Doll.Tropy03) == 3 and player:getStorageValue(Storage.Doll.Tropy04) == 3 and player:getStorageValue(Storage.Doll.Tropy05) == 3 and player:getStorageValue(Storage.Doll.Tropy06) == 3 and player:getStorageValue(Storage.Doll.Tropy07) == 3 and player:getStorageValue(Storage.Doll.Tropy08) == 3 then
 		npcHandler:say('You have give me all trophys. For {reward} I can give you blue robe, boots of haste and one 200000 expirence. Do you\'ll get it?', cid)	
 		talk_state[cid] = 3
 	else
@@ -47,7 +47,7 @@ elseif player:getStorageValue(Storage.Doll.Mission01) == 3 then
 	npcHandler:say('I gived you reward!', cid)	
 end
 ------------------Gravedigger Quest----------------
-elseif msgcontains(msg, 'fix jester doll') or msgcontains(msg, 'jester doll') or msgcontains(msg, 'fix doll') then
+elseif msgcontains(msg, 'fix jester doll') or msgcontains(msg, 'jester doll') or msgcontains(msg, 'fix doll') or msgcontains(msg, 'doll') then
     if player:getStorageValue(Storage.Grave.Mission04) == 1 then
 		npcHandler:say('If you have all parts of doll I can repair it for you for free. Do it?', cid)
 		talk_state[cid] = 4
@@ -55,6 +55,9 @@ end
 ------------------------YES-------------------------		
 elseif msgcontains(msg, 'help') or msgcontains(msg, 'yes') and talk_state[cid] == 1 then
 	if player:getStorageValue(Storage.Doll.Mission01) == -1 then
+		for i = 1, #storage do
+			player:setStorageValue(storage[i],1)
+		end
 		npcHandler:say('Once time I created eight unique trophys. Trophys have been worth very much, so the trophys have become lickerish for a thief. All of my collection was stolen, and later for fear of being royal guard, hidden in {each of the cities}. Find it!', cid)
 		player:setStorageValue(Storage.Doll.Mission01, 1)
 	end
@@ -64,13 +67,16 @@ elseif msgcontains(msg, 'yes') and talk_state[cid] == 2 then
 			for a = 1, #trophy do
 				player:removeItem(trophy[a], 1)
 			end
+			for i = 1, #storage do
+			player:setStorageValue(storage[i],3)
+			end
 				player:setStorageValue(Storage.Doll.Mission01, 2)
 				npcHandler:say('You have given me all trophies. I give you {reward}!', cid)
 			else
 				npcHandler:say('Sorry, You don\'t have all trophy.', cid)
 	end
 elseif talk_state[cid] == 3 and player:getStorageValue(Storage.Doll.Mission01) == 2 then
-	if player:getStorageValue(Storage.Doll.Tropy01) == 2 and player:getStorageValue(Storage.Doll.Tropy02) == 2 and player:getStorageValue(Storage.Doll.Tropy03) == 2 and player:getStorageValue(Storage.Doll.Tropy04) == 2 and player:getStorageValue(Storage.Doll.Tropy05) == 2 and player:getStorageValue(Storage.Doll.Tropy06) == 2 and player:getStorageValue(Storage.Doll.Tropy07) == 2 and player:getStorageValue(Storage.Doll.Tropy08) == 2 then
+	if player:getStorageValue(Storage.Doll.Tropy01) == 3 and player:getStorageValue(Storage.Doll.Tropy02) == 3 and player:getStorageValue(Storage.Doll.Tropy03) == 3 and player:getStorageValue(Storage.Doll.Tropy04) == 3 and player:getStorageValue(Storage.Doll.Tropy05) == 3 and player:getStorageValue(Storage.Doll.Tropy06) == 3 and player:getStorageValue(Storage.Doll.Tropy07) == 3 and player:getStorageValue(Storage.Doll.Tropy08) == 3 then
 					npcHandler:say('Thank for all! Good Luck!', cid)
 					doPlayerAddItem(cid,2656,1)
 					doPlayerAddItem(cid,2195,1)

@@ -671,7 +671,7 @@
 	<!-- Ammunition -->
 	<distance id="1294" breakchance="3" /> <!-- small stone -->
 	<distance id="2111" action="removecount" /> <!-- snowball -->
-	<distance id="2389" breakchance="3" /> <!-- spear -->
+	<distance id="2389" breakchance="0" /> <!-- spear -->
 	<distance id="2399" breakchance="10" /> <!-- throwing star -->
 	<distance id="2410" breakchance="7" /> <!-- throwing knife -->
 	<distance id="2543" action="removecount" /> <!-- bolt -->

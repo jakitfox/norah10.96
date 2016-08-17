@@ -4,5 +4,5 @@
 	<stage minlevel="1" maxlevel="50" multiplier="5" />
 	<stage minlevel="51" maxlevel="100" multiplier="4" />
 	<stage minlevel="101" maxlevel="200" multiplier="3" />
-	<stage minlevel="201" multiplier="5" />
+	<stage minlevel="201" multiplier="2" />
 </stages>

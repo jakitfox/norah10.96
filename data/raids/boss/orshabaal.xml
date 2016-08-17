@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <raid>
 	<announce delay="1000" type="warning" message="Evul Orshabaal want visit this world! Watch out!" />
-	<announce delay="488000" type="warning" message="Yes! It's perfect time! Go to th safe place! Orshabaal comes to the Norah World!" />
+	<announce delay="488000" type="warning" message="Yes! It's perfect time! Go to th safe place! Orshabaal comes to the B-Rox World!" />
 	<singlespawn delay="40000" name="Orshabaal" x="1063" y="853" z="7"/>
 </raid>
 

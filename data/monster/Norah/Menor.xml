@@ -58,48 +58,44 @@
 		<voice sentence="Nie daci mi rady!"/>
 	</voices>
 	<loot>
-    <item id="7591" chance="18350" /><!-- great health potion -->
-    <item id="2152" countmax="28" chance="9050" /><!-- platinum coin -->
-    <item id="2160" countmax="10" chance="54875" /><!-- crystal coin -->
-    <item id="2515" chance="12100" /><!-- guardian shield -->
-    <item id="2127" chance="28175" /><!-- emerald bangle -->
-    <item id="2381" chance="28175" /><!-- halberd -->
-    <item id="7590" chance="16575" /><!-- great mana potion -->
-    <item id="2528" chance="10325" /><!-- tower shield -->
-	<item id="2474" chance="8000" /><!-- winged helmet -->
-	<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
-	<item id="21700" chance="8000" /><!-- icy culotte -->
-	<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
-	<item id="2646" chance="5000" /><!-- golden boots -->
-	<item id="2522" chance="5000" /><!-- great shield -->
-	<item id="18412" chance="8000" /><!-- glacial rod -->
-	<item id="18411" chance="8000" /><!-- muck rod -->
-	<item id="18390" chance="8000" /><!-- wand of defiance -->
-	<item id="18409" chance="8000" /><!-- wand of everblazing -->
-	<item id="16111" chance="5000" /><!-- thorn spitter -->
-	<item id="7455" chance="8000" /><!-- mythril axe -->
-	<item id="7410" chance="8000" /><!-- queens sceptre -->
-	<item id="8884" chance="8000" /><!-- runed sword -->
-    <item id="1988" chance="100000"><!-- bag -->
-        <inside>
-            <item id="6529" countmax="49" chance="12825" /><!-- infernal bolt -->
-            <item id="9971" chance="19250" /><!-- gold ingot -->
-            <item id="2452" chance="31750" /><!-- heavy mace -->
-            <item id="8891" chance="10325" /><!-- paladin armor -->
-            <item id="5944" countmax="5" chance="13350" /><!-- soul orb -->
-            <item id="8928" chance="4950" /><!-- obsidian truncheon -->
-            <item id="5954" countmax="2" chance="9425" /><!-- demon horn -->
-            <item id="7632" countmax="2" chance="25050" /><!-- giant shimmering pearl -->
-            <item id="8473" chance="10325" /><!-- ultimate health potion -->
-            <item id="7440" chance="20150" /><!-- mastermind potion -->
-            <item id="8889" chance="1400" /><!-- skullcracker armor -->
-            <item id="2520" chance="5850" /><!-- demon shield -->
-            <item id="2514" chance="3175" /><!-- mastermind shield -->
-            <item id="7387" chance="6750" /><!-- diamond sceptre -->
-            <item id="2519" chance="11200" /><!-- crown shield -->
-            <item id="8472" chance="9425" /><!-- great spirit potion -->
-            <item id="7431" chance="1400" /><!-- demonbone -->
-        </inside>
-    </item>
+		<item id="7591" chance="18350" /><!-- great health potion -->
+		<item id="2152" countmax="28" chance="9050" /><!-- platinum coin -->
+		<item id="2160" countmax="10" chance="54875" /><!-- crystal coin -->
+		<item id="2515" chance="12100" /><!-- guardian shield -->
+		<item id="2127" chance="28175" /><!-- emerald bangle -->
+		<item id="2381" chance="28175" /><!-- halberd -->
+		<item id="7590" chance="16575" /><!-- great mana potion -->
+		<item id="2528" chance="10325" /><!-- tower shield -->
+		<item id="2474" chance="3000" /><!-- winged helmet -->
+		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
+		<item id="21700" chance="8000" /><!-- icy culotte -->
+		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
+		<item id="2646" chance="5000" /><!-- golden boots -->
+		<item id="2522" chance="5000" /><!-- great shield -->
+		<item id="18412" chance="8000" /><!-- glacial rod -->
+		<item id="18411" chance="8000" /><!-- muck rod -->
+		<item id="18390" chance="8000" /><!-- wand of defiance -->
+		<item id="18409" chance="8000" /><!-- wand of everblazing -->
+		<item id="16111" chance="5000" /><!-- thorn spitter -->
+		<item id="7455" chance="8000" /><!-- mythril axe -->
+		<item id="7410" chance="8000" /><!-- queens sceptre -->
+		<item id="8884" chance="8000" /><!-- runed sword -->
+		<item id="6529" countmax="49" chance="12825" /><!-- infernal bolt -->
+        <item id="9971" chance="19250" /><!-- gold ingot -->
+        <item id="2452" chance="31750" /><!-- heavy mace -->
+        <item id="8891" chance="10325" /><!-- paladin armor -->
+        <item id="5944" countmax="5" chance="13350" /><!-- soul orb -->
+        <item id="8928" chance="4950" /><!-- obsidian truncheon -->
+        <item id="5954" countmax="2" chance="9425" /><!-- demon horn -->
+        <item id="7632" countmax="2" chance="25050" /><!-- giant shimmering pearl -->
+        <item id="8473" chance="10325" /><!-- ultimate health potion -->
+        <item id="7440" chance="20150" /><!-- mastermind potion -->
+        <item id="8889" chance="1400" /><!-- skullcracker armor -->
+        <item id="2520" chance="5850" /><!-- demon shield -->
+        <item id="2514" chance="3175" /><!-- mastermind shield -->
+        <item id="7387" chance="6750" /><!-- diamond sceptre -->
+        <item id="2519" chance="11200" /><!-- crown shield -->
+        <item id="8472" chance="9425" /><!-- great spirit potion -->
+        <item id="7431" chance="1400" /><!-- demonbone -->
 </loot>
 </monster>

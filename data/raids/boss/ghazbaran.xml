@@ -4,6 +4,12 @@
 <announce delay="30000" type="Event" message="Demonic entities are entering the mortal realm in the Snowhill mines." />
 <announce delay="60000" type="Event" message="The demonic master has revealed itself in the mines of Snowhill." />
 
-<singlespawn delay="60000" name="ghazbaran" x="1294" y="1190" z="11" />
-
+<singlespawn delay="80000" name="ghazbaran" x="1294" y="1190" z="11" />
+ <!--Area Spawns-->
+  <areaspawn delay="53000" fromx="12755" fromy="1187" fromz="11" tox="1306" toy="1202" toz="11">
+    <monster name="Deathslicer" amount="5" />
+	<monster name="Juggernaut" amount="5" />
+	<monster name="Fury" amount="5" />
+	<monster name="Demon" amount="6" />
+  </areaspawn>
 </raid>

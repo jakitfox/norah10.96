@@ -4,8 +4,8 @@ local monsters = {
 	["dipthrah"] = 3182,
 	["thalas"] = 3183,
 	["hydra"] = 3184,
-	["wyrm"] = 3185,	
-	["lich"] = 3186,
+	["wyrm"] = 3184,	
+	["lich"] = 3184,
 	["syzam"] = 3187,
 	["koshei the deathless"] = 3188,
 	["yodense"] = 3189,
@@ -69,7 +69,7 @@ function onKill(cid, target, lastHit)
 		end
 	elseif name == "Dipthrah" and getPlayerStorageValue(cid,Storage.Grave.Mission02) == 1 then
 		if(isPlayer(target) == FALSE and monster) then	
-                if getPlayerStorageValue(cid, Pharaoh01Boss) == -1 then 
+                if getPlayerStorageValue(cid, Storage.Grave.Pharaoh01Boss) == -1 then 
 				setPlayerStorageValue(cid, Storage.Grave.Mission02, 2)
 				setPlayerStorageValue(cid, Storage.Grave.Pharaoh01, -1)
 				setPlayerStorageValue(cid, Storage.Grave.Pharaoh01Boss, 1)     

@@ -229,7 +229,10 @@ function Player:onGainExperience(source, exp, rawExp)
 		end
 	end
 
-	return exp
+	if getGlobalStorageValue(Storage.EXP_Event) == 1 then
+		exp = exp * 2.0
+	end
+return exp
 end
 
 function Player:onLoseExperience(exp)

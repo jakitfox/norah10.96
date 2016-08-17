@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
 	<!-- EVENTS -->
-	<movevent event="StepIn" uniqueid="3293" script="event/spider/spider_tp.lua" />
+	<movevent event="StepIn" uniqueid="3293" script="event/Spider/spider_tp.lua" />
 	<!-- TWD -->
 	<movevent event="StepIn" fromuid="3290" touid="3291" script="event/twd/twdTile.lua" />
 	<!-- Swim -->
@@ -28,6 +28,7 @@
 	<movevent event="StepIn" uniqueid="3081" script="quest/yalahar/wioska.lua" />
 	<movevent event="StepIn" uniqueid="3083" script="quest/yalahar/tp_ucker.lua" />
 	<movevent event="StepIn" fromuid="3084" touid="3085" script="quest/yalahar/tepek1.lua" />
+	<movevent event="StepIn" uniqueid="3355" script="quest/yalahar/exit_arena.lua"/>
 	<movevent event="StepIn" uniqueid="3100" script="quest/yalahar/tp_amerus.lua" />
 	<movevent event="StepIn" fromuid="3101" touid="3102" script="quest/yalahar/LastFightTeleports.lua" />
 	<movevent event="StepIn" uniqueid="3103" script="quest/yalahar/yalahar_azerus_quest.lua" />
@@ -512,6 +513,8 @@
 	<movevent event="DeEquip" itemid="18407" slot="necklace" function="onDeEquipItem" />
 	<movevent event="Equip" itemid="21691" slot="necklace" level="150" function="onEquipItem" />
 	<movevent event="DeEquip" itemid="21691" slot="necklace" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="24851" slot="necklace" level="60" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="24851" slot="necklace" function="onDeEquipItem" />
 
 	<!-- Rings -->
 	<movevent event="Equip" itemid="2164" slot="ring" function="onEquipItem" />

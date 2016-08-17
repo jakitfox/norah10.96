@@ -88,8 +88,6 @@
 		<item id="7407" chance="1100"/>
 		<item id="8910" chance="8000"/> 
 		<item id="2377" chance="8000"/> 
-		<item id="1987" chance="100000">
-		<inside>
 			<item id="2520" chance="7650"/> 
 			<item id="2145" chance1="5800"/> 
 			<item id="2183" chance1="5800"/> 
@@ -107,7 +105,5 @@
 			<item id="7418" chance1="5800"/> 
 			<item id="2493" chance1="5800"/> 
 			<item id="8877" chance1="9800"/> 
-		</inside>
-    </item>
 </loot>
 </monster>

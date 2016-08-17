@@ -121,7 +121,7 @@ local player = Player(cid)
 			npcHandler:say('You don\'t have my ball.', cid)
 		end
 	elseif talk_state[cid] == 9 then
-			npcHandler:say("So you must defeat the great master of hell, {Hades}! He is stronger than ever, you must gather the strongest team in the {Norah World}! Take care of you, I will wait with impatient for you, good luck!", cid) 
+			npcHandler:say("So you must defeat the great master of hell, {Hades}! He is stronger than ever, you must gather the strongest team in the {B-Rox World}! Take care of you, I will wait with impatient for you, good luck!", cid) 
 			player:setStorageValue(Storage.Grave.Mission08, 1)
 			player:setStorageValue(Storage.Grave.HadesDoor, 1)
 	elseif msgcontains(msg, 'no') then

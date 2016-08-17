@@ -1,5 +1,4 @@
 local npos = {[3285] = PTR.spawn}
-local x = {x = 658, y = 525, z = 9}
 local Equipment = {11374, 2195, 12646, 12607, 15490, 9956, 18404, 18406, 21691, 8908, 2169, 11301, 11303}
 local condition_speed = createConditionObject(CONDITION_HASTE)
 	setConditionParam(condition_speed, CONDITION_PARAM_TICKS, 1)
@@ -22,16 +21,16 @@ end
 		return true
 	end
 	
-	if tonumber(table.find(active_events,8)) == nil then
+	if tonumber(table.find(active_events,3)) == nil then
 		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "This event is not active.")
-		doTeleportThing(cid, x)
+		Player(cid):teleportTo(fromPosition, true)
 		return true
 	end
 	
 	for i = 1, #Equipment do
 		if getPlayerItemCount(cid,Equipment[i]) ~= 0 then
 			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "No equipment allowed here.")
-			doTeleportThing(cid, x)
+			Player(cid):teleportTo(fromPosition, true)
 			return true
 		end
 	end

@@ -13,7 +13,7 @@ function kickUcker(player, item, position, fromPosition)
 end
 
 function onStepIn(player, item, pos)
-    if player:getStorageValue(Storage.Yala.Ucker) == -1 then
+    if player:getStorageValue(Storage.Yala.Ucker) == -1 and player:getStorageValue(Storage.Yala.Mission03) == 1 then
 		if isPlayerInArea(NW, SE) then
 			player:teleportTo(deny)
 			player:getPosition():sendMagicEffect(CONST_ME_GROUNDSHAKER)

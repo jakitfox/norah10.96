@@ -32,11 +32,12 @@ function onPrepareDeath(cid, killer)
             if winner then
                 winner:teleportTo(winner:getTown():getTemplePosition())
 				winner:changeSpeed(winner:getBaseSpeed())
-			local coin = winner:addItem(24115, 10)	
+			local coin = winner:setCoinsBalance(winner:getCoinsBalance() + 20)	
 			if coin then
 			end
                  Game.broadcastMessage(string.format('%s is the winner of Spider Event Versus %s Spiders.', winner:getName(), Game.getStorageValue(zeZombieCountGlobalStorage)), MESSAGE_STATUS_WARNING)
             end
+			table.remove(active_events, table.find(active_events,4))
             doClearZombieArena()
             resetVariables()
         end

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Glooth Anemone" nameDescription="a glooth anemone" race="venom" experience="1800" speed="180" manacost="0">
+	<health now="2400" max="2400"/>
+	<look type="604" corpse="23359"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+        <flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-20" max="-150" />
+		<attack name="earth" interval="2000" chance="35" range="7" min="0" max="-180">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="greenbubble" />
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="35">
+		<defense name="healing" interval="2000" chance="15" min="0" max="80">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>	
+	<elements>
+		<element energyPercent="1" />
+		<element firePercent="-1" />
+		<element deathPercent="1" />
+	</elements>
+	<immunities>
+		<immunity earth="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="*shglib*"/>
+	</voices>
+	<summons maxSummons="3">
+		<summon name="Glooth Blob" interval="2000" chance="10"/>
+	</summons>
+	<loot>
+		<item id="2148" countmax="170" chance="100000" /><!-- gold coin -->
+		<item id="2152" countmax="3" chance="60000" /><!-- platinum coin -->
+		<item id="23568" chance="15930" /><!-- slimy leaf tentacle -->
+		<item id="23515" chance="10020" /><!-- bowl of glooth soup -->
+		<item id="2149" countmax="4" chance="8230" /><!-- small emerald -->
+		<item id="9970" countmax="4" chance="8220" /><!-- small topaz -->
+		<item id="7589" countmax="2" chance="8060" /><!-- strong mana potion -->
+		<item id="2147" countmax="4" chance="7850" /><!-- small ruby -->
+		<item id="7588" countmax="2" chance="7480" /><!-- strong health potion -->
+		<item id="23543" chance="4080" /><!-- glooth whip -->
+		<item id="2796" chance="2820" /><!-- green mushroom -->
+		<item id="8473" countmax="2" chance="1950" /><!-- ultimate health potion -->
+		<item id="23551" chance="1050" /><!-- glooth axe -->
+		<item id="23529" chance="1020" /><!-- glooth spear -->
+		<item id="23549" chance="940" /><!-- glooth club -->
+		<item id="23550" chance="920" /><!-- glooth blade -->
+		<item id="23554" chance="920" /><!-- glooth amulet -->
+		<item id="23535" chance="780" /><!-- glooth cape -->
+	</loot>
+</monster>

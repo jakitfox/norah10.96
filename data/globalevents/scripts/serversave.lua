@@ -1,4 +1,4 @@
-local shutdownAtServerSave = false
+local shutdownAtServerSave = true
 local cleanMapAtServerSave = false
 
 local function serverSave()

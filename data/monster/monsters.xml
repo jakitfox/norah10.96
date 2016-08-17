@@ -18,20 +18,68 @@
 	<monster name="Lord Thorgot" file="NewBoss/lord thorgot.xml" />
 	<monster name="Lord Spectre" file="NewBoss/lord spectre.xml" />
 	
-	<!-- Machines -->
-	<monster name="Glooth Golem" file="machines/glooth golem.xml" />
-	<monster name="Metal Gargoyle" file="machines/metal gargoyle.xml" />
-	<monster name="Rustheap Golem" file="machines/rustheap golem.xml" />
-	<monster name="Walker" file="machines/walker.xml" />
+	<!-- Tibia 10.50 -->
+	<monster name="Glooth Anemone" file="1050/glooth anemone.xml" />
+	<monster name="Devourer" file="1050/devourer.xml" />
+	<monster name="Glooth Golem" file="1050/glooth golem.xml" />
+	<monster name="Metal Gargoyle" file="1050/metal gargoyle.xml" />
+	<monster name="Rustheap Golem" file="1050/rustheap golem.xml" />
+	<monster name="Walker" file="1050/walker.xml" />
+	<monster name="Moohtant" file="1050/moohtant.xml" />
+	<monster name="Execowtioner" file="1050/execowtioner.xml" />
+	<monster name="Minotaur Amazon" file="1050/minotaur amazon.xml" />
+	<monster name="Minotaur Hunter" file="1050/minotaur hunter.xml" />
+	<monster name="Worm Priestess" file="1050/worm priestess.xml" />
+	<monster name="Mooh'Tah Warrior" file="1050/mooh'tah warrior.xml" />
+	<monster name="Blood Beast" file="1050/blood beast.xml" />
 	
 	<!-- Tibia 10.70 -->
-	<monster name="Deep Terror" file="10.70/deep terror.xml" />
-	<monster name="Empowered Glooth Horror" file="10.70/empowered glooth horror.xml" />
-	<monster name="Glooth Bandit" file="10.70/glooth bandit.xml" />
-	<monster name="Control Tower" file="10.70/control tower.xml" />
-	<monster name="Glooth Battery" file="10.70/glooth battery.xml" />
-	<monster name="Glooth Brigand" file="10.70/glooth brigand.xml" />
-	<monster name="Glooth Blob" file="10.70/glooth blob.xml" />
+	<monster name="Seacrest Serpent" file="1070/seacrest serpent.xml"/>
+	<monster name="Roaring Lion" file="1070/roaring lion.xml" /><!-- do zrobienia -->
+	<monster name="Noble Lion" file="1070/noble lion.xml"/>
+	<monster name="Professor Maxxen" file="1070/professor maxxen.xml"/>
+	<monster name="Deep Terror" file="1070/deep terror.xml" />
+	<monster name="Empowered Glooth Horror" file="1070/empowered glooth horror.xml" />
+	<monster name="Glooth Bandit" file="1070/glooth bandit.xml" />
+	<monster name="Control Tower" file="1070/control tower.xml" />
+	<monster name="Glooth Battery" file="1070/glooth battery.xml" />
+	<monster name="Glooth Brigand" file="1070/glooth brigand.xml" />
+	<monster name="Glooth Blob" file="1070/glooth blob.xml" />
+	
+	<!-- Tibia 10.95 -->
+	<monster name="Breach Brood" file="1095/breach brood.xml"/>
+	<monster name="Dread Intruder" file="1095/dread intruder.xml"/>
+	<monster name="Instable Sparkion" file="1095/instable sparkion.xml"/>
+	<monster name="Pit Battler" file="1095/pit battler.xml"/>
+	<monster name="Pit Berserker" file="1095/pit berserker.xml"/>
+	<monster name="Pit Blacking" file="1095/pit blacking.xml"/>
+	<monster name="Pit Brawler" file="1095/pit brawler.xml"/>
+	<monster name="Pit Destroyer" file="1095/pit destroyer.xml"/>
+	<monster name="Pit Groveller" file="1095/pit groveller.xml"/>
+	<monster name="Pit Grunt" file="1095/pit grunt.xml"/>
+	<monster name="Pit Lord" file="1095/pit lord.xml"/>
+	<monster name="Pit Maimer" file="1095/pit maimer.xml"/>
+	<monster name="Pit Overlord" file="1095/pit overlord.xml"/>
+	<monster name="Pit Reaver" file="1095/pit reaver.xml"/>
+	<monster name="Pit Scourge" file="1095/pit scourge.xml"/>
+	<monster name="Reality Reaver" file="1095/reality reaver.xml"/>
+	<monster name="sparkion" file="1095/sparkion.xml"/>
+	<monster name="Stabilizing Dread Intruder" file="1095/stabilizing dread intruder.xml"/>
+	<monster name="Stabilizing Reality Reaver" file="1095/stabilizing reality reaver.xml"/>
+
+	<monster name="Aftershock" file="1095/aftershock.xml"/>
+	<monster name="Eradicator" file="1095/eradicator.xml"/>
+	<monster name="eradicatorv2" file="1095/eradicatorv2.xml"/>
+	<monster name="Foreshock" file="1095/foreshock.xml"/>
+	<monster name="Rupture" file="1095/rupture.xml"/>
+	<monster name="World Devourer" file="1095/world devourer.xml"/>
+	<monster name="Anomaly" file="1095/anomaly.xml"/>
+	<monster name="Charged Anomaly" file="1095/charged anomaly.xml"/>
+	<monster name="Charging Outburst" file="1095/charging outburst.xml"/>
+	<monster name="Outburst" file="1095/outburst.xml"/>
+	<monster name="The Destruction" file="1095/the destruction.xml"/>
+	<monster name="The Hunger" file="1095/the hunger.xml"/>
+	<monster name="The Rage" file="1095/the rage.xml"/>
 	
 	<!--Norah -->
 	<monster name="Inoperative Uniwheel" file="Norah/inoperative uniwheel.xml" />
@@ -188,8 +236,6 @@
 	<monster name="Undead Cavebear" file="Bears/undead cavebear.xml" />
 
 	<!-- Bio-Elementals -->
-	<monster name="Devourer" file="Bio-Elementals/devourer.xml" />
-	<monster name="Glooth Anemone" file="Bio-Elementals/glooth anemone.xml" />
 	<monster name="Bane Bringer" file="Bio-Elementals/bane bringer.xml" />
 	<monster name="Bog Raider" file="Bio-Elementals/bog raider.xml" />
 	<monster name="Carniphila" file="Bio-Elementals/carniphila.xml" />
@@ -242,14 +288,15 @@
 	<monster name="Eye of the Seven" file="Bonelords/eye of the seven.xml" />
 
 	<!-- Bosses -->
-	<monster name="Kerberos" file="bosses/kerberos.xml" />
-	<monster name="Paiz The Pauperizer" file="bosses/paiz the pauperizer.xml" />
-	<monster name="Ribstride" file="bosses/ribstride.xml" />
-	<monster name="Sulphur Scuttler" file="bosses/sulphur scuttler.xml" />
-	<monster name="Tromphonyte" file="bosses/tromphonyte.xml" />
-	<monster name="Bruise Payne" file="bosses/bruise payne.xml" />
-	<monster name="Bretzecutioner" file="bosses/bretzecutioner.xml" />
-	<monster name="Hemming" file="bosses/hemming.xml" />
+	<!--<monster name="Bullwark" file="Bosses/bullwark.xml"/> -->
+	<monster name="Kerberos" file="Bosses/kerberos.xml" />
+	<monster name="Paiz The Pauperizer" file="Bosses/paiz the pauperizer.xml" />
+	<monster name="Ribstride" file="Bosses/ribstride.xml" />
+	<monster name="Sulphur Scuttler" file="Bosses/sulphur scuttler.xml" />
+	<monster name="Tromphonyte" file="Bosses/tromphonyte.xml" />
+	<monster name="Bruise Payne" file="Bosses/bruise payne.xml" />
+	<monster name="Bretzecutioner" file="Bosses/bretzecutioner.xml" />
+	<monster name="Hemming" file="Bosses/hemming.xml" />
 	<monster name="Abyssador" file="Bosses/abyssador.xml" />
 	<monster name="Annihilon" file="Bosses/annihilon.xml" />
 	<monster name="Apocalypse" file="Bosses/Apocalypse.xml" />

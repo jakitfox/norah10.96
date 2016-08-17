@@ -12,7 +12,7 @@ local lastSound = 0
 function onThink()
     if lastSound < os.time() then
         lastSound = (os.time() + 5)
-        if math.random(100) < 25 then
+        if math.random(100) < 7 then
             Npc():say("Better deposit your money in the bank where it's safe.", TALKTYPE_SAY)
         end
     end

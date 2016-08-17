@@ -25,7 +25,7 @@ local brampos2 = getThingfromPos(v.brampos2)
 		doRemoveItem(brampos2.uid, 1)
 		setGlobalStorageValue(v.stronge, 1)
 		doSendMagicEffect(v.efekt,CONST_ME_POFF)
-        addEvent(onTimer7, 30*60*1000) --30 minutes
+        addEvent(onTimer7, 40*60*1000) --40 minutes
 		else
 		doPlayerSendCancel(cid,"Sorry not possible.")
     end

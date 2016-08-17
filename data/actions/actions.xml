@@ -19,12 +19,17 @@
 	<!-- Eight Dolls Quest -->
 	<action fromuid="3030" touid="3037" script="quests/dolls/doll.lua" />
 	
+	<!-- Elemental Quest -->
+	<action fromuid="2018" touid="2020" script="quests/elemental/reward.lua" />
+	
 	<!-- Gravedigger Quest -->
 	<action fromuid="3040" touid="3043"	script="quests/gravedigger/koshei.lua" />
 	<action fromuid="3044" touid="3045" script="quests/gravedigger/monument.lua" /> 
-	<action actionid="3046" script="quests/gravedigger/pharaoh_first.lua" />
-	<action actionid="3049" script="quests/gravedigger/pharaoh_second.lua" />	
-	<action uniqueid="3055" script="quests/gravedigger/swamp.lua" /> 
+	<action uniqueid="3364" script="quests/gravedigger/pharaoh_first.lua" />
+	<action uniqueid="3369" script="quests/gravedigger/pharaoh_second.lua" />	
+	<action fromuid="3360" touid="3363" script="quests/gravedigger/lever_faraon.lua" />
+	<action fromuid="3365" touid="3368" script="quests/gravedigger/lever_faraon.lua" />
+	<action uniqueid="3055" script="quests/gravedigger/swamp.lua" />  
 	<action uniqueid="3056" script="quests/gravedigger/labirynt_1.lua" /> 
 	<action uniqueid="3057" script="quests/gravedigger/labirynt_2.lua" />
 	<action fromuid="3060" touid="3063" script="quests/gravedigger/plague.lua" />
@@ -50,7 +55,7 @@
 	<!--Ruiny-->
 	<action fromuid="3128" touid="3131" script="quests/ruiny/kapliczki.lua" />
 	<action uniqueid="3132" script="quests/ruiny/ksiega.lua" />
-
+	<action itemid="2416" script="quests/ruiny/RuinySciana.lua" />
 	<action fromuid="3141" touid="3143" script="quests/ruiny/brama1.lua" />
 	<action uniqueid="3144"	script="quests/ruiny/reward mount.lua" />
 	<action fromuid="3145" touid="3147"	script="quests/ruiny/reward.lua" />
@@ -347,7 +352,8 @@
 	<action itemid="22845" script="other/teleport.lua" />
 	<action itemid="22846" script="other/teleport.lua" />
 	<action fromid="2376" toid="2404" script="other/destroy.lua" />
-	<action fromid="2406" toid="2419" script="other/destroy.lua" />
+	<action fromid="2406" toid="2415" script="other/destroy.lua" />
+	<action fromid="2417" toid="2419" script="other/destroy.lua" />
 	<action fromid="2421" toid="2453" script="other/destroy.lua" />
 	<action fromid="2005" toid="2009" script="other/fluids.lua" />
 	<action fromid="2011" toid="2015" script="other/fluids.lua" />

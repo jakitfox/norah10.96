@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talkactions>
 	<!-- commands -->
+	<talkaction words="!report" separator=" " script="adminreport.lua"/>
+	<talkaction words="/event" separator=" " script="eventstarter.lua"/>
 	<talkaction words="!help" separator=" " script="commands.lua"/>
 	<talkaction words="!commands" separator=" " script="commands.lua"/>
 	<talkaction words="/help" separator=" " script="commands.lua"/>

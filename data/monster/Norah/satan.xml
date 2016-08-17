@@ -72,19 +72,19 @@
     <voice sentence="ZATHROTH! LOOK AT THE DESTRUCTION I AM CAUSING IN YOUR NAME!" yell="1"/>
   </voices>
   <loot>
-	<item id="2148" chance="100000" countmax="100"/>
-	<item id="2148" chance="50000" countmax="90"/>
-	<item id="2143" chance="10000" countmax="5"/>
-	<item id="2396" chance="19429"/>
-	<item id="2462" chance="20000"/>
-	<item id="2214" chance="16000"/>
-	<item id="2495" chance="100"/>
-	<item id="2387" chance="20000"/>
-	<item id="2393" chance="60000"/>
-	<item id="2195" chance="19253"/>
-	<item id="2421" chance="200"/>
-	<item id="2522" chance="250"/>
-	<item id="2192" chance="24000"/>
-	<item id="11423" chance="3200"/> <!-- coral comb -->
+	<item id="2148" chance="100000" countmax="100"/><!-- gold coins -->
+	<item id="2148" chance="50000" countmax="90"/><!-- gold coins -->
+	<item id="2393" chance="60000"/><!-- giant sword -->
+	<item id="2645" chance="19253"/><!-- steel boots -->
+	<item id="7382" chance="17000"/><!-- demonrage sword -->
+	<item id="2462" chance="12000"/><!-- devil helmet -->
+	<item id="2192" chance="9000"/><!-- crystal ball -->
+	<item id="7414" chance="9000"/><!-- abyss hammer -->
+	<item id="24851" chance="16000"/><!-- onyx pendant-->
+	<item id="2144" chance="10000" countmax="5"/><!-- black pearl -->
+	<item id="11423" chance="2200"/><!-- coral comb -->
+	<item id="2522" chance="250"/><!-- great shield -->
+	<item id="2421" chance="200"/><!-- thunder hammer -->
+	<item id="2495" chance="100"/><!-- demon legs -->
   </loot>
 </monster>

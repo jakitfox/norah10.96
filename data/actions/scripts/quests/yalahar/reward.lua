@@ -7,7 +7,7 @@ local config = {
 }
 
 local v = config[item.uid]
-if v and getPlayerStorageValue(Storage.Yala.Reward) == -1 then
+if v and player:getStorageValue(Storage.Yala.Reward) == -1 then
 	if player:getFreeCapacity() >= ItemType(v.item):getWeight() then
 		if player:addItem(v.item, 1, false) then
 			else

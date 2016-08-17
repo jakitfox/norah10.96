@@ -51,7 +51,7 @@
 	end
 
 	function SE_stop(winner_name, reward)
-		table.remove(active_events, table.find(active_events, 8))
+		table.remove(active_events, table.find(active_events,3))
 		for x = PTR.from.x, PTR.to.x do
 		for y = PTR.from.y, PTR.to.y do
 		for z = PTR.from.z, PTR.to.z do
@@ -93,7 +93,7 @@
 	end
 	
 	function SE_wave()
-		if isInArray(active_events, 8) then
+		if isInArray(active_events,3) then
 			for x = PTR.water_from.x, PTR.water_to.x do
 			for y = PTR.water_from.y, PTR.water_to.y do
 			for z = PTR.water_from.z, PTR.water_to.z do
@@ -113,7 +113,7 @@
 	end
 	
 	function SE_init()
-		table.insert(active_events,8)
+		table.insert(active_events,3)
 		
 		sendChannelMessage(events_calendar.channel_id, TALKTYPE_CHANNEL_O, "[PTR]: Event started.")
 		SE_wave()

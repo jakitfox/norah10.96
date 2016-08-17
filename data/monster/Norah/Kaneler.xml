@@ -91,8 +91,6 @@
 		<item id="7455" chance="8000" /><!-- mythril axe -->
 		<item id="7410" chance="8000" /><!-- queens sceptre -->
 		<item id="8884" chance="8000" /><!-- runed sword -->
-		<item id="1987" chance="100000">
-		<inside>
 			<item id="2520" chance="7650"/>
 			<item id="2145" chance1="5800"/> 
 			<item id="2183" chance1="5800"/> 
@@ -110,7 +108,5 @@
 			<item id="7418" chance1="5800"/> 
 			<item id="2493" chance1="5800"/> 
 			<item id="8877" chance1="9800"/> 
-		</inside>
-    </item>
 </loot>
 </monster>

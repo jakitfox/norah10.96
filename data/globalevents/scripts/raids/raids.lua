@@ -30,10 +30,11 @@ local raids = {
 	
 	
 	['16/04'] = {
-		['09:00'] = {raidName = 'Halloween Hare'},
-		['12:00'] = {raidName = 'Halloween Hare'},
-		['14:00'] = {raidName = 'Halloween Hare'},
-		['16:00'] = {raidName = 'Halloween Hare'}
+		['09:00'] = {raidName = 'Ester pont'},
+		['12:00'] = {raidName = 'Ester nilf'},
+		['14:00'] = {raidName = 'Ester pont'},
+		['16:00'] = {raidName = 'Ester nilf'},
+		['18:00'] = {raidName = 'Ester pont'}
 	}
 }
 

@@ -1,6 +1,6 @@
 function onStepIn(player, item, position, fromPosition, lastPosition)
 
-if player:getStorageValue(Storage.Riwen.Lever01) == 1 and player:getStorageValue(Storage.Riwen.Lever02) == 1 and player:getStorageValue(Storage.Riwen.Lever03) == 1 and player:getStorageValue(Storage.Riwen.Lever04) == 1 and player:getStorageValue(Storage.Riwen.Lever05) == 1 and player:getStorageValue(Storage.Riwen.Lever06) == 1 then
+if player:getStorageValue(Storage.RiwenTown.Lever01) == 1 and player:getStorageValue(Storage.RiwenTown.Lever02) == 1 and player:getStorageValue(Storage.RiwenTown.Lever03) == 1 and player:getStorageValue(Storage.RiwenTown.Lever04) == 1 and player:getStorageValue(Storage.RiwenTown.Lever05) == 1 and player:getStorageValue(Storage.RiwenTown.Lever06) == 1 then
 	player:teleportTo(Position(497,1353,8))
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 else

@@ -25,7 +25,7 @@ end
 function sendReward(cid)
     local player = Player(cid)
     player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have won the Tower Of Defense Event.")
-    player:addItem(24115, 5)
+    player:setCoinsBalance(player:getCoinsBalance() + 10)
     player:resetValues()
 end
  
