@@ -1,109 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Adness" nameDescription="a adness" race="fire" experience="10000" speed="330" manacost="0">
-	<health now="75000" max="75000"/>
-	<look type="247"  corpse="6516"/>
-	<targetchange interval="2000" chance="10"/>
-	<strategy attack="100" defense="0"/>
+	<health now="75000" max="75000" />
+	<look type="247"  corpse="6516" />
+	<targetchange interval="2000" chance="10" />
+	<strategy attack="100" defense="0" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="85"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="85" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="200" attack="180"/>
+		<attack name="melee" interval="2000" skill="200" attack="180" />
 		<attack name="energy" interval="2000" chance="40" range="3" target="1" min="-180" max="-1060">
-			<attribute key="areaEffect" value="purpleenergy"/>
+			<attribute key="areaEffect" value="purpleenergy" />
 		</attack>
 		<attack name="death" interval="2000" chance="30" length="8" spread="0" min="-600" max="-850">
-			<attribute key="areaEffect" value="mortarea"/>
+			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 		<attack name="manadrain" interval="2000" chance="25" target="1" spread="1" min="-250" max="-450">
-			<attribute key="areaEffect" value="energyarea"/>
+			<attribute key="areaEffect" value="energyarea" />
 		</attack>
 		<attack name="manadrain" interval="2000" chance="10" range="7" target="1" radius="5" min="-0" max="-225">
-			<attribute key="areaEffect" value="energyarea"/>
+			<attribute key="areaEffect" value="energyarea" />
 		</attack>
 	</attacks>
-	<defenses armor="48" defense="20"/>
+	<defenses armor="48" defense="20" />
 	<elements>
-		<element deathPercent="95"/>
-		<element firePercent="30"/>
-		<element icePercent="-10"/>
-		<element holyPercent="30"/>
+		<element deathPercent="95" />
+		<element firePercent="30" />
+		<element icePercent="-10" />
+		<element holyPercent="30" />
 	</elements>
 	<immunities>
-		<immunity energy="1"/>
-		<immunity invisible="1"/>
-		<immunity paralyze="1"/>
+		<immunity energy="1" />
+		<immunity invisible="1" />
+		<immunity paralyze="1" />
 	</immunities>
 	<voices interval="2000" chance="10">
-		<voice sentence="Hio Hio Hio!"/>
-		<voice sentence="Ohhh Cooo Jak!"/>
-		<voice sentence="Chcesz zginac!"/>
+		<voice sentence="Hio Hio Hio!" />
+		<voice sentence="Do you want to die!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="100" chance1="100000" chancemax="0"/> 
-		<item id="5954" countmax="2" chance1="10000" chancemax="0"/> 
-		<item id="2145" countmax="2" chance1="10000" chancemax="0"/> 
-		<item id="2514" chance="12650"/> 
-		<item id="2214" chance="8000"/> 
-		<item id="6500" chance="8000"/> 
-		<item id="9810" chance="8000"/> 
-		<item id="9813" chance="8000"/> 
-		<item id="2474" chance="8000" /><!-- winged helmet -->
-		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
-		<item id="21700" chance="8000" /><!-- icy culotte -->
-		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
-		<item id="2646" chance="5000" /><!-- golden boots -->
-		<item id="2522" chance="5000" /><!-- great shield -->
-		<item id="18412" chance="8000" /><!-- glacial rod -->
-		<item id="18411" chance="8000" /><!-- muck rod -->
-		<item id="18390" chance="8000" /><!-- wand of defiance -->
-		<item id="18409" chance="8000" /><!-- wand of everblazing -->
-		<item id="16111" chance="5000" /><!-- thorn spitter -->
-		<item id="7455" chance="8000" /><!-- mythril axe -->
-		<item id="7410" chance="8000" /><!-- queens sceptre -->
-		<item id="8884" chance="8000" /><!-- runed sword -->
-		<item id="2160" countmax="10" chance="54875" /><!-- crystal coin -->
-		<item id="2520" chance="8000"/> 
-		<item id="7440" chance="8000"/> 
-		<item id="7439" chance="8000"/> 
-		<item id="2208" chance="8000"/> 
-		<item id="6300" chance="8000"/> 
-		<item id="2207" chance="8000"/>
-		<item id="2209" chance="8000"/> 
-		<item id="8472" chance="8000"/> 
-		<item id="2169" chance="8000"/> 
-		<item id="2187" chance="8000"/> 
-		<item id="8920" chance="8000"/> 
-		<item id="2162" chance="8000"/> 
-		<item id="7407" chance="1100"/>
-		<item id="8910" chance="8000"/> 
-		<item id="2377" chance="8000"/> 
-			<item id="2520" chance="7650"/> 
-			<item id="2145" chance1="5800"/> 
-			<item id="2183" chance1="5800"/> 
-			<item id="8912" chance1="5800"/> 
-			<item id="2071" chance1="5800"/> 
-			<item id="2072" chance1="5800"/> 
-			<item id="3957" chance1="5800"/> 
-			<item id="7449" chance1="5800"/> 
-			<item id="7386" chance1="5800"/> 
-			<item id="7383" chance1="5800"/> 
-			<item id="7404" chance1="5800"/> 
-			<item id="2396" chance1="5800"/> 
-			<item id="2195" chance1="5800"/> 
-			<item id="7416" chance1="4800"/> 
-			<item id="7418" chance1="5800"/> 
-			<item id="2493" chance1="5800"/> 
-			<item id="8877" chance1="9800"/> 
-</loot>
+		<item id="2148" countmax="100" chance="100000" /><!-- gold coin -->
+		<item id="2145" countmax="5" chance="20000" /><!-- small diamond -->
+		<item id="8472" chance="12000" /><!-- great spirit potion -->
+		<item id="2514" chance="8650" /><!-- mastermind shield -->
+		<item id="2214" chance="8000" /><!-- ring of healing -->
+		<item id="2149" countmax="35" chance="54875"  /><!-- small emerald -->
+		<item id="2187" chance="7600" /><!-- wand of inferno -->
+		<item id="2520" chance="6000" /><!-- demon shield -->
+		<item id="7386" chance1="5900" /><!-- mercenary sword -->
+		<item id="2071" chance1="5800" /><!-- lyre --> 
+		<item id="2160" countmax="5" chance="54875"  /><!-- crystal coin -->
+		<item id="2208" chance="5100" /><!-- axe ring --> 
+		<item id="18411" chance="5000"  /><!-- muck rod -->
+		<item id="7440" chance="4500" /><!-- mastermind potion -->
+		<item id="7404" chance1="4400" /><!-- assassin dagger -->
+		<item id="3957" chance1="3600" /><!-- cornucopia -->
+		<item id="6300" chance="3500" /><!-- death ring -->
+		<item id="7416" chance1="3400" /><!-- bloody edge --> 
+		<item id="2396" chance1="3100" /><!-- ice rapier -->
+		<item id="7418" chance1="2200" /><!-- nightmare blade -->
+		<item id="7407" chance="2100" /><!-- haunted blade -->
+		<item id="2493" chance1="1000" /><!-- demon helmet --> 
+		<item id="7383" chance1="900" /><!-- relic sword --> 
+		<item id="2474" chance="100"  /><!-- winged helmet -->
+	</loot>
 </monster>

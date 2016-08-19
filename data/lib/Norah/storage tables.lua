@@ -136,7 +136,13 @@ Storage = {
 		Mount = 3146, -- mount id 39
 		Reward = 3147,
 		Gazh = 3148,
-		Final = 3149
+		Final = 3149,
+		Addon = 3154,
+		-- Quest Log
+		Mission01_QuestLog = 3150,
+		Mission02_QuestLog = 3151,
+		Mission03_QuestLog = 3152,
+		Mission04_QuestLog = 3153
 	},
 	
 	Blue = {
@@ -220,6 +226,7 @@ Storage = {
 	combatProtectionStorage = 3670,
 	
 	SvargrondArena = {
+		Start = 3678,
 		Arena = 3680,
 		Pit = 3681,
 
@@ -227,6 +234,10 @@ Storage = {
 		QuestLogScrapper = 3683,
 		QuestLogWarlord = 3684,
 
+		SmallRewardGreenhorn = 3672,
+		SmallRewardScrapper = 3673,
+		SmallRewardWarlord = 3674,
+		
 		RewardGreenhorn = 3685,
 		RewardScrapper = 3686,
 		RewardWarlord = 3687,
@@ -270,5 +281,7 @@ Storage = {
 	EXP_Event = 3725,
 	
 	Admin_Report = 3728
+	
+	-- 
 	
 }

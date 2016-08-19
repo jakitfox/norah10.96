@@ -24,7 +24,7 @@ function onStepIn(player, item, pos)
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			player:say('You have ten minutes to slain your enemy, otherwise you will be kicked out.', TALKTYPE_MONSTER_SAY)
 			setGlobalStorageValue(Storage.Grave.Pharaoh02, os.time() + (10 * 60 * 1000 / 1000))
-			Game.createItem(1551,1,Position(481,407,11))
+			Game.createItem(1551,1,Position(481,409,11))
 			Game.createMonster(boss,Position(481,427,11))
 			Thalas = addEvent(kickThalas, 10 * 60 * 1000, cid)
 		end

@@ -221,21 +221,21 @@
 	</quest>
 
 	<quest name="Stronghold Quest" startstorageid="3130" startstoragevalue="1">
-		<mission name="Chapels" storageid="3131" startvalue="1" endvalue="2">
+		<mission name="Chapels" storageid="3150" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Go and find four Ardos chapel's."/>
 			<missionstate id="2" description="Mission complete."/>
 		</mission>
-		<mission name="Records" storageid="3131" startvalue="3" endvalue="4">
-			<missionstate id="3" description="Go and search the ruins to find books or notes."/>
-			<missionstate id="4" description="Mission complete."/>
+		<mission name="Records" storageid="3151" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Go and search the ruins to find books or notes."/>
+			<missionstate id="2" description="Mission complete."/>
 		</mission>
-		<mission name="Ruins" storageid="3131" startvalue="5" endvalue="6">
-			<missionstate id="5" description="Go to the ruins , to stop spreading of evil"/>
-			<missionstate id="6" description="Mission complete."/>
+		<mission name="Ruins" storageid="3152" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Go to the ruins , to stop spreading of evil"/>
+			<missionstate id="2" description="Mission complete."/>
 		</mission>
-		<mission name="Reward" storageid="3131" startvalue="6" endvalue="7">
-			<missionstate id="6" description="You did it! You banish evil from this world , go to Dargitan and take your reward."/>
-			<missionstate id="7" description="Mission complete."/>
+		<mission name="Reward" storageid="3153" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You did it! You banish evil from this world, go to Dargitan and take your reward."/>
+			<missionstate id="2" description="Mission complete."/>
 		</mission>
 	</quest>
 
@@ -392,4 +392,19 @@
 			<missionstate id="2" description="Mission complete."/>
 		</mission>
 	</quest>	
+	
+	<quest name="The Ultimate Challenges" startstorageid="3678" startstoragevalue="1">
+		<mission name="Barbarian Arena - Greenhorn Mode" storageid="3682" startvalue="1" endvalue="2">
+				<missionstate id="1" description="You have to defeat all enemies in this mode." />
+				<missionstate id="2" description="You have defeated all enemies in this mode." />
+		</mission>
+				<mission name="Barbarian Arena - Scrapper Mode" storageid="3683" startvalue="1" endvalue="2">
+				<missionstate id="1" description="You have to defeat all enemies in this mode." />
+				<missionstate id="2" description="You have defeated all enemies in this mode." />
+		</mission>
+				<mission name="Barbarian Arena - Warlord Mode" storageid="3684" startvalue="1" endvalue="2">
+				<missionstate id="1" description="You have to defeat all enemies in this mode." />
+				<missionstate id="2" description="You have defeated all enemies in this mode." />
+		</mission>
+	</quest>
 </quests>

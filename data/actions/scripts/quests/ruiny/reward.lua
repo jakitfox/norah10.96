@@ -1,9 +1,15 @@
 function onUse(player, item, frompos, item2, topos)
 
 local config = {
-	[3145] = {item = 18403},
-	[3146] = {item = 18404},
-	[3147] = {item = 18405}	
+	[3145] = {item = 22398},
+	[3146] = {item = 22401},
+	[3147] = {item = 22410},
+	[3148] = {item = 22413},
+	[3149] = {item = 22404},
+	[3375] = {item = 22407},
+	[3372] = {item = 22416},
+	[3373] = {item = 22419},
+	[3374] = {item = 22422}
 	}
 
 local v = config[item.uid]

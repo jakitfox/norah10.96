@@ -2,8 +2,7 @@ local condition = Condition(CONDITION_OUTFIT)
 condition:setTicks(120000)
 condition:setOutfit({lookType = 111})
 
-function onStepIn(creature, item, position, fromPosition)
-	local player = creature:getPlayer()
+function onStepIn(player, item, position, fromPosition)
 	if not player then
 		return true
 	end
@@ -12,7 +11,7 @@ function onStepIn(creature, item, position, fromPosition)
 	if item.actionid == 3695 then
 		player:addCondition(condition)
 
-		player:setStorageValue(Storage.SvargrondArena.Pit, 0)
+		player:setStorageValue(Storage.SvargrondArena.Pit, -1)
 		player:teleportTo(SvargrondArena.kickPosition)
 		player:say('Coward!', TALKTYPE_MONSTER_SAY)
 		SvargrondArena.cancelEvents(playerId)
@@ -23,7 +22,7 @@ function onStepIn(creature, item, position, fromPosition)
 	local arenaId = player:getStorageValue(Storage.SvargrondArena.Arena)
 	if pitId > 10 then
 		player:teleportTo(SvargrondArena.rewardPosition)
-		player:setStorageValue(Storage.SvargrondArena.Pit, 0)
+		player:setStorageValue(Storage.SvargrondArena.Pit, -1)
 
 		if arenaId == 1 then
 			SvargrondArena.rewardPosition:sendMagicEffect(CONST_ME_FIREWORK_BLUE)

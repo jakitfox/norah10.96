@@ -1,101 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Menor" nameDescription="a menor" race="fire" experience="6500" speed="320" manacost="0">
-<health now="38000" max="38000"/>
-	<look type="12" head="0" body="76" legs="123" feet="123" corpse="6068"/>
-	<targetchange interval="2000" chance="10"/>
-	<strategy attack="100" defense="0"/>
+<health now="38000" max="38000" />
+	<look type="12" head="0" body="76" legs="123" feet="123" corpse="6068" />
+	<targetchange interval="2000" chance="10" />
+	<strategy attack="100" defense="0" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="85"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="85" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="190" attack="180"/>
+		<attack name="melee" interval="2000" skill="190" attack="180" />
 		<attack name="physical" interval="2000" chance="20" radius="5" target="1" min="-100" max="-300">
-			<attribute key="areaEffect" value="groundshaker"/>
+			<attribute key="areaEffect" value="groundshaker" />
 		</attack>
 		<attack name="physical" interval="2000" chance="15" target="0" radius="1">
-			<attribute key="areaEffect" value="groundshaker"/>
+			<attribute key="areaEffect" value="groundshaker" />
 		</attack>
 		<attack name="energy" interval="2000" chance="25" radius="3" target="1" min="-100" max="-700">
-			<attribute key="areaEffect" value="energyarea"/>
+			<attribute key="areaEffect" value="energyarea" />
 		</attack>
 		<attack name="poisoncondition" interval="2000" chance="20" range="5" min="-1" max="-350">
-			<attribute key="shooteffect" value="poison"/>
+			<attribute key="shooteffect" value="poison" />
 		</attack>
 		<attack name="manadrain" interval="2000" chance="25" radius="5" target="0" min="-50" max="-210">
-			<attribute key="areaEffect" value="energyarea"/>
+			<attribute key="areaEffect" value="energyarea" />
 		</attack>
 		<attack name="death" interval="2000" chance="20" length="8" spread="0" min="-100" max="-700">
-			<attribute key="areaEffect" value="smallclouds"/>
+			<attribute key="areaEffect" value="smallclouds" />
 		</attack>
 		<attack name="speed" interval="2000" chance="25" radius="5" target="1" speedchange="-600" duration="5000">
-			<attribute key="areaEffect" value="icearea"/>
+			<attribute key="areaEffect" value="icearea" />
 		</attack>
 	</attacks>
 	<defenses armor="60" defense="55"> 
 	</defenses>
 	<elements>
-		<element energyPercent="-5"/>
-		<element icePercent="20"/>
-		<element earthPercent="5"/>
-		<element firePercent="-5"/>
+		<element energyPercent="-5" />
+		<element icePercent="20" />
+		<element earthPercent="5" />
+		<element firePercent="-5" />
 	</elements>
 	<immunities>
-		<immunity lifedrain="1"/>
-		<immunity invisible="1"/>
+		<immunity lifedrain="1" />
+		<immunity invisible="1" />
 	</immunities>
 	<voices interval="2000" chance="10">
-		<voice sentence="Nie pozwole wam zniszyc kolumn!"/>
-		<voice sentence="Nie daci mi rady!"/>
+		<voice sentence="I will not let you destroy my columns!" />
+		<voice sentence="Do not defeat me!" />
 	</voices>
 	<loot>
-		<item id="7591" chance="18350" /><!-- great health potion -->
-		<item id="2152" countmax="28" chance="9050" /><!-- platinum coin -->
-		<item id="2160" countmax="10" chance="54875" /><!-- crystal coin -->
-		<item id="2515" chance="12100" /><!-- guardian shield -->
-		<item id="2127" chance="28175" /><!-- emerald bangle -->
-		<item id="2381" chance="28175" /><!-- halberd -->
-		<item id="7590" chance="16575" /><!-- great mana potion -->
-		<item id="2528" chance="10325" /><!-- tower shield -->
-		<item id="2474" chance="3000" /><!-- winged helmet -->
-		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
-		<item id="21700" chance="8000" /><!-- icy culotte -->
-		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
-		<item id="2646" chance="5000" /><!-- golden boots -->
-		<item id="2522" chance="5000" /><!-- great shield -->
-		<item id="18412" chance="8000" /><!-- glacial rod -->
-		<item id="18411" chance="8000" /><!-- muck rod -->
-		<item id="18390" chance="8000" /><!-- wand of defiance -->
-		<item id="18409" chance="8000" /><!-- wand of everblazing -->
-		<item id="16111" chance="5000" /><!-- thorn spitter -->
-		<item id="7455" chance="8000" /><!-- mythril axe -->
-		<item id="7410" chance="8000" /><!-- queens sceptre -->
-		<item id="8884" chance="8000" /><!-- runed sword -->
-		<item id="6529" countmax="49" chance="12825" /><!-- infernal bolt -->
-        <item id="9971" chance="19250" /><!-- gold ingot -->
-        <item id="2452" chance="31750" /><!-- heavy mace -->
-        <item id="8891" chance="10325" /><!-- paladin armor -->
-        <item id="5944" countmax="5" chance="13350" /><!-- soul orb -->
-        <item id="8928" chance="4950" /><!-- obsidian truncheon -->
-        <item id="5954" countmax="2" chance="9425" /><!-- demon horn -->
-        <item id="7632" countmax="2" chance="25050" /><!-- giant shimmering pearl -->
-        <item id="8473" chance="10325" /><!-- ultimate health potion -->
-        <item id="7440" chance="20150" /><!-- mastermind potion -->
-        <item id="8889" chance="1400" /><!-- skullcracker armor -->
-        <item id="2520" chance="5850" /><!-- demon shield -->
-        <item id="2514" chance="3175" /><!-- mastermind shield -->
-        <item id="7387" chance="6750" /><!-- diamond sceptre -->
-        <item id="2519" chance="11200" /><!-- crown shield -->
-        <item id="8472" chance="9425" /><!-- great spirit potion -->
-        <item id="7431" chance="1400" /><!-- demonbone -->
+		<item id="2152" countmax="12" chance="44050"  /><!-- platinum coin -->
+		<item id="2519" chance="31200"  /><!-- crown shield -->
+		<item id="7632" countmax="2" chance="25050"  /><!-- giant shimmering pearl -->
+		<item id="7591" chance="18350"  /><!-- great health potion -->
+		<item id="7590" chance="16575"  /><!-- great mana potion -->
+		<item id="6529" countmax="30" chance="12825"  /><!-- infernal bolt -->
+		<item id="8472" chance="9425"  /><!-- great spirit potion -->
+		<item id="2147" countmax="30" chance="9875"  /><!-- small ruby -->
+		<item id="2515" chance="8100"  /><!-- guardian shield -->
+		<item id="2528" chance="6325"  /><!-- tower shield -->
+		<item id="2520" chance="5850"  /><!-- demon shield -->
+		<item id="5954" countmax="2" chance="5125"  /><!-- demon horn -->
+		<item id="18412" chance="4200"  /><!-- glacial rod -->
+		<item id="2160" countmax="3" chance="3875"  /><!-- crystal coin -->
+		<item id="7410" chance="3500"  /><!-- queens sceptre -->
+		<item id="2514" chance="3175"  /><!-- mastermind shield -->
+		<item id="8891" chance="3425"  /><!-- paladin armor -->		
+		<item id="9971" chance="3000"  /><!-- gold ingot -->		
+		<item id="8884" chance="2800"  /><!-- runed sword -->
+		<item id="21700" chance="2100"  /><!-- icy culotte -->
+		<item id="21706" chance="2000"  /><!-- goo shell -->
+		<item id="8928" chance="1000"  /><!-- obsidian truncheon -->
+		<item id="7455" chance="900"  /><!-- mythril axe -->
+		<item id="2452" chance="550"  /><!-- heavy mace -->
+        <item id="7431" chance="300"  /><!-- demonbone -->
 </loot>
 </monster>

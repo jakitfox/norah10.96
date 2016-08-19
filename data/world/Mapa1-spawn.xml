@@ -20045,8 +20045,8 @@
 	<spawn centerx="104" centery="1415" centerz="9" radius="1">
 		<monster name="Hand of Cursed Fate" x="1" y="1" z="9" spawntime="60" />
 	</spawn>
-	<spawn centerx="110" centery="1415" centerz="9" radius="1">
-		<monster name="Demon" x="-1" y="1" z="9" spawntime="60" />
+	<spawn centerx="109" centery="1416" centerz="9" radius="1">
+		<monster name="Zomer" x="-1" y="0" z="9" spawntime="900" />
 	</spawn>
 	<spawn centerx="271" centery="1417" centerz="9" radius="1">
 		<monster name="Demon" x="1" y="1" z="9" spawntime="60" />
@@ -20156,11 +20156,14 @@
 	<spawn centerx="121" centery="1456" centerz="9" radius="1">
 		<monster name="Destroyer" x="-1" y="0" z="9" spawntime="60" />
 	</spawn>
+	<spawn centerx="85" centery="1458" centerz="9" radius="1">
+		<monster name="Demon" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
 	<spawn centerx="79" centery="1461" centerz="9" radius="1">
 		<monster name="Hellhound" x="-1" y="0" z="9" spawntime="60" />
 	</spawn>
-	<spawn centerx="84" centery="1461" centerz="9" radius="1">
-		<monster name="Demon" x="0" y="-1" z="9" spawntime="60" />
+	<spawn centerx="82" centery="1461" centerz="9" radius="1">
+		<monster name="Kaneler" x="-1" y="0" z="9" spawntime="900" />
 	</spawn>
 	<spawn centerx="90" centery="1465" centerz="9" radius="1">
 		<monster name="Hellhound" x="0" y="1" z="9" spawntime="60" />
@@ -20179,6 +20182,9 @@
 	</spawn>
 	<spawn centerx="174" centery="1471" centerz="9" radius="1">
 		<monster name="Demon" x="-1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="172" centery="1474" centerz="9" radius="1">
+		<monster name="Menor" x="1" y="0" z="9" spawntime="900" />
 	</spawn>
 	<spawn centerx="171" centery="1477" centerz="9" radius="1">
 		<monster name="Demon" x="-1" y="-1" z="9" spawntime="60" />
@@ -20208,7 +20214,7 @@
 		<monster name="Demon" x="-1" y="1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="127" centery="1490" centerz="9" radius="1">
-		<monster name="Demonic" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Adness" x="1" y="1" z="9" spawntime="900" />
 	</spawn>
 	<spawn centerx="133" centery="1490" centerz="9" radius="1">
 		<monster name="Hand of Cursed Fate" x="-1" y="0" z="9" spawntime="60" />

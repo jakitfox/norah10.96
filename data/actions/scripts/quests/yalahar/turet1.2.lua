@@ -16,7 +16,7 @@ if v and player:getStorageValue(v.Storage) == 1 then
 			
 elseif player:getStorageValue(v.Storage) == 2 then
 	Game.createMonster(v.monster, {x = math.random(v.fromPos.x, v.toPos.x), y = math.random(v.fromPos.y, v.toPos.y), z = math.random(v.fromPos.z, v.toPos.z)})
-	
+	player:setStorageValue(v.Storage,3)
 elseif player:getStorageValue(v.Storage) == 3 then
     player:sendTextMessage(MESSAGE_EVENT_ADVANCE,'You\'ve destroyed both columns!')
 end	

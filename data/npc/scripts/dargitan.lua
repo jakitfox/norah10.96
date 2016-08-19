@@ -28,6 +28,7 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 2 then
 		npcHandler:say('Loot ruins in the west of nilfgaard , and maby you\'ll find some notes of this cursed fortress.', cid)
 		setPlayerStorageValue(cid,Storage.Ruiny.Mission01,3)
+		setPlayerStorageValue(cid, Storage.Ruiny.Mission02_QuestLog, 1)
 		setPlayerStorageValue(cid, Storage.Ruiny.NotesDoor, 1)
 			
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 3 then
@@ -36,6 +37,7 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 			
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 4 then
 		npcHandler:say('We need to clean ruins from this cursed beasts , so find the team and go face this monsters in fortress', cid)
+		setPlayerStorageValue(cid, Storage.Ruiny.Mission03_QuestLog, 1)
 		setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 5)
 		setPlayerStorageValue(cid, Storage.Ruiny.RuinyDoor, 1)
 		talk_state[cid] = 0
@@ -49,6 +51,7 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 		if getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 6 then
 			npcHandler:say('This sword was in our family from generation to generation , but i think that you are better than me. I\'ll give you this sword then.', cid)
 			doPlayerAddItem(cid,8932,1)
+			setPlayerStorageValue(cid, Storage.Ruiny.Mission04_QuestLog, 2)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 7)
 		else
 			npcHandler:say('You have already received your reward!', cid)			
@@ -60,11 +63,13 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 			npcHandler:say('Great , go and visit four Ardoses chapels and pray to get blessing , that will save your soul from evil, that is behind the gate of this fortress.', cid)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 1)
 			setPlayerStorageValue(cid, Storage.Ruiny.Questline, 1)
+			setPlayerStorageValue(cid, Storage.Ruiny.Mission01_QuestLog, 1)
 		
 	elseif talk_state[cid] == 2 then
 		if getPlayerStorageValue(cid,Storage.Ruiny.Kaplica01) == 1 and getPlayerStorageValue(cid,Storage.Ruiny.Kaplica02) == 1  and getPlayerStorageValue(cid,Storage.Ruiny.Kaplica03) == 1 and getPlayerStorageValue(cid,Storage.Ruiny.Kaplica04) == 1 then
 				npcHandler:say('Now your sould is ready to go behind this gate , but your body isn\'t. I have a {mission} for you , thats makes that you will be ready. ', cid)
-				setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 2)			
+				setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 2)
+				setPlayerStorageValue(cid, Storage.Ruiny.Mission01_QuestLog, 2)
 			else
 				npcHandler:say('I\'m not feeling blessing of the Ardos in you!', cid)			
 		end
@@ -73,6 +78,7 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 			if getPlayerItemCount(cid,12406) >= 1 then
 				doPlayerRemoveItem(cid,12406,1)
 				npcHandler:say('Thanks to this notes , we can go to this fortress, and I\'ve got another {mission} for you', cid)
+				setPlayerStorageValue(cid, Storage.Ruiny.Mission02_QuestLog, 2)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 4)
 			else
 			npcHandler:say('Not found anything yet, hurry up and find some records!', cid)	
@@ -82,6 +88,8 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 		elseif talk_state[cid] == 4 then
 		if getPlayerStorageValue(cid,Storage.Ruiny.Reward) == 1 then
 			npcHandler:say('I knew that you\'ll make it , and i have a {reward} for you', cid)
+			setPlayerStorageValue(cid, Storage.Ruiny.Mission03_QuestLog, 2)
+			setPlayerStorageValue(cid, Storage.Ruiny.Mission04_QuestLog, 1)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 6)
 			else
 			npcHandler:say('Go and check this ruins. Quick!', cid)	

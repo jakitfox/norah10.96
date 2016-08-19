@@ -2,7 +2,10 @@ local specialQuests = {
 [2001] = Storage.ANNI.Reward, 
 [2002] = Storage.SvargrondArena.RewardGreenhorn,
 [2003] = Storage.SvargrondArena.RewardScrapper,
-[2004] = Storage.SvargrondArena.RewardWarlord
+[2004] = Storage.SvargrondArena.RewardWarlord,
+[2006] = Storage.SvargrondArena.SmallRewardGreenhorn,
+[2007] = Storage.SvargrondArena.SmallRewardScrapper,
+[2008] = Storage.SvargrondArena.SmallRewardWarlord
 }
 local questsExperience = { [30015] = 100000, [7248] = 150000 }
 

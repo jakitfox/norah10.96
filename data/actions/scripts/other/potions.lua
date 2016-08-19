@@ -81,17 +81,17 @@ local potions = {
 	[7590] = { -- great mana potion
 		vocations = {1, 2, 5, 6},
 		minLevel = 80,
-		manaToAdd = { min = 150, max = 250},
+		manaToAdd = { min = 170, max = 270},
 		emptyFlask = 7635
 	},
 	[7589] = { -- strong mana potion
 		vocations = {1, 2, 3, 5, 6, 7},
 		minLevel = 50,
-		manaToAdd = { min = 115, max = 185},
+		manaToAdd = { min = 135, max = 205},
 		emptyFlask = 7634
 	},
 	[7620] = { -- mana potion
-		manaToAdd = { min = 75, max = 125},
+		manaToAdd = { min = 100, max = 145},
 		emptyFlask = 7636
 	},
 	[8704] = { -- small health potion

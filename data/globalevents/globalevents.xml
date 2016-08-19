@@ -12,7 +12,7 @@
 	<globalevent name="DemonOakVoices" interval="15000" script="demon oak quest/voices.lua" />
 	
 	<!-- Raids -->
-	<globalevent name="RaidSystem" interval="10000" script="raids/raids.lua" />
+	<!-- <globalevent name="RaidSystem" interval="10000" script="raids/raids.lua" /> -->
 	<!-- <globalevent name="BossSystem" interval="3600000" script="raids/BossSpawn.lua" /> -->
 	
 </globalevents>

@@ -96,37 +96,12 @@
 		<item id="22614" chance="6000" /> <!-- Nightmare Beacon -->
 		<item id="22613" chance="6000" /> <!-- Eye Pod -->
 		<item id="22611" chance="6000" /> <!-- Psychedelic Tapestry -->
-		<item id="22398" chance="5000" /> <!-- Crude Umbral Blade -->
-		<item id="22401" chance="5000" /> <!-- Crude Umbral Slayer -->
-		<item id="22404" chance="5000" /> <!-- Crude Umbral Axe -->
-		<item id="22407" chance="5000" /> <!-- Crude Umbral Chopper -->
-		<item id="22413" chance="5000" /> <!-- Crude Umbral Hammer -->
-		<item id="22410" chance="5000" /> <!-- Crude Umbral Mace -->
-		<item id="22416" chance="5000" /> <!-- Crude Umbral Bow -->
-		<item id="22419" chance="5000" /> <!-- Crude Umbral Crossbow -->
-		<item id="22422" chance="5000" /> <!-- Crude Umbral Spellbook -->
-		<item id="22399" chance="5000" /> <!-- Umbral Blade -->
-		<item id="22402" chance="5000" /> <!-- Umbral Slayer -->
-		<item id="22405" chance="4000" /> <!-- Umbral Axe -->
-		<item id="22408" chance="4000" /> <!-- Umbral Chopper -->
-		<item id="22414" chance="4000" /> <!-- Umbral Hammer -->
-		<item id="22411" chance="4000" /> <!-- Umbral Mace -->
-		<item id="22417" chance="4000" /> <!-- Umbral Bow -->
-		<item id="22420" chance="4000" /> <!-- Umbral Crossbow -->
-		<item id="22423" chance="4000" /> <!-- Umbral Spellbook -->
-		<item id="22400" chance="4000" /> <!-- Umbral Masterblade -->
-		<item id="22403" chance="3000" /> <!-- Umbral Master Slayer -->
-		<item id="22406" chance="3000" /> <!-- Umbral Master Axe -->
-		<item id="22409" chance="3000" /> <!-- Umbral Master Chopper -->
-		<item id="22415" chance="3000" /> <!-- Umbral Master Hammer -->
-		<item id="22412" chance="3000" /> <!-- Umbral Master Mace -->
-		<item id="22418" chance="3000" /> <!-- Umbral Master Bow -->
-		<item id="22421" chance="3000" /> <!-- Umbral Master Crossbow -->
-		<item id="22424" chance="3000" /> <!-- Umbral Master Spellbook -->
 		<item id="11262" chance="6000" /> <!-- Solitude Charm -->
 		<item id="11261" chance="6000" /> <!-- Twin Sun Charm -->
 		<item id="11260" chance="6000" /> <!-- Spiritual Charm -->
 		<item id="11259" chance="6000" /> <!-- Unity Charm -->
 		<item id="11258" chance="6000" /> <!-- Phoenix Charm -->
+		<item id="2469" chance="1800" /> <!-- dragon scale legs -->
+		<item id="2471" chance="1800" /> <!-- golden helmet -->
 	</loot>
 </monster>

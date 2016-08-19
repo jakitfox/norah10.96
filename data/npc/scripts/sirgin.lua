@@ -10,7 +10,7 @@ local lastSound = 0
 function onThink()
 	if lastSound < os.time() then
 		lastSound = (os.time() + 5)
-		if math.random(100) < 15 then
+		if math.random(100) < 3 then
 			Npc():say("Selling all sorts of magic equipment. Come and have a look.", TALKTYPE_SAY)
 		end
 	end

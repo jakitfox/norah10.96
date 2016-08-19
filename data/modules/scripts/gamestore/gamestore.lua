@@ -67,14 +67,9 @@ GameStore.Categories = {
 		offers = {
 		-- Arena Champion Outfit
 			{name = "Full Champion Outfit", thingId = {male=633,female=632}, addon = 3, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT, price = 570, icons = {"Full_Product_Champion.png"}},
-			{name = "Champion Outfit", thingId = {male=633,female=632}, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT, price = 390, icons = {"Product_Arena_Champion.png"}},
+			{name = "Champion Outfit", thingId = {male=633,female=632}, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT, price = 390, icons = {"Product_Champion.png"}},
 			{name = "Champion Addon 1", thingId = {male=633,female=632}, addon = 1, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT_ADDON, price = 120, icons = {"Product_Champion_Addon1.png"}},
 			{name = "Champion Addon 2", thingId = {male=633,female=632}, addon = 2, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT_ADDON, price = 120, icons = {"Product_Champion_Addon2.png"}},
-		-- Conjurer Outfit
-			{name = "Full Conjurer Outfit", thingId = {male=634,female=635}, addon = 3, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT, price = 720, icons = {"Full_Product_Conjurer.png"}},
-			{name = "Conjurer Outfit", thingId = {male=634,female=635}, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT, price = 540, icons = {"Product_Conjurer.png"}},
-			{name = "Conjurer Addon 1", thingId = {male=634,female=635}, addon = 1, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT_ADDON, price = 120, icons = {"Product_Conjurer_Addon1.png"}},
-			{name = "Conjurer Addon 2", thingId = {male=634,female=635}, addon = 2, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT_ADDON, price = 120, icons = {"Product_Conjurer_Addon2.png"}},
 		-- Beastmaster Outfit
 			{name = "Full Beastmaster Outfit", thingId = {male=637,female=636}, addon = 3, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT, price = 870, icons = {"Full_Product_Beastmaster.png"}},
 			{name = "Beastmaster Outfit", thingId = {male=637,female=636}, type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT, price = 690, icons = {"Product_Beastmaster.png"}},

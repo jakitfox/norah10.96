@@ -58,7 +58,9 @@
 	<action itemid="2416" script="quests/ruiny/RuinySciana.lua" />
 	<action fromuid="3141" touid="3143" script="quests/ruiny/brama1.lua" />
 	<action uniqueid="3144"	script="quests/ruiny/reward mount.lua" />
-	<action fromuid="3145" touid="3147"	script="quests/ruiny/reward.lua" />
+	<action fromuid="3145" touid="3149"	script="quests/ruiny/reward.lua" />
+	<action fromuid="3372" touid="3375"	script="quests/ruiny/reward.lua" />
+	<action uniqueid="3376" script="quests/ruiny/addon.lua" />
 	
 	<!-- Dry Hills -->
 	<action fromuid="3151" touid="3152" script="quests/blue_legs.lua" />
@@ -148,7 +150,7 @@
 	
 	<!-- Quests -->
 	<action actionid="2000" script="quests/quests.lua" />
-	<action fromaid="2001" toaid="2004" script="quests/quests.lua" />
+	<action fromaid="2001" toaid="2008" script="quests/quests.lua" />
 	<action uniqueid="3200" script="quests/anni/annihilator.lua" />
 	<action fromuid="3201" touid="3203" script="quests/s_quests.lua" />
 	<action uniqueid="3204" script="quests/s_quests_key.lua" />
