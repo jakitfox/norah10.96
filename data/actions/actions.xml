@@ -35,7 +35,6 @@
 	<action fromuid="3060" touid="3063" script="quests/gravedigger/plague.lua" />
 	<action uniqueid="3064" script="quests/gravedigger/boss.lua" />
 	<action itemid="2176" script="quests/gravedigger/ball.lua" />
-	<action itemid="5468" script="quests/gravedigger/hades.lua" />
 	<action uniqueid="3067" script="quests/gravedigger/hades_leaver.lua" /> 
 	<action fromuid="3070" touid="3072" script="quests/gravedigger/armors.lua" />
 	<action fromuid="3073" touid="3075" script="quests/gravedigger/rewards.lua" />  
@@ -58,8 +57,8 @@
 	<action itemid="2416" script="quests/ruiny/RuinySciana.lua" />
 	<action fromuid="3141" touid="3143" script="quests/ruiny/brama1.lua" />
 	<action uniqueid="3144"	script="quests/ruiny/reward mount.lua" />
-	<action fromuid="3145" touid="3149"	script="quests/ruiny/reward.lua" />
-	<action fromuid="3372" touid="3375"	script="quests/ruiny/reward.lua" />
+	<action fromuid="3145" touid="3149" script="quests/ruiny/reward.lua" />
+	<action fromuid="3372" touid="3375" script="quests/ruiny/reward.lua" />
 	<action uniqueid="3376" script="quests/ruiny/addon.lua" />
 	
 	<!-- Dry Hills -->
@@ -122,6 +121,7 @@
 	<action itemid="11339" script="inne/claylump.lua" />
 	<action fromid="11258" toid="11262" script="inne/blessingCharms.lua" />
 	<action itemid="3955" script="inne/voodoo_doll.lua" />
+	<action itemid="5468" script="inne/firebug.lua" />
 	
 	<!-- Narzedzia -->
 	<action itemid="5908" script="tools/skinning.lua" />
@@ -264,6 +264,7 @@
 	<action itemid="22873" function="decreaseItemId" />
 	<action itemid="22874" function="increaseItemId" />
 	<action itemid="22875" function="decreaseItemId" />
+
 
 	<!-- Food -->
 	<action itemid="2362" script="other/food.lua" />

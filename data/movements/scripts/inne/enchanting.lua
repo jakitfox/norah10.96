@@ -4,8 +4,8 @@ local druid = "Only Druids of level 30 and higher are able to enter this portal.
 local sorc = "Only Sorcerers of level 30 and higher are able to enter this portal."
 
 local enchanting = {
-	[3200] = {vocmin = 1, vocmax = 5, pos = {x=771, y=844, z=7}, text = sorc},
-	[3201] = {vocmin = 1, vocmax = 5, pos = {x=652, y=775, z=7}, text = sorc},
+	[3200] = {vocmin = 1, vocmax = 5, pos = {x=654, y=777, z=7}, text = sorc},
+	[3201] = {vocmin = 1, vocmax = 5, pos = {x=776, y=847, z=7}, text = sorc},
 	[3202] = {vocmin = 2, vocmax = 6, pos = {x=1265, y=1358, z=7}, text = druid},
 	[3203] = {vocmin = 2, vocmax = 6, pos = {x=658, y=476, z=7}, text = druid}
 }
