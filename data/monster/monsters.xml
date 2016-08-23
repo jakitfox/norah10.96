@@ -288,7 +288,11 @@
 	<monster name="Eye of the Seven" file="Bonelords/eye of the seven.xml" />
 
 	<!-- Bosses -->
-	<!--<monster name="Bullwark" file="Bosses/bullwark.xml"/> -->
+	<monster name="Doctor Perhaps" file="Bosses/doctor perhaps.xml"/>
+	<monster name="Clubarc The Plunderer" file="Bosses/clubarc the plunderer.xml"/>
+	<monster name="Captain Jones" file="Bosses/captain jones.xml"/>
+	<monster name="Bullwark" file="Bosses/bullwark.xml"/>
+	<monster name="Bibby Bloodbath" file="Bosses/bibby bloodbath.xml" />
 	<monster name="Kerberos" file="Bosses/kerberos.xml" />
 	<monster name="Paiz The Pauperizer" file="Bosses/paiz the pauperizer.xml" />
 	<monster name="Ribstride" file="Bosses/ribstride.xml" />

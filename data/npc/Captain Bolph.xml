@@ -9,13 +9,13 @@
 	<parameter key="message_walkaway" value="Good bye then." />
 	
 	<parameter key="module_travel" value="1" />
-	<parameter key="travel_destinations" value="pont vanis,726,595,7,200;zagond,1129,1232,7,250;guzur,1033,1035,7,350;dharel,1091,1045,7,400;wilara,1275,915,7,450;zalavia,1281,519,7,500" />
+	<parameter key="travel_destinations" value="pont vanis,726,595,7,200;zagond,1129,1232,7,250;guzur,1033,1035,7,350;dharel,1091,1045,7,400;wilara,1275,915,7,450;zalavia,1281,519,7,500;tigunda,1260,576,7,200" />
 
 	<parameter key="module_keywords" value="1" />
 	<parameter key="keywords" value="go;travel;passage;sail" />
-	<parameter key="keyword_reply1" value="Where do you want to go? To {Pont Vanis}, {Zagond}, {Guzur}, {Dharel}, {Wilara} or {Zalavia}?" />
-	<parameter key="keyword_reply2" value="Where do you want to go? To {Pont Vanis}, {Zagond}, {Guzur}, {Dharel}, {Wilara} or {Zalavia}?" />
-	<parameter key="keyword_reply3" value="Where do you want to go? To {Pont Vanis}, {Zagond}, {Guzur}, {Dharel}, {Wilara} or {Zalavia}?" />
-	<parameter key="keyword_reply4" value="Where do you want to go? To {Pont Vanis}, {Zagond}, {Guzur}, {Dharel}, {Wilara} or {Zalavia}?" />
+	<parameter key="keyword_reply1" value="Where do you want to go? To {Pont Vanis}, {Zagond}, {Guzur}, {Dharel}, {Wilara}, {Tigunda} or {Zalavia}?" />
+	<parameter key="keyword_reply2" value="Where do you want to go? To {Pont Vanis}, {Zagond}, {Guzur}, {Dharel}, {Wilara}, {Tigunda} or {Zalavia}?" />
+	<parameter key="keyword_reply3" value="Where do you want to go? To {Pont Vanis}, {Zagond}, {Guzur}, {Dharel}, {Wilara}, {Tigunda} or {Zalavia}?" />
+	<parameter key="keyword_reply4" value="Where do you want to go? To {Pont Vanis}, {Zagond}, {Guzur}, {Dharel}, {Wilara}, {Tigunda} or {Zalavia}?" />
 </parameters>
 </npc>

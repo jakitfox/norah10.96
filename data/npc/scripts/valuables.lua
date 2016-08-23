@@ -41,7 +41,8 @@ local shopItems = {
 	["violet crystal shard"] = {id = 18414, sell = 1500, desc = 'violet crystal shard'},
 	["violet gem"] = {id = 2153, sell = 10000, desc = 'violet gem'},
 	["white pearl"] = {id = 2143, buy = 320, sell = 160, desc = 'white pearl'},
-	["yellow gem"] = {id = 2154, sell = 1000, desc = 'yellow gem'}
+	["yellow gem"] = {id = 2154, sell = 1000, desc = 'yellow gem'},
+	["seacrest pearl"] = {id = 24116, sell = 400, desc = 'seacrest pearl'}
 	}
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)

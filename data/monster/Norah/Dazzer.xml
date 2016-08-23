@@ -1,99 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dazzer" nameDescription="dazzer" race="fire" experience="10000" speed="350" manacost="0">
-	<health now="40000" max="40000"/>
-	<look type="198" corpse="6073"/>
-	<targetchange interval="7000" chance="10"/>
-	<strategy attack="90" defense="10"/>
+	<health now="40000" max="40000" />
+	<look type="198" corpse="6073" />
+	<targetchange interval="7000" chance="10" />
+	<strategy attack="90" defense="10" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="85"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="85" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="105" attack="100"/>
+		<attack name="melee" interval="2000" skill="105" attack="100" />
 		<attack name="death" interval="3000" chance="15" length="8" spread="0" min="-250" max="-850">
-			<attribute key="areaEffect" value="mortarea"/>
+			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 		<attack name="poisoncondition" interval="1000" chance="11" length="5" spread="2" min="-300" max="-350">
-			<attribute key="areaEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison" />
 		</attack>
 		<attack name="physical" interval="1000" chance="8" radius="6" target="0" min="-50" max="-955">
-			<attribute key="areaEffect" value="groundshaker"/>
+			<attribute key="areaEffect" value="groundshaker" />
 		</attack>
 		<attack name="fire" interval="2000" chance="15" radius="7" target="1" min="-50" max="-200">
-			<attribute key="areaEffect" value="firearea"/>
+			<attribute key="areaEffect" value="firearea" />
 		</attack>
 	</attacks>
 	<defenses armor="60" defense="75">
 		<defense name="healing" interval="4000" chance="60" min="200" max="600">
-			<attribute key="areaEffect" value="greenshimmer"/>
+			<attribute key="areaEffect" value="greenshimmer" />
 		</defense>
 		<defense name="speed" interval="1000" chance="4" speedchange="500" duration="7000">
-			<attribute key="areaEffect" value="blueshimmer"/>
+			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
 	<elements>
-		<element energyPercent="-15"/>
-		<element deathPercent="5"/>
-		<element icePercent="15"/>
-		<element holyPercent="15"/>
-		<element physicalPercent="-20"/>
-		<element firePercent="10"/>
+		<element energyPercent="-15" />
+		<element deathPercent="5" />
+		<element icePercent="15" />
+		<element holyPercent="15" />
+		<element physicalPercent="-20" />
+		<element firePercent="10" />
 	</elements>
 	<immunities>
-	<immunity earth="1"/>
-	<immunity invisible="1"/>
+	<immunity earth="1" />
+	<immunity invisible="1" />
 	</immunities>
 	<voices interval="5000" chance="10">
-		<voice sentence="Nie dasz mi rade!" yell="1"/>
+		<voice sentence="Mortal go away!" yell="1" />
 	</voices>
 	<loot>
-		<item id="2149" countmax="8" chance1="10000" chancemax="0"/> 
-		<item id="2145" countmax="4" chance1="10000" chancemax="0"/> 
-		<item id="7365" countmax="6" chance1="10000" chancemax="0"/> 
-		<item id="2144" countmax="5" chance1="10000" chancemax="0"/> 
-		<item id="2143" countmax="11" chance1="10000" chancemax="0"/> 
-		<item id="2179" chance1="10000" chancemax="0"/> 
-		<item id="2514" chance="12650"/> 
-		<item id="2214" chance="8000"/> 
-		<item id="6300" chance="8000"/> 
-		<item id="9971" chance="8000"/> 
-		<item id="6500" chance="8000"/> 
-		<item id="2128" chance="8000"/> 
-		<item id="2185" chance="8000"/> 
-		<item id="2165" chance="8000"/> 
-		<item id="2214" chance="8000"/> 
-		<item id="2402" chance="8000"/> 
-		<item id="2396" chance="8000"/> 
-		<item id="2474" chance="8000" /><!-- winged helmet -->
-		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
-		<item id="21700" chance="8000" /><!-- icy culotte -->
-		<item id="8884" chance="8000" /><!-- oceanborn leviathan armor -->
-		<item id="2646" chance="5000" /><!-- golden boots -->
-		<item id="2522" chance="5000" /><!-- great shield -->
-		<item id="18412" chance="8000" /><!-- glacial rod -->
-		<item id="18411" chance="8000" /><!-- muck rod -->
-		<item id="18390" chance="8000" /><!-- wand of defiance -->
-		<item id="18409" chance="8000" /><!-- wand of everblazing -->
-		<item id="16111" chance="5000" /><!-- thorn spitter -->
-		<item id="7455" chance="8000" /><!-- mythril axe -->
-		<item id="7410" chance="8000" /><!-- queens sceptre -->
-		<item id="8884" chance="8000" /><!-- runed sword -->
-		<item id="2160" countmax="10" chance="54875" /><!-- crystal coin -->
-			<item id="2520" chance="7650"/> 
-			<item id="2145" chance1="5800"/> 
-			<item id="2432" chance="8000"/> 
-			<item id="2436" chance="8000"/> 
-			<item id="2393" chance="8000"/> 
-			<item id="2462" chance="8000"/> 
+		<item id="2514" chance="12650" /><!-- mastermind shield --> 
+		<item id="2149" countmax="20" chance="10000" /><!-- small emerald -->
+		<item id="2145" countmax="10" chance="10000" /><!-- small diamond --> 
+		<item id="2179" chance="10000" /><!-- gold ring --> 
+		<item id="2432" chance="9000" /><!-- fire axe -->
+		<item id="2393" chance="8500" /><!-- giant sword -->
+		<item id="2436" chance="8000" /><!-- skull staff --> 
+		<item id="2520" chance="7650" /><!-- demon shield -->
+		<item id="6300" chance="6000" /><!-- death ring -->
+		<item id="2160" countmax="10" chance="4875"  /><!-- crystal coin -->
+		<item id="18409" chance="3500"  /><!-- wand of everblazing -->
+		<item id="9971" chance="3000" /><!-- gold ingot -->   
+		<item id="2474" chance="200"  /><!-- winged helmet -->
 	</loot>
 </monster>
 

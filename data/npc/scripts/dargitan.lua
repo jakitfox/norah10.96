@@ -77,7 +77,7 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 		elseif talk_state[cid] == 3 then
 			if getPlayerItemCount(cid,12406) >= 1 then
 				doPlayerRemoveItem(cid,12406,1)
-				npcHandler:say('Thanks to this notes , we can go to this fortress, and I\'ve got another {mission} for you', cid)
+				npcHandler:say('Thanks to this notes , we can go to this fortress, and I\'ve got another {mission} for you.', cid)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission02_QuestLog, 2)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 4)
 			else

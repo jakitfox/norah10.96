@@ -50,7 +50,7 @@ local shopItems = {
 	["springsprout rod"] = {id = 8912, buy = 18000, sell = 3600, desc = 'springsprout rod'},
 	["underworld rod"] = {id = 8910, buy = 22000, sell = 4400, desc = 'underworld rod'},
 	["muck rod"] = {id = 18411, sell = 6000, desc = 'muck rod'},
-	["glacial Rod"] = {id = 18412, sell = 6500, desc = 'glacial Rod'},
+	["glacial rod"] = {id = 18412, sell = 6500, desc = 'glacial Rod'},
 	-------POTIONS------
 	["empty potion flask"] = {id = 7636, sell = 5, desc = 'empty potion flask'},
 	["strong potion flask"] = {id = 7634, sell = 7, desc = 'empty potion flask'},
@@ -65,6 +65,9 @@ local shopItems = {
 	["great mana"] = {id = 7590, buy = 120, desc = 'great mana'},
 	["great spirit"] = {id = 8472, buy = 190, desc = 'great spirit'},
 	["ultimate health"] = {id = 8473, buy = 310, desc = 'ultimate health'},
+	["supreme health potion"] = {id = 26031, buy = 500, desc = 'supreme health potion'},
+	["ultimate mana potion"] = {id = 26029, buy = 350, desc = 'ultimate mana potion'},
+	["ultimate spirit potion"] = {id = 26030, buy = 350, desc = 'ultimate spirit potion'},
 	-------Magical Items------
 	["crystal ball"] = {id = 2192, buy = 530, sell = 190, desc = 'crystal ball'},
 	["life crystal"] = {id = 2177, sell = 85, desc = 'life crystal'},

@@ -203,6 +203,108 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
+	<melee id="25959" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25879" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25919" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25960" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25880" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25923" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25963" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25961" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25964" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25962" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25965" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25966" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25416" level="150" unproperly="1" />
+	<melee id="25889" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25920" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25890" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25924" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25921" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25899" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25900" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25925" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25922" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25909" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25910" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25926" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="23550" level="75" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="23548" level="25" unproperly="1" />
 
 	<!-- Fire -->
 	<melee id="7744" action="removecharge" />
@@ -371,6 +473,12 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
+	<melee id="23545" level="45" unproperly="1" />
+	<melee id="23551" level="75" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="23547" level="55" unproperly="1" />
 
 	<!-- Fire -->
 	<melee id="7749" level="20" action="removecharge" unproperly="1" />
@@ -525,6 +633,14 @@
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
 	<melee id="22415" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="23544" level="60" unproperly="1" />
+	<melee id="23590" level="70" unproperly="1" />
+	<melee id="23542" level="55" unproperly="1" />
+	<melee id="23543" level="25" unproperly="1" />
+	<melee id="23549" level="75" unproperly="1">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
@@ -699,6 +815,6 @@
 	<distance id="18435" action="removecount" unproperly="1" level="90" /> <!-- Prismatic Bolt -->
 	<distance id="18436" action="removecount" unproperly="1" level="70" /> <!-- Drill Bolt -->
 	<distance id="18437" action="removecount" unproperly="1" level="70" /> <!-- Envenomed Arrow -->
-	<distance id="23529" breakchance="31" unproperly="1" level="60" /> <!-- Glooth Spear -->
+	<distance id="23529" breakchance="6" unproperly="1" level="60" /> <!-- Glooth Spear -->
 	<distance id="23839" action="removecount" unproperly="0" level="1" /> <!-- Simple Arrow -->
 </weapons>
