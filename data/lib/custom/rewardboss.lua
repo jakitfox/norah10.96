@@ -9,8 +9,8 @@ function Monster.setReward(self, enable)
 			return false
 		end
 		globalBosses[self:getId()] = {}
-		self:registerEvent("BossDeath")    
-		self:registerEvent("BossThink")    
+		self:registerEvent("BossDeath")
+		self:registerEvent("BossThink")
 	else
 		globalBosses[self:getId()] = nil
 		self:unregisterEvent("BossDeath")

@@ -6,7 +6,7 @@
 	<parameter key="message_walkaway" value="Take care!" />
 	
 	<parameter key="module_travel" value="1" />
-	<parameter key="travel_destinations" value="pont vanis,648,684,6,500;orc,915,699,6,500;undead,841,925,3,500;nilfgaard,533,315,6,500;riwen,460,1364,6,290" />
+	<parameter key="travel_destinations" value="pont vanis,648,684,6,500;orc,915,699,6,500;undead,841,925,3,500;nilfgaard,531,312,6,500;riwen,460,1364,6,290" />
 	
 	<parameter key="module_keywords" value="1" />
 		<parameter key="keywords" value="go;travel" />

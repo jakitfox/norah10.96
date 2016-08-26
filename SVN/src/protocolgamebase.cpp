@@ -220,20 +220,15 @@ void ProtocolGameBase::AddPlayerSkills(NetworkMessage& msg)
 {
 	msg.addByte(0xA1);
 
-	for (uint8_t i = SKILL_FIRST; i <= SKILL_LAST; ++i) {
+	for (uint8_t i = SKILL_FIRST; i <= SKILL_FISHING; ++i) {
 		msg.add<uint16_t>(std::min<int32_t>(player->getSkillLevel(i), std::numeric_limits<uint16_t>::max()));
 		msg.add<uint16_t>(player->getBaseSkill(i));
 		msg.addByte(player->getSkillPercent(i));
 	}
 
-	if (version >= 1094) {
-		for (int i = 10; i < 16; i++) {
-			msg.add<uint16_t>(i); // this is value to display
-			msg.add<uint16_t>(15); // this is 'base' value,
-								   // if lower then skill then text color is green
-								   // if equal to skill then text color is gray [default for skills]
-								   // if higher then skill then text color is red
-		}
+	for (uint8_t i = SKILL_CRITICAL_HIT_CHANCE; i <= SKILL_LAST; ++i) {
+		msg.add<uint16_t>(std::min<int32_t>(player->getSkillLevel(i), std::numeric_limits<uint16_t>::max()));
+		msg.add<uint16_t>(player->getBaseSkill(i));
 	}
 }
 

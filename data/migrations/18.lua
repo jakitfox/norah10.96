@@ -1,5 +1,6 @@
 function onUpdateDatabase()
-	print("> Updating database to version 19 (authenticator token support)")
-	db.query("ALTER TABLE `accounts` ADD COLUMN `secret` CHAR(16) NULL AFTER `password`")
+	print("> Updating database to version 19 (update on depot chests)")
+	db.query("UPDATE `player_depotitems` SET `pid` = 17 WHERE `pid` = 0")
+	db.query("UPDATE `player_depotitems` SET `pid` = 17 WHERE `pid` > 17")
 	return true
 end

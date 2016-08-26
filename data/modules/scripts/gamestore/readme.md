@@ -3,11 +3,6 @@
 
 > Notify! Please put the images in folder called "64".
 
-### Information
-###### - Developer : @slavidodo
-###### - Version : 0.3
-###### - last Updated : [CEST] 25-05-2016 07:00AM
-
 ### Faq
 
 ##### 1. How to make a category?

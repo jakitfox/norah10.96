@@ -342,9 +342,6 @@ class ProtocolGame final : public ProtocolGameBase
 
 		void sendCloseContainer(uint8_t cid);
 
-		//inventory
-		void sendInventoryClientIds();
-
 		//messages
 		void sendModalWindow(const ModalWindow& modalWindow);
 
@@ -392,6 +389,7 @@ class ProtocolGame final : public ProtocolGameBase
 				
 		/// Password used to access the live cast
 		std::string liveCastPassword;
+		void sendInventory();
 };
 
 #endif

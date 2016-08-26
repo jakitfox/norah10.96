@@ -2,60 +2,65 @@ local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 NpcSystem.parseParameters(npcHandler)
 
-function onCreatureAppear(cid)			npcHandler:onCreatureAppear(cid)			end
-function onCreatureDisappear(cid)		npcHandler:onCreatureDisappear(cid)			end
-function onCreatureSay(cid, type, msg)		npcHandler:onCreatureSay(cid, type, msg)		end
+function onCreatureAppear(cid)            npcHandler:onCreatureAppear(cid)            end
+function onCreatureDisappear(cid)        npcHandler:onCreatureDisappear(cid)            end
+function onCreatureSay(cid, type, msg)    npcHandler:onCreatureSay(cid, type, msg)    end
+function onThink()                        npcHandler:onThink()                        end
 
-local shopItems = {
-	["black pearl"] = {id = 2144, buy = 560, sell = 280, desc = 'black pearl'},
-	["blue crystal shard"] = {id = 18413, sell = 1500, desc = 'blue crystal shard'},
-	["blue crystal splinter"] = {id = 18418, sell = 400, desc = 'blue crystal splinter'},
-	["blue gem"] = {id = 2158, sell = 5000, desc = 'blue gem'},
-	["brown crystal splinter"] = {id = 18417, sell = 400, desc = 'brown crystal splinter'},
-	["Countess Sorrow's frozen tear"] = {id = 6536, sell = 50000, desc = 'Countess Sorrow\'s frozen tear'},
-	["crystal wand"] = {id = 2184, sell = 1000, desc = 'crystal wand'},
-	["crystal of balance"] = {id = 9942, sell = 1000, desc = 'crystal of balance'},
-	["crystal of focus"] = {id = 9941, sell = 2000, desc = 'crystal of focus'},
-	["crystal of power"] = {id = 9980, sell = 3000, desc = 'crystal of power'},
-	["cyan crystal fragment"] = {id = 18419, sell = 800, desc = 'cyan crystal fragment'},
-	["emerald bangle"] = {id = 2127, sell = 800, desc = 'emerald bangle'},
-	["giant shimmering pearl"] = {id = 7632, sell = 3000, desc = 'giant shimmering pearl'},
-	["giant shimmering pearl2"] = {id = 7633, sell = 3000, desc = 'giant shimmering pearl'},
-	["green crystal fragment"] = {id = 18421, sell = 800, desc = 'green crystal fragment'},
-	["green crystal shard"] = {id = 18415, sell = 1500, desc = 'green crystal shard'},
-	["green crystal splinter"] = {id = 18416, sell = 400, desc = 'green crystal splinter'},
-	["green gem"] = {id = 2155, sell = 5000, desc = 'green gem'},
-	["orichalcum pearl"] = {id = 5022, buy = 80, desc = 'orichalcum pearl'},
-	["red crystal fragment"] = {id = 18420, sell = 800, desc = 'red crystal fragment'},
-	["red gem"] = {id = 2156, sell = 1000, desc = 'red gem'},
-	["scarab coin"] = {id = 2159, sell = 100, desc = 'scarab coin'},
-	["silver brooch"] = {id = 2134, sell = 150, desc = 'silver brooch'},
-	["small amethyst"] = {id = 2150, buy = 400, sell = 200, desc = 'small amethyst'},
-	["small diamond"] = {id = 2145, buy = 600, sell = 300, desc = 'small diamond'},
-	["small emerald"] = {id = 2149, buy = 500, sell = 250, desc = 'small emerald'},
-	["small ruby"] = {id = 2147, buy = 500, sell = 250, desc = 'small ruby'},
-	["small sapphire"] = {id = 2146, buy = 500, sell = 250, desc = 'small sapphire'},
-	["small topaz"] = {id = 9970, sell = 200, desc = 'small topaz'},
-	["gold ingot"] = {id = 9971, sell = 5000, desc = 'gold ingot'},
-	["vampire's cape chain"] = {id = 21244, sell = 150, desc = 'vampire\'s cape chain'},
-	["violet crystal shard"] = {id = 18414, sell = 1500, desc = 'violet crystal shard'},
-	["violet gem"] = {id = 2153, sell = 10000, desc = 'violet gem'},
-	["white pearl"] = {id = 2143, buy = 320, sell = 160, desc = 'white pearl'},
-	["yellow gem"] = {id = 2154, sell = 1000, desc = 'yellow gem'},
-	["seacrest pearl"] = {id = 24116, sell = 400, desc = 'seacrest pearl'}
-	}
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
-if type(shopItems) == "table" then
-    for name, v in pairs(shopItems) do
-        shopModule:addBuyableItem({name}, shopItems[name].id, shopItems[name].buy, name)
-        shopModule:addSellableItem({name, name}, shopItems[name].id, shopItems[name].sell, shopItems[name].desc)
-    end
-end
+	
+---BUY---
+shopModule:addBuyableItem({'black pearl'}, 				2144, 560,		'black pearl')
+shopModule:addBuyableItem({'white pearl'}, 				2143, 320,		'white pearl')
+shopModule:addBuyableItem({'orichalcum pearl'}, 		5022, 80,		'orichalcum pearl')
+shopModule:addBuyableItem({'small amethyst'}, 			2150, 400,		'small amethyst')
+shopModule:addBuyableItem({'small diamond'}, 			2145, 600,		'small diamond')
+shopModule:addBuyableItem({'small emerald'}, 			2149, 500,		'small emerald')
+shopModule:addBuyableItem({'small ruby'}, 				2147, 500,		'small ruby')
+shopModule:addBuyableItem({'small sapphire'}, 			2146, 500,		'small sapphire')
+
+---SELL---
+shopModule:addSellableItem({'black pearl'},      		2144, 280, 		'black pearl')
+shopModule:addSellableItem({'blue crystal shard'}, 		18413, 1500,	'blue crystal shard')
+shopModule:addSellableItem({'blue crystal splinter'}, 	18418, 400, 	'blue crystal splinter')
+shopModule:addSellableItem({'blue gem'},      			2158, 5000, 	'blue gem')
+shopModule:addSellableItem({'brown crystal splinter'}, 	18417, 400, 	'brown crystal splinter')
+shopModule:addSellableItem({'crystal wand'},      		2184, 1000, 	'crystal wand')
+shopModule:addSellableItem({'crystal of balance'},    	9942, 1000, 	'crystal of balance')
+shopModule:addSellableItem({'crystal of focus'},      	9941, 2000, 	'crystal of focus')
+shopModule:addSellableItem({'crystal of power'},      	9980, 3000, 	'crystal of power')
+shopModule:addSellableItem({'cyan crystal fragment'},  	18419, 800, 	'cyan crystal fragment')
+shopModule:addSellableItem({'emerald bangle'},     		2127, 800, 		'emerald bangle')
+shopModule:addSellableItem({'giant shimmering pearl'}, 	7632, 3000, 	'giant shimmering pearl')
+shopModule:addSellableItem({'giant shimmering pearl2'},	7633, 3000, 	'giant shimmering pearl')
+shopModule:addSellableItem({'green crystal fragment'},	18421, 800, 	'green crystal fragment')
+shopModule:addSellableItem({'green crystal shard'}, 	18415, 1500, 	'green crystal shard')
+shopModule:addSellableItem({'green crystal splinter'}, 	18416, 400, 	'green crystal splinter')
+shopModule:addSellableItem({'green gem'},      			2155, 5000, 	'green gem')
+shopModule:addSellableItem({'red crystal fragment'},  	18420, 800, 	'red crystal fragment')
+shopModule:addSellableItem({'red gem'},      			2156, 1000, 	'red gem')
+shopModule:addSellableItem({'scarab coin'},      		2159, 100, 		'scarab coin')
+shopModule:addSellableItem({'silver brooch'},     		2134, 150, 		'silver brooch')
+shopModule:addSellableItem({'small amethyst'},     		2150, 200, 		'small amethyst')
+shopModule:addSellableItem({'small diamond'},      		2145, 300,		'small diamond')
+shopModule:addSellableItem({'small emerald'},      		2149, 250,		'small emerald')
+shopModule:addSellableItem({'small ruby'},      		2147, 250, 		'small ruby')
+shopModule:addSellableItem({'small sapphire'},      	2146, 250,		'small sapphire')
+shopModule:addSellableItem({'small topaz'},      		9970, 200,		'small topaz')
+shopModule:addSellableItem({'gold ingot'},      		9971, 5000, 	'gold ingot')
+shopModule:addSellableItem({'vampire\'s cape chain'},	21244, 150, 	'vampire\'s cape chain')
+shopModule:addSellableItem({'violet crystal shard'},  	18414, 1500, 	'violet crystal shard')
+shopModule:addSellableItem({'violet gem'},   			2153, 10000, 	'violet gem')
+shopModule:addSellableItem({'white pearl'},     		2143, 160, 		'white pearl')
+shopModule:addSellableItem({'yellow gem'},      		2154, 1000, 	'yellow gem')
+shopModule:addSellableItem({'seacrest pearl'},      	24116, 400, 	'seacrest pearl')
+
+shopModule:addSellableItem({'countess sorrow\'s frozen tear'},  	6536, 50000, 	'countess sorrow\'s frozen tear')
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setMessage(MESSAGE_GREET, "Welcome to my legal shop.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye, hope you might come back anytime to my legal shop.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Uhm... Hope you liked my legal shop...")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new())  

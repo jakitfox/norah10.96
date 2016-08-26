@@ -1,9 +1,9 @@
 -- Please don't edit those information!
 GameStore = {
 	ModuleName = "GameStore",
-	Developer = "Slavi Dodo",
+	Developer = "Mattyx14",
 	Version = "0.3",
-	LastUpdated = "[CEST] 25-05-2016 07:00AM"
+	LastUpdated = "[CEST] 29-05-2016 07:15PM"
 }
 --== Enums ==--
 GameStore.OfferTypes						= {

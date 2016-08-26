@@ -1,3 +1,7 @@
+/**
+* This file doesn't belong to theforgottenserver developers.
+*/
+
 #ifndef FS_REWARDCHEST_H
 #define FS_REWARDCHEST_H
 
@@ -6,7 +10,7 @@
 class RewardChest final : public Container
 {
 	public:
-		explicit RewardChest(uint16_t _type);
+		explicit RewardChest(uint16_t type);
 
 		RewardChest* getRewardChest() final {
 			return this;

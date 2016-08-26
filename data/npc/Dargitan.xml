@@ -3,6 +3,6 @@
 	<health now="100" max="100"/>
 	<look type="134" head="28" body="54" legs="114" feet="42" addons="3"/>
 	<parameters>
-		<parameter key="message_greet" value="Hello |PLAYERNAME|, What are you doing, in such dangerous place?"/>
+		<parameter key="message_greet" value="Pfht. So your name is |PLAYERNAME|? Are you another mercenary looking to get rich? We are on a holy mission to cleanse this cursed stronghold. People like you are not welcomed here."/>
 	</parameters>
 </npc>

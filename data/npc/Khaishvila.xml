@@ -8,7 +8,7 @@
 	<parameter key="message_walkaway" value="Take care!" />
  
 	<parameter key="module_travel" value="1" />
-	<parameter key="travel_destinations" value="orc,915,699,6,300;nilfgaard,533,315,6,310;undead,841,925,3,400;dry hills,420,478,2,320;riwen,460,1364,6,290" />
+	<parameter key="travel_destinations" value="orc,915,699,6,300;nilfgaard,531,312,6,310;undead,841,925,3,400;dry hills,420,478,2,320;riwen,460,1364,6,290" />
 		
 	<parameter key="module_keywords" value="1" />
 	<parameter key="keywords" value="go;travel;passage;sail" />

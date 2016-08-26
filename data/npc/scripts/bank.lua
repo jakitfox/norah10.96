@@ -8,16 +8,6 @@ function onCreatureAppear(cid) npcHandler:onCreatureAppear(cid) end
 function onCreatureDisappear(cid) npcHandler:onCreatureDisappear(cid) end
 function onCreatureSay(cid, type, msg) npcHandler:onCreatureSay(cid, type, msg) end
  
-local lastSound = 0
-function onThink()
-    if lastSound < os.time() then
-        lastSound = (os.time() + 5)
-        if math.random(100) < 7 then
-            Npc():say("Better deposit your money in the bank where it's safe.", TALKTYPE_SAY)
-        end
-    end
-    npcHandler:onThink()
-end
  
 local function getCount(s)
     local b, e = s:find('%d+')

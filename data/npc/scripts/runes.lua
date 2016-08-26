@@ -2,71 +2,53 @@ local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 NpcSystem.parseParameters(npcHandler)
 
-function onCreatureAppear(cid)			npcHandler:onCreatureAppear(cid)			end
-function onCreatureDisappear(cid)		npcHandler:onCreatureDisappear(cid)			end
-function onCreatureSay(cid, type, msg)		npcHandler:onCreatureSay(cid, type, msg)		end
-
-local lastSound = 0
-function onThink()
-	if lastSound < os.time() then
-		lastSound = (os.time() + 5)
-		if math.random(100) < 3  then
-			Npc():say("Selling all sorts of magic equipment. Come and have a look.", TALKTYPE_SAY)
-		end
-	end
-	npcHandler:onThink()
-end
-
-local shopItems = {
-	-------RUNES------
-	["blank rune"] = {id = 2260, buy = 10, desc = 'blank rune'},
-	------Attack------
-	["light magic missile rune"] = {id = 2287, buy = 4, desc = 'light magic missile rune'},
-	["heavy magic missile rune"] = {id = 2311, buy = 12, desc = 'heavy magic missile rune'},
-	["stalagmite rune"] = {id = 2292, buy = 12, desc = 'stalagmite rune'},
-	["holy missile rune"] = {id = 2295, buy = 16, desc = 'holy missile rune'},
-	["icicle rune"] = {id = 2271, buy = 30, desc = 'icicle rune'},
-	["fireball rune"] = {id = 2302, buy = 30, desc = 'fireball rune'},
-	["explosion rune"] = {id = 2313, buy = 31, desc = 'explosion rune'},
-	["thunderstorm rune"] = {id = 2315, buy = 37, desc = 'thunderstorm rune'},
-	["avalanche rune"] = {id = 2274, buy = 45, desc = 'avalanche rune'},
-	["great fireball rune"] = {id = 2304, buy = 45, desc = 'great fireball rune'},
-	["soulfire rune"] = {id = 2308, buy = 46, desc = 'soulfire rune'},
-	["sudden death rune"] = {id = 2268, buy = 108, desc = 'sudden death rune'},
-	["magic wall rune"] = {id = 2293, buy = 116, desc = 'magic wall rune'},
-	------Healing------
-	["cure poison rune"] = {id = 2266, buy = 65, desc = 'cure poison rune'},
-	["intense healing rune"] = {id = 2265, buy = 95, desc = 'intense healing rune'},
-	["ultimate healing rune"] = {id = 2273, buy = 175, desc = 'ultimate healing rune'},
-	------Field------
-	["poison field rune"] = {id = 2285, buy = 21, desc = 'poison field rune'},
-	["fire field rune"] = {id = 2301, buy = 28, desc = 'fire field rune'},
-	["energy field rune"] = {id = 2277, buy = 38, desc = 'energy field rune'},
-	["poison wall rune"] = {id = 2289, buy = 52, desc = 'poison wall rune'},
-	["fire wall rune"] = {id = 2303, buy = 61, desc = 'fire wall rune'},
-	["energy wall rune"] = {id = 2279, buy = 85, desc = 'energy wall rune'},
-	["poison bomb rune"] = {id = 2286, buy = 85, desc = 'poison bomb rune'},
-	["fire bomb rune"] = {id = 2305, buy = 117, desc = 'fire bomb rune'},
-	["energy bomb rune"] = {id = 2262, buy = 162, desc = 'energy bomb rune'},
-	------Summon------
-	["convince creature rune"] = {id = 2290, buy = 80, desc = 'convince creature rune'},
-	["animate dead rune"] = {id = 2316, buy = 375, desc = 'animate dead rune'},
-	------Support-----
-	["chameleon rune"] = {id = 2291, buy = 210, desc = 'chameleon rune'},
-	["destroy field rune"] = {id = 2261, buy = 15, desc = 'destroy field rune'},
-	["paralyze rune"] = {id = 2278, buy = 700, desc = 'paralyze rune'},
-	["wild growth rune"] = {id = 2269, buy = 160, desc = 'wild growth rune'}
-}
+function onCreatureAppear(cid)            npcHandler:onCreatureAppear(cid)            end
+function onCreatureDisappear(cid)        npcHandler:onCreatureDisappear(cid)            end
+function onCreatureSay(cid, type, msg)    npcHandler:onCreatureSay(cid, type, msg)    end
+function onThink()                        npcHandler:onThink()                        end
 
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
-if type(shopItems) == "table" then
-    for name, v in pairs(shopItems) do
-        shopModule:addBuyableItem({name}, shopItems[name].id, shopItems[name].buy, name)
-        shopModule:addSellableItem({name, name}, shopItems[name].id, shopItems[name].sell, shopItems[name].desc)
-    end
-end
+	-------RUNES------
+	shopModule:addBuyableItem({'blank rune'}, 				2260, 10,		'blank rune')
+	------Attack------
+	shopModule:addBuyableItem({'light magic missile rune'}, 2287, 4,		'light magic missile rune')
+	shopModule:addBuyableItem({'heavy magic missile rune'}, 2311, 12,		'heavy magic missile rune')
+	shopModule:addBuyableItem({'stalagmite rune'}, 			2292, 12,		'stalagmite rune')
+	shopModule:addBuyableItem({'holy missile rune'}, 		2295, 16,		'holy missile rune')
+	shopModule:addBuyableItem({'icicle rune'}, 				2271, 30,		'icicle rune')
+	shopModule:addBuyableItem({'fireball rune'}, 			2302, 30,		'fireball rune')
+	shopModule:addBuyableItem({'explosion rune'}, 			2313, 31,		'explosion rune')
+	shopModule:addBuyableItem({'thunderstorm rune'}, 		2315, 37,		'thunderstorm rune')
+	shopModule:addBuyableItem({'avalanche rune'}, 			2274, 45,		'avalanche rune')
+	shopModule:addBuyableItem({'great fireball rune'}, 		2304, 45,		'great fireball rune')
+	shopModule:addBuyableItem({'soulfire rune'}, 			2308, 46,		'soulfire rune')
+	shopModule:addBuyableItem({'sudden death rune'}, 		2268, 108,		'sudden death rune')
+	shopModule:addBuyableItem({'magic wall rune'}, 			2293, 116,		'magic wall rune')
+	------Healing------
+	shopModule:addBuyableItem({'cure poison rune'}, 		2266, 65,		'cure poison rune')
+	shopModule:addBuyableItem({'intense healing rune'}, 	2265, 95,		'intense healing rune')
+	shopModule:addBuyableItem({'ultimate healing rune'}, 	2273, 175,		'ultimate healing rune')
+	------Field------
+	shopModule:addBuyableItem({'poison field rune'}, 		2285, 21,		'poison field rune')
+	shopModule:addBuyableItem({'fire field rune'}, 			2301, 28,		'fire field rune')
+	shopModule:addBuyableItem({'energy field rune'}, 		2277, 38,		'energy field rune')
+	shopModule:addBuyableItem({'poison wall rune'}, 		2289, 52,		'poison wall rune')
+	shopModule:addBuyableItem({'fire wall rune'}, 			2303, 61,		'fire wall rune')
+	shopModule:addBuyableItem({'energy wall rune'}, 		2279, 85,		'energy wall rune')
+	shopModule:addBuyableItem({'poison bomb rune'}, 		2286, 85,		'poison bomb rune')
+	shopModule:addBuyableItem({'fire bomb rune'}, 			2305, 117,		'fire bomb rune')
+	shopModule:addBuyableItem({'energy bomb rune'}, 		2262, 162,		'energy bomb rune')
+	------Summon------
+	shopModule:addBuyableItem({'convince creature rune'}, 	2290, 80,		'convince creature rune')
+	shopModule:addBuyableItem({'animate dead rune'}, 		2316, 375,		'animate dead rune')
+	------Support-----
+	shopModule:addBuyableItem({'chameleon rune'}, 			2291, 210,		'chameleon rune')
+	shopModule:addBuyableItem({'destroy field rune'}, 		2261, 15,		'destroy field rune')
+	shopModule:addBuyableItem({'paralyze rune'}, 			2278, 700,		'paralyze rune')
+	shopModule:addBuyableItem({'wild growth rune'}, 		2269, 160,		'wild growth rune')
+
 
 keywordHandler:addKeyword({'magic'}, StdModule.say, {npcHandler = npcHandler, text = "I'm selling runes. If you like to see my offers, ask me for a {trade}."})
 

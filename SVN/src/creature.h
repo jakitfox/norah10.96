@@ -43,6 +43,7 @@ enum slots_t : uint8_t {
 	CONST_SLOT_FEET = 8,
 	CONST_SLOT_RING = 9,
 	CONST_SLOT_AMMO = 10,
+
 	CONST_SLOT_STORE_INBOX = 11,
 
 	CONST_SLOT_FIRST = CONST_SLOT_HEAD,
@@ -156,6 +157,13 @@ class Creature : virtual public Thing
 		virtual void removeList() = 0;
 		virtual void addList() = 0;
 
+		const Position& getLastPosition() const {
+			return lastPosition;
+		}
+		void setLastPosition(const Position& newLastPos) {
+			lastPosition = newLastPos;
+		}
+
 		virtual bool canSee(const Position& pos) const;
 		virtual bool canSeeCreature(const Creature* creature) const;
 
@@ -181,6 +189,13 @@ class Creature : virtual public Thing
 		}
 		void setHiddenHealth(bool b) {
 			hiddenHealth = b;
+		}
+
+		bool isMoveLocked() const {
+			return moveLocked;
+		}
+		void setMoveLocked(bool locked) {
+			moveLocked = locked;
 		}
 
 		int32_t getThrowRange() const final {
@@ -375,6 +390,7 @@ class Creature : virtual public Thing
 		virtual void onAttacked();
 		virtual void onAttackedCreatureDrainHealth(Creature* target, int32_t points);
 		virtual void onTargetCreatureGainHealth(Creature*, int32_t) {}
+		void onAttackedCreatureKilled(Creature* target);
 		virtual bool onKilledCreature(Creature* target, bool lastHit = true);
 		virtual void onGainExperience(uint64_t gainExp, Creature* target);
 		virtual void onAttackedCreatureBlockHit(BlockType_t) {}
@@ -400,7 +416,7 @@ class Creature : virtual public Thing
 		virtual void onRemoveTileItem(const Tile* tile, const Position& pos, const ItemType& iType,
 		                              const Item* item);
 
-		virtual void onCreatureAppear(Creature* creature, bool);
+		virtual void onCreatureAppear(Creature* creature, bool isLogin);
 		virtual void onRemoveCreature(Creature* creature, bool isLogout);
 		virtual void onCreatureMove(Creature* creature, const Tile* newTile, const Position& newPos,
 		                            const Tile* oldTile, const Position& oldPos, bool teleport);
@@ -518,6 +534,7 @@ class Creature : virtual public Thing
 		Outfit_t currentOutfit;
 		Outfit_t defaultOutfit;
 
+		Position lastPosition;
 		LightInfo internalLight;
 
 		Direction direction;
@@ -535,6 +552,7 @@ class Creature : virtual public Thing
 		bool hasFollowPath;
 		bool forceUpdateFollowPath;
 		bool hiddenHealth;
+		bool moveLocked;
 
 		//creature script events
 		bool hasEventRegistered(CreatureEventType_t event) const {

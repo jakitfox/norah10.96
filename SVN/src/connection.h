@@ -114,7 +114,6 @@ class Connection : public std::enable_shared_from_this<Connection>
 		friend class ServicePort;
 
 		NetworkMessage msg;
-
 		void broadcastMessage(OutputMessage_ptr msg);
 		void dispatchBroadcastMessage(const OutputMessage_ptr& msg);
 

@@ -144,15 +144,6 @@ function creatureSayCallback(cid, type, msg)
                 npcHandler:say("You can not afford this blessing!", cid)
             end
             talkState[talkUser] = 0
-        elseif(talkState[talkUser] == 6) then
-            if(player:removeMoney(getBlessingsCost(player:getLevel()))) then
-                npcHandler:say("You received the wisdom of solitude blessing!", cid)
-                player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-                player:addBlessing(1)
-            else
-                npcHandler:say("You can not afford this blessing!", cid)
-            end
-            talkState[talkUser] = 0
 		elseif(talkState[talkUser] == 7) then
             if(player:getMoney() >= getPvpBlessingCost(player:getLevel())) then
                 npcHandler:say("You received the twist of fate blessing!", cid)

@@ -2,97 +2,105 @@ local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 NpcSystem.parseParameters(npcHandler)
 
-function onCreatureAppear(cid)			npcHandler:onCreatureAppear(cid)			end
-function onCreatureDisappear(cid)		npcHandler:onCreatureDisappear(cid)			end
-function onCreatureSay(cid, type, msg)		npcHandler:onCreatureSay(cid, type, msg)		end
-
-local lastSound = 0
-function onThink()
-	if lastSound < os.time() then
-		lastSound = (os.time() + 5)
-		if math.random(100) < 3 then
-			Npc():say("Selling all sorts of magic equipment. Come and have a look.", TALKTYPE_SAY)
-		end
-	end
-	npcHandler:onThink()
-end
-
-local shopItems = {
-	-------MAGIC ARMOR------
-	["ethno coat"] = {id = 8892, buy = 750, sell = 200, desc = 'ethno coat'},
-	["spirit cloak"] = {id = 8870, buy = 1000, sell = 350, desc = 'spirit cloak'},
-	["magician's robe"] = {id = 8819, buy = 450, desc = 'magician\'s robe'},
-	["focus cape"] = {id = 8871, sell = 6000, desc = 'focus cape'},
-	-------SPELL BOOK------
-	["spellbook of enlightenment"] = {id = 8900, sell = 4000, desc = 'spellbook of enlightenment'},
-	["spellbook of lost souls"] = {id = 8903, sell = 19000, desc = 'spellbook of lost souls'},
-	["spellbook of mind control"] = {id = 8902, sell = 13000, desc = 'spellbook of mind control'},
-	["spellbook of warding"] = {id = 8901, sell = 8000, desc = 'spellbook of warding'},
-	["spellbook"] = {id = 2175, buy = 150, desc = 'spellbook'},
-	-------WANDS AND RODS------
-	["wand of vortex"] = {id = 2190, buy = 500, sell = 100, desc = 'wand of vortex'},
-	["wand of dragonbreath"] = {id = 2191, buy = 1000, sell = 200, desc = 'wand of dragonbreath'},
-	["wand of decay"] = {id = 2188, buy = 5000, sell = 1000, desc = 'wand of decay'},
-	["wand of draconia"] = {id = 8921, buy = 7500, sell = 1500, desc = 'wand of draconia'},
-	["wand of cosmic energy"] = {id = 2189, buy = 10000, sell = 2000, desc = 'wand of cosmic energy'},
-	["wand of inferno"] = {id = 2187, buy = 15000, sell = 3000, desc = 'wand of inferno'},
-	["wand of starstorm"] = {id = 8920, buy = 18000, sell = 3600, desc = 'wand of starstorm'},
-	["wand of voodoo"] = {id = 8922, buy = 22000, sell = 4400, desc = 'wand of voodoo'},
-	["wand of everblazing"] = {id = 18409, sell = 6000, desc = 'wand of everblazing'},
-	["wand of defiance"] = {id = 18390, sell = 6500, desc = 'wand of defiance'},
-	
-	["snakebite rod"] = {id = 2182, buy = 500, sell = 100, desc = 'snakebite rod'},
-	["moonlight rod"] = {id = 2186, buy = 1000, sell = 200, desc = 'moonlight rod'},
-	["necrotic rod"] = {id = 2185, buy = 5000, sell = 1000, desc = 'necrotic rod'},
-	["northwind rod"] = {id = 8911, buy = 7500, sell = 1500, desc = 'northwind rod'},
-	["terra rod"] = {id = 2181, buy = 10000, sell = 2000, desc = 'terra rod'},
-	["hailstorm rod"] = {id = 2183, buy = 15000, sell = 3000, desc = 'hailstorm rod'},
-	["springsprout rod"] = {id = 8912, buy = 18000, sell = 3600, desc = 'springsprout rod'},
-	["underworld rod"] = {id = 8910, buy = 22000, sell = 4400, desc = 'underworld rod'},
-	["muck rod"] = {id = 18411, sell = 6000, desc = 'muck rod'},
-	["glacial Rod"] = {id = 18412, sell = 6500, desc = 'glacial Rod'},
-	-------POTIONS------
-	["empty potion flask"] = {id = 7636, sell = 5, desc = 'empty potion flask'},
-	["strong potion flask"] = {id = 7634, sell = 7, desc = 'empty potion flask'},
-	["great potion flask"] = {id = 7635, sell = 10, desc = 'empty potion flask'},
-	
-	["antidote potion"] = {id = 8474, buy = 50, desc = 'antidote potion'},
-	["health potion"] = {id = 7618, buy = 45, desc = 'health potion'},
-	["mana potion"] = {id = 7620, buy = 50, desc = 'mana potion'},
-	["strong health"] = {id = 7588, buy = 100, desc = 'strong health'},
-	["strong mana"] = {id = 7589, buy = 80, desc = 'strong mana'},
-	["great health"] = {id = 7591, buy = 190, desc = 'great health'},
-	["great mana"] = {id = 7590, buy = 120, desc = 'great mana'},
-	["great spirit"] = {id = 8472, buy = 190, desc = 'great spirit'},
-	["ultimate health"] = {id = 8473, buy = 310, desc = 'ultimate health'},
-	["supreme health potion"] = {id = 26031, buy = 500, desc = 'supreme health potion'},
-	["ultimate mana potion"] = {id = 26029, buy = 350, desc = 'ultimate mana potion'},
-	["ultimate spirit potion"] = {id = 26030, buy = 350, desc = 'ultimate spirit potion'},
-	-------Magical Items------
-	["crystal ball"] = {id = 2192, buy = 530, sell = 190, desc = 'crystal ball'},
-	["life crystal"] = {id = 2177, sell = 85, desc = 'life crystal'},
-	["mind stone"] = {id = 2178, sell = 170, desc = 'mind stone'},
-	["orb"] = {id = 2176, sell = 750, desc = 'orb'},
-	["talon"] = {id = 2151, sell = 320, desc = 'talon'},
-	["demonic essence"] = {id = 6500, sell = 1000, desc = 'demonic essence'},
-	["draken sulphur"] = {id = 12614, sell = 550, desc = 'draken sulphur'},
-	["lizard essence"] = {id = 12636, sell = 300, desc = 'lizard essence'},
-	["luminous orb"] = {id = 12410, sell = 1000, desc = 'luminous orb'},
-	["mysterious voodoo skull"] = {id = 5669, sell = 4000, desc = 'mysterious voodoo skull'},
-	["enigmatic voodoo skull"] = {id = 5670, sell = 4000, desc = 'enigmatic voodoo skull'},
-	["mystical hourglass"] = {id = 10577, sell = 700, desc = 'mystical hourglass'},
-	["ankh"] = {id = 2193, sell = 100, desc = 'ankh'}
-}
+function onCreatureAppear(cid)            npcHandler:onCreatureAppear(cid)            end
+function onCreatureDisappear(cid)        npcHandler:onCreatureDisappear(cid)            end
+function onCreatureSay(cid, type, msg)    npcHandler:onCreatureSay(cid, type, msg)    end
+function onThink()                        npcHandler:onThink()                        end
 
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
-if type(shopItems) == "table" then
-    for name, v in pairs(shopItems) do
-        shopModule:addBuyableItem({name}, shopItems[name].id, shopItems[name].buy, name)
-        shopModule:addSellableItem({name, name}, shopItems[name].id, shopItems[name].sell, shopItems[name].desc)
-    end
-end
+	-------BUY---------
+	--magic armor--
+	shopModule:addBuyableItem({'spirit cloak'}, 			8870, 1000,		'spirit cloak')
+	shopModule:addBuyableItem({'ethno coat'}, 				8892, 750,		'ethno coat')
+	shopModule:addBuyableItem({'magician\'s robe'}, 		8819, 450,		'magician\'s robe')
+	--spell book--
+	shopModule:addBuyableItem({'spellbook'}, 				2175, 150,		'spellbook')
+	--wands and rods--
+	shopModule:addBuyableItem({'wand of vortex'}, 			2190, 500,		'wand of vortex')
+	shopModule:addBuyableItem({'wand of dragonbreath'}, 	2191, 1000,		'wand of dragonbreath')
+	shopModule:addBuyableItem({'wand of decay'}, 			2188, 5000,		'wand of decay')
+	shopModule:addBuyableItem({'wand of draconia'}, 		8921, 7500,		'wand of draconia')
+	shopModule:addBuyableItem({'wand of cosmic energy'}, 	2189, 10000,	'wand of cosmic energy')
+	shopModule:addBuyableItem({'wand of inferno'}, 			2187, 15000,	'wand of inferno')
+	shopModule:addBuyableItem({'wand of starstorm'}, 		8920, 18000,	'wand of starstorm')
+	shopModule:addBuyableItem({'wand of voodoo'}, 			8922, 22000,	'wand of voodoo')
+	--rods--
+	shopModule:addBuyableItem({'snakebite rod'}, 			2182, 500,		'snakebite rod')
+	shopModule:addBuyableItem({'moonlight rod'}, 			2186, 1000,		'moonlight rod')
+	shopModule:addBuyableItem({'necrotic rod'}, 			2185, 5000,		'necrotic rod')
+	shopModule:addBuyableItem({'northwind rod'}, 			8911, 7500,		'northwind rod')
+	shopModule:addBuyableItem({'terra rod'}, 				2181, 10000,	'terra rod')
+	shopModule:addBuyableItem({'hailstorm rod'}, 			2183, 15000,	'hailstorm rod')
+	shopModule:addBuyableItem({'springsprout rod'}, 		8912, 18000,	'springsprout rod')
+	shopModule:addBuyableItem({'underworld rod'}, 			8910, 22000,	'underworld rod')
+	--potions--
+	shopModule:addBuyableItem({'antidote potion'}, 			8474, 50,		'antidote potion')
+	shopModule:addBuyableItem({'health potion'}, 			7618, 45,		'health potion')
+	shopModule:addBuyableItem({'mana potion'}, 				7620, 50,		'mana potion')
+	shopModule:addBuyableItem({'strong health potion'}, 	7588, 100,		'strong health potion')
+	shopModule:addBuyableItem({'strong mana potion'}, 		7589, 80,		'strong mana potion')
+	shopModule:addBuyableItem({'great health potion'}, 		7591, 190,		'great health potion')
+	shopModule:addBuyableItem({'great mana potion'}, 		7590, 120,		'great mana potion')
+	shopModule:addBuyableItem({'great spirit potion'}, 		8472, 190,		'great spirit potion')
+	shopModule:addBuyableItem({'ultimate health potion'}, 	8473, 310,		'ultimate health potion')
+	shopModule:addBuyableItem({'supreme health potion'}, 	26031, 500,		'supreme health potion')
+	shopModule:addBuyableItem({'ultimate mana potion'}, 	26029, 350,		'ultimate mana potion')
+	shopModule:addBuyableItem({'ultimate spirit potion'}, 	26030, 350,		'ultimate spirit potion')
+	--others--
+	shopModule:addBuyableItem({'crystal ball'}, 			2192, 530,		'crystal ball')
+	
+	----SELL----
+	--magic armor--
+	shopModule:addSellableItem({'spirit cloak'}, 			8870, 350,		'spirit cloak')
+	shopModule:addSellableItem({'ethno coat'}, 				8892, 200,		'ethno coat')
+	shopModule:addSellableItem({'focus cape'}, 				8871, 6000,		'focus cape')
+	--spell book--
+	shopModule:addSellableItem({'spellbook of enlightenment'}, 	8900, 4000,		'spellbook of enlightenment')
+	shopModule:addSellableItem({'spellbook of lost souls'}, 	8903, 19000,	'spellbook of lost souls')
+	shopModule:addSellableItem({'spellbook of mind control'}, 	8902, 13000,	'spellbook of mind control')
+	shopModule:addSellableItem({'spellbook of warding'}, 		8901, 8000,		'spellbook of warding')
+	--wands--
+	shopModule:addSellableItem({'wand of vortex'}, 			2190, 100,		'wand of vortex')
+	shopModule:addSellableItem({'wand of dragonbreath'}, 	2191, 200,		'wand of dragonbreath')
+	shopModule:addSellableItem({'wand of decay'}, 			2188, 1000,		'wand of decay')
+	shopModule:addSellableItem({'wand of draconia'}, 		8921, 1500,		'wand of draconia')
+	shopModule:addSellableItem({'wand of cosmic energy'}, 	2189, 2000,		'wand of cosmic energy')
+	shopModule:addSellableItem({'wand of inferno'}, 		2187, 3000,		'wand of inferno')
+	shopModule:addSellableItem({'wand of starstorm'}, 		8920, 3600,		'wand of starstorm')
+	shopModule:addSellableItem({'wand of voodoo'}, 			8922, 4400,		'wand of voodoo')
+	shopModule:addSellableItem({'wand of everblazing'}, 	18409, 6000,	'wand of everblazing')
+	shopModule:addSellableItem({'wand of defiance'}, 		18390, 6500,	'wand of defiance')
+	--rods--
+	shopModule:addSellableItem({'snakebite rod'}, 			2182, 100,		'snakebite rod')
+	shopModule:addSellableItem({'moonlight rod'}, 			2186, 200,		'moonlight rod')
+	shopModule:addSellableItem({'necrotic rod'}, 			2185, 1000,		'necrotic rod')
+	shopModule:addSellableItem({'northwind rod'}, 			8911, 1500,		'northwind rod')
+	shopModule:addSellableItem({'terra rod'}, 				2181, 2000,		'terra rod')
+	shopModule:addSellableItem({'hailstorm rod'}, 			2183, 3000,		'hailstorm rod')
+	shopModule:addSellableItem({'springsprout rod'}, 		8912, 3600,		'springsprout rod')
+	shopModule:addSellableItem({'underworld rod'}, 			8910, 4400,		'underworld rod')
+	shopModule:addSellableItem({'muck rod'}, 				18411, 6000,	'muck rod')
+	shopModule:addSellableItem({'glacial rod'}, 			18412, 6500,	'glacial rod')
+	--potions--
+	shopModule:addSellableItem({'empty potion flask'}, 		7636, 5,		'empty potion flask')
+	shopModule:addSellableItem({'strong potion flask'}, 	7634, 7,		'strong potion flask')
+	shopModule:addSellableItem({'great potion flask'}, 		7635, 10,		'great potion flask')
+	--others--
+	shopModule:addSellableItem({'crystal ball'}, 			2192, 190,		'crystal ball')
+	shopModule:addSellableItem({'life crystal'}, 			2177, 85,		'life crystal')
+	shopModule:addSellableItem({'mind stone'}, 				2178, 170,		'mind stone')
+	shopModule:addSellableItem({'orb'}, 					2176, 750,		'orb')
+	shopModule:addSellableItem({'talon'}, 					2151, 320,		'talon')
+	shopModule:addSellableItem({'demonic essence'}, 		6500, 1000,		'demonic essence')
+	shopModule:addSellableItem({'draken sulphur'}, 			12614, 550,		'draken sulphur')
+	shopModule:addSellableItem({'lizard essence'}, 			12636, 300,		'lizard essence')
+	shopModule:addSellableItem({'luminous orb'}, 			12410, 1000,	'luminous orb')
+	shopModule:addSellableItem({'mysterious voodoo skull'}, 5669, 4000,		'mysterious voodoo skull')
+	shopModule:addSellableItem({'enigmatic voodoo skull'}, 	5670, 4000,		'enigmatic voodoo skull')
+	shopModule:addSellableItem({'mystical hourglass'}, 		10577, 700,		'mystical hourglass')
+	shopModule:addSellableItem({'ankh'}, 					2193, 100,		'ankh')
 
 local function creatureSayCallback(cid, type, msg)
 	if not npcHandler:isFocused(cid) then

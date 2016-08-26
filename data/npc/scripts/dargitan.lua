@@ -18,38 +18,38 @@ function creatureSayCallback(cid, type, msg)
     
 if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 'join')  then
 	if getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == -1 then
-		npcHandler:say('I need to be sure that you\'re worthy , to join us , are you ready for a test?', cid)
+		npcHandler:say('If you insist, very well. You dont look like much. First i will put you to the test. Are you fine with that?', cid)
 		talk_state[cid] = 1
 			
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 1 then
-		npcHandler:say('Did you get the Ardos blessing?', cid)
+		npcHandler:say('Have you been blessed by Ardos?', cid)
 		talk_state[cid] = 2
 			
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 2 then
-		npcHandler:say('Loot ruins in the west of nilfgaard , and maby you\'ll find some notes of this cursed fortress.', cid)
+		npcHandler:say('Many years ago there was an archive west of Nilfgaard. Today the only thing you will find there are crumbling ruins. The point is, the place we need to raid is not mapped. Even my best scouts did not return. Plunderthose dusty archives and bring me some information about this damned place we\'re in.', cid)
 		setPlayerStorageValue(cid,Storage.Ruiny.Mission01,3)
 		setPlayerStorageValue(cid, Storage.Ruiny.Mission02_QuestLog, 1)
 		setPlayerStorageValue(cid, Storage.Ruiny.NotesDoor, 1)
 			
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 3 then
-		npcHandler:say('Did you fould something usefull?', cid)
+		npcHandler:say('Have you found something useful?', cid)
 		talk_state[cid] = 3
 			
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 4 then
-		npcHandler:say('We need to clean ruins from this cursed beasts , so find the team and go face this monsters in fortress', cid)
+		npcHandler:say('My men and I are not enough to face the enemy. We need more people to help with our quest. Find some worthy adventurers that will lend us their hands to smite evil from this place. I trust you, because where others failed, you were victorious. From now on you are in charge. Gates are now open for you, good luck!', cid)
 		setPlayerStorageValue(cid, Storage.Ruiny.Mission03_QuestLog, 1)
 		setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 5)
 		setPlayerStorageValue(cid, Storage.Ruiny.RuinyDoor, 1)
 		talk_state[cid] = 0
 			
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 5  then
-		npcHandler:say('The expedition was successful?', cid)
+		npcHandler:say('Was the expedition successful?', cid)
 		talk_state[cid] = 4
 	end	
 				
 	elseif msgcontains(msg, 'reward') then
 		if getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 6 then
-			npcHandler:say('This sword was in our family from generation to generation , but i think that you are better than me. I\'ll give you this sword then.', cid)
+			npcHandler:say('This sword was in my family for generations. Now it belongs to you. Wield it in the name of light with your face up. Farewell, hero!', cid)
 			doPlayerAddItem(cid,8932,1)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission04_QuestLog, 2)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 7)
@@ -60,14 +60,14 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 -------------------YES-----------------------		
 	elseif msgcontains(msg, 'yes') then
 		if talk_state[cid] == 1 then
-			npcHandler:say('Great , go and visit four Ardoses chapels and pray to get blessing , that will save your soul from evil, that is behind the gate of this fortress.', cid)
+			npcHandler:say('Hmm, show me that you are pure of heart and faith. Find four chapels of Ardos - the god of courage and light - and pray at them for his blessing. You will need it to remain unshaken from evil shadows that lurk inside the walls of this forsaken stronghold.', cid)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 1)
 			setPlayerStorageValue(cid, Storage.Ruiny.Questline, 1)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01_QuestLog, 1)
 		
 	elseif talk_state[cid] == 2 then
 		if getPlayerStorageValue(cid,Storage.Ruiny.Kaplica01) == 1 and getPlayerStorageValue(cid,Storage.Ruiny.Kaplica02) == 1  and getPlayerStorageValue(cid,Storage.Ruiny.Kaplica03) == 1 and getPlayerStorageValue(cid,Storage.Ruiny.Kaplica04) == 1 then
-				npcHandler:say('Now your sould is ready to go behind this gate , but your body isn\'t. I have a {mission} for you , thats makes that you will be ready. ', cid)
+				npcHandler:say('Yes, I can see the aura you emit. Maybe I was wrong judging you, maybe you are not just another cutthroat. Maybe you will be able to help us. I have assigned another task for you. Are you interested in this {mission}? ', cid)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 2)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission01_QuestLog, 2)
 			else
@@ -77,17 +77,17 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 		elseif talk_state[cid] == 3 then
 			if getPlayerItemCount(cid,12406) >= 1 then
 				doPlayerRemoveItem(cid,12406,1)
-				npcHandler:say('Thanks to this notes , we can go to this fortress, and I\'ve got another {mission} for you.', cid)
+				npcHandler:say('Thanks to these notes we can finally venture inside. I also have got another {mission} for you.', cid)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission02_QuestLog, 2)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 4)
 			else
-			npcHandler:say('Not found anything yet, hurry up and find some records!', cid)	
+			npcHandler:say('You not found anything yet, hurry up and find some records!', cid)	
 		end
 		
 			
 		elseif talk_state[cid] == 4 then
 		if getPlayerStorageValue(cid,Storage.Ruiny.Reward) == 1 then
-			npcHandler:say('I knew that you\'ll make it , and i have a {reward} for you', cid)
+			npcHandler:say('What did you say!? Demons? But it\'s safe now isn\'t it? I\'m affraid our cause would be lost without you. You are the most honorable and courageous fighter I\'ve met in my life. Me and my men bow to you fighter. Our world needs people like you! Here, take this as a {reward}. You deserve this more than me.', cid)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission03_QuestLog, 2)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission04_QuestLog, 1)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 6)

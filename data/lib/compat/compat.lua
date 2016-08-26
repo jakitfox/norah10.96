@@ -757,7 +757,7 @@ function getTileInfo(position)
 	ret.nopz = ret.protection
 	ret.nologout = t:hasFlag(TILESTATE_NOLOGOUT)
 	ret.refresh = t:hasFlag(TILESTATE_REFRESH)
-	ret.house = t:getHouse() ~= nil
+	ret.house = t:hasFlag(TILESTATE_HOUSE)
 	ret.bed = t:hasFlag(TILESTATE_BED)
 	ret.depot = t:hasFlag(TILESTATE_DEPOT)
 
@@ -1002,6 +1002,7 @@ end
 function Guild.addMember(self, player)
 	return player:setGuild(guild)
 end
+
 function Guild.removeMember(self, player)
 	return player:getGuild() == self and player:setGuild(nil)
 end

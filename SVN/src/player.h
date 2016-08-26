@@ -123,7 +123,7 @@ struct Skill {
 
 typedef std::map<uint32_t, uint32_t> MuteCountMap;
 
-#define PLAYER_MAX_SPEED 1500
+#define PLAYER_MAX_SPEED 3000
 #define PLAYER_MIN_SPEED 10
 
 class Player final : public Creature, public Cylinder
@@ -720,6 +720,15 @@ class Player final : public Creature, public Cylinder
 				}
 			}
 		}
+
+		void sendUpdateTileItem(const Tile*, const Position& pos, const Item* item, int32_t stackpos) {
+			if (client) {
+				if (stackpos != -1) {
+					client->sendUpdateTileItem(pos, stackpos, item);
+				}
+			}
+		}
+
 		void sendRemoveTileThing(const Position& pos, int32_t stackpos) {
 			if (stackpos != -1 && client) {
 				client->sendRemoveTileThing(pos, stackpos);
@@ -1389,8 +1398,8 @@ class Player final : public Creature, public Cylinder
 		friend class Map;
 		friend class Actions;
 		friend class IOLoginData;
-		friend class ProtocolGameBase;
 		friend class ProtocolGame;
+		friend class ProtocolGameBase;
 };
 
 #endif

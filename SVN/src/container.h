@@ -89,7 +89,7 @@ class Container : public Item, public Cylinder
 		virtual const Reward* getReward() const {
 			return nullptr;
 		}
-		
+
 		Attr_ReadValue readAttr(AttrTypes_t attr, PropStream& propStream) override;
 		bool unserializeItemNode(FileLoader& f, NODE node, PropStream& propStream) override;
 		std::string getContentDescription() const;

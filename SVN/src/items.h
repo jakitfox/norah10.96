@@ -59,7 +59,7 @@ enum ItemTypes_t {
 };
 
 struct Abilities {
-	Abilities() : stats(), statsPercent(), skills(), fieldAbsorbPercent(), absorbPercent() {
+	Abilities() : stats(), statsPercent(), skills(), fieldAbsorbPercent(), absorbPercent(), reflectPercent() {
 		elementType = COMBAT_NONE;
 		elementDamage = 0;
 
@@ -99,6 +99,9 @@ struct Abilities {
 
 	//damage abilities modifiers
 	int16_t absorbPercent[COMBAT_COUNT];
+
+	//relfect abilities modifires
+	int16_t reflectPercent[COMBAT_COUNT];
 
 	//elemental damage
 	uint16_t elementDamage;
@@ -216,6 +219,7 @@ class ItemType
 		uint32_t wieldInfo;
 		uint32_t minReqLevel;
 		uint32_t minReqMagicLevel;
+		uint32_t minReqSkillLevel;
 		uint32_t charges;
 		int32_t maxHitChance;
 		int32_t decayTo;

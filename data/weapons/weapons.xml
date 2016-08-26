@@ -37,7 +37,43 @@
 	<wand id="18412" level="65" mana="17" min="70" max="100" type="ice"> <!-- Glacial Rod -->
 		<vocation name="Druid" />
 	</wand>
-
+	<wand id="25995" level="100" mana="18" min="70" max="105" type="ice"> <!-- Rod of Carving -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25996" level="150" mana="18" min="70" max="105" type="ice"> <!-- Rod of Carving -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25997" level="200" mana="18" min="70" max="105" type="ice"> <!-- Rod of Carving -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25998" level="250" mana="18" min="70" max="105" type="ice"> <!-- Rod of Carving -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25888" level="100" mana="18" min="70" max="105" type="ice"> <!--	rod of mayhem -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25898" level="150" mana="18" min="70" max="105" type="ice"> <!-- rod of mayhem -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25908" level="200" mana="18" min="70" max="105" type="ice"> <!-- rod of mayhem -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25918" level="250" mana="18" min="70" max="105" type="ice"> <!-- rod of mayhem -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25955" level="100" mana="18" min="70" max="105" type="ice"> <!-- rod of remedy -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25956" level="150" mana="18" min="70" max="105" type="ice"> <!-- rod of remedy -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25957" level="200" mana="18" min="70" max="105" type="ice"> <!-- rod of remedy -->
+		<vocation name="Druid" />
+	</wand>
+	<wand id="25958" level="250" mana="18" min="70" max="105" type="ice"> <!-- rod of remedy -->
+		<vocation name="Druid" />
+	</wand>
+	
 	<!-- Wands -->
 	<wand id="23719" level="1" mana="1" min="3" max="7" type="fire"> <!-- The Scorcher -->
 		<vocation name="Sorcerer" />
@@ -78,7 +114,43 @@
 	<wand id="18409" level="65" mana="17" min="70" max="100" type="fire"> <!-- Wand of Everblazing -->
 		<vocation name="Sorcerer" />
 	</wand>
-
+	<wand id="25991" level="100" mana="18" min="70" max="105" type="energy"> <!-- wand of carving -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25992" level="150" mana="18" min="70" max="105" type="energy"> <!-- wand of carving -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25993" level="200" mana="18" min="70" max="105" type="energy"> <!-- wand of carving -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25994" level="250" mana="18" min="70" max="105" type="energy"> <!-- wand of carving -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25887" level="100" mana="18" min="70" max="105" type="energy"> <!-- wand of mayhem -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25897" level="150" mana="18" min="70" max="105" type="energy"> <!-- wand of mayhem -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25907" level="200" mana="18" min="70" max="105" type="energy"> <!-- wand of mayhem -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25917" level="250" mana="18" min="70" max="105" type="energy"> <!-- wand of mayhem -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25951" level="100" mana="18" min="70" max="105" type="energy"> <!-- Wand of Remedy -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25952" level="150" mana="18" min="70" max="105" type="energy"> <!-- Wand of Remedy -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25953" level="200" mana="18" min="70" max="105" type="energy"> <!-- Wand of Remedy -->
+		<vocation name="Sorcerer" />
+	</wand>
+	<wand id="25954" level="250" mana="18" min="70" max="105" type="energy"> <!-- Wand of Remedy -->
+		<vocation name="Sorcerer" />
+	</wand>
+	
 	<!-- Swords -->
 	<melee id="2396" action="removecharge" />
 	<melee id="2413" unproperly="1">
@@ -215,7 +287,7 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
-	<melee id="25960" level="100" unproperly="1">
+	<melee id="25960" level="150" unproperly="1">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
@@ -231,23 +303,23 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
-	<melee id="25961" level="100" unproperly="1">
+	<melee id="25961" level="200" unproperly="1">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
-	<melee id="25964" level="100" unproperly="1">
+	<melee id="25964" level="150" unproperly="1">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
-	<melee id="25962" level="100" unproperly="1">
+	<melee id="25962" level="250" unproperly="1">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
-	<melee id="25965" level="100" unproperly="1">
+	<melee id="25965" level="200" unproperly="1">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
-	<melee id="25966" level="100" unproperly="1">
+	<melee id="25966" level="250" unproperly="1">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
@@ -479,6 +551,104 @@
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
 	<melee id="23547" level="55" unproperly="1" />
+	<melee id="25967" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25968" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25969" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25970" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25881" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25891" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25901" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25911" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25927" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25928" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25929" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25930" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25971" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25972" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25973" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25974" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25882" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25892" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25902" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25912" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25931" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25932" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25933" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25934" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	
+	
 
 	<!-- Fire -->
 	<melee id="7749" level="20" action="removecharge" unproperly="1" />
@@ -644,6 +814,104 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
+	<melee id="25979" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25980" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25981" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25982" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25884" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25894" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25904" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25914" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25939" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25940" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25941" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25942" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25975" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25976" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25977" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25978" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25883" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25893" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25903" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25913" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25935" level="100" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25936" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25937" level="200" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	<melee id="25938" level="250" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
+	
+	
 
 	<!-- Fire -->
 	<melee id="7754" level="20" action="removecharge" unproperly="1" />
@@ -783,6 +1051,103 @@
 		<vocation name="Paladin" />
 		<vocation name="Royal Paladin" showInDescription="0" />
 	</distance>
+	<distance id="25983" level="100" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25984" level="150" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25985" level="200" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25986" level="250" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25885" level="100" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25895" level="150" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25906" level="200" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25915" level="250" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25943" level="100" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25944" level="150" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25945" level="200" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25946" level="250" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25987" level="100" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25988" level="150" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25989" level="200" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25990" level="250" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25886" level="100" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25896" level="150" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25905" level="200" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25916" level="250" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25947" level="100" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25948" level="150" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25949" level="200" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25950" level="250" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	
 
 	<!-- Ammunition -->
 	<distance id="1294" breakchance="3" /> <!-- small stone -->
