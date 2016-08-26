@@ -7,7 +7,7 @@ local holeId = {
 local holes = {468, 481, 483, 7932}
 local groundIds = {354, 355}
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function onUseScythe(player, item, fromPosition, target, toPosition, isHotkey)
 	if target.itemid == 2739 then
 		target:transform(2737)
 		target:decay()
@@ -17,7 +17,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	return destroyItem(player, target, toPosition)
 end
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function onUseMachete(player, item, fromPosition, target, toPosition, isHotkey)
 	if target.itemid == 2782 then
 		target:transform(2781)
 		target:decay()
@@ -26,7 +26,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	return destroyItem(player, target, toPosition)
 end
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 	if toPosition.x == CONTAINER_POSITION then
 		return false
 	end
@@ -53,7 +53,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	return true
 end
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 	if toPosition.x == CONTAINER_POSITION then
 		return false
 	end
@@ -108,7 +108,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	return true
 end
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function onUseRope(player, item, fromPosition, target, toPosition, isHotkey)
 	local tile = Tile(toPosition)
 	if not tile then
 		return false
