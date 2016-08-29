@@ -16,7 +16,7 @@ function onPrepareDeath(cid, killer)
         player:teleportTo(player:getTown():getTemplePosition())
         player:setStorageValue(zeJoinStorage, 0)
         player:addHealth(player:getMaxHealth())
-		player:changeSpeed(player:getBaseSpeed())
+		player:changeSpeed(player:getBaseSpeed() - player:getSpeed())
 		player:sendTextMessage(MESSAGE_INFO_DESCR, ("You was catched by spider"))
 		
         if Game.getStorageValue(zeJoinedCountGlobalStorage) <= 1 then --Event ended, someone won!
@@ -31,7 +31,7 @@ function onPrepareDeath(cid, killer)
             winner = Player(winner)
             if winner then
                 winner:teleportTo(winner:getTown():getTemplePosition())
-				winner:changeSpeed(winner:getBaseSpeed())
+				winner:changeSpeed(winner:getBaseSpeed() - winner:getSpeed())
 			local coin = winner:setCoinsBalance(winner:getCoinsBalance() + 20)	
 			if coin then
 			end

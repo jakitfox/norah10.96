@@ -49,7 +49,7 @@
 	end
 	return false
 	end
-
+	
 	function SE_stop(winner_name, reward)
 		table.remove(active_events, table.find(active_events,3))
 		for x = PTR.from.x, PTR.to.x do
@@ -62,10 +62,10 @@
 				doTeleportThing(cid, PTR.kick)
 				if winner_name ~= nil then
 					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, winner_name .. " has reached the chest. The event is over.")
-					doChangeSpeed(cid,getCreatureBaseSpeed(cid))
+					Player(cid):changeSpeed(Player(cid):getBaseSpeed() - Player(cid):getSpeed())
 				else
 					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Game over.")
-					doChangeSpeed(cid,getCreatureBaseSpeed(cid))
+					Player(cid):changeSpeed(Player(cid):getBaseSpeed() - Player(cid):getSpeed())
 				end
 			end
 		end

@@ -12,7 +12,7 @@
 	<!-- Satan Quest -->
 	<movevent event="StepIn" uniqueid="3003" script="quest/satan/room.lua" />
 	<movevent event="StepIn" fromuid="3011" touid="3017" script="quest/satan/thrones.lua" />
-
+	
 	<!--Gravedigger Quest-->
 	<movevent event="StepIn" fromuid="3047" touid="3050" script="quest/gravedigger/tomb_tp.lua" />
 	<movevent event="StepIn" uniqueid="3051" script="quest/gravedigger/tp_faraon_1.lua" />

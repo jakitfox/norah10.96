@@ -102,33 +102,41 @@ npcHandler:addModule(shopModule)
 	shopModule:addSellableItem({'mystical hourglass'}, 		10577, 700,		'mystical hourglass')
 	shopModule:addSellableItem({'ankh'}, 					2193, 100,		'ankh')
 
-local function creatureSayCallback(cid, type, msg)
+function creatureSayCallback(cid, type, msg)
 	if not npcHandler:isFocused(cid) then
 		return false
 	end
+
 	local player = Player(cid)
-	local items = {[1] = 2190, [2] = 2182}
-	local itemId = items[player:getVocation():getBase():getId()]
+	local vocationId = player:getVocation():getId()
+	local items = {
+		[1] = 2190,
+		[2] = 2182,
+		[5] = 2190,
+		[6] = 2182
+	}
+
 	if msgcontains(msg, 'first rod') or msgcontains(msg, 'first wand') then
-		if player:isMage() then
+		if isInArray({1, 2, 5, 6}, vocationId) then
 			if player:getStorageValue(Storage.firstMageWeapon) == -1 then
-				npcHandler:say('So you ask me for a {' .. ItemType(itemId):getName() .. '} to begin your adventure?', cid)
+				selfSay('So you ask me for a {' .. ItemType(items[vocationId]):getName() .. '} to begin your advanture?', cid)
 				npcHandler.topic[cid] = 1
 			else
-				npcHandler:say('What? I have already gave you one {' .. ItemType(itemId):getName() .. '}!', cid)
+				selfSay('What? I have already gave you one {' .. ItemType(items[vocationId]):getName() .. '}!', cid)
 			end
 		else
-			npcHandler:say('Sorry, you aren\'t a druid either a sorcerer.', cid)
+			selfSay('Sorry, you aren\'t a druid either a sorcerer.', cid)
 		end
 	elseif msgcontains(msg, 'yes') then
 		if npcHandler.topic[cid] == 1 then
-			player:addItem(itemId, 1)
-			npcHandler:say('Here you are young adept, take care yourself.', cid)
+			player:addItem(items[vocationId], 1)
 			player:setStorageValue(Storage.firstMageWeapon, 1)
+			selfSay('Here you are young adept, take care yourself.', cid)
 		end
 		npcHandler.topic[cid] = 0
+		
 	elseif msgcontains(msg, 'no') and npcHandler.topic[cid] == 1 then
-		npcHandler:say('Ok then.', cid)
+		selfSay('Ok then.', cid)
 		npcHandler.topic[cid] = 0
 	end
 	return true

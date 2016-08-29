@@ -280,10 +280,11 @@ Storage = {
 	SwampDiggingTimeout = 3720,
 	EXP_Event = 3725,
 	
-	Admin_Report = 3728
+	Admin_Report = 3728,
 	
 	-- 
 	-- 3790 aid
 	-- 3791 aid runes events
 	
+	firstMageWeapon = 3795,
 }
