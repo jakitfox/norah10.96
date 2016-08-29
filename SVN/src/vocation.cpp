@@ -184,12 +184,12 @@ uint32_t Vocation::skillBase[SKILL_LAST + 1] = {50, 50, 50, 50, 30, 100, 20};
 Vocation::Vocation(uint16_t id)
 	: name("none"), id(id)
 {
-	gainHealthTicks = gainHealthTicks;
-	gainHealthAmount = gainHealthAmount;
-	gainManaTicks = gainManaTicks;
-	gainManaAmount = gainManaAmount;
-	gainSoulTicks = gainSoulTicks;
-	soulMax = soulMax;
+	gainHealthTicks = 6;
+	gainHealthAmount = 1;
+	gainManaTicks = 6;
+	gainManaAmount = 1;
+	gainSoulTicks = 120;
+	soulMax = 100;
 
 	clientId = 0;
 	fromVocation = VOCATION_NONE;

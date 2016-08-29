@@ -165,6 +165,10 @@ shopModule:addSellableItem({'glooth axe'},          	23551, 1500,   	'glooth axe
 shopModule:addSellableItem({'execowtioner axe'},   		23547, 12000, 	'execowtioner axe')
 shopModule:addSellableItem({'cowtana'},            		23548, 2500, 	'cowtana')
 shopModule:addSellableItem({'ratana'},            		20092, 500,   	'ratana')
+--10.90--
+shopModule:addSellableItem({'rift bow'},      	    	25522, 45000,  	'rift bow')
+shopModule:addSellableItem({'rift crossbow'},          	25523, 45000,  	'rift crossbow')
+shopModule:addSellableItem({'rift lance'},          	25383, 30000,  	'rift lance')
 
 
 npcHandler:addModule(FocusModule:new())  

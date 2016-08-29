@@ -13,6 +13,7 @@ local function onMovementRemoveProtection(cid, oldPosition, time)
 	addEvent(onMovementRemoveProtection, 1000, cid, oldPosition, time - 1)
 end
 
+
 function onLogin(player)
 	local loginStr = "Welcome to " .. configManager.getString(configKeys.SERVER_NAME) .. "!"
 	if player:getLastLoginSaved() <= 0 then
@@ -43,12 +44,24 @@ function onLogin(player)
 	elseif not promotion then
 		player:setVocation(vocation:getDemotion())
 	end
+	
+	-- Rewards notice
+	local rewards = #player:getRewardList()
+	if rewards > 0 then
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("You have %s %s in your reward chest.", rewards == 1 and 'one' or rewards, rewards > 1 and "rewards" or "reward"))
+	end
+
+	-- Update player id 
+	local stats = player:inBossFight()
+	if stats then
+		stats.playerId = player:getId()
+	end
 
 	if player:getStorageValue(Storage.combatProtectionStorage) <= os.time() then
 		player:setStorageValue(Storage.combatProtectionStorage, os.time() + 10)
 		onMovementRemoveProtection(playerId, player:getPosition(), 10)
 	end
-
+	
 	if player:getStorageValue(1000) == 1 then --write ze_join_storage number here
         player:setStorageValue(1000, 0) --write ze_join_storage number here
     end
@@ -63,7 +76,6 @@ function onLogin(player)
 	player:registerEvent("SvargrondArenaKill")
 	player:registerEvent("AdvanceSave")
 	player:registerEvent("ZE_Death")
-	player:registerEvent("RewardLoot")
 	
 	return true
 end

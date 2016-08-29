@@ -1,7 +1,3 @@
-/**
-* This file doesn't belong to theforgottenserver developers.
-*/
-
 #ifndef FS_REWARD_H
 #define FS_REWARD_H
 

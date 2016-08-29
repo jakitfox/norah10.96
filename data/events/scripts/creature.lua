@@ -37,13 +37,8 @@ function Creature:onTargetCombat(target)
 	if not self then
 		return true
 	end
-
-	if self:isPlayer() and target:isPlayer() then
-		if self:getStorageValue(_Lib_Battle_Info.TeamOne.storage) >= 1 and target:getStorageValue(_Lib_Battle_Info.TeamOne.storage) >= 1 or self:getStorageValue(_Lib_Battle_Info.TeamTwo.storage) >= 1 and target:getStorageValue(_Lib_Battle_Info.TeamTwo.storage) >= 1 then
-			return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
-		end
-	end
-
+	
+	
 	if target:isPlayer() then
 		if self:isMonster() then
 			local protectionStorage = target:getStorageValue(Storage.combatProtectionStorage)
@@ -59,12 +54,31 @@ function Creature:onTargetCombat(target)
 
 				return true
 			end
-
-			if protectionStorage >= os.time() then
+			
+		if protectionStorage >= os.time() then
+				return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
+			end
+		end
+	end	
+	
+	if PARTY_PROTECTION ~= 0 then
+		if self:isPlayer() and target:isPlayer() then
+			local party = self:getParty()
+			if party then
+				local targetParty = target:getParty()
+				if targetParty and targetParty == party then
+					return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
+				end
+			end
+		end
+	end
+	
+	if ADVANCED_SECURE_MODE ~= 0 then
+		if self:isPlayer() and target:isPlayer() then
+			if self:hasSecureMode() then
 				return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
 			end
 		end
 	end
-
 	return true
 end

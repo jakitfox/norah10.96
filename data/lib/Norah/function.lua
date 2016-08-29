@@ -40,6 +40,10 @@ function Player.withdrawMoney(self, amount)
 	return true
 end
 
+function Position:isInRange(fromPosition, toPosition)
+    return (self.x >= fromPosition.x and self.y >= fromPosition.y and self.z >= fromPosition.z and self.x <= toPosition.x and self.y <= toPosition.y and self.z <= toPosition.z)
+end
+
 function Player.depositMoney(self, amount)
 	if not self:removeMoney(amount) then
 		return false

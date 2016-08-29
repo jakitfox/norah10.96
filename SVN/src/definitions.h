@@ -21,14 +21,10 @@
 #define FS_DEFINITIONS_H_877452FEC245450C9F96B8FD268D8963
 
 #define STATUS_SERVER_NAME "The Forgotten Server"
-#define STATUS_SERVER_VERSION "1"
-#define MINOR_VERSION "2"
-#define REVISION_VERSION "TibiaKing"
-#define SOFTWARE_CODENAME "Edition"
-#define STATUS_SERVER_DEVELOPERS "Malucooo and The Forgotten Server Developers"
-#define GIT_REPO "https://github.com/otland/forgottenserver"
+#define STATUS_SERVER_VERSION "1.2"
+#define STATUS_SERVER_DEVELOPERS "Mark Samman"
 
-#define CLIENT_VERSION_MIN 1096
+#define CLIENT_VERSION_MIN 1095
 #define CLIENT_VERSION_MAX 1096
 #define CLIENT_VERSION_STR "10.96"
 

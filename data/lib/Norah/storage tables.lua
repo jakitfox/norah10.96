@@ -283,5 +283,7 @@ Storage = {
 	Admin_Report = 3728
 	
 	-- 
+	-- 3790 aid
+	-- 3791 aid runes events
 	
 }

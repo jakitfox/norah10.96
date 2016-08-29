@@ -1,5 +1,16 @@
 function onUpdateDatabase()
-	print("> Updating database to version 19 (casting system)")
-	db.query("CREATE TABLE IF NOT EXISTS `live_casts` ( `player_id` int(11) NOT NULL, `cast_name` varchar(255) NOT NULL, `password` boolean NOT NULL DEFAULT false, `description` varchar(255), `spectators` smallint(5) DEFAULT 0, UNIQUE KEY `player_id_2` (`player_id`), FOREIGN KEY (`player_id`) REFERENCES `players`(`id`) ON DELETE CASCADE ) ENGINE=InnoDB;")
+	print("> Updating database to version 19 (add crit itp.)")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_critical_hit_chance` int(10) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_critical_hit_chance_tries` bigint(20) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_critical_hit_damage` int(10) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_critical_hit_damage_tries` bigint(20) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_life_leech_chance` int(10) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_life_leech_chance_tries` bigint(20) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_life_leech_amount` int(10) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_life_leech_amount_tries` bigint(20) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_mana_leech_chance` int(10) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_mana_leech_chance_tries` bigint(20) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_mana_leech_amount` int(10) unsigned NOT NULL DEFAULT 0")
+	db.query("ALTER TABLE `players` ADD COLUMN `skill_mana_leech_amount_tries` bigint(20) unsigned NOT NULL DEFAULT 0")
 	return true
 end

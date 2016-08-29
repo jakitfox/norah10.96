@@ -59,9 +59,6 @@ class Events
 		void eventPlayerOnLoseExperience(Player* player, uint64_t& exp);
 		void eventPlayerOnGainSkillTries(Player* player, skills_t skill, uint64_t& tries);
 
-		// Custom
-		bool eventMonsterOnSpawn(Monster* monster, const Position& position, bool isStartup);
-
 	private:
 		LuaScriptInterface scriptInterface;
 
@@ -89,9 +86,6 @@ class Events
 		int32_t playerOnGainExperience;
 		int32_t playerOnLoseExperience;
 		int32_t playerOnGainSkillTries;
-
-		// Custom
-		int32_t monsterOnSpawn;
 };
 
 #endif

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
 	<!-- EVENTS -->
+	<!-- Rune Match event-->
+	<movevent event="StepOut" actionid="3791" script="event/runes.lua"/>
+	<!-- Spider -->
 	<movevent event="StepIn" uniqueid="3293" script="event/Spider/spider_tp.lua" />
 	<!-- TWD -->
 	<movevent event="StepIn" fromuid="3290" touid="3291" script="event/twd/twdTile.lua" />
@@ -483,6 +486,10 @@
 	<movevent event="DeEquip" itemid="26132" slot="feet" function="onDeEquipItem" />
 	<movevent event="Equip" itemid="26133" slot="feet" level="150" function="onEquipItem" />
 	<movevent event="DeEquip" itemid="26133" slot="feet" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="25429" slot="feet" level="100" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="25429" slot="feet" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="25430" slot="feet" level="100" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="25430" slot="feet" function="onDeEquipItem" />
 
 	<!-- Amulets -->
 	<movevent event="Equip" itemid="2161" slot="necklace" function="onEquipItem" />
@@ -798,6 +805,8 @@
 		<vocation name="Elder Druid" showInDescription="0" />
 	</movevent>
 	<movevent event="DeEquip" itemid="26131" slot="head" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="25413" slot="head" level="150" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="25413" slot="head" function="onDeEquipItem" />
 
 	<!-- Armors -->
 	<movevent event="Equip" itemid="2466" slot="armor" function="onEquipItem">
@@ -2003,4 +2012,15 @@
 		<vocation name="Elder Druid" showInDescription="0" />
 	</movevent>
 	<movevent event="DeEquip" itemid="22424" slot="shield" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="25546" slot="hand" level="999" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="25546" slot="hand" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="25414" slot="hand" level="200" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="25414" slot="hand" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="25411" slot="shield" level="150" function="onEquipItem">
+		<vocation name="Sorcerer" />
+		<vocation name="Master Sorcerer" showInDescription="0" />
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" showInDescription="0" />
+	</movevent>
+	<movevent event="DeEquip" itemid="25411" slot="shield" function="onDeEquipItem" />
 </movements>

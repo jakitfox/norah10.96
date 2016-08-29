@@ -113,9 +113,6 @@ class Monster final : public Creature
 		bool isHostile() const {
 			return mType->isHostile;
 		}
-		bool isPassive() const {
-			return mType->isPassive;
-		}
 		bool canSee(const Position& pos) const final;
 		bool canSeeInvisibility() const final {
 			return isImmune(CONDITION_INVISIBLE);
@@ -165,7 +162,7 @@ class Monster final : public Creature
 
 		bool isTarget(const Creature* creature) const;
 		bool isFleeing() const {
-			return getHealth() <= mType->runAwayHealth;
+			return !isSummon() && getHealth() <= mType->runAwayHealth;
 		}
 
 		bool getDistanceStep(const Position& targetPos, Direction& direction, bool flee = false);

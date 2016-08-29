@@ -130,9 +130,6 @@ class MoveEvent final : public Event
 		uint32_t getReqMagLv() const {
 			return reqMagLevel;
 		}
-		uint32_t getReqSkillLv() const {
-			return reqSkillLevel;
-		}
 		bool isPremium() const {
 			return premium;
 		}
@@ -166,7 +163,6 @@ class MoveEvent final : public Event
 		//onEquip information
 		uint32_t reqLevel;
 		uint32_t reqMagLevel;
-		uint32_t reqSkillLevel;
 		bool premium;
 		std::string vocationString;
 		uint32_t wieldInfo;

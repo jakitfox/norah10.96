@@ -650,7 +650,7 @@ bool ConditionAttributes::setParam(ConditionParam_t param, int32_t value)
 			skillsPercent[SKILL_LIFE_LEECH_CHANCE] = value;
 			return true;
 		}
-
+		
 		case CONDITION_PARAM_SKILL_LIFE_LEECH_AMOUNT: {
 			skills[SKILL_LIFE_LEECH_AMOUNT] = value;
 			return true;

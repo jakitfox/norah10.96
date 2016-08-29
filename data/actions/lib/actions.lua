@@ -4,7 +4,7 @@ local holeId = {
 	8251, 8252, 8254, 8255, 8256, 8276, 8277, 8279, 8281, 8284, 8285, 8286, 8323,
 	8567, 8585, 8595, 8596, 8972, 9606, 9625, 13190, 14461, 19519, 21536
 }
-local holes = {468, 481, 483, 7932}
+local holes = {468, 481, 483, 7932, 26019}
 local groundIds = {354, 355}
 
 function onUseScythe(player, item, fromPosition, target, toPosition, isHotkey)

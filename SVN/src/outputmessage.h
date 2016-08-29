@@ -65,7 +65,7 @@ class OutputMessage : public NetworkMessage
 			length += msgLen;
 			position += msgLen;
 		}
-
+		
 		bool isBroadcastMsg() const {
 			return isBroadcastMesssage;
 		}
@@ -83,7 +83,7 @@ class OutputMessage : public NetworkMessage
 		}
 
 		MsgSize_t outputBufferStart;
-		bool isBroadcastMesssage {false};
+		bool isBroadcastMesssage{false};
 };
 
 class OutputMessagePool

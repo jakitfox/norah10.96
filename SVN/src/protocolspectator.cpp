@@ -1,21 +1,21 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- */
+* The Forgotten Server - a free and open-source MMORPG server emulator
+* Copyright (C) 2014  Mark Samman <mark.samman@gmail.com>
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with this program; if not, write to the Free Software Foundation, Inc.,
+* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
 
 #include "otpch.h"
 
@@ -40,7 +40,7 @@ extern Game g_game;
 extern ConfigManager g_config;
 extern Chat* g_chat;
 
-ProtocolSpectator::ProtocolSpectator(Connection_ptr connection):
+ProtocolSpectator::ProtocolSpectator(Connection_ptr connection) :
 	ProtocolGameBase(connection),
 	client(nullptr)
 {
@@ -149,9 +149,10 @@ void ProtocolSpectator::addDummyCreature(NetworkMessage& msg, const uint32_t& cr
 {
 	// add dummy creature
 	CreatureType_t creatureType = CREATURETYPE_NPC;
-	if(creatureID <= 0x10000000) {
+	if (creatureID <= 0x10000000) {
 		creatureType = CREATURETYPE_PLAYER;
-	} else if(creatureID <= 0x40000000) {
+	}
+	else if (creatureID <= 0x40000000) {
 		creatureType = CREATURETYPE_MONSTER;
 	}
 	msg.addByte(0x6A);
@@ -206,7 +207,8 @@ void ProtocolSpectator::syncKnownCreatureSets()
 			checkCreatureAsKnown(creature->getID(), known, removedKnown);
 			AddCreature(msg, creature, known, removedKnown);
 			RemoveTileThing(msg, playerPos, 1);
-		} else if (operatingSystem <= CLIENTOS_FLASH) { // otclient freeze with huge amount of creature add, but do not debug if there are unknown creatures, best solution for now :(
+		}
+		else if (operatingSystem <= CLIENTOS_FLASH) { // otclient freeze with huge amount of creature add, but do not debug if there are unknown creatures, best solution for now :(
 			addDummyCreature(msg, creatureID, playerPos);
 			RemoveTileThing(msg, playerPos, 1);
 		}
@@ -241,13 +243,13 @@ void ProtocolSpectator::syncOpenContainers()
 void ProtocolSpectator::login(const std::string& liveCastName, const std::string& password)
 {
 	//dispatcher thread
-	auto foundPlayer = g_game.getPlayerByName(liveCastName);
-	if (!foundPlayer || foundPlayer->isRemoved()) {
+	auto _player = g_game.getPlayerByName(liveCastName);
+	if (!_player || _player->isRemoved()) {
 		disconnectSpectator("Live cast no longer exists. Please relogin to refresh the list.");
 		return;
 	}
 
-	const auto liveCasterProtocol = ProtocolGame::getLiveCast(foundPlayer);
+	const auto liveCasterProtocol = ProtocolGame::getLiveCast(_player);
 	if (!liveCasterProtocol) {
 		disconnectSpectator("Live cast no longer exists. Please relogin to refresh the list.");
 		return;
@@ -260,7 +262,7 @@ void ProtocolSpectator::login(const std::string& liveCastName, const std::string
 			return;
 		}
 
-		player = foundPlayer;
+		player = _player;
 		player->incrementReferenceCounter();
 		eventConnect = 0;
 		client = liveCasterProtocol;
@@ -272,7 +274,8 @@ void ProtocolSpectator::login(const std::string& liveCastName, const std::string
 		syncOpenContainers();
 
 		liveCasterProtocol->addSpectator(std::static_pointer_cast<ProtocolSpectator>(shared_from_this()));
-	} else {
+	}
+	else {
 		disconnectSpectator("Live cast no longer exists. Please relogin to refresh the list.");
 	}
 }
@@ -311,15 +314,15 @@ void ProtocolSpectator::parsePacket(NetworkMessage& msg)
 	}
 
 	switch (recvbyte) {
-		case 0x14: g_dispatcher.addTask(createTask(std::bind(&ProtocolSpectator::logout, getThis()))); break;
-		case 0x1D: g_dispatcher.addTask(createTask(std::bind(&ProtocolSpectator::sendPingBack, getThis()))); break;
-		case 0x1E: g_dispatcher.addTask(createTask(std::bind(&ProtocolSpectator::sendPing, getThis()))); break;
+	case 0x14: g_dispatcher.addTask(createTask(std::bind(&ProtocolSpectator::logout, getThis()))); break;
+	case 0x1D: g_dispatcher.addTask(createTask(std::bind(&ProtocolSpectator::sendPingBack, getThis()))); break;
+	case 0x1E: g_dispatcher.addTask(createTask(std::bind(&ProtocolSpectator::sendPing, getThis()))); break;
 		//Reset viewed position/direction if the spectator tries to move in any way
-		case 0x64: case 0x65: case 0x66: case 0x67: case 0x68: case 0x6A: case 0x6B: case 0x6C: case 0x6D: case 0x6F: case 0x70: case 0x71:
-		case 0x72: g_dispatcher.addTask(createTask(std::bind(&ProtocolSpectator::sendCancelWalk, getThis()))); break;
-		case 0x96: parseSpectatorSay(msg); break;
-		default:
-			break;
+	case 0x64: case 0x65: case 0x66: case 0x67: case 0x68: case 0x6A: case 0x6B: case 0x6C: case 0x6D: case 0x6F: case 0x70: case 0x71:
+	case 0x72: g_dispatcher.addTask(createTask(std::bind(&ProtocolSpectator::sendCancelWalk, getThis()))); break;
+	case 0x96: parseSpectatorSay(msg); break;
+	default:
+		break;
 	}
 
 	if (msg.isOverrun()) {
@@ -334,7 +337,8 @@ void ProtocolSpectator::parseSpectatorSay(NetworkMessage& msg)
 
 	if (type == TALKTYPE_CHANNEL_Y) {
 		channelId = msg.get<uint16_t>();
-	} else {
+	}
+	else {
 		return;
 	}
 

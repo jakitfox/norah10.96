@@ -5,6 +5,15 @@
 	<action itemid="2557" script="event/Tower Defense/twdHammer.lua" allowfaruse="1" />
 	<!-- Swim Event -->
 	<action uniqueid="3286" script="event/swim/se_chest.lua" />
+	<!-- Rune Match event -->
+	<action actionid="3791" script="event/runes.lua" />
+	
+	<!-- Meble -->
+	<action fromid="26107" toid="26111" script="inne/furniture.lua" />
+	<action fromid="26087" toid="26089" script="inne/furniture.lua" />
+	<action fromid="26090" toid="26101" script="inne/furniture.lua" />
+	<action fromid="25390" toid="25391" script="inne/furniture.lua" />
+	
 	
 	<!-- Satan Quest -->
 	<action uniqueid="3000" script="quests/satan/ceremonial_ankh.lua" />

@@ -9,6 +9,8 @@ function onThink()                        npcHandler:onThink()                  
 
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
+
+shopModule:addSellableItem({'rift shield'},  				25382, 50000,    	'rift shield')
 --10.50--
 shopModule:addSellableItem({'mino shield'},  				23546, 3000,    	'mino shield')
 shopModule:addSellableItem({'metal spats'},  				23540, 2000,     	'metal spats')

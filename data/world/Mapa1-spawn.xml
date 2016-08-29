@@ -1000,32 +1000,42 @@
 	<spawn centerx="837" centery="938" centerz="4" radius="1">
 		<monster name="Nightmare" x="0" y="1" z="4" spawntime="60" />
 	</spawn>
-	<spawn centerx="370" centery="1148" centerz="4" radius="5">
-		<monster name="Grim Reaper" x="2" y="-2" z="4" spawntime="60" />
+	<spawn centerx="369" centery="1146" centerz="4" radius="1">
+		<monster name="Grim Reaper" x="0" y="1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="372" centery="1147" centerz="4" radius="1">
+		<monster name="Grim Reaper" x="0" y="-1" z="4" spawntime="60" />
+		<monster name="Juggernaut" x="-1" y="1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="371" centery="1151" centerz="4" radius="1">
 		<monster name="Grim Reaper" x="-1" y="-1" z="4" spawntime="60" />
-		<monster name="Juggernaut" x="1" y="0" z="4" spawntime="60" />
-		<monster name="Grim Reaper" x="0" y="2" z="4" spawntime="60" />
 	</spawn>
-	<spawn centerx="372" centery="1158" centerz="4" radius="5">
-		<monster name="Spectre" x="-1" y="-2" z="4" spawntime="60" />
-		<monster name="Spectre" x="2" y="5" z="4" spawntime="60" />
+	<spawn centerx="370" centery="1156" centerz="4" radius="1">
+		<monster name="Vampire Viscount" x="1" y="-1" z="4" spawntime="60" />
 	</spawn>
-	<spawn centerx="400" centery="1161" centerz="4" radius="5">
-		<monster name="Spectre" x="2" y="-2" z="4" spawntime="60" />
-		<monster name="Spectre" x="0" y="-1" z="4" spawntime="60" />
+	<spawn centerx="399" centery="1159" centerz="4" radius="1">
+		<monster name="Demon" x="1" y="0" z="4" spawntime="60" />
 	</spawn>
-	<spawn centerx="365" centery="1167" centerz="4" radius="5">
-		<monster name="Spectre" x="1" y="-1" z="4" spawntime="60" />
-		<monster name="Spectre" x="3" y="2" z="4" spawntime="60" />
+	<spawn centerx="371" centery="1162" centerz="4" radius="1">
+		<monster name="Vampire Bride" x="0" y="-1" z="4" spawntime="60" />
 	</spawn>
-	<spawn centerx="374" centery="1168" centerz="4" radius="5">
-		<monster name="Spectre" x="2" y="-2" z="4" spawntime="60" />
-		<monster name="Spectre" x="-2" y="1" z="4" spawntime="60" />
+	<spawn centerx="375" centery="1166" centerz="4" radius="1">
+		<monster name="Vampire Viscount" x="1" y="0" z="4" spawntime="60" />
 	</spawn>
-	<spawn centerx="340" centery="1171" centerz="4" radius="5">
-		<monster name="Spectre" x="-1" y="-1" z="4" spawntime="60" />
-		<monster name="Spectre" x="3" y="-1" z="4" spawntime="60" />
-		<monster name="Spectre" x="1" y="0" z="4" spawntime="60" />
+	<spawn centerx="366" centery="1167" centerz="4" radius="1">
+		<monster name="Vampire Bride" x="0" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="338" centery="1169" centerz="4" radius="1">
+		<monster name="Vampire Viscount" x="1" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="344" centery="1170" centerz="4" radius="1">
+		<monster name="Vampire Viscount" x="0" y="1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="372" centery="1170" centerz="4" radius="1">
+		<monster name="Bonebeast" x="0" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="341" centery="1171" centerz="4" radius="1">
+		<monster name="Bonebeast" x="-1" y="0" z="4" spawntime="60" />
 	</spawn>
 	<spawn centerx="324" centery="1177" centerz="4" radius="5">
 		<monster name="Spectre" x="-1" y="-2" z="4" spawntime="60" />
@@ -2385,34 +2395,43 @@
 	<spawn centerx="1039" centery="1055" centerz="5" radius="1">
 		<monster name="Bug" x="-1" y="0" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="401" centery="1160" centerz="5" radius="5">
-		<monster name="Spectre" x="0" y="-1" z="5" spawntime="60" />
-		<monster name="Spectre" x="-1" y="1" z="5" spawntime="60" />
+	<spawn centerx="401" centery="1159" centerz="5" radius="1">
+		<monster name="Demon" x="1" y="0" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="374" centery="1164" centerz="5" radius="5">
-		<monster name="Spectre" x="0" y="-2" z="5" spawntime="60" />
-		<monster name="Spectre" x="-2" y="-1" z="5" spawntime="60" />
-		<monster name="Spectre" x="2" y="2" z="5" spawntime="60" />
+	<spawn centerx="368" centery="1162" centerz="5" radius="1">
+		<monster name="Vampire Viscount" x="1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="372" centery="1163" centerz="5" radius="1">
+		<monster name="Vampire Bride" x="1" y="1" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="332" centery="1166" centerz="5" radius="5">
 		<monster name="Spectre" x="-1" y="-3" z="5" spawntime="60" />
 		<monster name="Spectre" x="1" y="-1" z="5" spawntime="60" />
 		<monster name="Nightmare Scion" x="0" y="0" z="5" spawntime="60" />
 	</spawn>
+	<spawn centerx="377" centery="1166" centerz="5" radius="1">
+		<monster name="Vampire Viscount" x="-1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="363" centery="1170" centerz="5" radius="1">
+		<monster name="Vampire" x="1" y="-1" z="5" spawntime="60" />
+		<monster name="Vampire Bride" x="0" y="1" z="5" spawntime="60" />
+	</spawn>
 	<spawn centerx="325" centery="1171" centerz="5" radius="5">
 		<monster name="Spectre" x="-4" y="-2" z="5" spawntime="60" />
 		<monster name="Spectre" x="-3" y="0" z="5" spawntime="60" />
 		<monster name="Spectre" x="4" y="2" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="365" centery="1173" centerz="5" radius="5">
-		<monster name="Spectre" x="-1" y="-4" z="5" spawntime="60" />
-		<monster name="Spectre" x="-3" y="-2" z="5" spawntime="60" />
-		<monster name="Spectre" x="0" y="1" z="5" spawntime="60" />
+	<spawn centerx="345" centery="1173" centerz="5" radius="1">
+		<monster name="Vampire Viscount" x="1" y="0" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="347" centery="1174" centerz="5" radius="5">
-		<monster name="Spectre" x="3" y="-2" z="5" spawntime="60" />
-		<monster name="Spectre" x="0" y="-1" z="5" spawntime="60" />
-		<monster name="Spectre" x="2" y="1" z="5" spawntime="60" />
+	<spawn centerx="350" centery="1173" centerz="5" radius="1">
+		<monster name="Vampire Bride" x="1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="369" centery="1173" centerz="5" radius="1">
+		<monster name="Vampire Viscount" x="-1" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="364" centery="1174" centerz="5" radius="1">
+		<monster name="Vampire Bride" x="1" y="1" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="1495" centery="1174" centerz="5" radius="5">
 		<monster name="Ice Golem" x="-1" y="-1" z="5" spawntime="60" />
@@ -2423,9 +2442,11 @@
 		<monster name="Ice Golem" x="0" y="2" z="5" spawntime="60" />
 		<monster name="Ice Golem" x="4" y="2" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="377" centery="1181" centerz="5" radius="5">
-		<monster name="Spectre" x="0" y="-1" z="5" spawntime="60" />
-		<monster name="Spectre" x="0" y="2" z="5" spawntime="60" />
+	<spawn centerx="377" centery="1180" centerz="5" radius="1">
+		<monster name="Vampire Viscount" x="-1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="374" centery="1181" centerz="5" radius="1">
+		<monster name="Vampire Viscount" x="0" y="-1" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="335" centery="1184" centerz="5" radius="5">
 		<monster name="Spectre" x="-5" y="-5" z="5" spawntime="60" />
@@ -2466,7 +2487,6 @@
 	</spawn>
 	<spawn centerx="348" centery="1195" centerz="5" radius="5">
 		<monster name="Nightmare Scion" x="0" y="0" z="5" spawntime="60" />
-		<monster name="Spectre" x="2" y="0" z="5" spawntime="60" />
 		<monster name="Spectre" x="-1" y="1" z="5" spawntime="60" />
 		<monster name="Spectre" x="3" y="3" z="5" spawntime="60" />
 	</spawn>
@@ -5360,53 +5380,89 @@
 	<spawn centerx="404" centery="1109" centerz="6" radius="1">
 		<monster name="Draken Spellweaver" x="-1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="391" centery="1152" centerz="6" radius="5">
-		<monster name="Spectre" x="-2" y="-3" z="6" spawntime="60" />
-		<monster name="Spectre" x="2" y="-2" z="6" spawntime="60" />
-		<monster name="Spectre" x="2" y="2" z="6" spawntime="60" />
-		<monster name="Spectre" x="-3" y="4" z="6" spawntime="60" />
-		<monster name="Spectre" x="5" y="5" z="6" spawntime="60" />
+	<spawn centerx="392" centery="1148" centerz="6" radius="1">
+		<monster name="Demonic" x="1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="386" centery="1156" centerz="6" radius="5" />
-	<spawn centerx="413" centery="1159" centerz="6" radius="5">
+	<spawn centerx="386" centery="1156" centerz="6" radius="1">
+		<monster name="Demonic" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="391" centery="1156" centerz="6" radius="1">
+		<monster name="Demon" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="423" centery="1158" centerz="6" radius="1">
+		<monster name="Demon" x="-1" y="0" z="6" spawntime="60" />
+		<monster name="Demon" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="413" centery="1159" centerz="6" radius="1">
 		<monster name="Demon" x="0" y="-1" z="6" spawntime="60" />
 		<monster name="Demon" x="-1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="421" centery="1159" centerz="6" radius="5">
-		<monster name="Demon" x="1" y="-1" z="6" spawntime="60" />
-		<monster name="Demon" x="2" y="0" z="6" spawntime="60" />
+	<spawn centerx="396" centery="1160" centerz="6" radius="1">
+		<monster name="Demon" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="400" centery="1160" centerz="6" radius="5">
-		<monster name="Spectre" x="1" y="-1" z="6" spawntime="60" />
-		<monster name="Spectre" x="-4" y="2" z="6" spawntime="60" />
+	<spawn centerx="402" centery="1160" centerz="6" radius="1">
+		<monster name="Demon" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="381" centery="1168" centerz="6" radius="5">
-		<monster name="Spectre" x="0" y="-2" z="6" spawntime="60" />
-		<monster name="Spectre" x="0" y="3" z="6" spawntime="60" />
+	<spawn centerx="418" centery="1165" centerz="6" radius="1">
+		<monster name="Vampire" x="-1" y="0" z="6" spawntime="60" />
+		<monster name="Vampire Viscount" x="1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="418" centery="1169" centerz="6" radius="5">
-		<monster name="Spectre" x="0" y="-1" z="6" spawntime="60" />
-		<monster name="Spectre" x="2" y="0" z="6" spawntime="60" />
-		<monster name="Spectre" x="-2" y="1" z="6" spawntime="60" />
-		<monster name="Spectre" x="1" y="2" z="6" spawntime="60" />
+	<spawn centerx="378" centery="1166" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="382" centery="1168" centerz="6" radius="1">
+		<monster name="Vampire Viscount" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="416" centery="1168" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="420" centery="1168" centerz="6" radius="1">
+		<monster name="Bonebeast" x="-1" y="-1" z="6" spawntime="60" />
+		<monster name="Vampire Bride" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="405" centery="1170" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="0" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="317" centery="1171" centerz="6" radius="5">
 		<monster name="Spectre" x="0" y="-4" z="6" spawntime="60" />
 		<monster name="Spectre" x="-4" y="-3" z="6" spawntime="60" />
 		<monster name="Spectre" x="0" y="3" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="381" centery="1173" centerz="6" radius="5">
-		<monster name="Spectre" x="-5" y="1" z="6" spawntime="60" />
-		<monster name="Spectre" x="3" y="2" z="6" spawntime="60" />
+	<spawn centerx="384" centery="1172" centerz="6" radius="1">
+		<monster name="Vampire" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Bonebeast" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="406" centery="1173" centerz="6" radius="5">
-		<monster name="Spectre" x="-1" y="-3" z="6" spawntime="60" />
-		<monster name="Spectre" x="1" y="-1" z="6" spawntime="60" />
+	<spawn centerx="391" centery="1172" centerz="6" radius="1">
+		<monster name="Vampire Viscount" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="396" centery="1174" centerz="6" radius="5">
-		<monster name="Spectre" x="-5" y="-3" z="6" spawntime="60" />
-		<monster name="Spectre" x="2" y="-3" z="6" spawntime="60" />
-		<monster name="Spectre" x="-2" y="0" z="6" spawntime="60" />
+	<spawn centerx="394" centery="1172" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Bonebeast" x="-1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="400" centery="1172" centerz="6" radius="1">
+		<monster name="Vampire" x="-1" y="1" z="6" spawntime="60" />
+		<monster name="Vampire Viscount" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="411" centery="1172" centerz="6" radius="1">
+		<monster name="Vampire Viscount" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="416" centery="1172" centerz="6" radius="1">
+		<monster name="Vampire" x="1" y="-1" z="6" spawntime="60" />
+		<monster name="Vampire Viscount" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="357" centery="1173" centerz="6" radius="1">
+		<monster name="Vampire Viscount" x="1" y="-1" z="6" spawntime="60" />
+		<monster name="Vampire" x="-1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="364" centery="1173" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="380" centery="1173" centerz="6" radius="1">
+		<monster name="Bonebeast" x="-1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="407" centery="1173" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="1" y="-1" z="6" spawntime="60" />
+		<monster name="Bonebeast" x="-1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="1493" centery="1174" centerz="6" radius="5">
 		<monster name="Ice Golem" x="-1" y="-1" z="6" spawntime="60" />
@@ -5414,11 +5470,17 @@
 		<monster name="Ice Golem" x="0" y="1" z="6" spawntime="60" />
 		<monster name="Ice Golem" x="-2" y="2" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="358" centery="1175" centerz="6" radius="5">
-		<monster name="Spectre" x="-2" y="-2" z="6" spawntime="60" />
-		<monster name="Spectre" x="5" y="-2" z="6" spawntime="60" />
-		<monster name="Spectre" x="2" y="-1" z="6" spawntime="60" />
-		<monster name="Spectre" x="-2" y="3" z="6" spawntime="60" />
+	<spawn centerx="376" centery="1175" centerz="6" radius="1">
+		<monster name="Vampire Viscount" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="361" centery="1176" centerz="6" radius="1">
+		<monster name="Bonebeast" x="-1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="372" centery="1176" centerz="6" radius="1">
+		<monster name="Vampire" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="393" centery="1176" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="0" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="1501" centery="1176" centerz="6" radius="5">
 		<monster name="Frost Dragon" x="-2" y="-1" z="6" spawntime="60" />
@@ -5431,19 +5493,23 @@
 		<monster name="Spectre" x="0" y="1" z="6" spawntime="60" />
 		<monster name="Spectre" x="3" y="3" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="355" centery="1177" centerz="6" radius="1">
+		<monster name="Bonebeast" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="383" centery="1177" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="316" centery="1178" centerz="6" radius="5">
 		<monster name="Spectre" x="-2" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="368" centery="1178" centerz="6" radius="5">
-		<monster name="Spectre" x="-4" y="-2" z="6" spawntime="60" />
-		<monster name="Spectre" x="1" y="-1" z="6" spawntime="60" />
-		<monster name="Spectre" x="1" y="3" z="6" spawntime="60" />
+	<spawn centerx="368" centery="1179" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="382" centery="1181" centerz="6" radius="5">
-		<monster name="Spectre" x="0" y="-2" z="6" spawntime="60" />
-		<monster name="Spectre" x="-5" y="-1" z="6" spawntime="60" />
-		<monster name="Spectre" x="4" y="2" z="6" spawntime="60" />
-		<monster name="Spectre" x="-2" y="4" z="6" spawntime="60" />
+	<spawn centerx="377" centery="1180" centerz="6" radius="1">
+		<monster name="Vampire Viscount" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="381" centery="1180" centerz="6" radius="1">
+		<monster name="Bonebeast" x="-1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="325" centery="1182" centerz="6" radius="5">
 		<monster name="Spectre" x="2" y="0" z="6" spawntime="60" />
@@ -5454,12 +5520,26 @@
 		<monster name="Destroyer" x="-1" y="-3" z="6" spawntime="60" />
 		<monster name="Dark Torturer" x="2" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="366" centery="1183" centerz="6" radius="5">
-		<monster name="Spectre" x="5" y="2" z="6" spawntime="60" />
-		<monster name="Spectre" x="-5" y="3" z="6" spawntime="60" />
+	<spawn centerx="356" centery="1183" centerz="6" radius="1">
+		<monster name="Vampire Viscount" x="1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="357" centery="1186" centerz="6" radius="5">
-		<monster name="Spectre" x="0" y="-2" z="6" spawntime="60" />
+	<spawn centerx="386" centery="1183" centerz="6" radius="1">
+		<monster name="Vampire Viscount" x="-1" y="-1" z="6" spawntime="60" />
+		<monster name="Bonebeast" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="365" centery="1184" centerz="6" radius="1">
+		<monster name="Vampire" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Vampire" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="370" centery="1184" centerz="6" radius="1">
+		<monster name="Vampire Viscount" x="-1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="380" centery="1184" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="360" centery="1186" centerz="6" radius="1">
+		<monster name="Vampire Bride" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Bonebeast" x="1" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="1424" centery="1186" centerz="6" radius="5">
 		<monster name="Frost Dragon" x="3" y="-1" z="6" spawntime="60" />
@@ -5498,7 +5578,6 @@
 	</spawn>
 	<spawn centerx="326" centery="1196" centerz="6" radius="5">
 		<monster name="Spectre" x="-3" y="-3" z="6" spawntime="60" />
-		<monster name="Spectre" x="-1" y="-1" z="6" spawntime="60" />
 		<monster name="Spectre" x="1" y="0" z="6" spawntime="60" />
 		<monster name="Spectre" x="0" y="3" z="6" spawntime="60" />
 		<monster name="Spectre" x="3" y="5" z="6" spawntime="60" />
@@ -11373,11 +11452,22 @@
 	<spawn centerx="429" centery="1137" centerz="7" radius="1">
 		<monster name="Draken Spellweaver" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="394" centery="1161" centerz="7" radius="5" />
-	<spawn centerx="404" centery="1161" centerz="7" radius="5" />
-	<spawn centerx="385" centery="1165" centerz="7" radius="5" />
-	<spawn centerx="392" centery="1172" centerz="7" radius="5" />
-	<spawn centerx="400" centery="1172" centerz="7" radius="5" />
+	<spawn centerx="401" centery="1160" centerz="7" radius="1">
+		<monster name="Demon" x="0" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="395" centery="1161" centerz="7" radius="1" />
+	<spawn centerx="383" centery="1167" centerz="7" radius="1">
+		<monster name="Demon" x="-1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="392" centery="1167" centerz="7" radius="1">
+		<monster name="Demon" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="398" centery="1171" centerz="7" radius="1">
+		<monster name="Demon" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="392" centery="1174" centerz="7" radius="1">
+		<monster name="Demon" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="1493" centery="1176" centerz="7" radius="5">
 		<monster name="Ice Golem" x="-3" y="-3" z="7" spawntime="60" />
 		<monster name="Ice Golem" x="2" y="-2" z="7" spawntime="60" />
@@ -16223,50 +16313,72 @@
 	<spawn centerx="410" centery="1097" centerz="8" radius="1">
 		<monster name="Draken Warmaster" x="1" y="1" z="8" spawntime="60" />
 	</spawn>
-	<spawn centerx="432" centery="1112" centerz="8" radius="20">
-		<monster name="Draken Elite" x="-6" y="-13" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-1" y="-13" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-2" y="-11" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-4" y="-9" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-6" y="-8" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-4" y="0" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-18" y="3" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-9" y="3" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-7" y="7" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-16" y="11" z="8" spawntime="60" />
-		<monster name="Draken Abomination" x="-14" y="11" z="8" spawntime="60" />
-		<monster name="Draken Abomination" x="-6" y="11" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-5" y="12" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="3" y="15" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="6" y="16" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-18" y="18" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-11" y="18" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-2" y="18" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="4" y="18" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="8" y="19" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="6" y="20" z="8" spawntime="20" />
+	<spawn centerx="425" centery="1100" centerz="8" radius="1">
+		<monster name="Draken Elite" x="1" y="-1" z="8" spawntime="60" />
 	</spawn>
-	<spawn centerx="396" centery="1117" centerz="8" radius="20">
-		<monster name="Draken Elite" x="-14" y="-6" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-13" y="-6" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-10" y="-6" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="4" y="-6" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-3" y="-2" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="13" y="-2" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="1" y="1" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-10" y="2" z="8" spawntime="60" />
-		<monster name="Draken Elite" x="4" y="2" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="8" y="2" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-9" y="3" z="8" spawntime="60" />
-		<monster name="Draken Elite" x="9" y="5" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="13" y="8" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-2" y="9" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-7" y="12" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="6" y="13" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-12" y="14" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-12" y="16" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-3" y="17" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="13" y="17" z="8" spawntime="20" />
+	<spawn centerx="431" centery="1100" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Draken Warmaster" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="429" centery="1104" centerz="8" radius="1">
+		<monster name="Draken Elite" x="-1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="426" centery="1105" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="382" centery="1111" centerz="8" radius="1">
+		<monster name="Draken Elite" x="1" y="0" z="8" spawntime="60" />
+		<monster name="Draken Elite" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="428" centery="1111" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="385" centery="1112" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="400" centery="1112" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="394" centery="1115" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="413" centery="1115" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="424" centery="1115" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="409" centery="1116" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="387" centery="1119" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Draken Warmaster" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="397" centery="1119" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="401" centery="1119" centerz="8" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="405" centery="1119" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="424" centery="1120" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="405" centery="1123" centerz="8" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="415" centery="1123" centerz="8" radius="1">
+		<monster name="Draken Elite" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="419" centery="1123" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="427" centery="1123" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Draken Elite" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="178" centery="1126" centerz="8" radius="30">
 		<monster name="Hellfire Fighter" x="-5" y="-26" z="8" spawntime="20" />
@@ -16363,53 +16475,95 @@
 		<monster name="Hellfire Fighter" x="-4" y="22" z="8" spawntime="20" />
 		<monster name="Hellfire Fighter" x="8" y="23" z="8" spawntime="20" />
 	</spawn>
+	<spawn centerx="395" centery="1126" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="409" centery="1126" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="389" centery="1130" centerz="8" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="413" centery="1130" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="402" centery="1131" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="348" centery="1132" centerz="8" radius="1">
 		<monster name="Souleater" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="384" centery="1132" centerz="8" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Draken Warmaster" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="335" centery="1133" centerz="8" radius="1">
 		<monster name="Souleater" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="409" centery="1133" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="346" centery="1135" centerz="8" radius="1">
 		<monster name="Souleater" x="-1" y="1" z="8" spawntime="60" />
 	</spawn>
-	<spawn centerx="379" centery="1136" centerz="8" radius="20">
-		<monster name="Draken Abomination" x="-3" y="2" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="5" y="2" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-1" y="3" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="14" y="3" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="15" y="4" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-3" y="7" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="5" y="7" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="3" y="11" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="1" y="12" z="8" spawntime="20" />
+	<spawn centerx="394" centery="1135" centerz="8" radius="1">
+		<monster name="Draken Elite" x="-1" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="340" centery="1139" centerz="8" radius="1">
 		<monster name="Souleater" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
-	<spawn centerx="420" centery="1146" centerz="8" radius="20">
-		<monster name="Draken Elite" x="1" y="-12" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-8" y="-7" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-6" y="-3" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-7" y="-1" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-16" y="0" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-16" y="1" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-12" y="7" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-10" y="10" z="8" spawntime="20" />
-		<monster name="Draken Warmaster" x="-11" y="14" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-14" y="15" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-7" y="15" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-11" y="17" z="8" spawntime="20" />
-		<monster name="Draken Elite" x="-17" y="18" z="8" spawntime="20" />
-		<monster name="Draken Abomination" x="-5" y="18" z="8" spawntime="20" />
+	<spawn centerx="377" centery="1139" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Draken Abomination" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="384" centery="1139" centerz="8" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="393" centery="1140" centerz="8" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Draken Warmaster" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="412" centery="1140" centerz="8" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="385" centery="1143" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="377" centery="1144" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="414" centery="1144" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Draken Abomination" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="381" centery="1147" centerz="8" radius="1">
+		<monster name="Draken Elite" x="1" y="0" z="8" spawntime="60" />
+		<monster name="Draken Abomination" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="405" centery="1147" centerz="8" radius="1">
+		<monster name="Draken Elite" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Draken Elite" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="349" centery="1153" centerz="8" radius="1">
 		<monster name="Souleater" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="409" centery="1153" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="327" centery="1157" centerz="8" radius="1">
 		<monster name="Souleater" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="339" centery="1157" centerz="8" radius="1">
 		<monster name="Souleater" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="405" centery="1161" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="409" centery="1161" centerz="8" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="414" centery="1161" centerz="8" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="308" centery="1164" centerz="8" radius="1">
 		<monster name="Souleater" x="1" y="0" z="8" spawntime="60" />
@@ -16419,6 +16573,12 @@
 	</spawn>
 	<spawn centerx="330" centery="1164" centerz="8" radius="1">
 		<monster name="Souleater" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="403" centery="1165" centerz="8" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="415" centery="1165" centerz="8" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="345" centery="1166" centerz="8" radius="1">
 		<monster name="Souleater" x="1" y="0" z="8" spawntime="60" />
@@ -20053,6 +20213,18 @@
 	<spawn centerx="1022" centery="1060" centerz="9" radius="1">
 		<monster name="Nightmare" x="-1" y="0" z="9" spawntime="10" />
 	</spawn>
+	<spawn centerx="478" centery="1075" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="483" centery="1077" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="457" centery="1078" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="466" centery="1078" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
 	<spawn centerx="1340" centery="1079" centerz="9" radius="30">
 		<monster name="Lost Husher" x="9" y="-4" z="9" spawntime="60" />
 		<monster name="Lost Thrower" x="9" y="1" z="9" spawntime="60" />
@@ -20064,84 +20236,129 @@
 		<monster name="Lost Thrower" x="23" y="28" z="9" spawntime="60" />
 		<monster name="Lost Husher" x="17" y="29" z="9" spawntime="60" />
 	</spawn>
+	<spawn centerx="479" centery="1080" centerz="9" radius="1">
+		<monster name="Lizard Dragon Priest" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="438" centery="1081" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="20" />
+	</spawn>
+	<spawn centerx="455" centery="1081" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
 	<spawn centerx="427" centery="1082" centerz="9" radius="1">
 		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="20" />
 	</spawn>
-	<spawn centerx="458" centery="1090" centerz="9" radius="30">
-		<monster name="Draken Warmaster" x="19" y="-15" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-2" y="-13" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="9" y="-13" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="24" y="-13" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="7" y="-12" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="23" y="-11" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="1" y="-10" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="19" y="-10" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-21" y="-9" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="7" y="-9" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-28" y="-8" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-3" y="-8" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="11" y="-8" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="20" y="-8" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="4" y="-7" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-20" y="-6" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="25" y="-6" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-1" y="-5" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-23" y="-4" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="8" y="-4" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="20" y="-3" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-7" y="-2" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-2" y="-2" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-6" y="-1" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-23" y="0" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="2" y="3" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-26" y="5" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="1" y="5" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-3" y="6" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-17" y="7" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-29" y="9" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-6" y="9" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-11" y="10" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-24" y="11" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-15" y="11" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-1" y="11" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-18" y="14" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-11" y="15" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-14" y="21" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-8" y="21" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-5" y="22" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-16" y="23" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-12" y="23" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-9" y="24" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-14" y="26" z="9" spawntime="20" />
-		<monster name="Draken Warmaster" x="-6" y="26" z="9" spawntime="20" />
+	<spawn centerx="462" centery="1082" centerz="9" radius="1">
+		<monster name="Draken Spellweaver" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Draken Warmaster" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="470" centery="1082" centerz="9" radius="1">
+		<monster name="Lizard Dragon Priest" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="476" centery="1082" centerz="9" radius="1">
+		<monster name="Draken Spellweaver" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="433" centery="1083" centerz="9" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="438" centery="1085" centerz="9" radius="1">
+		<monster name="Draken Spellweaver" x="0" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="456" centery="1085" centerz="9" radius="1">
+		<monster name="Lizard Dragon Priest" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="483" centery="1085" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Draken Spellweaver" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="465" centery="1086" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="431" centery="1087" centerz="9" radius="1">
+		<monster name="Draken Spellweaver" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="435" centery="1087" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="20" />
+	</spawn>
+	<spawn centerx="479" centery="1087" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="451" centery="1089" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="456" centery="1090" centerz="9" radius="1">
+		<monster name="Draken Spellweaver" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="454" centery="1093" centerz="9" radius="1">
+		<monster name="Lizard Dragon Priest" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="460" centery="1094" centerz="9" radius="1">
+		<monster name="Draken Spellweaver" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Draken Warmaster" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="433" centery="1095" centerz="9" radius="1">
+		<monster name="Draken Spellweaver" x="0" y="-1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="411" centery="1096" centerz="9" radius="1">
-		<monster name="Draken Warmaster" x="-1" y="1" z="9" spawntime="20" />
+		<monster name="Draken Warmaster" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="456" centery="1096" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="424" centery="1097" centerz="9" radius="1">
-		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="20" />
+		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="60" />
 	</spawn>
-	<spawn centerx="427" centery="1098" centerz="9" radius="1">
-		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="20" />
+	<spawn centerx="427" centery="1097" centerz="9" radius="1">
+		<monster name="Lizard Dragon Priest" x="-1" y="0" z="9" spawntime="60" />
 	</spawn>
-	<spawn centerx="417" centery="1099" centerz="9" radius="1">
-		<monster name="Draken Warmaster" x="-1" y="1" z="9" spawntime="20" />
+	<spawn centerx="442" centery="1097" centerz="9" radius="1">
+		<monster name="Draken Spellweaver" x="1" y="0" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="407" centery="1100" centerz="9" radius="1">
-		<monster name="Draken Warmaster" x="1" y="-1" z="9" spawntime="20" />
+		<monster name="Draken Warmaster" x="1" y="-1" z="9" spawntime="60" />
 	</spawn>
-	<spawn centerx="430" centery="1100" centerz="9" radius="1" />
+	<spawn centerx="416" centery="1100" centerz="9" radius="1">
+		<monster name="Lizard Dragon Priest" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="430" centery="1100" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="453" centery="1100" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="435" centery="1101" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="447" centery="1101" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="457" centery="1101" centerz="9" radius="1">
+		<monster name="Lizard Dragon Priest" x="0" y="0" z="9" spawntime="60" />
+	</spawn>
 	<spawn centerx="411" centery="1103" centerz="9" radius="1">
-		<monster name="Draken Warmaster" x="0" y="1" z="9" spawntime="20" />
+		<monster name="Draken Warmaster" x="0" y="1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="423" centery="1103" centerz="9" radius="1">
-		<monster name="Draken Warmaster" x="-1" y="1" z="9" spawntime="20" />
+		<monster name="Draken Warmaster" x="-1" y="1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="426" centery="1103" centerz="9" radius="1">
-		<monster name="Draken Warmaster" x="0" y="1" z="9" spawntime="20" />
+		<monster name="Draken Warmaster" x="0" y="1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="414" centery="1104" centerz="9" radius="1">
-		<monster name="Draken Warmaster" x="-1" y="1" z="9" spawntime="20" />
+		<monster name="Lizard Dragon Priest" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="441" centery="1104" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="448" centery="1105" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="450" centery="1111" centerz="9" radius="1">
+		<monster name="Lizard Dragon Priest" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="446" centery="1112" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="1" y="0" z="9" spawntime="20" />
 	</spawn>
 	<spawn centerx="1391" centery="1112" centerz="9" radius="30">
 		<monster name="Lost Basher" x="-14" y="-23" z="9" spawntime="60" />
@@ -20163,6 +20380,16 @@
 		<monster name="Lost Thrower" x="3" y="1" z="9" spawntime="60" />
 		<monster name="Lost Thrower" x="-7" y="7" z="9" spawntime="60" />
 		<monster name="Lost Thrower" x="-6" y="19" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="453" centery="1113" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="20" />
+		<monster name="Draken Spellweaver" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="442" centery="1115" centerz="9" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="9" spawntime="20" />
+	</spawn>
+	<spawn centerx="448" centery="1116" centerz="9" radius="1">
+		<monster name="Draken Spellweaver" x="0" y="1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="1334" centery="1123" centerz="9" radius="30">
 		<monster name="Lost Basher" x="-20" y="-12" z="9" spawntime="60" />
@@ -23089,9 +23316,64 @@
 	<spawn centerx="1009" centery="1058" centerz="10" radius="1">
 		<monster name="Dragon" x="-1" y="0" z="10" spawntime="10" />
 	</spawn>
+	<spawn centerx="519" centery="1063" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="10" spawntime="60" />
+		<monster name="Draken Elite" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="504" centery="1065" centerz="10" radius="1">
+		<monster name="Draken Elite" x="-1" y="-1" z="10" spawntime="60" />
+		<monster name="Draken Abomination" x="0" y="-1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="522" centery="1066" centerz="10" radius="1">
+		<monster name="Draken Abomination" x="-1" y="-1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="507" centery="1067" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="1133" centery="1067" centerz="10" radius="1" />
+	<spawn centerx="516" centery="1068" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="10" spawntime="60" />
+		<monster name="Draken Abomination" x="1" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="521" centery="1069" centerz="10" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="498" centery="1070" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="10" spawntime="60" />
+		<monster name="Draken Abomination" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="511" centery="1071" centerz="10" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="502" centery="1072" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="520" centery="1072" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="505" centery="1077" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="10" spawntime="60" />
+		<monster name="Draken Elite" x="1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="483" centery="1078" centerz="10" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="10" spawntime="60" />
+		<monster name="Draken Elite" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="496" centery="1078" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="10" spawntime="60" />
+		<monster name="Draken Abomination" x="1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="479" centery="1079" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="1" y="0" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="1013" centery="1080" centerz="10" radius="1">
 		<monster name="Grim Reaper" x="1" y="-1" z="10" spawntime="40" />
+	</spawn>
+	<spawn centerx="485" centery="1082" centerz="10" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="490" centery="1082" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="993" centery="1082" centerz="10" radius="1">
 		<monster name="Grim Reaper" x="1" y="1" z="10" spawntime="40" />
@@ -23099,50 +23381,14 @@
 	<spawn centerx="1038" centery="1082" centerz="10" radius="1">
 		<monster name="Juggernaut" x="-1" y="0" z="10" spawntime="40" />
 	</spawn>
-	<spawn centerx="503" centery="1083" centerz="10" radius="30">
-		<monster name="Draken Warmaster" x="15" y="-20" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="0" y="-19" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="1" y="-19" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="16" y="-19" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="18" y="-18" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="3" y="-16" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="13" y="-16" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-5" y="-14" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="14" y="-14" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="17" y="-14" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="-5" y="-12" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="7" y="-12" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-2" y="-11" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="16" y="-11" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="2" y="-7" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="3" y="-6" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="-21" y="-5" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-8" y="-5" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="-6" y="-5" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-23" y="-4" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="-20" y="-4" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-13" y="-2" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="-25" y="-1" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="-19" y="-1" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-22" y="1" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="-10" y="1" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="-11" y="2" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="3" y="2" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-2" y="3" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="2" y="3" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="-2" y="8" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="-13" y="10" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-9" y="10" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="-14" y="12" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="-12" y="17" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="-8" y="17" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-5" y="19" z="10" spawntime="20" />
-		<monster name="Draken Warmaster" x="-12" y="21" z="10" spawntime="20" />
-		<monster name="Draken Elite" x="-8" y="21" z="10" spawntime="20" />
-		<monster name="Draken Abomination" x="-10" y="22" z="10" spawntime="20" />
+	<spawn centerx="478" centery="1083" centerz="10" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="982" centery="1083" centerz="10" radius="1">
 		<monster name="Juggernaut" x="-1" y="-1" z="10" spawntime="40" />
+	</spawn>
+	<spawn centerx="482" centery="1084" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="999" centery="1084" centerz="10" radius="1">
 		<monster name="Destroyer" x="1" y="1" z="10" spawntime="40" />
@@ -23150,12 +23396,39 @@
 	<spawn centerx="1024" centery="1084" centerz="10" radius="1">
 		<monster name="Destroyer" x="1" y="-1" z="10" spawntime="40" />
 	</spawn>
+	<spawn centerx="493" centery="1085" centerz="10" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="10" spawntime="60" />
+		<monster name="Draken Elite" x="-1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="1085" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="506" centery="1086" centerz="10" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="10" spawntime="60" />
+		<monster name="Draken Warmaster" x="-1" y="0" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="1007" centery="1089" centerz="10" radius="1">
 		<monster name="Grim Reaper" x="0" y="1" z="10" spawntime="40" />
+	</spawn>
+	<spawn centerx="501" centery="1090" centerz="10" radius="1">
+		<monster name="Draken Elite" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="490" centery="1094" centerz="10" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="10" spawntime="60" />
+		<monster name="Draken Abomination" x="-1" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="494" centery="1094" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="496" centery="1099" centerz="10" radius="1">
+		<monster name="Draken Abomination" x="-1" y="1" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="373" centery="1100" centerz="10" radius="2">
 		<monster name="Souleater" x="-1" y="0" z="10" spawntime="60" />
 		<monster name="Souleater" x="2" y="1" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="490" centery="1100" centerz="10" radius="1">
+		<monster name="Draken Elite" x="1" y="0" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="362" centery="1101" centerz="10" radius="2">
 		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
@@ -23177,6 +23450,9 @@
 		<monster name="Souleater" x="0" y="2" z="10" spawntime="60" />
 		<monster name="Souleater" x="1" y="2" z="10" spawntime="60" />
 	</spawn>
+	<spawn centerx="499" centery="1103" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="-1" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="374" centery="1104" centerz="10" radius="2">
 		<monster name="Souleater" x="0" y="-1" z="10" spawntime="60" />
 		<monster name="Souleater" x="0" y="1" z="10" spawntime="60" />
@@ -23184,12 +23460,18 @@
 	<spawn centerx="1013" centery="1104" centerz="10" radius="1">
 		<monster name="Juggernaut" x="-1" y="-1" z="10" spawntime="40" />
 	</spawn>
-	<spawn centerx="374" centery="1106" centerz="10" radius="2" />
-	<spawn centerx="383" centery="1106" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="2" z="10" spawntime="60" />
+	<spawn centerx="490" centery="1105" centerz="10" radius="1">
+		<monster name="Draken Warmaster" x="1" y="-1" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="384" centery="1106" centerz="10" radius="2" />
+	<spawn centerx="494" centery="1105" centerz="10" radius="1">
+		<monster name="Draken Elite" x="1" y="-1" z="10" spawntime="60" />
+		<monster name="Draken Abomination" x="-1" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="374" centery="1106" centerz="10" radius="2" />
+	<spawn centerx="384" centery="1107" centerz="10" radius="2">
+		<monster name="Souleater" x="-1" y="-1" z="10" spawntime="60" />
+		<monster name="Souleater" x="0" y="1" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="402" centery="1107" centerz="10" radius="2">
 		<monster name="Souleater" x="-1" y="-1" z="10" spawntime="60" />
 		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
@@ -23280,16 +23562,16 @@
 		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
 		<monster name="Souleater" x="-2" y="1" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="358" centery="1142" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="-2" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="357" centery="1142" centerz="10" radius="2">
+		<monster name="Souleater" x="2" y="-2" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="370" centery="1143" centerz="10" radius="2">
 		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
 		<monster name="Souleater" x="-2" y="1" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="348" centery="1144" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="349" centery="1144" centerz="10" radius="2">
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="404" centery="1144" centerz="10" radius="2">
 		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
@@ -25275,105 +25557,228 @@
 	<spawn centerx="998" centery="1035" centerz="11" radius="1">
 		<monster name="Dragon Lord" x="-1" y="0" z="11" spawntime="60" />
 	</spawn>
-	<spawn centerx="533" centery="1082" centerz="11" radius="30">
-		<monster name="Draken Warmaster" x="-14" y="-19" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-10" y="-19" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-16" y="-17" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-17" y="-15" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-9" y="-14" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-13" y="-13" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="12" y="-12" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="14" y="-10" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-8" y="-9" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-1" y="-9" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="0" y="-9" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="17" y="-9" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="15" y="-7" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-12" y="-6" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-3" y="-6" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="5" y="-6" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="12" y="-6" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-13" y="-5" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="17" y="-5" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="15" y="-3" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-9" y="-2" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="2" y="-2" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="3" y="-2" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-16" y="1" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-4" y="1" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-25" y="2" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-12" y="2" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-27" y="5" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-24" y="6" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-21" y="6" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-28" y="8" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-8" y="8" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-22" y="9" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-10" y="9" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-24" y="11" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-4" y="11" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-5" y="12" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-12" y="14" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-13" y="15" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-8" y="19" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-19" y="20" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-20" y="21" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-4" y="23" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-15" y="24" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-4" y="24" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-23" y="25" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-19" y="25" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-11" y="29" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-10" y="29" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-26" y="30" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-22" y="30" z="11" spawntime="20" />
+	<spawn centerx="520" centery="1063" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="11" spawntime="60" />
 	</spawn>
-	<spawn centerx="486" centery="1119" centerz="11" radius="30">
-		<monster name="Draken Warmaster" x="7" y="-20" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="10" y="-19" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="4" y="-18" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-3" y="-16" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="5" y="-16" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="10" y="-16" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-4" y="-15" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="4" y="-13" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-7" y="-12" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-1" y="-12" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-10" y="-8" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-11" y="-7" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-7" y="-7" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="2" y="-7" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="4" y="-7" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-25" y="-5" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-21" y="-4" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-25" y="-3" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-3" y="-2" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="24" y="-2" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-22" y="-1" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-13" y="-1" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-4" y="-1" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-26" y="1" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="3" y="2" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="5" y="2" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="15" y="2" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="16" y="2" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-26" y="3" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="28" y="3" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="-23" y="4" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="9" y="5" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="13" y="5" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="22" y="5" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="-4" y="8" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="-3" y="8" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="6" y="8" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="7" y="9" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="20" y="16" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="11" y="17" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="15" y="17" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="15" y="19" z="11" spawntime="20" />
-		<monster name="Draken Warmaster" x="18" y="20" z="11" spawntime="20" />
-		<monster name="Draken Elite" x="12" y="21" z="11" spawntime="20" />
-		<monster name="Draken Abomination" x="21" y="21" z="11" spawntime="20" />
+	<spawn centerx="524" centery="1063" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="517" centery="1066" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="521" centery="1069" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="544" centery="1070" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="547" centery="1071" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="525" centery="1072" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="552" centery="1073" centerz="11" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="532" centery="1074" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Warmaster" x="1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="546" centery="1075" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="0" y="1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="521" centery="1077" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="539" centery="1077" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="551" centery="1077" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="535" centery="1079" centerz="11" radius="1">
+		<monster name="Draken Elite" x="0" y="1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="547" centery="1080" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="509" centery="1083" centerz="11" radius="1">
+		<monster name="Draken Elite" x="0" y="1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="528" centery="1083" centerz="11" radius="1">
+		<monster name="Draken Elite" x="1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="517" centery="1084" centerz="11" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="522" centery="1084" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="505" centery="1087" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="512" centery="1087" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="504" centery="1091" centerz="11" radius="1">
+		<monster name="Draken Elite" x="1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="512" centery="1091" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="524" centery="1091" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="1" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="509" centery="1094" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="529" centery="1094" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="521" centery="1097" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="492" centery="1099" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="497" centery="1100" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="525" centery="1102" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="514" centery="1103" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="483" centery="1104" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="492" centery="1104" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="496" centery="1104" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="528" centery="1105" centerz="11" radius="1">
+		<monster name="Draken Elite" x="1" y="0" z="11" spawntime="60" />
+		<monster name="Draken Abomination" x="1" y="1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="519" centery="1106" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="511" centery="1107" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="515" centery="1107" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="479" centery="1108" centerz="11" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="486" centery="1108" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="522" centery="1110" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="1" z="11" spawntime="60" />
+		<monster name="Draken Abomination" x="1" y="1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="461" centery="1112" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="476" centery="1112" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="489" centery="1112" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Draken Elite" x="1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="512" centery="1112" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="479" centery="1113" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="507" centery="1113" centerz="11" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="467" centery="1114" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="459" centery="1118" centerz="11" radius="1">
+		<monster name="Draken Elite" x="1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="466" centery="1118" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="483" centery="1118" centerz="11" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="511" centery="1118" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="473" centery="1119" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="458" centery="1122" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="490" centery="1122" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Abomination" x="1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="1122" centerz="11" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Abomination" x="1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="514" centery="1123" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="464" centery="1124" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="496" centery="1124" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="507" centery="1125" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="493" centery="1127" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+		<monster name="Draken Elite" x="0" y="1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="482" centery="1128" centerz="11" radius="1">
+		<monster name="Draken Elite" x="0" y="-1" z="11" spawntime="60" />
+		<monster name="Draken Abomination" x="1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="507" centery="1135" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="502" centery="1136" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="497" centery="1137" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="0" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="497" centery="1140" centerz="11" radius="1">
+		<monster name="Draken Elite" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="505" centery="1140" centerz="11" radius="1">
+		<monster name="Draken Warmaster" x="-1" y="-1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="508" centery="1140" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="-1" y="0" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="1141" centerz="11" radius="1">
+		<monster name="Draken Abomination" x="0" y="-1" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="323" centery="1223" centerz="11" radius="30">
 		<monster name="Shaburak Demon" x="0" y="-19" z="11" spawntime="60" />

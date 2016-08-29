@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <creaturescripts>
-	
 	<event type="login" name="PlayerLogin" script="login.lua" />
 	<event type="logout" name="PlayerLogout" script="logout.lua" />
 	<event type="login" name="FirstItems" script="firstitems.lua" />
@@ -19,7 +18,7 @@
 	<!-- Arena: Killing a boss -->
 	<event type="kill" name="SvargrondArenaKill" script="quest/arena/arena_kill.lua" />
 	<!-- Auto Open Channel-->
-	<event type="login" name="ChatChannels" script="other/chatchannels.lua" />
+	<event type="login" name="ChatChannels" script="chatchannels.lua" />
 	<!-- Others -->
 	<event type="death" name="WhiteDeerDeath" script="other/whitedeer.lua" />
 	<event type="death" name="WhiteDeerScoutsDeath" script="other/whitedeer_scouts.lua" />

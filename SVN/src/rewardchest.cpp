@@ -1,13 +1,9 @@
-/**
-* This file doesn't belong to theforgottenserver developers.
-*/
-
 #include "otpch.h"
 
 #include "rewardchest.h"
 
-RewardChest::RewardChest(uint16_t type) :
-	Container(type)
+RewardChest::RewardChest(uint16_t _type) :
+	Container(_type)
 {
 	maxSize = 32;
 	unlocked = false;

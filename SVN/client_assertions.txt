@@ -1,0 +1,42 @@
+----- 01/07/2016 07:35:23 - Lundrial (127.0.0.1) -----
+Debug Assertion 10.95 Utils.cpp 546
+Fri Jul 01 07:21:00 2016
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in USA
+Processor: Intel Core i5 -5200U @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 100 040 020 000 000 000 000 000 000 000
+Last Packet: 020 030 000 049 010 087 101 108 099 111 109 101 032 116 111 032
+Player.cpp 344: exception occurred, reason:
+Network.cpp 855: exception occurred, reason:
+Control.cpp 1522: exception occurred (Type = 100) (MainWindow = 03B33568), reason:
+Communication.cpp 2004: exception occurred (Count = 1), reason:
+Network.cpp 315: exception occurred, reason:
+Utils.cpp 546: assertion failed (Position = 108) (Size = 109), reason:
+Position<=Size-4
+Comment: 
+----- 02/07/2016 16:53:33 - Lundrial (127.0.0.1) -----
+Debug Assertion 10.95 NWin32Exception.cpp 55
+Sat Jul 02 16:52:41 2016
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in USA
+Processor: Intel Core i5 -5200U @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 252 252 252 223 242 242 251 029 162 180
+Last Packet: 252 008 000 069 120 097 109 112 108 101 115 009 000 001 000 000
+Player Position: [854,960,7]
+Player Name: Lundrial (Requiem Aeternam)
+Player Action: 048 046 048 046 048 046 048 058 055 049 055 050
+Player.cpp 344: exception occurred, reason:
+MainFrm.cpp 664: exception occurred (point.x = 897) (point.y = 509), reason:
+Control.cpp 785: exception occurred (x = 897) (y = 509), reason:
+DialogsGeneric.cpp 288: exception occurred (x = 491) (y = 392), reason:
+GUI.cpp 1912: exception occurred (x = 491) (y = 392), reason:
+GUI.cpp 1912: exception occurred (x = 473) (y = 360), reason:
+GUI.cpp 1912: exception occurred (x = 308) (y = 274), reason:
+DialogElements.cpp 1403: exception occurred (x = 44) (y = 10), reason:
+GUI.cpp 2491: exception occurred, reason:
+DialogsIngameShop.cpp 1298: exception occurred, reason:
+NWin32Exception.cpp 55: win32 exception occurred, reason:
+access violation (read attempt at 01424C70)
+Comment: 

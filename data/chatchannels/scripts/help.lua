@@ -3,21 +3,11 @@ local CHANNEL_HELP = 7
 local muted = Condition(CONDITION_CHANNELMUTEDTICKS, CONDITIONID_DEFAULT)
 muted:setParameter(CONDITION_PARAM_SUBID, CHANNEL_HELP)
 muted:setParameter(CONDITION_PARAM_TICKS, 3600000)
-local delay = Condition(CONDITION_CHANNELMUTEDTICKS, CONDITIONID_DEFAULT)
-delay:setParameter(CONDITION_PARAM_SUBID, CHANNEL_ADVERTISING)
-delay:setParameter(CONDITION_PARAM_TICKS, 120000)
 
 function onSpeak(player, type, message)
 	local playerAccountType = player:getAccountType()
-	if player:getCondition(CONDITION_CHANNELMUTEDTICKS, CONDITIONID_DEFAULT, CHANNEL_ADVERTISING) then
-	player:sendCancelMessage("You can send 1 message every 1 minute.")
-	return false
-end
-if playerAccountType == ACCOUNT_TYPE_NORMAL and not(player:getGroup():getId() >= 2) then
-	player:addCondition(delay)
-end
-	if player:getLevel() == 20 and playerAccountType == ACCOUNT_TYPE_NORMAL then
-		player:sendCancelMessage("You may not speak into channels as long as you are on level 20.")
+	if player:getLevel() == 1 and playerAccountType == ACCOUNT_TYPE_NORMAL then
+		player:sendCancelMessage("You may not speak into channels as long as you are on level 1.")
 		return false
 	end
 

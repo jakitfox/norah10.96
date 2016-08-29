@@ -647,7 +647,8 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
-	
+	<melee id="25415" level="150" unproperly="1" />
+	<melee id="25383" level="70" unproperly="1" />
 	
 
 	<!-- Fire -->
@@ -910,6 +911,10 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" showInDescription="0" />
 	</melee>
+	<melee id="25418" level="150" unproperly="1">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" showInDescription="0" />
+	</melee>
 	
 	
 
@@ -1144,6 +1149,14 @@
 		<vocation name="Royal Paladin" showInDescription="0" />
 	</distance>
 	<distance id="25950" level="250" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25522" level="120" unproperly="1">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" showInDescription="0" />
+	</distance>
+	<distance id="25523" level="120" unproperly="1">
 		<vocation name="Paladin" />
 		<vocation name="Royal Paladin" showInDescription="0" />
 	</distance>
