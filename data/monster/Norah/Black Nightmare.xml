@@ -17,7 +17,8 @@
       <flag lightcolor="0"/>
       <flag targetdistance="1"/>
       <flag runonhealth="0"/>
-    </flags>
+    <flag isblockable="1" />
+	</flags>
     <attacks>
       <attack name="melee" interval="2000" min="-115" max="-264"/>
       <attack name="sudden death" interval="2000" chance="100" min="-119" max="-466"/>

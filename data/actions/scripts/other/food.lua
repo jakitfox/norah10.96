@@ -77,6 +77,7 @@ local foods = {
 	[9114] = {5, "Crunch."}, -- bulb of garlic
 	[9996] = {0, "Slurp."}, -- banana chocolate shake
 	[10454] = {0, "Your head begins to feel better."}, -- headache pill
+	[11136] = {10, "Mmmm."}, -- crocodile steak
 	[11246] = {15, "Yum."}, -- rice ball
 	[11370] = {3, "Urgh."}, -- terramite eggs
 	[11429] = {10, "Mmmm."}, -- crocodile steak
@@ -95,7 +96,17 @@ local foods = {
 	[18397] = {33, "Munch."}, -- mushroom pie
 	[19737] = {10, "Urgh."}, -- insectoid eggs
 	[20100] = {15, "Smack."}, -- soft cheese
-	[20101] = {12, "Smack."} -- rat cheese
+	[20101] = {12, "Smack."}, -- rat cheese
+	[22644] = {12, "Mmmm."}, -- christmas cookie tray
+	[23514] = {15, "Munch."}, -- glooth sandwich
+	[23515] = {7, "Slurp."}, -- bowl of glooth soup
+	[23517] = {25, "Chomp."}, -- glooth steak
+	[23516] = {6, "Burp."}, -- bottle of glooth wine
+	[24843] = {50, "Chomp."}, -- roasted meat
+	[26191] = {25, "Mmmm."}, -- energy bar
+	[26201] = {15, "Mmmm."} -- energy drink
+	
+	
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

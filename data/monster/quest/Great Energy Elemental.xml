@@ -17,7 +17,8 @@
     <flag lightcolor="0"/>
     <flag targetdistance="1"/>
     <flag runonhealth="1"/>
-    </flags>
+    <flag isblockable="0" />
+	</flags>
 <attacks>
     <attack name="melee" interval="2000" skill="75" attack="60"/>
     <attack name="energy" interval="1000" chance="11" range="3" target="1" radius="2" min="-500" max="-1000">

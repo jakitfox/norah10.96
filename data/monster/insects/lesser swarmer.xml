@@ -14,6 +14,7 @@
 		<flag canpushcreatures="0" />
 		<flag targetdistance="0" />
 		<flag runonhealth="0" />
+	<flag isblockable="1" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="34" attack="35" poison="60" />

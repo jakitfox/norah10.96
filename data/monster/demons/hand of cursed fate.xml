@@ -15,6 +15,7 @@
 		<flag targetdistance="1" />
 		<flag staticattack="20" />
 		<flag runonhealth="3500" />
+	<flag isblockable="1" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="70" attack="130" poison="380" />

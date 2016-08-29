@@ -83,6 +83,7 @@
 	<action fromuid="3165" touid="3169"	script="quests/firewalker/statues.lua" />
 	
 	<!-- Inne -->
+	<action itemid="24842" script="inne/roasted meat.lua" />
 	<action itemid="13670" script="inne/randomitems.lua" />
 	<action itemid="15572" script="inne/randomitems.lua" />
 	<action itemid="18215" script="inne/randomitems.lua" />
@@ -299,6 +300,7 @@
 	<action itemid="9114" script="other/food.lua" />
 	<action itemid="9996" script="other/food.lua" />
 	<action itemid="10454" script="other/food.lua" />
+	<action itemid="11136" script="other/food.lua" />
 	<action itemid="11246" script="other/food.lua" />
 	<action itemid="11370" script="other/food.lua" />
 	<action itemid="11429" script="other/food.lua" />
@@ -311,6 +313,10 @@
 	<action itemid="18397" script="other/food.lua" />
 	<action itemid="19737" script="other/food.lua" />
 	<action fromid="20100" toid="20101" script="other/food.lua" />
+	<action fromid="23514" toid="23517" script="other/food.lua" />
+	<action itemid="24843" script="other/food.lua" />
+	<action itemid="26191" script="other/food.lua" />
+	<action itemid="26201" script="other/food.lua" />
 
 	<!-- Spellbooks -->
 	<action itemid="2175" script="other/spellbook.lua" />

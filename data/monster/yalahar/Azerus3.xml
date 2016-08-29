@@ -16,7 +16,8 @@
         <flag targetdistance="1"/>
         <flag staticattack="85"/>
         <flag runonhealth="0"/>
-    </flags>
+    <flag isblockable="1" />
+	</flags>
 <script>
     <event name="Azerus"/>
 </script>

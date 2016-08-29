@@ -14,6 +14,7 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="1" />
+	<flag isblockable="1" />
 	</flags>
 	<defenses>
 		<defense name="physical" interval="100" chance="100" radius="1" target="0">

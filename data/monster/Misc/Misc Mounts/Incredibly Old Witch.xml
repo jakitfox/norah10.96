@@ -15,6 +15,7 @@
 		<flag targetdistance="4" />
 		<flag staticattack="90" />
 		<flag runonhealth="30" />
+	<flag isblockable="1" />
 	</flags>
 	<attacks>
 		<attack name="outfit" interval="1000" chance="17" range="1" length="2" spread="1" monster="rat" duration="20000">

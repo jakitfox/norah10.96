@@ -2,7 +2,7 @@
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
 worldType = "pvp"
 hotkeyAimbotEnabled = true
-protectionLevel = 1
+protectionLevel = 40
 killsToRedSkull = 3
 killsToBlackSkull = 6
 pzLocked = 60000
@@ -16,16 +16,16 @@ allowWalkthrough = true
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
-ip = "norah.zapto.org"
+ip = "127.0.0.1"
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 0
-motd = "Welcome to Norah!"
+motd = "Welcome to B-Rox!"
 onePlayerOnlinePerAccount = true
 allowClones = false
-serverName = "Norah"
+serverName = "B-Rox"
 statusTimeout = 5000
 replaceKickOnLogin = true
 maxPacketsPerSecond = 25
@@ -51,7 +51,7 @@ houseRentPeriod = "never"
 
 -- Item Usage
 timeBetweenActions = 200
-timeBetweenExActions = 1000
+timeBetweenExActions = 500
 
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
@@ -68,7 +68,7 @@ maxMarketOffersAtATimePerPlayer = 100
 mysqlHost = "127.0.0.1"
 mysqlUser = "root"
 mysqlPass = ""
-mysqlDatabase = "norah1"
+mysqlDatabase = "b-rox"
 mysqlPort = 3306
 mysqlSock = ""
 
@@ -84,7 +84,7 @@ classicEquipmentSlots = false
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml
 rateExp = 2
 rateSkill = 5
-rateLoot = 1
+rateLoot = 2
 rateMagic = 3
 rateSpawn = 1
 

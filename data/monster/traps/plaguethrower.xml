@@ -16,6 +16,7 @@
 		<flag staticattack="90" />
 		<flag runonhealth="100" />
 		<flag hidehealth="1" />
+	<flag isblockable="1" />
 	</flags>
 	<attacks>
 		<attack name="earth" interval="2000" chance="100" range="7" min="0" max="-100">

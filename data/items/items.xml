@@ -31563,6 +31563,24 @@
 		<attribute key="corpseType" value="blood" />
 		<attribute key="fluidSource" value="blood" />
 	</item>
+	<item id="24708" article="a" name="werewolf fangs">
+		<attribute key="weight" value="160" />
+	</item>
+	<item id="24739" article="a" name="moonlight crystals">
+		<attribute key="weight" value="400" />
+	</item>
+	<item id="24740" article="a" name="wolf backpack">
+		<attribute key="weight" value="1800" />
+		<attribute key="containerSize" value="20" />
+		<attribute key="slotType" value="backpack" />
+	</item>
+	<item id="24842" article="a" name="raw meat">
+		<attribute key="description" value="It doesn't look appetizing. Perhaps it would taste better if roasted." />
+		<attribute key="weight" value="2800" />
+	</item>
+	<item id="24843" article="a" name="roasted meat">
+		<attribute key="weight" value="2500" />
+	</item>
 	<item id="24851" article="a" name="onyx pendant">
 		<attribute key="weight" value="500" />
 		<attribute key="slotType" value="necklace" />
@@ -31625,6 +31643,29 @@
 	</item>
 	<item id="25391" article="a" name="rift lamp">
 		<attribute key="weight" value="800" />
+	</item>
+	<item id="25398" article="a" name="dead clomps">
+		<attribute key="containerSize" value="10" />
+		<attribute key="decayTo" value="25399" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="25399" article="a" name="dead clomps">
+		<attribute key="containerSize" value="10" />
+		<attribute key="decayTo" value="25400" />
+		<attribute key="duration" value="600" />
+		<attribute key="corpseType" value="blood" />
+	</item>
+	<item id="25400" article="a" name="dead clomps">
+		<attribute key="containerSize" value="10" />
+		<attribute key="decayTo" value="25401" />
+		<attribute key="duration" value="600" />
+		<attribute key="corpseType" value="blood" />
+	</item>
+	<item id="25401" article="a" name="dead clomps">
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
 	</item>
 	<item id="25402" article="a" name="ancient amulet">
 		<attribute key="weight" value="300" />
@@ -31743,7 +31784,7 @@
 		<attribute key="weight" value="650" />
 	</item>
 	<item id="25541" article="a" name="bird nest">
-	<attribute key="description" value="Something glitters between the eggs" />
+		<attribute key="description" value="Something glitters between the eggs" />
 	</item>
 	<item id="25545" article="a" name="shield of destiny">
 		<attribute key="description" value="It was awarded by TibiaRoyal.com. Holding the divine intellect of Uman and the merciless destruction instinct of Zathroth, the eternal balance remains on the hands of its owner." />

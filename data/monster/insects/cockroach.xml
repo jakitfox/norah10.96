@@ -16,6 +16,7 @@
 		<flag lightcolor="0" />
 		<flag targetdistance="5" />
 		<flag runonhealth="1" />
+	<flag isblockable="1" />
 	</flags>
 	<loot>
 		<item id="8710" chance="100000" /><!-- cockroach leg -->

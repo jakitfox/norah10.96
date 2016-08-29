@@ -17,7 +17,8 @@
       <flag lightcolor="0"/>
       <flag targetdistance="1"/>
       <flag runonhealth="1"/>
-    </flags>
+    <flag isblockable="1" />
+	</flags>
     <attacks>
       <attack name="melee" interval="2000" min="-80" max="-745" poison="40"/>
       <attack name="lifedrain" interval="2000" min="-90" max="-140" target="1">

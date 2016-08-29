@@ -15,6 +15,7 @@
 		<flag targetdistance="5" />
 		<flag staticattack="0" />
 		<flag runonhealth="0" />
+	<flag isblockable="1" />
 	</flags>
 	<defenses armor="2" defense="3" />
 </monster>

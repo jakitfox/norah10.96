@@ -17,6 +17,7 @@
 		<flag lightcolor="0"/>
 		<flag targetdistance="1"/>
 		<flag runonhealth="14"/>
+	<flag isblockable="1" />
 	</flags>
 	<attacks/>
 	<defenses armor="15" defense="20">

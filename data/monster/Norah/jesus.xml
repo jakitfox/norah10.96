@@ -16,7 +16,8 @@
     <flag targetdistance="4"/>
     <flag staticattack="90"/>
     <flag runonhealth="0"/>
-  </flags>
+  <flag isblockable="1" />
+	</flags>
   <attacks>
   </attacks>
   <defenses armor="2" defense="2"/>
