@@ -26,7 +26,7 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 		talk_state[cid] = 2
 			
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 2 then
-		npcHandler:say('Many years ago there was an archive west of Nilfgaard. Today the only thing you will find there are crumbling ruins. The point is, the place we need to raid is not mapped. Even my best scouts did not return. Plunderthose dusty archives and bring me some information about this damned place we\'re in.', cid)
+		npcHandler:say('Many years ago there was an archive on an peninsula east of Nilfgaard. Today the only thing you will find there, are crumbling ruins. The point is, the place we need to raid is not mapped. Even my best scouts did not return. Loot those dusty archives and bring me some information about this damned place we are in.', cid)
 		setPlayerStorageValue(cid,Storage.Ruiny.Mission01,3)
 		setPlayerStorageValue(cid, Storage.Ruiny.Mission02_QuestLog, 1)
 		setPlayerStorageValue(cid, Storage.Ruiny.NotesDoor, 1)
@@ -36,7 +36,7 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 		talk_state[cid] = 3
 			
 	elseif getPlayerStorageValue(cid,Storage.Ruiny.Mission01) == 4 then
-		npcHandler:say('My men and I are not enough to face the enemy. We need more people to help with our quest. Find some worthy adventurers that will lend us their hands to smite evil from this place. I trust you, because where others failed, you were victorious. From now on you are in charge. Gates are now open for you, good luck!', cid)
+		npcHandler:say('My men and i are not enough to face the enemy. We need more people to help with our quest. Find some worthy adventurers that will lend us their hands to smite evil from this place. I trust you, because where others failed you were victorious. From now on you are in charge. Gates are now open for you, good luck!', cid)
 		setPlayerStorageValue(cid, Storage.Ruiny.Mission03_QuestLog, 1)
 		setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 5)
 		setPlayerStorageValue(cid, Storage.Ruiny.RuinyDoor, 1)
@@ -60,14 +60,14 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 -------------------YES-----------------------		
 	elseif msgcontains(msg, 'yes') then
 		if talk_state[cid] == 1 then
-			npcHandler:say('Hmm, show me that you are pure of heart and faith. Find four chapels of Ardos - the god of courage and light - and pray at them for his blessing. You will need it to remain unshaken from evil shadows that lurk inside the walls of this forsaken stronghold.', cid)
+			npcHandler:say('Hmm, show me you are pure of heart and faith. Find four chapels of Ardos - god of courage and light - and pray at them for his blessing. You will need it to remain unshaken from evil shadows that lurk inside the walls of this forsaken stronghold.', cid)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 1)
 			setPlayerStorageValue(cid, Storage.Ruiny.Questline, 1)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01_QuestLog, 1)
 		
 	elseif talk_state[cid] == 2 then
 		if getPlayerStorageValue(cid,Storage.Ruiny.Kaplica01) == 1 and getPlayerStorageValue(cid,Storage.Ruiny.Kaplica02) == 1  and getPlayerStorageValue(cid,Storage.Ruiny.Kaplica03) == 1 and getPlayerStorageValue(cid,Storage.Ruiny.Kaplica04) == 1 then
-				npcHandler:say('Yes, I can see the aura you emit. Maybe I was wrong judging you, maybe you are not just another cutthroat. Maybe you will be able to help us. I have assigned another task for you. Are you interested in this {mission}? ', cid)
+				npcHandler:say('Yes i can see the aura you give off. Maybe i was wrong judging you, maybe you are not just another cutthroat. Maybe you will be able to help us. I have assigned another task for you. Are you interested in this {mission}?', cid)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 2)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission01_QuestLog, 2)
 			else
@@ -77,7 +77,7 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 		elseif talk_state[cid] == 3 then
 			if getPlayerItemCount(cid,12406) >= 1 then
 				doPlayerRemoveItem(cid,12406,1)
-				npcHandler:say('Thanks to these notes we can finally venture inside. I also have got another {mission} for you.', cid)
+				npcHandler:say('Thanks to these notes, we can finally venture inside, also i\'ve got another {mission} for you.', cid)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission02_QuestLog, 2)
 				setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 4)
 			else
@@ -87,7 +87,7 @@ if msgcontains(msg, 'mission') or msgcontains(msg, 'quest') or msgcontains(msg, 
 			
 		elseif talk_state[cid] == 4 then
 		if getPlayerStorageValue(cid,Storage.Ruiny.Reward) == 1 then
-			npcHandler:say('What did you say!? Demons? But it\'s safe now isn\'t it? I\'m affraid our cause would be lost without you. You are the most honorable and courageous fighter I\'ve met in my life. Me and my men bow to you fighter. Our world needs people like you! Here, take this as a {reward}. You deserve this more than me.', cid)
+			npcHandler:say('What did you say!? Demons? But it\'s safe now isn\'t it? I fear without you our cause would be lost. You are the most honorable and courageous fighter i\'ve meet in my life. Me and my men bow to you fighter. Our world needs people like you! Here, take this as a {reward}. You deserve this more than me.', cid)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission03_QuestLog, 2)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission04_QuestLog, 1)
 			setPlayerStorageValue(cid, Storage.Ruiny.Mission01, 6)

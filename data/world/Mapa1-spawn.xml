@@ -390,17 +390,87 @@
 		<monster name="Adept of the Cult" x="1" y="-2" z="3" spawntime="60" />
 	</spawn>
 	<spawn centerx="971" centery="92" centerz="4" radius="10" />
+	<spawn centerx="543" centery="229" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="1" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="551" centery="229" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="1" y="1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="495" centery="230" centerz="4" radius="1">
+		<monster name="Glooth Brigand" x="-1" y="1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="538" centery="230" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="1" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="562" centery="230" centerz="4" radius="1">
+		<monster name="Glooth Brigand" x="1" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="486" centery="232" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="0" y="1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="491" centery="232" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="1" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="548" centery="232" centerz="4" radius="1">
+		<monster name="Glooth Brigand" x="0" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="557" centery="232" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="1" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="505" centery="233" centerz="4" radius="1">
+		<monster name="Glooth Brigand" x="-1" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="530" centery="233" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="1" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="498" centery="234" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="1" y="1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="514" centery="234" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="1" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="534" centery="234" centerz="4" radius="1">
+		<monster name="Glooth Brigand" x="1" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="523" centery="235" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="1" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="508" centery="236" centerz="4" radius="1">
+		<monster name="Glooth Bandit" x="0" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="517" centery="237" centerz="4" radius="1">
+		<monster name="Glooth Brigand" x="1" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="484" centery="238" centerz="4" radius="1">
+		<monster name="Glooth Brigand" x="1" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="540" centery="247" centerz="4" radius="1">
+		<monster name="Rustheap Golem" x="0" y="-1" z="4" spawntime="60" />
+		<monster name="Rustheap Golem" x="-1" y="1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="492" centery="261" centerz="4" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="0" z="4" spawntime="60" />
+	</spawn>
 	<spawn centerx="445" centery="287" centerz="4" radius="1">
 		<monster name="Demon" x="1" y="1" z="4" spawntime="60" />
 	</spawn>
 	<spawn centerx="452" centery="287" centerz="4" radius="1">
 		<monster name="Demon" x="-1" y="1" z="4" spawntime="60" />
 	</spawn>
+	<spawn centerx="544" centery="288" centerz="4" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="1" z="4" spawntime="60" />
+	</spawn>
 	<spawn centerx="446" centery="290" centerz="4" radius="1">
 		<monster name="Demon" x="1" y="-1" z="4" spawntime="60" />
 	</spawn>
 	<spawn centerx="451" centery="290" centerz="4" radius="1">
 		<monster name="Demon" x="-1" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="525" centery="290" centerz="4" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="519" centery="291" centerz="4" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="4" spawntime="60" />
 	</spawn>
 	<spawn centerx="398" centery="414" centerz="4" radius="1">
 		<monster name="Gnarlhound" x="0" y="-1" z="4" spawntime="60" />
@@ -1144,96 +1214,101 @@
 	<spawn centerx="625" centery="227" centerz="5" radius="1">
 		<monster name="Dragon Lord" x="0" y="0" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="549" centery="242" centerz="5" radius="1">
+	<spawn centerx="561" centery="241" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="5" spawntime="60" />
+		<monster name="Metal Gargoyle" x="-1" y="1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="550" centery="242" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="5" spawntime="60" />
+		<monster name="Metal Gargoyle" x="-1" y="1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="481" centery="243" centerz="5" radius="1">
+		<monster name="Glooth Brigand" x="1" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="522" centery="243" centerz="5" radius="1">
 		<monster name="Rustheap Golem" x="-1" y="0" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="560" centery="242" centerz="5" radius="1">
-		<monster name="Glooth Blob" x="1" y="-1" z="5" spawntime="60" />
-		<monster name="Glooth Blob" x="0" y="1" z="5" spawntime="60" />
+	<spawn centerx="526" centery="243" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="1" y="-1" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="524" centery="243" centerz="5" radius="1">
-		<monster name="Metal Gargoyle" x="0" y="-1" z="5" spawntime="60" />
+	<spawn centerx="538" centery="243" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="-1" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="540" centery="243" centerz="5" radius="1">
-		<monster name="Metal Gargoyle" x="1" y="-1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="565" centery="243" centerz="5" radius="1">
-		<monster name="Glooth Blob" x="0" y="1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="551" centery="244" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="0" y="-1" z="5" spawntime="60" />
+	<spawn centerx="476" centery="244" centerz="5" radius="1">
+		<monster name="Glooth Bandit" x="1" y="0" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="562" centery="244" centerz="5" radius="1">
 		<monster name="Glooth Blob" x="0" y="1" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="537" centery="246" centerz="5" radius="1">
-		<monster name="Metal Gargoyle" x="0" y="-1" z="5" spawntime="60" />
-		<monster name="Metal Gargoyle" x="1" y="0" z="5" spawntime="60" />
+	<spawn centerx="524" centery="247" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="523" centery="247" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="-1" y="0" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="512" centery="248" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="1" y="0" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="528" centery="248" centerz="5" radius="1">
+	<spawn centerx="540" centery="247" centerz="5" radius="1">
 		<monster name="Rustheap Golem" x="0" y="-1" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="514" centery="250" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="0" y="0" z="5" spawntime="60" />
+	<spawn centerx="493" centery="248" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="0" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="513" centery="249" centerz="5" radius="1">
+		<monster name="Rot Elemental" x="-1" y="-1" z="5" spawntime="60" />
+		<monster name="Rot Elemental" x="1" y="1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="477" centery="252" centerz="5" radius="1">
+		<monster name="Glooth Brigand" x="0" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="482" centery="255" centerz="5" radius="1">
+		<monster name="Glooth Bandit" x="0" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="542" centery="257" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="1" y="1" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="525" centery="258" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="-1" y="0" z="5" spawntime="60" />
+		<monster name="Metal Gargoyle" x="-1" y="0" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="541" centery="258" centerz="5" radius="1">
-		<monster name="Metal Gargoyle" x="0" y="-1" z="5" spawntime="60" />
+	<spawn centerx="543" centery="261" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="1" y="1" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="516" centery="261" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="1" y="-1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="544" centery="261" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="0" y="-1" z="5" spawntime="60" />
-		<monster name="Metal Gargoyle" x="-1" y="1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="528" centery="262" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="0" y="-1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="525" centery="263" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="-1" y="0" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="539" centery="263" centerz="5" radius="1">
-		<monster name="Glooth Blob" x="1" y="-1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="515" centery="265" centerz="5" radius="1">
+	<spawn centerx="493" centery="262" centerz="5" radius="1">
 		<monster name="Metal Gargoyle" x="1" y="0" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="518" centery="265" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="0" y="-1" z="5" spawntime="60" />
+	<spawn centerx="516" centery="262" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="0" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="543" centery="270" centerz="5" radius="1">
-		<monster name="Rustheap Golem" x="-1" y="0" z="5" spawntime="60" />
+	<spawn centerx="526" centery="262" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="539" centery="262" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="1" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="518" centery="265" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="509" centery="269" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="539" centery="271" centerz="5" radius="1">
-		<monster name="Metal Gargoyle" x="1" y="-1" z="5" spawntime="60" />
-		<monster name="Metal Gargoyle" x="-1" y="1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="509" centery="272" centerz="5" radius="1">
-		<monster name="Glooth Golem" x="0" y="-1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="511" centery="280" centerz="5" radius="1">
-		<monster name="Metal Gargoyle" x="1" y="-1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="526" centery="280" centerz="5" radius="1">
-		<monster name="Glooth Golem" x="1" y="0" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="508" centery="281" centerz="5" radius="1">
 		<monster name="Metal Gargoyle" x="0" y="-1" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="516" centery="281" centerz="5" radius="1">
+	<spawn centerx="542" centery="271" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="508" centery="274" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="511" centery="280" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="0" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="526" centery="280" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="515" centery="281" centerz="5" radius="1">
 		<monster name="Metal Gargoyle" x="1" y="0" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="445" centery="282" centerz="5" radius="1">
 		<monster name="Demon" x="1" y="1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="498" centery="282" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="0" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="442" centery="283" centerz="5" radius="1">
 		<monster name="Demon" x="0" y="1" z="5" spawntime="60" />
@@ -1241,11 +1316,25 @@
 	<spawn centerx="449" centery="284" centerz="5" radius="1">
 		<monster name="red mage" x="0" y="-1" z="5" spawntime="60" />
 	</spawn>
+	<spawn centerx="544" centery="288" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="5" spawntime="60" />
+	</spawn>
 	<spawn centerx="442" centery="290" centerz="5" radius="1">
 		<monster name="Warlock" x="-1" y="0" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="452" centery="290" centerz="5" radius="1">
 		<monster name="Demon" x="-1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="519" centery="291" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="5" spawntime="60" />
+		<monster name="Metal Gargoyle" x="-1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="527" centery="291" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="537" centery="292" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="5" spawntime="60" />
+		<monster name="Rustheap Golem" x="1" y="1" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="443" centery="296" centerz="5" radius="1">
 		<monster name="Demon" x="1" y="1" z="5" spawntime="60" />
@@ -1255,6 +1344,22 @@
 	</spawn>
 	<spawn centerx="447" centery="298" centerz="5" radius="1">
 		<monster name="Warlock" x="-1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="509" centery="302" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="521" centery="304" centerz="5" radius="1">
+		<monster name="Glooth Blob" x="0" y="1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="506" centery="305" centerz="5" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="519" centery="308" centerz="5" radius="1">
+		<monster name="Glooth Blob" x="-1" y="-1" z="5" spawntime="60" />
+		<monster name="Glooth Blob" x="1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="509" centery="309" centerz="5" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="1" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="739" centery="309" centerz="5" radius="10">
 		<monster name="Giant Spider" x="1" y="-7" z="5" spawntime="60" />
@@ -2721,8 +2826,14 @@
 	<spawn centerx="963" centery="64" centerz="6" radius="8" />
 	<spawn centerx="949" centery="72" centerz="6" radius="8" />
 	<spawn centerx="977" centery="92" centerz="6" radius="10" />
-	<spawn centerx="573" centery="230" centerz="6" radius="1">
-		<monster name="Blood Beast" x="0" y="1" z="6" spawntime="60" />
+	<spawn centerx="543" centery="226" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="542" centery="231" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="571" centery="231" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="618" centery="231" centerz="6" radius="1">
 		<monster name="Dragon" x="1" y="1" z="6" spawntime="60" />
@@ -2730,77 +2841,138 @@
 	<spawn centerx="628" centery="232" centerz="6" radius="1">
 		<monster name="Dragon" x="0" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="573" centery="234" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="0" y="1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="578" centery="235" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="1" y="-1" z="6" spawntime="60" />
+	<spawn centerx="576" centery="235" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="-1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="625" centery="235" centerz="6" radius="1">
 		<monster name="Dragon Hatchling" x="-1" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="566" centery="236" centerz="6" radius="1">
+	<spawn centerx="567" centery="236" centerz="6" radius="1">
 		<monster name="Metal Gargoyle" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="538" centery="238" centerz="6" radius="1">
 		<monster name="Metal Gargoyle" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="570" centery="238" centerz="6" radius="1">
-		<monster name="Blood Beast" x="1" y="-1" z="6" spawntime="60" />
+	<spawn centerx="545" centery="238" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="556" centery="239" centerz="6" radius="1">
+	<spawn centerx="571" centery="238" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="580" centery="238" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="497" centery="240" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="555" centery="240" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="561" centery="241" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="551" centery="242" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Blood Beast" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="492" centery="243" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="243" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="509" centery="243" centerz="6" radius="1">
+		<monster name="Blood Beast" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="524" centery="243" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="-1" y="-1" z="6" spawntime="60" />
 		<monster name="Glooth Blob" x="1" y="0" z="6" spawntime="60" />
-		<monster name="Metal Gargoyle" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="562" centery="241" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="0" y="1" z="6" spawntime="60" />
+	<spawn centerx="532" centery="243" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="523" centery="243" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="1" y="0" z="6" spawntime="60" />
+	<spawn centerx="538" centery="244" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="539" centery="243" centerz="6" radius="1">
-		<monster name="Blood Beast" x="0" y="1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="544" centery="244" centerz="6" radius="1">
-		<monster name="Blood Beast" x="1" y="0" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="550" centery="244" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="0" y="-1" z="6" spawntime="60" />
+	<spawn centerx="549" centery="244" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="1" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="564" centery="244" centerz="6" radius="1">
 		<monster name="Metal Gargoyle" x="1" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="559" centery="245" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="1" y="-1" z="6" spawntime="60" />
+	<spawn centerx="518" centery="245" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="522" centery="246" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="-1" y="-1" z="6" spawntime="60" />
+	<spawn centerx="561" centery="245" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="527" centery="246" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="1" y="0" z="6" spawntime="60" />
+	<spawn centerx="521" centery="246" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="533" centery="246" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="0" y="1" z="6" spawntime="60" />
+	<spawn centerx="545" centery="246" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="541" centery="248" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="-1" y="-1" z="6" spawntime="60" />
-		<monster name="Blood Beast" x="-1" y="0" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="513" centery="249" centerz="6" radius="1" />
-	<spawn centerx="528" centery="252" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="-1" y="1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="537" centery="253" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="1" y="0" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="519" centery="256" centerz="6" radius="1">
+	<spawn centerx="527" centery="247" centerz="6" radius="1">
 		<monster name="Metal Gargoyle" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="508" centery="258" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="1" y="0" z="6" spawntime="60" />
+	<spawn centerx="540" centery="247" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="527" centery="258" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="1" y="1" z="6" spawntime="60" />
+	<spawn centerx="504" centery="248" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="568" centery="248" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="1" y="-1" z="6" spawntime="60" />
+		<monster name="Glooth Blob" x="-1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="488" centery="249" centerz="6" radius="1">
+		<monster name="Blood Beast" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="493" centery="249" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="509" centery="249" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="513" centery="249" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="551" centery="249" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="-1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="558" centery="249" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="523" centery="252" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="6" spawntime="60" />
+		<monster name="Blood Beast" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="544" centery="252" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="498" centery="253" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="533" centery="253" centerz="6" radius="1">
+		<monster name="Blood Beast" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="529" centery="254" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="470" centery="255" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="491" centery="255" centerz="6" radius="1">
+		<monster name="Blood Beast" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="511" centery="255" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="518" centery="255" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="505" centery="256" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="834" centery="258" centerz="6" radius="10">
 		<monster name="Behemoth" x="0" y="-5" z="6" spawntime="60" />
@@ -2808,70 +2980,141 @@
 		<monster name="Behemoth" x="-7" y="2" z="6" spawntime="60" />
 		<monster name="Behemoth" x="-1" y="6" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="539" centery="261" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="1" y="0" z="6" spawntime="60" />
+	<spawn centerx="478" centery="259" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="543" centery="261" centerz="6" radius="1">
+	<spawn centerx="526" centery="259" centerz="6" radius="1">
 		<monster name="Metal Gargoyle" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="518" centery="262" centerz="6" radius="1">
+	<spawn centerx="541" centery="259" centerz="6" radius="1">
 		<monster name="Metal Gargoyle" x="1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="527" centery="262" centerz="6" radius="1" />
-	<spawn centerx="512" centery="264" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="-1" y="-1" z="6" spawntime="60" />
+	<spawn centerx="473" centery="260" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="517" centery="265" centerz="6" radius="1">
+	<spawn centerx="493" centery="261" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="504" centery="261" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="488" centery="262" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="500" centery="262" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="516" centery="262" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="538" centery="262" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="528" centery="263" centerz="6" radius="1">
 		<monster name="Metal Gargoyle" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="518" centery="265" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="1" y="-1" z="6" spawntime="60" />
+		<monster name="Glooth Blob" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="532" centery="265" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="803" centery="265" centerz="6" radius="10">
 		<monster name="Behemoth" x="-3" y="-2" z="6" spawntime="60" />
 		<monster name="Behemoth" x="5" y="2" z="6" spawntime="60" />
 		<monster name="Behemoth" x="2" y="7" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="488" centery="266" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="500" centery="266" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="524" centery="266" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="485" centery="267" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="493" centery="268" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="509" centery="268" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="1" y="-1" z="6" spawntime="60" />
-		<monster name="Metal Gargoyle" x="-1" y="1" z="6" spawntime="60" />
+		<monster name="Glooth Blob" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Glooth Blob" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="533" centery="269" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="0" y="-1" z="6" spawntime="60" />
+	<spawn centerx="524" centery="270" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="1" y="0" z="6" spawntime="60" />
+		<monster name="Glooth Blob" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="522" centery="270" centerz="6" radius="1" />
-	<spawn centerx="525" centery="270" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="0" y="-1" z="6" spawntime="60" />
+	<spawn centerx="542" centery="270" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="0" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="538" centery="270" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="0" y="-1" z="6" spawntime="60" />
+	<spawn centerx="539" centery="271" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Rot Elemental" x="0" y="1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="541" centery="272" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="1" y="-1" z="6" spawntime="60" />
+	<spawn centerx="515" centery="272" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="508" centery="273" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="532" centery="273" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="481" centery="274" centerz="6" radius="1">
 		<monster name="Metal Gargoyle" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="503" centery="275" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="486" centery="276" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="521" centery="276" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="-1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="784" centery="276" centerz="6" radius="10">
 		<monster name="Behemoth" x="1" y="-7" z="6" spawntime="60" />
 		<monster name="Behemoth" x="6" y="-3" z="6" spawntime="60" />
 		<monster name="Behemoth" x="2" y="2" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="516" centery="279" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="1" y="1" z="6" spawntime="60" />
+	<spawn centerx="489" centery="278" centerz="6" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="533" centery="279" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="440" centery="280" centerz="6" radius="1">
 		<monster name="Warlock" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="509" centery="280" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="0" y="-1" z="6" spawntime="60" />
+	<spawn centerx="514" centery="280" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="528" centery="280" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="-1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="451" centery="281" centerz="6" radius="1">
 		<monster name="Dragon Lord" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="511" centery="281" centerz="6" radius="1">
-		<monster name="Rustheap Golem" x="0" y="-1" z="6" spawntime="60" />
+	<spawn centerx="509" centery="281" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="1" y="-1" z="6" spawntime="60" />
+		<monster name="Rot Elemental" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="447" centery="282" centerz="6" radius="1">
 		<monster name="Demon" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="514" centery="282" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="-1" y="0" z="6" spawntime="60" />
+	<spawn centerx="498" centery="282" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="0" z="6" spawntime="60" />
+		<monster name="Glooth Blob" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="517" centery="282" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="525" centery="282" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="-1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="438" centery="283" centerz="6" radius="1">
 		<monster name="dark mage" x="0" y="-1" z="6" spawntime="60" />
@@ -2883,11 +3126,34 @@
 		<monster name="Giant Spider" x="0" y="-3" z="6" spawntime="60" />
 		<monster name="Giant Spider" x="3" y="7" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="537" centery="285" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Glooth Blob" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="506" centery="286" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="515" centery="286" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="525" centery="286" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="532" centery="286" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="1" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="447" centery="287" centerz="6" radius="1">
 		<monster name="Warlock" x="-1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="441" centery="288" centerz="6" radius="1">
 		<monster name="Dragon Lord" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="537" centery="288" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="545" centery="288" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="0" z="6" spawntime="60" />
+		<monster name="Glooth Blob" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="435" centery="289" centerz="6" radius="1">
 		<monster name="Warlock" x="0" y="1" z="6" spawntime="60" />
@@ -2904,18 +3170,40 @@
 	<spawn centerx="456" centery="291" centerz="6" radius="1">
 		<monster name="Warlock" x="-1" y="0" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="508" centery="291" centerz="6" radius="1">
+		<monster name="Blood Beast" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="527" centery="291" centerz="6" radius="1">
 		<monster name="Rot Elemental" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="504" centery="292" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="512" centery="292" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="518" centery="292" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="-1" z="6" spawntime="60" />
+		<monster name="Glooth Blob" x="1" y="-1" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="538" centery="293" centerz="6" radius="1">
-		<monster name="Metal Gargoyle" x="0" y="1" z="6" spawntime="60" />
-		<monster name="Rustheap Golem" x="1" y="1" z="6" spawntime="60" />
+		<monster name="Rot Elemental" x="1" y="0" z="6" spawntime="60" />
+		<monster name="Rot Elemental" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="820" centery="293" centerz="6" radius="10">
 		<monster name="Behemoth" x="-5" y="-5" z="6" spawntime="60" />
 		<monster name="Behemoth" x="7" y="-2" z="6" spawntime="60" />
 		<monster name="Behemoth" x="-2" y="4" z="6" spawntime="60" />
 		<monster name="Behemoth" x="-2" y="9" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="515" centery="297" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="524" centery="297" centerz="6" radius="1">
+		<monster name="Rot Elemental" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="533" centery="297" centerz="6" radius="1">
+		<monster name="Blood Beast" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="440" centery="298" centerz="6" radius="1">
 		<monster name="Warlock" x="-1" y="0" z="6" spawntime="60" />
@@ -2932,9 +3220,28 @@
 	<spawn centerx="448" centery="301" centerz="6" radius="1">
 		<monster name="Demon" x="0" y="1" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="529" centery="301" centerz="6" radius="1">
+		<monster name="Blood Beast" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="715" centery="303" centerz="6" radius="10">
 		<monster name="Giant Spider" x="3" y="-3" z="6" spawntime="60" />
 		<monster name="Giant Spider" x="-1" y="9" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="506" centery="304" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="-1" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="520" centery="304" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="1" y="0" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="514" centery="305" centerz="6" radius="1">
+		<monster name="Glooth Blob" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="518" centery="307" centerz="6" radius="1">
+		<monster name="Blood Beast" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="508" centery="308" centerz="6" radius="1">
+		<monster name="Blood Beast" x="0" y="-1" z="6" spawntime="60" />
+		<monster name="Blood Beast" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="673" centery="308" centerz="6" radius="5">
 		<monster name="Wyvern" x="-2" y="-4" z="6" spawntime="60" />
@@ -3918,11 +4225,6 @@
 	</spawn>
 	<spawn centerx="710" centery="529" centerz="6" radius="1">
 		<monster name="Bandit" x="-1" y="-1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="1018" centery="530" centerz="6" radius="1">
-		<monster name="Sheep" x="-1" y="-1" z="6" spawntime="60" />
-		<monster name="Rabbit" x="1" y="-1" z="6" spawntime="60" />
-		<monster name="Sheep" x="1" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="778" centery="532" centerz="6" radius="1">
 		<monster name="Dragon Lord" x="1" y="-1" z="6" spawntime="60" />
@@ -6314,19 +6616,40 @@
 	<spawn centerx="451" centery="233" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="530" centery="234" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="466" centery="235" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="0" y="1" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="539" centery="235" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="236" centerz="7" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="443" centery="237" centerz="7" radius="1">
 		<monster name="Glooth Brigand" x="-1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="495" centery="237" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="600" centery="237" centerz="7" radius="1">
 		<monster name="Bear" x="0" y="1" z="7" spawntime="60" />
 		<monster name="Bear" x="1" y="1" z="7" spawntime="512" />
 	</spawn>
+	<spawn centerx="507" centery="238" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="544" centery="238" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="424" centery="240" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="0" y="-1" z="7" spawntime="60" />
 		<monster name="Glooth Bandit" x="-1" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="530" centery="240" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="0" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="450" centery="241" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="1" y="-1" z="7" spawntime="60" />
@@ -6334,6 +6657,9 @@
 	</spawn>
 	<spawn centerx="458" centery="241" centerz="7" radius="1">
 		<monster name="Glooth Brigand" x="-1" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="241" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="1" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="439" centery="242" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="-1" y="0" z="7" spawntime="60" />
@@ -6344,6 +6670,9 @@
 	<spawn centerx="430" centery="243" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="541" centery="243" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="1" y="-1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="702" centery="243" centerz="7" radius="1">
 		<monster name="Bear" x="1" y="-1" z="7" spawntime="60" />
 	</spawn>
@@ -6353,11 +6682,17 @@
 	<spawn centerx="711" centery="245" centerz="7" radius="1">
 		<monster name="Bear" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="531" centery="246" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="420" centery="247" centerz="7" radius="1">
 		<monster name="Glooth Brigand" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="445" centery="247" centerz="7" radius="1">
 		<monster name="Glooth Brigand" x="0" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="502" centery="247" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="411" centery="248" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="-1" y="-1" z="7" spawntime="60" />
@@ -6389,6 +6724,9 @@
 	<spawn centerx="453" centery="250" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="541" centery="250" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="768" centery="250" centerz="7" radius="30">
 		<monster name="Behemoth" x="-11" y="-25" z="7" spawntime="60" />
 		<monster name="Behemoth" x="-16" y="-16" z="7" spawntime="60" />
@@ -6406,8 +6744,26 @@
 		<monster name="Behemoth" x="-25" y="21" z="7" spawntime="60" />
 		<monster name="Behemoth" x="0" y="23" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="535" centery="251" centerz="7" radius="1">
+		<monster name="Blood Beast" x="-1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="500" centery="252" centerz="7" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="520" centery="252" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="528" centery="253" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="415" centery="254" centerz="7" radius="1">
 		<monster name="Glooth Brigand" x="0" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="506" centery="254" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="512" centery="254" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="438" centery="255" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="1" y="-1" z="7" spawntime="60" />
@@ -6433,14 +6789,36 @@
 	<spawn centerx="444" centery="259" centerz="7" radius="1">
 		<monster name="Glooth Bandit" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="533" centery="260" centerz="7" radius="1">
+		<monster name="Blood Beast" x="-1" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="499" centery="261" centerz="7" radius="1" />
 	<spawn centerx="616" centery="261" centerz="7" radius="1">
 		<monster name="Wolf" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="511" centery="262" centerz="7" radius="1">
+		<monster name="Blood Beast" x="0" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="516" centery="262" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="523" centery="262" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="0" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="684" centery="262" centerz="7" radius="1">
 		<monster name="Wolf" x="0" y="1" z="7" spawntime="60" />
 		<monster name="Wolf" x="1" y="1" z="7" spawntime="512" />
 	</spawn>
+	<spawn centerx="504" centery="263" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="432" centery="264" centerz="7" radius="1" />
+	<spawn centerx="532" centery="264" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="500" centery="266" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="862" centery="266" centerz="7" radius="1">
 		<monster name="Behemoth" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
@@ -6450,8 +6828,14 @@
 	<spawn centerx="483" centery="270" centerz="7" radius="1">
 		<monster name="green mage" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="515" centery="270" centerz="7" radius="1">
+		<monster name="Blood Beast" x="1" y="-1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="875" centery="270" centerz="7" radius="1">
 		<monster name="Behemoth" x="0" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="518" centery="273" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="485" centery="274" centerz="7" radius="1">
 		<monster name="green mage" x="-1" y="-1" z="7" spawntime="60" />
@@ -6461,6 +6845,12 @@
 	</spawn>
 	<spawn centerx="444" centery="279" centerz="7" radius="1">
 		<monster name="Dragon Lord" x="-1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="516" centery="281" centerz="7" radius="1">
+		<monster name="Blood Beast" x="1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="527" centery="282" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="448" centery="283" centerz="7" radius="1">
 		<monster name="Demon" x="-1" y="0" z="7" spawntime="60" />
@@ -6474,8 +6864,26 @@
 	<spawn centerx="440" centery="285" centerz="7" radius="1">
 		<monster name="Demon" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="514" centery="285" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="1" y="1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="462" centery="286" centerz="7" radius="1">
 		<monster name="Dragon Lord" x="-1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="482" centery="286" centerz="7" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="491" centery="287" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="0" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="287" centerz="7" radius="1">
+		<monster name="Blood Beast" x="1" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="508" centery="287" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="529" centery="287" centerz="7" radius="1">
+		<monster name="Glooth Anemone" x="0" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="860" centery="287" centerz="7" radius="15">
 		<monster name="Behemoth" x="10" y="-11" z="7" spawntime="60" />
@@ -6497,11 +6905,21 @@
 	<spawn centerx="445" centery="290" centerz="7" radius="1">
 		<monster name="Behemoth" x="0" y="1" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="485" centery="290" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="518" centery="291" centerz="7" radius="1" />
+	<spawn centerx="525" centery="291" centerz="7" radius="1">
+		<monster name="Blood Beast" x="-1" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="436" centery="292" centerz="7" radius="1">
 		<monster name="Demon" x="-1" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="461" centery="292" centerz="7" radius="1">
 		<monster name="Behemoth" x="-1" y="1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="498" centery="293" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="444" centery="294" centerz="7" radius="1">
 		<monster name="Dragon Lord" x="0" y="-1" z="7" spawntime="60" />
@@ -6520,6 +6938,12 @@
 	</spawn>
 	<spawn centerx="844" centery="298" centerz="7" radius="1">
 		<monster name="Behemoth" x="0" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="496" centery="299" centerz="7" radius="1">
+		<monster name="Blood Beast" x="1" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="299" centerz="7" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="569" centery="299" centerz="7" radius="1">
 		<npc name="Harina" x="-1" y="0" z="7" spawntime="60" direction="2" />
@@ -8452,9 +8876,7 @@
 	<spawn centerx="925" centery="615" centerz="7" radius="1">
 		<monster name="Mooh'Tah Warrior" x="1" y="-1" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="939" centery="615" centerz="7" radius="1">
-		<monster name="Blood Beast" x="-1" y="0" z="7" spawntime="60" />
-	</spawn>
+	<spawn centerx="939" centery="615" centerz="7" radius="1" />
 	<spawn centerx="1225" centery="617" centerz="7" radius="1">
 		<monster name="Panda" x="-1" y="1" z="7" spawntime="60" />
 	</spawn>
@@ -8464,9 +8886,7 @@
 	<spawn centerx="676" centery="618" centerz="7" radius="1">
 		<npc name="Lucia" x="0" y="1" z="7" spawntime="60" direction="2" />
 	</spawn>
-	<spawn centerx="940" centery="618" centerz="7" radius="1">
-		<monster name="Minotaur Hunter" x="0" y="-1" z="7" spawntime="60" />
-	</spawn>
+	<spawn centerx="940" centery="618" centerz="7" radius="1" />
 	<spawn centerx="1212" centery="618" centerz="7" radius="1">
 		<monster name="Panda" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
@@ -8754,7 +9174,7 @@
 		<monster name="Novice of the Cult" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="905" centery="646" centerz="7" radius="1">
-		<monster name="Elder Bonelord" x="0" y="-1" z="7" spawntime="60" />
+		<monster name="Bonelord" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="929" centery="646" centerz="7" radius="1">
 		<monster name="Bonelord" x="1" y="0" z="7" spawntime="60" />
@@ -8831,7 +9251,7 @@
 		<monster name="Novice of the Cult" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="908" centery="654" centerz="7" radius="1">
-		<monster name="Elder Bonelord" x="1" y="0" z="7" spawntime="60" />
+		<monster name="Bonelord" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="793" centery="655" centerz="7" radius="1">
 		<monster name="Minotaur" x="0" y="1" z="7" spawntime="768" />
@@ -8959,7 +9379,7 @@
 		<monster name="Acolyte of the Cult" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="916" centery="665" centerz="7" radius="1">
-		<monster name="Elder Bonelord" x="1" y="-1" z="7" spawntime="60" />
+		<monster name="Bonelord" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="606" centery="666" centerz="7" radius="1">
 		<monster name="Green Djinn" x="0" y="1" z="7" spawntime="60" />
@@ -12835,6 +13255,21 @@
 	<spawn centerx="688" centery="180" centerz="8" radius="1">
 		<monster name="Banshee" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="544" centery="181" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="548" centery="182" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="542" centery="185" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="548" centery="188" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="543" centery="189" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="681" centery="189" centerz="8" radius="1">
 		<monster name="Banshee" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
@@ -12847,6 +13282,9 @@
 	<spawn centerx="702" centery="191" centerz="8" radius="1">
 		<monster name="Banshee" x="-1" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="545" centery="193" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="672" centery="193" centerz="8" radius="1">
 		<monster name="Banshee" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
@@ -12856,14 +13294,318 @@
 	<spawn centerx="683" centery="197" centerz="8" radius="1">
 		<monster name="Banshee" x="1" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="537" centery="198" centerz="8" radius="1">
+		<monster name="Control Tower" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Metal Gargoyle" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="518" centery="199" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="523" centery="199" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="530" centery="199" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="552" centery="200" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="557" centery="200" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="506" centery="201" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="514" centery="201" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="540" centery="201" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="546" centery="201" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="672" centery="202" centerz="8" radius="1">
 		<monster name="Banshee" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="527" centery="203" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="537" centery="203" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="561" centery="203" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="522" centery="204" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="551" centery="204" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="557" centery="205" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="503" centery="206" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="673" centery="206" centerz="8" radius="1">
 		<monster name="Banshee" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="538" centery="207" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="536" centery="208" centerz="8" radius="1">
 		<monster name="Inoperative Tin Lizzard" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="506" centery="209" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="500" centery="210" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="527" centery="212" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="516" centery="214" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="527" centery="214" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Glooth Anemone" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="548" centery="214" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="539" centery="215" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="519" centery="216" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="553" centery="216" centerz="8" radius="1">
+		<monster name="Glooth Battery" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="483" centery="217" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="217" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="536" centery="217" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Glooth Anemone" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Rustheap Golem" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="543" centery="217" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="564" centery="218" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="489" centery="219" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="569" centery="220" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="485" centery="221" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="495" centery="221" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="575" centery="221" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="553" centery="222" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="498" centery="223" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="516" centery="223" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="528" centery="223" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="534" centery="223" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="-1" z="8" spawntime="60" />
+		<monster name="Control Tower" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="525" centery="224" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="538" centery="224" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="566" centery="224" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="543" centery="225" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="501" centery="226" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="530" centery="226" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="8" spawntime="60" />
+		<monster name="Rustheap Golem" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="495" centery="227" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="517" centery="227" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="578" centery="227" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="524" centery="228" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="547" centery="229" centerz="8" radius="1">
+		<monster name="Control Tower" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="552" centery="230" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="579" centery="230" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="574" centery="231" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="495" centery="233" centerz="8" radius="1">
+		<monster name="Glooth Battery" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Glooth Anemone" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="553" centery="233" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="490" centery="234" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="-1" z="8" spawntime="60" />
+		<monster name="Glooth Golem" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="502" centery="234" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="579" centery="234" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="558" centery="235" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="491" centery="238" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="539" centery="238" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="549" centery="238" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="566" centery="238" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="502" centery="239" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="488" centery="240" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="497" centery="240" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="510" centery="241" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="536" centery="241" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="543" centery="241" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="517" centery="242" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="570" centery="242" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="564" centery="243" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="557" centery="244" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="522" centery="245" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="527" centery="245" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="575" centery="245" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="510" centery="246" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="563" centery="246" centerz="8" radius="1">
+		<monster name="Glooth Battery" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="567" centery="246" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="583" centery="246" centerz="8" radius="1">
+		<monster name="Control Tower" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="553" centery="247" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="516" centery="248" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="543" centery="249" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="1" y="-1" z="8" spawntime="60" />
+		<monster name="Rustheap Golem" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="556" centery="250" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="575" centery="250" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="569" centery="252" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="520" centery="254" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="534" centery="254" centerz="8" radius="1">
+		<monster name="Glooth Golem" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="547" centery="254" centerz="8" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="574" centery="254" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="526" centery="255" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="-1" z="8" spawntime="60" />
+		<monster name="Glooth Anemone" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="539" centery="255" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="553" centery="255" centerz="8" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="529" centery="258" centerz="8" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="523" centery="260" centerz="8" radius="1">
+		<monster name="Control Tower" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="637" centery="265" centerz="8" radius="5">
 		<monster name="Giant Spider" x="-1" y="1" z="8" spawntime="60" />
@@ -17489,6 +18231,9 @@
 	<spawn centerx="677" centery="171" centerz="9" radius="1">
 		<monster name="Banshee" x="-1" y="0" z="9" spawntime="60" />
 	</spawn>
+	<spawn centerx="546" centery="173" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
 	<spawn centerx="609" centery="175" centerz="9" radius="1">
 		<monster name="Demon" x="1" y="-1" z="9" spawntime="60" />
 	</spawn>
@@ -17498,11 +18243,23 @@
 	<spawn centerx="675" centery="177" centerz="9" radius="1">
 		<monster name="Banshee" x="-1" y="-1" z="9" spawntime="60" />
 	</spawn>
+	<spawn centerx="544" centery="178" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="548" centery="178" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
 	<spawn centerx="616" centery="178" centerz="9" radius="1">
 		<monster name="Diabolic Imp" x="0" y="1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="622" centery="179" centerz="9" radius="1">
 		<monster name="Demon" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="543" centery="182" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="548" centery="182" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="1" y="-1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="677" centery="182" centerz="9" radius="1">
 		<monster name="Banshee" x="1" y="0" z="9" spawntime="60" />
@@ -17512,6 +18269,12 @@
 	</spawn>
 	<spawn centerx="615" centery="184" centerz="9" radius="1">
 		<monster name="Demon" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="544" centery="187" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="548" centery="188" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="-1" y="-1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="660" centery="189" centerz="9" radius="1">
 		<monster name="Banshee" x="0" y="-1" z="9" spawntime="60" />
@@ -17531,14 +18294,287 @@
 	<spawn centerx="674" centery="197" centerz="9" radius="1">
 		<monster name="Banshee" x="-1" y="0" z="9" spawntime="60" />
 	</spawn>
+	<spawn centerx="519" centery="199" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="523" centery="199" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="9" spawntime="60" />
+	</spawn>
 	<spawn centerx="696" centery="199" centerz="9" radius="1">
 		<monster name="Banshee" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="527" centery="200" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="562" centery="200" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="552" centery="201" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="524" centery="202" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="503" centery="203" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="557" centery="203" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="538" centery="204" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="565" centery="204" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="695" centery="204" centerz="9" radius="1">
 		<monster name="Banshee" x="0" y="-1" z="9" spawntime="60" />
 	</spawn>
+	<spawn centerx="553" centery="205" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
 	<spawn centerx="672" centery="205" centerz="9" radius="1">
 		<monster name="Banshee" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="561" centery="206" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="498" centery="208" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="502" centery="208" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="536" centery="208" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="505" centery="209" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="494" centery="210" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="564" centery="210" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="488" centery="211" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="534" centery="212" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="516" centery="213" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="485" centery="214" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="528" centery="214" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="564" centery="214" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="496" centery="215" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="518" centery="215" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="550" centery="215" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="568" centery="215" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="536" centery="216" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="542" centery="216" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="488" centery="217" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="545" centery="218" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="499" centery="219" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="567" centery="219" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Glooth Anemone" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="550" centery="220" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="483" centery="221" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="517" centery="221" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="534" centery="221" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="545" centery="221" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="495" centery="222" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="504" centery="222" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="541" centery="222" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="530" centery="223" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="564" centery="223" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="486" centery="225" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="492" centery="225" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="499" centery="225" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="550" centery="225" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="568" centery="225" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="516" centery="226" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Metal Gargoyle" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="528" centery="226" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="530" centery="228" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="544" centery="228" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="577" centery="229" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="574" centery="230" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="491" centery="231" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="547" centery="231" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="579" centery="232" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Rustheap Golem" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="500" centery="234" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="543" centery="234" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="495" centery="235" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="565" centery="238" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="498" centery="240" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Glooth Anemone" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="569" centery="240" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="543" centery="241" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="513" centery="243" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="495" centery="244" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="502" centery="244" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="507" centery="244" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="567" centery="244" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="573" centery="245" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="0" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="510" centery="247" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="544" centery="247" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="567" centery="248" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="576" centery="248" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="581" centery="248" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="515" centery="249" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="0" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="564" centery="250" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="-1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="543" centery="252" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="552" centery="252" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="571" centery="252" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="582" centery="253" centerz="9" radius="1">
+		<monster name="Glooth Golem" x="1" y="-1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="560" centery="254" centerz="9" radius="1">
+		<monster name="Metal Gargoyle" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="546" centery="255" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Glooth Anemone" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="555" centery="255" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="567" centery="255" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="573" centery="255" centerz="9" radius="1">
+		<monster name="Glooth Battery" x="1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="579" centery="255" centerz="9" radius="1">
+		<monster name="Glooth Anemone" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Glooth Anemone" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="555" centery="260" centerz="9" radius="1">
+		<monster name="Rustheap Golem" x="1" y="1" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="440" centery="264" centerz="9" radius="1">
 		<monster name="green mage" x="-1" y="-1" z="9" spawntime="60" />

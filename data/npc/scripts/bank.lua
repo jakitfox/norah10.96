@@ -1,14 +1,14 @@
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 NpcSystem.parseParameters(npcHandler)
- 
-local Topic, count, transfer = {}, {}, {}
- 
+local talkState = {}
 function onCreatureAppear(cid) npcHandler:onCreatureAppear(cid) end
 function onCreatureDisappear(cid) npcHandler:onCreatureDisappear(cid) end
 function onCreatureSay(cid, type, msg) npcHandler:onCreatureSay(cid, type, msg) end
+function onThink() npcHandler:onThink() end
  
- 
+local Topic, count, transfer = {}, {}, {}
+
 local function getCount(s)
     local b, e = s:find('%d+')
     return b and e and math.min(4294967295, tonumber(s:sub(b, e))) or -1
@@ -327,8 +327,6 @@ keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text
  
  
 npcHandler:setCallback(CALLBACK_GREET, greet)
-npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setMessage(MESSAGE_GREET, "Welcome |PLAYERNAME|! What business do you have in the bank today? Please let me know if you need any {help}.")
-npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye, |PLAYERNAME|.")
-npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye, |PLAYERNAME|.")
+npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())

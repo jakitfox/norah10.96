@@ -3,6 +3,7 @@
 	<globalevent type="startup" name="ServerStartup" script="startup.lua" />
 	<globalevent type="record" name="PlayerRecord" script="record.lua" />
 	<globalevent name="Server Save" time="09:55:00" script="serversave.lua" />
+	<globalevent name="Save" interval="900000" script="save.lua" />
 	
 	<globalevent name="RentThink" interval="15000" script="checkmount.lua" />
 	<!-- Event -->
