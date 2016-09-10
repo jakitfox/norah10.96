@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Rot Elemental" nameDescription="a rot elemental" race="blood" experience="150" speed="200" manacost="490">
-	<health now="260" max="260"/>
-	<look type="615" corpse="5962"/>
+<monster name="Rot Elemental" nameDescription="a rot elemental" race="venom" experience="750" speed="230">
+	<health now="850" max="850"/>
+	<look type="615" corpse="23481"/>
 	<targetchange interval="4000" chance="10"/>
 	<flags>
-		<flag summonable="1"/>
+		<flag summonable="0"/>
 		<flag attackable="1"/>
 		<flag hostile="1"/>
 		<flag illusionable="1"/>
@@ -15,37 +15,55 @@
 		<flag targetdistance="1"/>
 		<flag staticattack="90"/>
 		<flag runonhealth="0"/>
-	<flag isblockable="1" />
+		<flag isblockable="1" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="60" attack="30"/>
+		<attack name="melee" interval="2000" min="0" max="-120" poison="260" />
+		<attack name="poisoncondition" interval="2000" chance="10" length="7" spread="0" min="-10" max="-230">
+			<attribute key="areaEffect" value="greenspark" />
+		</attack>
+		<attack name="earth" interval="2000" chance="10" range="7" radius="4" target="1" min="-10" max="-200">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="speed" interval="2000" chance="15" range="7" speedchange="-150" duration="30000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
 	</attacks>
-	<defenses armor="20" defense="20"/>
+	<defenses armor="38" defense="25">
+		<defense name="healing" interval="2000" chance="10" min="5" max="60">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<elements>
-		<element energyPercent="25"/>
-		<element holyPercent="20"/>
-		<element earthPercent="-10"/>
-		<element deathPercent="-10"/>
+		<element energyPercent="-5"/>
+		<element firePercent="-5"/>
+		<element holyPercent="1"/>
+		<element icePercent="30"/>
+		<element deathPercent="20"/>
 	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity earth="1" />
+	</immunities>
 	<voices interval="2000" chance="7">
-		<voice sentence="Il lorstok human!"/>
-		<voice sentence="Toks utat."/>
-		<voice sentence="Human, uh whil dyh!"/>
-		<voice sentence="Youh ah trak!"/>
-		<voice sentence="Let da mashing begin!"/>
+		<voice sentence="*splib*"/>
+		<voice sentence="*glibb*"/>
 	</voices>
 	<loot>
-		<item id="2148" countmax="47" chance="82000"/><!-- gold coin -->
-		<item id="7618" chance="210"/><!-- health potion -->
-		<item id="2666" chance="30070"/><!-- meat -->
-		<item id="2510" chance="2500"/><!-- plate shield -->
-		<item id="2406" chance="8000"/><!-- short sword -->
-		<item id="2513" chance="1400"/><!-- battle shield -->
-		<item id="2129" chance="190"/><!-- wolf tooth chain -->
-		<item id="2381" chance="1003"/><!-- halberd -->
-		<item id="2490" chance="220"/><!-- dark helmet -->
-		<item id="2209" chance="90"/><!-- club ring -->
-		<item id="7398" chance="80"/><!-- cyclops trophy -->
-		<item id="10574" chance="4930"/><!-- cyclops toe -->
+		<item id="2148" countmax="80" chance="100000"/><!-- gold coin -->
+		<item id="23553" chance="14000"/><!-- glob of glooth -->
+		<item id="2152" chance="10000"/><!-- platinum coin -->
+		<item id="7588" chance="9880"/><!-- strong health potion -->
+		<item id="7589" chance="9810"/><!-- strong mana potion -->
+		<item id="23529" chance="5120"/><!-- glooth spear -->
+		<item id="2146" chance="5050"/><!-- small sapphire -->
+		<item id="2149" countmax="2" chance="5010"/><!-- small emerald -->
+		<item id="9970" countmax="2" chance="4910"/><!-- small topaz -->
+		<item id="2168" chance="1510"/><!-- life ring -->
+		<item id="2155" chance="110" /><!-- green gem -->
+		<item id="23554" chance="100" /><!-- glooth amulet -->
+		<item id="23551" chance="90" /><!-- glooth axe -->
 	</loot>
 </monster>

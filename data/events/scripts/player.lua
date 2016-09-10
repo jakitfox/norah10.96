@@ -1,4 +1,12 @@
 function Player:onBrowseField(position)
+
+local runes = Game.getSpectators(Position(639,520,9), false, true, 3, 4)
+	for k = 1, #runes do
+		if runes[k] then
+			return runes[k]:sendCancelMessage('Sorry, not possible.') and false;
+		end
+	end	
+
 	return true
 end
 
