@@ -14690,8 +14690,8 @@
 		<monster name="Elder Wyrm" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1246" centery="551" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="-1" z="8" spawntime="60" />
-		<monster name="Wyrm" x="0" y="1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="-1" z="8" spawntime="120" />
+		<monster name="Wyrm" x="0" y="1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="693" centery="552" centerz="8" radius="5">
 		<monster name="Rotworm" x="3" y="-4" z="8" spawntime="60" />
@@ -14715,37 +14715,37 @@
 		<monster name="Elder Wyrm" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1207" centery="557" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1197" centery="558" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1244" centery="559" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1190" centery="563" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1214" centery="563" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1241" centery="564" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="793" centery="566" centerz="8" radius="1">
 		<monster name="Elf Arcanist" x="1" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1222" centery="567" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1191" centery="571" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1235" centery="571" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1228" centery="572" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="548" centery="573" centerz="8" radius="13">
 		<monster name="Spider" x="-10" y="-10" z="8" spawntime="60" />
@@ -14799,13 +14799,13 @@
 		<monster name="Elf Arcanist" x="-1" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1204" centery="579" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1214" centery="579" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1191" centery="580" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="635" centery="581" centerz="8" radius="1">
 		<monster name="Rat" x="-1" y="1" z="8" spawntime="512" />
@@ -14860,7 +14860,7 @@
 		<monster name="Carrion Worm" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1242" centery="586" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="519" centery="587" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="100" />
@@ -14875,25 +14875,25 @@
 		<monster name="Carrion Worm" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1199" centery="587" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1251" centery="587" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1177" centery="589" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1237" centery="589" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1257" centery="589" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="624" centery="590" centerz="8" radius="1">
 		<monster name="Rat" x="-1" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1223" centery="590" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="529" centery="591" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="-1" z="8" spawntime="100" />
@@ -14905,7 +14905,7 @@
 		<monster name="Rotworm" x="-1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1206" centery="591" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="523" centery="592" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="-1" z="8" spawntime="100" />
@@ -14944,7 +14944,7 @@
 		<monster name="Rat" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1195" centery="594" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="551" centery="595" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="-1" z="8" spawntime="60" />
@@ -14980,7 +14980,7 @@
 		<monster name="Vampire" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1240" centery="597" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="628" centery="598" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="-1" z="8" spawntime="60" />
@@ -15008,7 +15008,7 @@
 		<monster name="Carrion Worm" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1225" centery="599" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="555" centery="600" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="-1" z="8" spawntime="60" />
@@ -15026,8 +15026,8 @@
 		<monster name="Hydra" x="-1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1186" centery="601" centerz="8" radius="1">
-		<monster name="Wyrm" x="1" y="-1" z="8" spawntime="60" />
-		<monster name="Wyrm" x="-1" y="1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="1" y="-1" z="8" spawntime="120" />
+		<monster name="Wyrm" x="-1" y="1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="479" centery="602" centerz="8" radius="1">
 		<monster name="Mutated Human" x="-1" y="-1" z="8" spawntime="60" />
@@ -15071,7 +15071,7 @@
 		<monster name="Rat" x="0" y="-1" z="8" spawntime="512" />
 	</spawn>
 	<spawn centerx="1238" centery="603" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="653" centery="604" centerz="8" radius="1">
 		<monster name="Rat" x="-1" y="1" z="8" spawntime="60" />
@@ -15109,7 +15109,7 @@
 		<monster name="Rat" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1249" centery="606" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="484" centery="607" centerz="8" radius="1">
 		<monster name="Mutated Human" x="-1" y="0" z="8" spawntime="60" />
@@ -15147,10 +15147,10 @@
 		<monster name="Vampire" x="1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1204" centery="608" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1232" centery="608" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="584" centery="609" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="-1" z="8" spawntime="60" />
@@ -15166,7 +15166,7 @@
 		<monster name="Rotworm" x="1" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1176" centery="609" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="408" centery="610" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="1" z="8" spawntime="60" />
@@ -15222,7 +15222,7 @@
 		<monster name="Zombie" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1228" centery="614" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="504" centery="615" centerz="8" radius="1">
 		<monster name="Mutated Human" x="1" y="1" z="8" spawntime="60" />
@@ -15238,7 +15238,7 @@
 		<monster name="Zombie" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1180" centery="615" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="656" centery="616" centerz="8" radius="1">
 		<monster name="Rat" x="-1" y="-1" z="8" spawntime="60" />
@@ -15257,7 +15257,7 @@
 		<monster name="Rat" x="1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1203" centery="616" centerz="8" radius="1">
-		<monster name="Wyrm" x="1" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="1" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="390" centery="617" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="1" z="8" spawntime="60" />
@@ -15266,8 +15266,8 @@
 		<monster name="Rotworm" x="-1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1249" centery="617" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
-		<monster name="Wyrm" x="1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
+		<monster name="Wyrm" x="1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="405" centery="618" centerz="8" radius="1">
 		<monster name="Rotworm" x="1" y="1" z="8" spawntime="60" />
@@ -15293,7 +15293,7 @@
 		<monster name="Cave Rat" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1201" centery="619" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="456" centery="620" centerz="8" radius="5">
 		<monster name="Acid Blob" x="-2" y="-1" z="8" spawntime="60" />
@@ -15321,10 +15321,10 @@
 		<monster name="Zombie" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1180" centery="621" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1221" centery="621" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="408" centery="622" centerz="8" radius="1">
 		<monster name="Rotworm" x="1" y="0" z="8" spawntime="60" />
@@ -15355,10 +15355,10 @@
 		<monster name="Rotworm" x="1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1197" centery="626" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1226" centery="626" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="413" centery="627" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="-1" z="8" spawntime="60" />
@@ -15373,7 +15373,7 @@
 		<monster name="Spider" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1179" centery="627" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="492" centery="628" centerz="8" radius="1">
 		<monster name="Mutated Human" x="1" y="1" z="8" spawntime="60" />
@@ -15382,7 +15382,7 @@
 		<monster name="Rotworm" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1220" centery="628" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="693" centery="630" centerz="8" radius="1">
 		<monster name="Spider" x="-1" y="0" z="8" spawntime="60" />
@@ -15391,17 +15391,17 @@
 		<monster name="Rotworm" x="-1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1176" centery="630" centerz="8" radius="1">
-		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="60" />
+		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="1188" centery="630" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="629" centery="631" centerz="8" radius="1">
 		<monster name="Carrion Worm" x="-1" y="-1" z="8" spawntime="60" />
 		<monster name="Rotworm" x="1" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1231" centery="631" centerz="8" radius="1">
-		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
 	<spawn centerx="392" centery="632" centerz="8" radius="1">
 		<monster name="Rotworm" x="1" y="1" z="8" spawntime="60" />
@@ -20813,14 +20813,12 @@
 	</spawn>
 	<spawn centerx="744" centery="866" centerz="9" radius="5">
 		<monster name="Nightmare" x="-2" y="0" z="9" spawntime="60" />
-		<monster name="Nightmare" x="-3" y="1" z="9" spawntime="512" />
 		<monster name="Nightmare Scion" x="-1" y="1" z="9" spawntime="60" />
 		<monster name="Nightmare" x="-4" y="2" z="9" spawntime="60" />
 		<monster name="Nightmare" x="2" y="4" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="760" centery="866" centerz="9" radius="5">
 		<monster name="Nightmare" x="0" y="1" z="9" spawntime="60" />
-		<monster name="Nightmare" x="-3" y="3" z="9" spawntime="512" />
 		<monster name="Nightmare Scion" x="0" y="3" z="9" spawntime="60" />
 		<monster name="Nightmare" x="-4" y="4" z="9" spawntime="60" />
 	</spawn>
@@ -20839,7 +20837,6 @@
 	<spawn centerx="795" centery="871" centerz="9" radius="5">
 		<monster name="Nightmare" x="-5" y="-1" z="9" spawntime="60" />
 		<monster name="Nightmare Scion" x="-3" y="0" z="9" spawntime="60" />
-		<monster name="Nightmare" x="1" y="3" z="9" spawntime="60" />
 		<monster name="Nightmare" x="2" y="3" z="9" spawntime="60" />
 		<monster name="Nightmare Scion" x="5" y="5" z="9" spawntime="60" />
 	</spawn>
@@ -20911,7 +20908,6 @@
 	<spawn centerx="804" centery="905" centerz="9" radius="30">
 		<monster name="Nightmare" x="11" y="-26" z="9" spawntime="768" />
 		<monster name="Nightmare" x="18" y="-26" z="9" spawntime="60" />
-		<monster name="Nightmare" x="11" y="-25" z="9" spawntime="60" />
 		<monster name="Nightmare Scion" x="-5" y="-24" z="9" spawntime="60" />
 		<monster name="Nightmare" x="4" y="-23" z="9" spawntime="60" />
 		<monster name="Nightmare" x="-9" y="-22" z="9" spawntime="60" />
@@ -20937,7 +20933,6 @@
 		<monster name="Nightmare Scion" x="4" y="20" z="9" spawntime="60" />
 		<monster name="Nightmare" x="6" y="22" z="9" spawntime="60" />
 		<monster name="Nightmare" x="-23" y="23" z="9" spawntime="60" />
-		<monster name="Nightmare" x="-15" y="24" z="9" spawntime="768" />
 		<monster name="Nightmare" x="-16" y="25" z="9" spawntime="60" />
 		<monster name="Nightmare" x="-10" y="25" z="9" spawntime="60" />
 		<monster name="Nightmare Scion" x="-9" y="26" z="9" spawntime="60" />
@@ -20946,7 +20941,6 @@
 		<monster name="Nightmare Scion" x="-11" y="-29" z="9" spawntime="60" />
 		<monster name="Nightmare" x="16" y="-28" z="9" spawntime="60" />
 		<monster name="Nightmare" x="3" y="-24" z="9" spawntime="60" />
-		<monster name="Nightmare Scion" x="10" y="-23" z="9" spawntime="60" />
 		<monster name="Nightmare" x="12" y="-23" z="9" spawntime="60" />
 		<monster name="Nightmare" x="-18" y="-21" z="9" spawntime="60" />
 		<monster name="Nightmare Scion" x="-17" y="-21" z="9" spawntime="60" />
