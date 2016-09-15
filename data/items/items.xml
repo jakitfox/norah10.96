@@ -30660,8 +30660,8 @@
 	</item>
 	<item id="23378" article="a" name="dead execowtioner">
 		<attribute key="containerSize" value="20" />
-		<attribute key="decayTo" value="300" />
-		<attribute key="duration" value="10" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
 		<attribute key="corpseType" value="blood" />
 		<attribute key="fluidSource" value="blood" />
 	</item>

@@ -18,7 +18,7 @@ local player = Player(cid)
 		npcHandler:say('Why do you ask about my job? I am the head of the {club seekers and travelers}. Our club sponsors {B-Rox King}. Would you like to join us?', cid)
 		npcHandler.topic[cid] = 0
 	
-	elseif msgcontains(msg, 'join') and player:getStorageValue(Storage.Club.QuestLine) == -1 then
+	elseif msgcontains(msg, 'join') and player:getStorageValue(Storage.Club.QuestLine) ~= 1  then
 		npcHandler:say('Do you want to join our club prospectors and travelers?', cid)
 		npcHandler.topic[cid] = 1
 	
@@ -92,7 +92,7 @@ local player = Player(cid)
 	elseif msgcontains(msg, 'yes') then
 		if npcHandler.topic[cid] == 1 then
 			npcHandler:say('So welcome in the team! I hope that together we will {discover many interesting places and objects}. If you find something back to me, and I\'ll see what it can be more work.', cid)
-			player:setStorageValue(Storage.Club.QuestLine)
+			player:setStorageValue(Storage.Club.QuestLine, 1)
 			npcHandler.topic[cid] = 0
 			
 	elseif npcHandler.topic[cid] == 2 then
@@ -178,13 +178,12 @@ local player = Player(cid)
 		else
 			npcHandler:say('Sorry but you don\'t have all items!', cid)
 	end
-	end
-		
+	
 	elseif msgcontains(msg, 'no') then
 		npcHandler:say('Ok, then not.', cid)
 		npcHandler.topic[cid] = 0
 	end
-
+end
 	return true
 end
 

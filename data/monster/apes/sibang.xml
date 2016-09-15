@@ -52,6 +52,6 @@
 		<item id="1294" countmax="3" chance="30060" /><!-- small stone -->
 		<item id="2682" chance="1000" /><!-- melon -->
 		<item id="12467" chance="5000" /><!-- banana sash -->
-		<item id="5883" chance="1000" /><!-- ape fur -->
+		<item id="5883" chance="2500" /><!-- ape fur -->
 	</loot>
 </monster>
