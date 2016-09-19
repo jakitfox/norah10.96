@@ -41,7 +41,7 @@ elseif msgcontains(msg, 'yes') then
 	elseif npcHandler.topic[cid] == 2 then
 		if player:getItemCount(2498) >= 2 then
 			npcHandler:say('I like business with you! Take this.', cid)
-			removeItem(2498,2)
+			player:removeItem(2498,2)
 			player:addItem(5884,1)
 			npcHandler.topic[cid] = 0
 		else
@@ -50,7 +50,7 @@ elseif msgcontains(msg, 'yes') then
 	elseif npcHandler.topic[cid] == 3 then
 		if player:getItemCount(2392) >= 3 then
 			npcHandler:say('I like business with you! Take this.', cid)
-			removeItem(2392,3)
+			player:removeItem(2392,3)
 			player:addItem(5904,1)
 			npcHandler.topic[cid] = 0
 		else
@@ -59,7 +59,7 @@ elseif msgcontains(msg, 'yes') then
 	elseif npcHandler.topic[cid] == 4 then
 		if player:getItemCount(2475) >= 4 then
 			npcHandler:say('I like business with you! Take this.', cid)
-			removeItem(2475,4)
+			player:removeItem(2475,4)
 			player:addItem(5885,1)
 			npcHandler.topic[cid] = 0
 		else

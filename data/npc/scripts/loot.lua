@@ -14,11 +14,11 @@ shopModule:addSellableItem({'rift shield'},  				25382, 50000,    	'rift shield'
 --10.50--
 shopModule:addSellableItem({'mino shield'},  				23546, 3000,    	'mino shield')
 shopModule:addSellableItem({'metal spats'},  				23540, 2000,     	'metal spats')
-shopModule:addSellableItem({'heat core'},  				 	23538, 10000,    	'heat core')
-shopModule:addSellableItem({'glooth cape',},  				23535, 7000,     	'glooth cape')
-shopModule:addSellableItem({'alloy legs'},  				23539, 11000,    	'alloy legs')
-shopModule:addSellableItem({'rubber cap'},  				23536, 11000,       'rubber cap')
-shopModule:addSellableItem({'mooh\'tah plate'},  			23537, 6000,    	'mooh\'tah plate')
+shopModule:addSellableItem({'heat core'},  				 	23538, 8000,    	'heat core')
+shopModule:addSellableItem({'glooth cape',},  				23535, 5000,     	'glooth cape')
+shopModule:addSellableItem({'alloy legs'},  				23539, 9000,    	'alloy legs')
+shopModule:addSellableItem({'rubber cap'},  				23536, 9000,       'rubber cap')
+shopModule:addSellableItem({'mooh\'tah plate'},  			23537, 4000,    	'mooh\'tah plate')
 
 --9.80--
 shopModule:addSellableItem({'buckle'},  					20109, 7000, 		'buckle')

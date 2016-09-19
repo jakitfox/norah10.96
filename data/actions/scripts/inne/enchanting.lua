@@ -64,6 +64,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
+	
 	if item.itemid == 7760 and isInArray({9934, 10022}, target.itemid) then
 		target:transform(9933)
 		item:remove(1)

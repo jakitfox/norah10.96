@@ -24746,38 +24746,29 @@
 		<monster name="Draken Abomination" x="-1" y="1" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="373" centery="1100" centerz="10" radius="2">
-		<monster name="Souleater" x="-1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="2" y="1" z="10" spawntime="60" />
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="490" centery="1100" centerz="10" radius="1">
 		<monster name="Draken Elite" x="1" y="0" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="362" centery="1101" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="2" z="10" spawntime="60" />
-	</spawn>
-	<spawn centerx="400" centery="1101" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="387" centery="1102" centerz="10" radius="2">
-		<monster name="Souleater" x="-1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="2" y="1" z="10" spawntime="60" />
+		<monster name="Souleater" x="2" y="1" z="10" spawntime="120" />
+	</spawn>
+	<spawn centerx="400" centery="1102" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="407" centery="1102" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="2" y="2" z="10" spawntime="60" />
+		<monster name="Souleater" x="2" y="2" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="356" centery="1103" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="2" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="2" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
+		<monster name="Souleater" x="0" y="2" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="499" centery="1103" centerz="10" radius="1">
 		<monster name="Draken Warmaster" x="-1" y="-1" z="10" spawntime="60" />
-	</spawn>
-	<spawn centerx="374" centery="1104" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="-1" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="1" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="1013" centery="1104" centerz="10" radius="1">
 		<monster name="Juggernaut" x="-1" y="-1" z="10" spawntime="40" />
@@ -24789,178 +24780,156 @@
 		<monster name="Draken Elite" x="1" y="-1" z="10" spawntime="60" />
 		<monster name="Draken Abomination" x="-1" y="0" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="374" centery="1106" centerz="10" radius="2" />
+	<spawn centerx="374" centery="1106" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
+	</spawn>
 	<spawn centerx="384" centery="1107" centerz="10" radius="2">
-		<monster name="Souleater" x="-1" y="-1" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="1" z="10" spawntime="60" />
+		<monster name="Souleater" x="-1" y="-1" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="402" centery="1107" centerz="10" radius="2">
-		<monster name="Souleater" x="-1" y="-1" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="411" centery="1107" centerz="10" radius="2">
 		<monster name="Souleater" x="1" y="1" z="10" spawntime="60" />
-		<monster name="Souleater" x="2" y="1" z="10" spawntime="60" />
+		<monster name="Souleater" x="2" y="1" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="364" centery="1108" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="-1" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="392" centery="1108" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="2" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="375" centery="1111" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="376" centery="1111" centerz="10" radius="2">
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="406" centery="1111" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="2" z="10" spawntime="60" />
+	<spawn centerx="405" centery="1111" centerz="10" radius="2">
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="399" centery="1112" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="2" y="2" z="10" spawntime="60" />
+	<spawn centerx="400" centery="1112" centerz="10" radius="2">
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="385" centery="1113" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="407" centery="1115" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="365" centery="1116" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="-2" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="391" centery="1116" centerz="10" radius="2">
-		<monster name="Souleater" x="-1" y="-2" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="-1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="374" centery="1117" centerz="10" radius="2">
-		<monster name="Souleater" x="-1" y="-2" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="373" centery="1117" centerz="10" radius="2">
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="400" centery="1118" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="400" centery="1119" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="385" centery="1121" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="385" centery="1120" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="1" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="374" centery="1124" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="384" centery="1126" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="384" centery="1127" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="370" centery="1129" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="371" centery="1129" centerz="10" radius="2">
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="403" centery="1129" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="2" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="374" centery="1132" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="374" centery="1131" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="397" centery="1133" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="397" centery="1132" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="383" centery="1134" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="-2" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="-1" y="2" z="10" spawntime="60" />
+	<spawn centerx="383" centery="1135" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
+		<monster name="Souleater" x="-1" y="1" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="356" centery="1136" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="392" centery="1136" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="392" centery="1137" centerz="10" radius="2">
-		<monster name="Souleater" x="2" y="-2" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="356" centery="1137" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="403" centery="1140" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="2" z="10" spawntime="60" />
+	<spawn centerx="402" centery="1140" centerz="10" radius="2">
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="380" centery="1141" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="-2" y="1" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
+		<monster name="Souleater" x="-2" y="1" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="357" centery="1142" centerz="10" radius="2">
-		<monster name="Souleater" x="2" y="-2" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="370" centery="1143" centerz="10" radius="2">
 		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="-2" y="1" z="10" spawntime="60" />
 	</spawn>
 	<spawn centerx="349" centery="1144" centerz="10" radius="2">
-		<monster name="Souleater" x="-1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="404" centery="1144" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="391" centery="1144" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="391" centery="1145" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="403" centery="1144" centerz="10" radius="2">
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="366" centery="1146" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="378" centery="1148" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="379" centery="1148" centerz="10" radius="2">
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="397" centery="1151" centerz="10" radius="2">
-		<monster name="Souleater" x="-1" y="-1" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="1" z="10" spawntime="60" />
+		<monster name="Souleater" x="0" y="1" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="383" centery="1152" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="358" centery="1154" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="-1" z="10" spawntime="60" />
-		<monster name="Souleater" x="2" y="-1" z="10" spawntime="60" />
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="368" centery="1154" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="367" centery="1154" centerz="10" radius="2">
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="384" centery="1158" centerz="10" radius="2">
-		<monster name="Souleater" x="-1" y="-2" z="10" spawntime="60" />
-		<monster name="Souleater" x="-1" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="402" centery="1158" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="-2" y="1" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="362" centery="1160" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="363" centery="1160" centerz="10" radius="2">
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="397" centery="1162" centerz="10" radius="3">
-		<monster name="Souleater" x="0" y="-1" z="10" spawntime="60" />
-		<monster name="Souleater" x="1" y="1" z="10" spawntime="60" />
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="369" centery="1165" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="369" centery="1166" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="386" centery="1165" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="386" centery="1166" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="-1" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="392" centery="1168" centerz="10" radius="2">
 		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="2" y="2" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="377" centery="1169" centerz="10" radius="2">
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="2" y="2" z="10" spawntime="60" />
+	<spawn centerx="378" centery="1169" centerz="10" radius="2">
+		<monster name="Souleater" x="-1" y="0" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="402" centery="1169" centerz="10" radius="3">
-		<monster name="Souleater" x="3" y="-2" z="10" spawntime="60" />
-		<monster name="Souleater" x="-3" y="2" z="10" spawntime="60" />
+		<monster name="Souleater" x="3" y="-2" z="10" spawntime="120" />
+		<monster name="Souleater" x="-3" y="2" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="364" centery="1170" centerz="10" radius="2">
-		<monster name="Souleater" x="1" y="0" z="10" spawntime="60" />
-		<monster name="Souleater" x="2" y="0" z="10" spawntime="60" />
+		<monster name="Souleater" x="1" y="0" z="10" spawntime="120" />
 	</spawn>
-	<spawn centerx="385" centery="1174" centerz="10" radius="2">
-		<monster name="Souleater" x="2" y="-1" z="10" spawntime="60" />
-		<monster name="Souleater" x="0" y="0" z="10" spawntime="60" />
+	<spawn centerx="385" centery="1173" centerz="10" radius="2">
+		<monster name="Souleater" x="0" y="1" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="1240" centery="1184" centerz="10" radius="1">
 		<monster name="Lost Soul" x="1" y="1" z="10" spawntime="60" />
@@ -27575,19 +27544,19 @@
 		<monster name="Moohtant" x="0" y="0" z="12" spawntime="60" />
 	</spawn>
 	<spawn centerx="783" centery="518" centerz="12" radius="1">
-		<monster name="Demon" x="1" y="1" z="12" spawntime="60" />
+		<monster name="Demon" x="1" y="1" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="804" centery="518" centerz="12" radius="1">
-		<monster name="Demon" x="1" y="0" z="12" spawntime="60" />
+		<monster name="Demon" x="1" y="0" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="835" centery="521" centerz="12" radius="1">
-		<monster name="Demon" x="-1" y="-1" z="12" spawntime="60" />
+		<monster name="Demon" x="-1" y="-1" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="812" centery="526" centerz="12" radius="1">
-		<monster name="Demon" x="1" y="0" z="12" spawntime="60" />
+		<monster name="Demon" x="1" y="0" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="782" centery="528" centerz="12" radius="1">
-		<monster name="Demon" x="-1" y="1" z="12" spawntime="60" />
+		<monster name="Demon" x="-1" y="1" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="383" centery="531" centerz="12" radius="5">
 		<monster name="Lizard Chosen" x="3" y="-1" z="12" spawntime="60" />
@@ -27601,20 +27570,20 @@
 		<monster name="Lizard Chosen" x="-4" y="4" z="12" spawntime="60" />
 	</spawn>
 	<spawn centerx="787" centery="539" centerz="12" radius="1">
-		<monster name="Demon" x="1" y="-1" z="12" spawntime="60" />
+		<monster name="Demon" x="1" y="-1" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="380" centery="543" centerz="12" radius="5">
 		<monster name="Lizard Chosen" x="-1" y="-3" z="12" spawntime="60" />
 		<monster name="Lizard Chosen" x="-4" y="3" z="12" spawntime="60" />
 	</spawn>
 	<spawn centerx="781" centery="545" centerz="12" radius="1">
-		<monster name="Demon" x="1" y="0" z="12" spawntime="60" />
+		<monster name="Demon" x="1" y="0" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="812" centery="545" centerz="12" radius="1">
-		<monster name="Demon" x="1" y="0" z="12" spawntime="60" />
+		<monster name="Demon" x="1" y="0" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="799" centery="546" centerz="12" radius="1">
-		<monster name="Demon" x="0" y="1" z="12" spawntime="60" />
+		<monster name="Demon" x="0" y="1" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="376" centery="550" centerz="12" radius="5">
 		<monster name="Lizard Chosen" x="-3" y="-1" z="12" spawntime="60" />
@@ -27627,7 +27596,7 @@
 		<monster name="Lizard Chosen" x="0" y="4" z="12" spawntime="60" />
 	</spawn>
 	<spawn centerx="807" centery="556" centerz="12" radius="1">
-		<monster name="Demon" x="1" y="0" z="12" spawntime="60" />
+		<monster name="Demon" x="1" y="0" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="384" centery="557" centerz="12" radius="5">
 		<monster name="Lizard Chosen" x="-2" y="-2" z="12" spawntime="60" />
@@ -27635,7 +27604,7 @@
 		<monster name="Lizard Chosen" x="0" y="5" z="12" spawntime="60" />
 	</spawn>
 	<spawn centerx="784" centery="557" centerz="12" radius="1">
-		<monster name="Demon" x="0" y="-1" z="12" spawntime="60" />
+		<monster name="Demon" x="0" y="-1" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="314" centery="564" centerz="12" radius="30">
 		<monster name="Sight of Surrender" x="1" y="-2" z="12" spawntime="60" />
@@ -28225,20 +28194,20 @@
 		<monster name="Demon" x="9" y="4" z="12" spawntime="60" />
 	</spawn>
 	<spawn centerx="810" centery="510" centerz="13" radius="1">
-		<monster name="Demon" x="1" y="0" z="13" spawntime="60" />
+		<monster name="Demon" x="1" y="0" z="13" spawntime="120" />
 	</spawn>
 	<spawn centerx="837" centery="510" centerz="13" radius="1">
-		<monster name="Demon" x="1" y="0" z="13" spawntime="60" />
+		<monster name="Demon" x="1" y="0" z="13" spawntime="120" />
 	</spawn>
 	<spawn centerx="814" centery="520" centerz="13" radius="1">
-		<monster name="Demon" x="1" y="0" z="13" spawntime="60" />
+		<monster name="Demon" x="1" y="0" z="13" spawntime="120" />
 	</spawn>
 	<spawn centerx="399" centery="525" centerz="13" radius="5">
 		<monster name="Lizard Chosen" x="0" y="3" z="13" spawntime="60" />
 		<monster name="Lizard Chosen" x="2" y="4" z="13" spawntime="60" />
 	</spawn>
 	<spawn centerx="812" centery="530" centerz="13" radius="1">
-		<monster name="Demon" x="1" y="1" z="13" spawntime="60" />
+		<monster name="Demon" x="1" y="1" z="13" spawntime="120" />
 	</spawn>
 	<spawn centerx="390" centery="534" centerz="13" radius="5">
 		<monster name="Lizard Chosen" x="2" y="-2" z="13" spawntime="60" />

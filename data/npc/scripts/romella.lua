@@ -155,14 +155,14 @@ shopModule:addSellableItem({'swampling club'},       	20104, 40, 		'swampling cl
 shopModule:addSellableItem({'crystal crossbow'},   		18453, 35000,	'crystal crossbow')
 shopModule:addSellableItem({'mycological bow'},     	18454, 35000, 	'mycological bow')
 --10.50--
-shopModule:addSellableItem({'moohtant cudgel'},      	23544, 14000, 	'moohtant cudgel')
-shopModule:addSellableItem({'mino lance'},            	23545, 7000,  	'mino lance')
-shopModule:addSellableItem({'metal bat'},           	23542, 9000,  	'metal bat')
+shopModule:addSellableItem({'moohtant cudgel'},      	23544, 10000, 	'moohtant cudgel')
+shopModule:addSellableItem({'mino lance'},            	23545, 5000,  	'mino lance')
+shopModule:addSellableItem({'metal bat'},           	23542, 7000,  	'metal bat')
 shopModule:addSellableItem({'glooth whip'},         	23543, 2500,  	'glooth whip')
 shopModule:addSellableItem({'glooth club'},           	23549, 1500,  	'glooth club')
 shopModule:addSellableItem({'glooth blade'},        	23550, 1500,   	'glooth blade')
 shopModule:addSellableItem({'glooth axe'},          	23551, 1500,   	'glooth axe')
-shopModule:addSellableItem({'execowtioner axe'},   		23547, 12000, 	'execowtioner axe')
+shopModule:addSellableItem({'execowtioner axe'},   		23547, 9000, 	'execowtioner axe')
 shopModule:addSellableItem({'cowtana'},            		23548, 2500, 	'cowtana')
 shopModule:addSellableItem({'ratana'},            		20092, 500,   	'ratana')
 --10.90--
