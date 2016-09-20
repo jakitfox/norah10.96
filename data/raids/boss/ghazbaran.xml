@@ -6,7 +6,7 @@
 
 <singlespawn delay="80000" name="ghazbaran" x="1294" y="1190" z="11" />
  <!--Area Spawns-->
-  <areaspawn delay="53000" fromx="12755" fromy="1187" fromz="11" tox="1306" toy="1202" toz="11">
+  <areaspawn delay="53000" fromx="1275" fromy="1187" fromz="11" tox="1306" toy="1202" toz="11">
     <monster name="Deathslicer" amount="5" />
 	<monster name="Juggernaut" amount="5" />
 	<monster name="Fury" amount="5" />

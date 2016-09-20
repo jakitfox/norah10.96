@@ -24,11 +24,12 @@
 	<raid name="The Horned Fox" file="normal/the_horned_fox.xml" interval2="3600" margin="120" />
 	<raid name="Necropharus" file="normal/necropharus.xml" interval2="3600" margin="120" />
 	<raid name="Yeti" file="normal/yeti.xml" interval2="3600" chance="1" margin="60" enabled="yes"/>
+	<raid name="Mad Mage" file="normal/mad mage.xml" interval2="1600" margin="120" />
 	
 	<!-- Special -->
-	<raid name="Halloween Hare" file="special/halloween.xml" interval2="3600" margin="120" enabled="no" />
-	<raid name="Ester pont" file="special/ester_pont.xml" interval2="3600" margin="120" enabled="no" />
-	<raid name="Ester nilf" file="special/ester_nilf.xml" interval2="3600" margin="120" enabled="no" />
+	<!--  <raid name="Halloween Hare" file="special/halloween.xml" interval2="3600" margin="120" enabled="no" /> -->
+	<!-- <raid name="Ester pont" file="special/ester_pont.xml" interval2="3600" margin="120" enabled="no" /> -->
+	<!-- <raid name="Ester nilf" file="special/ester_nilf.xml" interval2="3600" margin="120" enabled="no" /> -->
 	<raid name="Orc nilf" file="special/Orc_nilf.xml" interval2="3600" margin="120" />
 	<raid name="Orc pont" file="special/Orc_pont.xml" interval2="3600" margin="120" />
 </raids>

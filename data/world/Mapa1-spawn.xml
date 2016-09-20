@@ -344,6 +344,12 @@
 		<monster name="Blackbeard" x="-1" y="1" z="3" spawntime="60" />
 		<monster name="Blackbeard" x="-1" y="5" z="3" spawntime="60" />
 	</spawn>
+	<spawn centerx="842" centery="846" centerz="3" radius="1">
+		<monster name="Infernalist" x="0" y="-1" z="3" spawntime="60" />
+	</spawn>
+	<spawn centerx="845" centery="849" centerz="3" radius="1">
+		<monster name="Infernalist" x="-1" y="0" z="3" spawntime="60" />
+	</spawn>
 	<spawn centerx="1208" centery="892" centerz="3" radius="1">
 		<monster name="Pirate Skeleton" x="1" y="-1" z="3" spawntime="60" />
 		<monster name="Pirate Corsair" x="-1" y="0" z="3" spawntime="60" />
@@ -982,6 +988,15 @@
 		<monster name="Hank" x="-3" y="-2" z="4" spawntime="60" />
 		<monster name="Hank" x="1" y="0" z="4" spawntime="60" />
 		<monster name="Hank" x="-2" y="4" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="844" centery="844" centerz="4" radius="1">
+		<monster name="Warlock" x="0" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="843" centery="849" centerz="4" radius="1">
+		<monster name="Warlock" x="0" y="-1" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="849" centery="850" centerz="4" radius="1">
+		<monster name="Infernalist" x="-1" y="-1" z="4" spawntime="60" />
 	</spawn>
 	<spawn centerx="768" centery="865" centerz="4" radius="1">
 		<monster name="Nightmare Scion" x="1" y="0" z="4" spawntime="60" />
@@ -2189,8 +2204,17 @@
 	<spawn centerx="759" centery="844" centerz="5" radius="1">
 		<monster name="Nightmare" x="0" y="-1" z="5" spawntime="60" />
 	</spawn>
+	<spawn centerx="842" centery="844" centerz="5" radius="1">
+		<monster name="Warlock" x="1" y="0" z="5" spawntime="60" />
+	</spawn>
 	<spawn centerx="776" centery="846" centerz="5" radius="1">
 		<monster name="Nightmare" x="0" y="-1" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="843" centery="849" centerz="5" radius="1">
+		<monster name="Infernalist" x="1" y="0" z="5" spawntime="60" />
+	</spawn>
+	<spawn centerx="849" centery="849" centerz="5" radius="1">
+		<monster name="Warlock" x="-1" y="0" z="5" spawntime="60" />
 	</spawn>
 	<spawn centerx="751" centery="850" centerz="5" radius="1">
 		<monster name="Nightmare" x="-1" y="0" z="5" spawntime="60" />
@@ -5312,13 +5336,22 @@
 	<spawn centerx="793" centery="834" centerz="6" radius="1">
 		<monster name="Nightmare" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
+	<spawn centerx="841" centery="834" centerz="6" radius="1">
+		<monster name="Werewolf" x="1" y="1" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="786" centery="835" centerz="6" radius="1">
 		<monster name="Nightmare Scion" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="847" centery="835" centerz="6" radius="1">
+		<monster name="Hellspawn" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="1195" centery="835" centerz="6" radius="5">
 		<monster name="Gecko" x="5" y="-5" z="6" spawntime="60" />
 		<monster name="Gecko" x="-1" y="-3" z="6" spawntime="60" />
 		<monster name="Hank" x="2" y="1" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="836" centery="837" centerz="6" radius="1">
+		<monster name="Hellspawn" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="1220" centery="837" centerz="6" radius="5">
 		<monster name="Hank" x="-1" y="0" z="6" spawntime="60" />
@@ -14798,6 +14831,9 @@
 	<spawn centerx="789" centery="576" centerz="8" radius="1">
 		<monster name="Elf Arcanist" x="-1" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="822" centery="577" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="1204" centery="579" centerz="8" radius="1">
 		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
@@ -14816,11 +14852,17 @@
 	<spawn centerx="629" centery="582" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="819" centery="582" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="625" centery="583" centerz="8" radius="1">
 		<monster name="Rat" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="639" centery="583" centerz="8" radius="1">
 		<monster name="Rat" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="830" centery="583" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="632" centery="584" centerz="8" radius="1">
 		<monster name="Rat" x="1" y="-1" z="8" spawntime="60" />
@@ -14830,6 +14872,9 @@
 	</spawn>
 	<spawn centerx="750" centery="584" centerz="8" radius="1">
 		<monster name="Carrion Worm" x="-1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="835" centery="584" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1220" centery="584" centerz="8" radius="1">
 		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="60" />
@@ -14880,6 +14925,12 @@
 	<spawn centerx="1251" centery="587" centerz="8" radius="1">
 		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
+	<spawn centerx="823" centery="588" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="843" centery="588" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="1177" centery="589" centerz="8" radius="1">
 		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
 	</spawn>
@@ -14922,6 +14973,9 @@
 	<spawn centerx="774" centery="592" centerz="8" radius="1">
 		<monster name="Bonelord" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="839" centery="592" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="867" centery="592" centerz="8" radius="1">
 		<monster name="Hydra" x="1" y="1" z="8" spawntime="60" />
 	</spawn>
@@ -14955,6 +15009,9 @@
 	<spawn centerx="670" centery="595" centerz="8" radius="1">
 		<monster name="Rotworm" x="1" y="1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="833" centery="595" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="652" centery="596" centerz="8" radius="1">
 		<monster name="Carrion Worm" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
@@ -14978,6 +15035,9 @@
 	</spawn>
 	<spawn centerx="809" centery="596" centerz="8" radius="1">
 		<monster name="Vampire" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="824" centery="597" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1240" centery="597" centerz="8" radius="1">
 		<monster name="Wyrm" x="0" y="1" z="8" spawntime="120" />
@@ -15012,6 +15072,9 @@
 	</spawn>
 	<spawn centerx="555" centery="600" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="846" centery="600" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="632" centery="601" centerz="8" radius="1">
 		<monster name="Cave Rat" x="-1" y="1" z="8" spawntime="60" />
@@ -15064,6 +15127,9 @@
 	<spawn centerx="808" centery="602" centerz="8" radius="1">
 		<monster name="Zombie" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="824" centery="602" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="0" y="1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="568" centery="603" centerz="8" radius="1">
 		<monster name="Rotworm" x="1" y="-1" z="8" spawntime="60" />
 	</spawn>
@@ -15091,6 +15157,9 @@
 	<spawn centerx="665" centery="605" centerz="8" radius="1">
 		<monster name="Rat" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="854" centery="605" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="133" centery="606" centerz="8" radius="11" />
 	<spawn centerx="575" centery="606" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="1" z="8" spawntime="60" />
@@ -15107,6 +15176,9 @@
 	</spawn>
 	<spawn centerx="692" centery="606" centerz="8" radius="1">
 		<monster name="Rat" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="850" centery="606" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="-1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1249" centery="606" centerz="8" radius="1">
 		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
@@ -15126,6 +15198,12 @@
 	</spawn>
 	<spawn centerx="751" centery="607" centerz="8" radius="1">
 		<monster name="Carrion Worm" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="825" centery="607" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="839" centery="607" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="544" centery="608" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="60" />
@@ -15165,6 +15243,9 @@
 	<spawn centerx="744" centery="609" centerz="8" radius="1">
 		<monster name="Rotworm" x="1" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="833" centery="609" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="1176" centery="609" centerz="8" radius="1">
 		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
@@ -15202,11 +15283,17 @@
 	<spawn centerx="682" centery="611" centerz="8" radius="1">
 		<monster name="Rat" x="-1" y="1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="858" centery="611" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="698" centery="612" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="669" centery="613" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="846" centery="613" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="563" centery="614" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="60" />
@@ -15256,6 +15343,9 @@
 		<monster name="Rotworm" x="-1" y="-1" z="8" spawntime="60" />
 		<monster name="Rat" x="1" y="1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="825" centery="616" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="1203" centery="616" centerz="8" radius="1">
 		<monster name="Wyrm" x="1" y="-1" z="8" spawntime="120" />
 	</spawn>
@@ -15286,6 +15376,9 @@
 	<spawn centerx="666" centery="618" centerz="8" radius="1">
 		<monster name="Rat" x="1" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="859" centery="618" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="-1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="707" centery="619" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="1" z="8" spawntime="60" />
 	</spawn>
@@ -15301,6 +15394,9 @@
 	</spawn>
 	<spawn centerx="556" centery="620" centerz="8" radius="1">
 		<monster name="Rotworm" x="0" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="849" centery="620" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="497" centery="621" centerz="8" radius="1">
 		<monster name="Mutated Human" x="1" y="1" z="8" spawntime="60" />
@@ -15329,9 +15425,15 @@
 	<spawn centerx="408" centery="622" centerz="8" radius="1">
 		<monster name="Rotworm" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="827" centery="622" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="704" centery="623" centerz="8" radius="1">
 		<monster name="Spider" x="-1" y="-1" z="8" spawntime="60" />
 		<monster name="Cave Rat" x="-1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="834" centery="623" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="389" centery="624" centerz="8" radius="1">
 		<monster name="Carrion Worm" x="0" y="-1" z="8" spawntime="60" />
@@ -15348,11 +15450,17 @@
 		<monster name="Spider" x="0" y="-1" z="8" spawntime="60" />
 		<monster name="Rat" x="1" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="853" centery="625" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="1" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="427" centery="626" centerz="8" radius="1">
 		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="437" centery="626" centerz="8" radius="1">
 		<monster name="Rotworm" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="843" centery="626" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1197" centery="626" centerz="8" radius="1">
 		<monster name="Wyrm" x="-1" y="0" z="8" spawntime="120" />
@@ -15383,6 +15491,9 @@
 	</spawn>
 	<spawn centerx="1220" centery="628" centerz="8" radius="1">
 		<monster name="Wyrm" x="0" y="-1" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="845" centery="629" centerz="8" radius="1">
+		<monster name="Elf Arcanist" x="0" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="693" centery="630" centerz="8" radius="1">
 		<monster name="Spider" x="-1" y="0" z="8" spawntime="60" />

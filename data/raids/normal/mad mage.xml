@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="warning" message="Mad Mage is back!!!" />	
+	<!--Area Spawns-->
+	<areaspawn delay="10000" fromx="839" fromy="841" fromz="3" tox="851" toy="852" toz="5">
+    <monster name="Mad Mage" amount="6" />
+  </areaspawn>
+</raid>
